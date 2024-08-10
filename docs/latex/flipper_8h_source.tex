@@ -1,0 +1,54 @@
+\doxysection{flipper.\+h}
+\hypertarget{flipper_8h_source}{}\label{flipper_8h_source}\index{src/flipper.h@{src/flipper.h}}
+\mbox{\hyperlink{flipper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FLIPPER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FLIPPER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/rigid\_body2d.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/sprite2d.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/physics\_direct\_body\_state2d.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/variant.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1flipper}{flipper}}:\ \textcolor{keyword}{public}\ godot::RigidBody2D\{}
+\DoxyCodeLine{00016\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1flipper}{flipper}},\ godot::RigidBody2D)}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}(\textcolor{keywordtype}{bool},\ is\_right\_hand)}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{bool},\ use\_right\_hand\_input)}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ max\_turn)}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ turn\_speed)}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{comment}{//\ in\ degrees}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_angle\_offset;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_do\_turn\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_do\_turn\_check\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_disabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1flipper_a6d9959e10285ad45220b2c112ec3fbb0}{\_check\_input}}(\textcolor{keywordtype}{int}\ \_flag);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1flipper_a699cdea3106b7953ae1b9c3987ed26df}{\_bind\_methods}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1flipper_a148bab2a5e7fcf3428e0ceac9cfb7ec9}{flipper}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1flipper_a669e2920bef59916c8984c55291a67e1}{\string~flipper}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1flipper_a86c6725f910d25c55b9c44d4e02af0d7}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1flipper_ac967cbc6502cffab0ce9f52d2b175284}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1flipper_a4fedf7b9cbb855f51c37c01251f7359c}{set\_flipper\_disabled}}(\textcolor{keywordtype}{bool}\ b);}
+\DoxyCodeLine{00045\ \ \ \};}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

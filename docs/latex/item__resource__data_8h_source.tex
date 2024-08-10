@@ -1,0 +1,43 @@
+\doxysection{item\+\_\+resource\+\_\+data.\+h}
+\hypertarget{item__resource__data_8h_source}{}\label{item__resource__data_8h_source}\index{src/item\_resource\_data.h@{src/item\_resource\_data.h}}
+\mbox{\hyperlink{item__resource__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_RESOURCE\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_RESOURCE\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{class\ }item\_resource\_database;}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__resource__data}{item\_resource\_data}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database}{Game::Item::item\_resource\_database}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ godot::String\ \_item\_res\_full\_id;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__data_a956a4921b10c85cdf76053bbfe95e893}{get\_item\_res\_full\_id}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \_add\_new\_subdata(godot::Dictionary*\ \_data\_dict)\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_add\_new\_subdata<subdata\_class>(\_data\_dict);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keyword}{const}\ subdata\_class*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__data_a8387ccd34af3577c3e9172c40f851285}{get\_subdata}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata<subdata\_class>();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::shared\_ptr<const\ GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__data_a9c82729ace23b56af90fef563ed9a62c}{get\_subdata\_shared}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata\_shared<subdata\_class>();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \};}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

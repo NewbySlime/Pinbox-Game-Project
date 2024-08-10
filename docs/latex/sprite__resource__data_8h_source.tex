@@ -1,0 +1,45 @@
+\doxysection{sprite\+\_\+resource\+\_\+data.\+h}
+\hypertarget{sprite__resource__data_8h_source}{}\label{sprite__resource__data_8h_source}\index{src/sprite\_resource\_data.h@{src/sprite\_resource\_data.h}}
+\mbox{\hyperlink{sprite__resource__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SPRITE\_RESOURCE\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SPRITE\_RESOURCE\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/image\_texture.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/resource.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1sprite__resource__data}{sprite\_resource\_data}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ godot::String\ \_full\_id;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ godot::Ref<godot::Resource>\ \_image\_res;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ godot::Ref<godot::Resource>\ \_animation\_library;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_custom\_object\_sprite;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_parse\_sprite\_resource\_data\_dict(godot::Dictionary*\ data);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1sprite__resource__data_a435f5d63097b6d269564508b4c26d2fb}{\string~sprite\_resource\_data}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_aff0fc6540f0dc07932abaaa32a050906}{get\_subdata\_name}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_ae44dd0fbb9fddc743a3b648cf3dfb995}{parse\_dictionary\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem,\ godot::Dictionary*\ data);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_a3c16b6e3a521d1ef471b0cb7c7033c66}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_a7a05a3c35e175472bfefd9863eed051c}{get\_full\_id}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ godot::Ref<godot::Resource>\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_a1557d85232d387ca544deac028ee9a6b}{get\_image}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ godot::Ref<godot::Resource>\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_af1188234cd46fb37ea38a711e559a7d6}{get\_animation\_library}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \mbox{\hyperlink{class_game_1_1sprite__resource__data_a8ffad503d576439639eccbf1b139cb55}{get\_custom\_object\_sprite}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,151 @@
+<mxfile host="65bd71144e">
+    <diagram id="2rs_qc1xb9bRdjbkRdPc" name="Page-1">
+        <mxGraphModel dx="2248" dy="2048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="iwe2d_handler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="1160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="game_handler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="340" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="pivot_node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="500" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="item_dropper" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="1050" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="item_picker" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="1040" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="item_server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="item_container" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="iwe2d_handler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="iwe2_object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="850" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="11" target="12">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="680" y="500" as="sourcePoint"/>
+                        <mxPoint x="730" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;startArrow=classic;html=1;" edge="1" parent="1" source="13" target="12">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="680" y="500" as="sourcePoint"/>
+                        <mxPoint x="730" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="13" target="11">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="680" y="500" as="sourcePoint"/>
+                        <mxPoint x="640" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Asks to create item_container from item_server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="460" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="iwe2d_handler" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1480" y="500" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Uses item_contaienr for holding items" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="540" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="item_server creates item_container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="320" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1210" y="390" as="sourcePoint"/>
+                        <mxPoint x="1260" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="As a parent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1270" y="440" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="19">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1200" y="460" as="sourcePoint"/>
+                        <mxPoint x="1250" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="As a pivot to spawn iwe2d_object" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1350" y="550" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="endArrow=classic;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="4" target="14">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="980" as="sourcePoint"/>
+                        <mxPoint x="1110" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="9" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="980" as="sourcePoint"/>
+                        <mxPoint x="1110" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="7" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="980" as="sourcePoint"/>
+                        <mxPoint x="1110" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="endArrow=classic;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="14" target="9">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="980" as="sourcePoint"/>
+                        <mxPoint x="1110" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="Give item to handler when dropping" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1170" y="1130" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Creates object" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1080" y="1040" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Check for nearby&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="890" y="990" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Give item data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="950" y="910" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="item_container&lt;br&gt;(player)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="1160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Tell handler that an item is picked" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="900" y="1130" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="9" target="41">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="980" as="sourcePoint"/>
+                        <mxPoint x="1110" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="Give the picked item to player's inv" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="1100" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Interaction with game world" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="720" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Handler initialization" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="990" y="110" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="&lt;h1&gt;IWE2D&lt;/h1&gt;&lt;p&gt;IWE2D or item_world_entity2d are a form of entity that holds data about an item and interaction with game's physical world for item storage functionaliy.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="275" width="230" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;h1&gt;Handler&lt;/h1&gt;&lt;p&gt;The handler are there to create the entity and also keep track of the entities in the world.&lt;/p&gt;&lt;p&gt;Handler also have to communicate with item_server and game_handler to complete its functionality.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="417.5" width="240" height="162.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;h1&gt;Interaction with game world&lt;/h1&gt;&lt;p&gt;Handler will listen to objects like item_dropper for when dropping items or item_picker for putting items to certain containers.&lt;br&gt;&lt;/p&gt;&lt;p&gt;The entity itself (IWE2D) is a physics object representing the dropped item.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="640" width="230" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

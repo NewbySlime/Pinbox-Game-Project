@@ -1,0 +1,45 @@
+\doxysection{I\+\_\+caller\+\_\+context.\+h}
+\hypertarget{_i__caller__context_8h_source}{}\label{_i__caller__context_8h_source}\index{src/I\_caller\_context.h@{src/I\_caller\_context.h}}
+\mbox{\hyperlink{_i__caller__context_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_CALLER\_CONTEXT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_CALLER\_CONTEXT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ CALLER\_CONTEXT\_WRAPPER(p\_target\_node,\ context\_data,\ function,\ ...)\{\ \(\backslash\)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ auto\ \_\_macro\_function\_var\ =\ function;\ \(\backslash\)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \ I\_caller\_context*\ \_\_macro\_interface\_context\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ INTERFACE\_GET(p\_target\_node,\ I\_caller\_context,\ \_\_macro\_interface\_context)\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ if(\_\_macro\_interface\_context)\{\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \_\_macro\_interface\_context-\/>add\_current\_context(context\_data);\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \_\_macro\_function\_var(\_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \_\_macro\_interface\_context-\/>delete\_current\_context();\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ else\{\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \_\_macro\_function\_var(\_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_function}{GameUtils::Function}}\{}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_utils_1_1_function_1_1caller__data}{caller\_data}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ godot::Node*\ \mbox{\hyperlink{struct_game_utils_1_1_function_1_1caller__data_af6a103d7c7316f77b96195ba9e91cc32}{node}}\ =\ NULL;}
+\DoxyCodeLine{00026\ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context}{I\_caller\_context}}\{}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context}{I\_caller\_context}})}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context_ac58bc1daabbc871947f38f2671f2f5e0}{add\_current\_context}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_utils_1_1_function_1_1caller__data}{caller\_data}}\&\ \mbox{\hyperlink{class_game_utils_1_1_function_1_1caller__context}{caller\_context}})\{\}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context_a270b64787f9a37700a80edc407651b18}{delete\_current\_context}}()\{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_utils_1_1_function_1_1caller__data}{caller\_data}}*\ \mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context_a5c48751d40f7b21aac9fe81d67ff8b41}{get\_current\_context}}()\{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
+\DoxyCodeLine{00036\ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

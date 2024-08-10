@@ -1,0 +1,86 @@
+\doxysection{hit\+\_\+register\+\_\+handler.\+h}
+\hypertarget{hit__register__handler_8h_source}{}\label{hit__register__handler_8h_source}\index{src/hit\_register\_handler.h@{src/hit\_register\_handler.h}}
+\mbox{\hyperlink{hit__register__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HIT\_REGISTER\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HIT\_REGISTER\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__data__container_8h}{hit\_register\_data\_container.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__interface_8h}{hit\_register\_interface.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/area2d.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node2d.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/vector2.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}set"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{class\ }hit\_register;}
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1hit__register__handler}{hit\_register\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::Node2D\_sac\{}
+\DoxyCodeLine{00027\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1hit__register__handler}{hit\_register\_handler}},\ godot\_sac::Node2D\_sac)}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::Dictionary,\ hit\_reg\_node\_packed\_scene)}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ Node2D*\ \_root\_node;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_load\_hr\_nodes();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ godot::PackedScene*\ \_get\_hr\_node(\mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71e}{Game::hit\_register\_type\_enum}}\ hrte\_type);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ std::map<uint32\_t,\ godot::PackedScene*>\ \_hr\_packed\_scenes;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_cast\_hit\_reg(}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::shared\_ptr<Game::hit\_register\_data\_container>\&\ reg\_data,\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ hitreg\_data,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::shared\_ptr<Game::I\_damager>\&\ damager,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__start__data}{hit\_register\_start\_data}}*\ start\_data}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ );}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_ae5f471e14dae65d5333c9476f48357f3}{\_bind\_methods}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_a0e71893043d245fc5afb03fffd53a71a}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1hit__register__handler_a2f528e78b601aa8d317d4df37d115b36}{hit\_register\_handler}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_a50033b1df68164af4553d098e8b79cc0}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_a88c2e4ebf1cdbcdfc1cf1a1fc88e2c82}{cast\_hit\_reg}}(std::shared\_ptr<Game::hit\_register\_data\_container>\&\ reg\_data,\ std::shared\_ptr<Game::I\_damager>\&\ damager,\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data}{hit\_register\_start\_data}}*\ start\_data);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_a5f8fd7de3d2c92b1a16e6c25f78095b0}{next\_hitreg\_part}}(\mbox{\hyperlink{class_game_1_1hit__register}{Game::hit\_register}}*\ hitreg,\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data}{hit\_register\_start\_data}}*\ start\_data);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_ad8e618eba9d624da270ed39a37936cd0}{stop\_hitreg}}(\mbox{\hyperlink{class_game_1_1hit__register}{Game::hit\_register}}*\ hitreg);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register__handler_af3ad67122bd1f3aadf243f1a7fe1e799}{set\_root}}(Node2D*\ node);}
+\DoxyCodeLine{00060\ \ \ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1hit__register}{hit\_register}}:\ \mbox{\hyperlink{class_game_1_1_i__hit__register}{I\_hit\_register}}\{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1hit__register__handler}{Game::hit\_register\_handler}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ godot::Node*\ \_this\_node;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hitreg__metadata}{Game::hitreg\_metadata}}\ \mbox{\hyperlink{class_game_1_1hit__register_a1b5a54122b06ac0ef956a5c756db408c}{\_metadata}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__start__data}{hit\_register\_start\_data}}\ \mbox{\hyperlink{class_game_1_1hit__register_afbe0c46444987d931f087a027abb765c}{\_start\_data}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register_ada7ba7038ae44850b72907a1c6883055}{on\_hitreg\_finished}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1hit__register_a7783efb0be9d2f46649716b8b1257453}{on\_hitreg\_interrupted}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1hit__register_acbf8ae6d3c031ba06df00d407e5d6aeb}{\string~hit\_register}}()\{\}}
+\DoxyCodeLine{00077\ \ \ \};}
+\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

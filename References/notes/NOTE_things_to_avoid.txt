@@ -1,0 +1,3 @@
+Things that to not do when developing with Godot
+- Using Godot's object outside bind_methods (when bind_methods aren't triggered yet)
+- Multiple inheritence with Godot's Node or Non Godot object that uses same binding mechanisms

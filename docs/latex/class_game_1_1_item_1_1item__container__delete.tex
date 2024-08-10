@@ -1,0 +1,134 @@
+\doxysection{Game\+::Item\+::item\+\_\+container\+\_\+delete Class Reference}
+\hypertarget{class_game_1_1_item_1_1item__container__delete}{}\label{class_game_1_1_item_1_1item__container__delete}\index{Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}}
+
+
+{\ttfamily \#include $<$item\+\_\+container\+\_\+delete.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::item\+\_\+container\+\_\+delete\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_1_1_item_1_1item__container__delete}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container__delete_ab32f51682013f115a4b4bcc63a5d2924}{delete\+\_\+items}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container__delete_a2487eb3fff78bf05793c2d647dd21e65}{get\+\_\+container\+\_\+type}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_item_1_1item__container}{Game\+::\+Item\+::item\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2596733d08f3de546f22662f57b2bc1d}{item\+\_\+container}} ()
+\item 
+const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ab24dcfba887b2a85e826f8a036dcfa42}{get\+\_\+item}} (int index) override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a00a21982310f69e6026d0e065077a00e}{get\+\_\+item\+\_\+id}} (int index) override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a43b72492fc59106dce7a1f4ab80e9c6d}{get\+\_\+container\+\_\+id}} () override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8101922a61f7a8cbb43f5b7467bde45e}{is\+\_\+item\+\_\+exist}} (int index) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ac3ddd1f8c4432a5155446e72c1c38d90}{is\+\_\+item\+\_\+can\+\_\+exist}} (const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}item) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8c0cdd78c2c0b3480ea9a10a20d0090d}{is\+\_\+item\+\_\+can\+\_\+exist}} (uint64\+\_\+t item\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_aefb665c97c6e053531fb6131751de8bb}{set\+\_\+item\+\_\+filter\+\_\+type}} (uint32\+\_\+t new\+\_\+type) override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a157137e21a8febb38a46a62c512e5673}{get\+\_\+item\+\_\+filter\+\_\+type}} () override
+\item 
+int \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8a1642ff2db820b92f3455cb56e3cc23}{empty\+\_\+slot\+\_\+count}} () override
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a0a61cce966186ab723d2638cc16583ba}{get\+\_\+container\+\_\+size}} () override
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a974172bcb46de57d8d49dacfb1482962}{resize\+\_\+container}} (int new\+\_\+size) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a9171d55e78daaa96e9479fae69a4e46d}{add\+\_\+to\+\_\+container}} (\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} id, int index=-\/1) override
+\item 
+\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a7c9b2dfe122c0ba7020b27227dfb5213}{remove\+\_\+from\+\_\+container}} (int index) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a99d01d8a15905899257ed93392716b76}{swap\+\_\+item}} (int index, \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&pos\+\_\+data) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c70ded4c0dcfff164b324f8f47d9533}{drop\+\_\+item}} (int index) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1f9dd402fdaa09b27ccd1a3635e44cbc}{drop\+\_\+all\+\_\+item}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8246fb40579c680e876420109e88e362}{drop\+\_\+all\+\_\+item\+\_\+filter}} (uint32\+\_\+t filter) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1item__container__delete_a0d18d94536ca61562a59056fe0484949}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_item_1_1item__container}{Game\+::\+Item\+::item\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a83285e7fb3653857d415ddbc4064b6de}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_item_1_1item__container}{Game\+::\+Item\+::item\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1f158894d8380f24af109d4c005784ba}{\+\_\+emit\+\_\+signal\+\_\+index\+\_\+removed}} (\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&pos\+\_\+data, uint64\+\_\+t item\+\_\+id)
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ae3abdd201d2368325377b9f49ae847d4}{\+\_\+emit\+\_\+signal\+\_\+index\+\_\+added}} (\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&pos\+\_\+data, uint64\+\_\+t item\+\_\+id)
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ae826c8e6ce5247cf22a5a8774aa660aa}{\+\_\+emit\+\_\+signal\+\_\+index\+\_\+changed}} (\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&pos\+\_\+data)
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a366962eb9e808f14ec33db88988b6911}{\+\_\+emit\+\_\+signal\+\_\+container\+\_\+resized}} ()
+\item 
+bool \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a33454c6d58b5dcb512902631af8b2c48}{\+\_\+check\+\_\+index}} (int index) override
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1item__container_adcf567b9660076fcd403a1725047c677}{\+\_\+get\+\_\+new\+\_\+index}} () override
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2be371cab744d43931659a9d29514cf2}{\+\_\+remove\+\_\+item}} (int index) override
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c6c6236d8d8c25ce53a3c2cb4f45aed}{\+\_\+add\+\_\+item}} (const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}item, int index=-\/1, bool force=false, uint64\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+removed\+\_\+id=NULL) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_1_1_item_1_1item__container}{Game\+::\+Item\+::item\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ad99c1e8a153fb99baca574dbd4c6a8ef}{item\+\_\+server}}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__server}{item\+\_\+server}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a97359308a0bd4150cab31625cbe38318}{\+\_\+server}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1906444480c8ba77dcd5d167b6fa3ddf}{\+\_\+container\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2d921fb0524934674c42f376ee599ce0}{\+\_\+item\+\_\+filter\+\_\+type}}
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a10a647c675ab5ce0594b418795badc67}{\+\_\+item\+\_\+list}}
+\item 
+int \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a54efe9c967d85e4a2b3c8ec7f388cdd2}{\+\_\+item\+\_\+count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1item__container__delete_a0d18d94536ca61562a59056fe0484949}\label{class_game_1_1_item_1_1item__container__delete_a0d18d94536ca61562a59056fe0484949} 
+\index{Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily void item\+\_\+container\+\_\+delete\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_item_1_1item__container__delete_ab32f51682013f115a4b4bcc63a5d2924}\label{class_game_1_1_item_1_1item__container__delete_ab32f51682013f115a4b4bcc63a5d2924} 
+\index{Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}!delete\_items@{delete\_items}}
+\index{delete\_items@{delete\_items}!Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}}
+\doxysubsubsection{\texorpdfstring{delete\_items()}{delete\_items()}}
+{\footnotesize\ttfamily void item\+\_\+container\+\_\+delete\+::delete\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__container__delete_a2487eb3fff78bf05793c2d647dd21e65}\label{class_game_1_1_item_1_1item__container__delete_a2487eb3fff78bf05793c2d647dd21e65} 
+\index{Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}!get\_container\_type@{get\_container\_type}}
+\index{get\_container\_type@{get\_container\_type}!Game::Item::item\_container\_delete@{Game::Item::item\_container\_delete}}
+\doxysubsubsection{\texorpdfstring{get\_container\_type()}{get\_container\_type()}}
+{\footnotesize\ttfamily uint32\+\_\+t Game\+::\+Item\+::item\+\_\+container\+\_\+delete\+::get\+\_\+container\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a72012ff093703378a4f195b7ebc23749}{Game\+::\+Item\+::item\+\_\+container}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{item__container__delete_8h}{item\+\_\+container\+\_\+delete.\+h}}\item 
+src/\mbox{\hyperlink{item__container__delete_8cpp}{item\+\_\+container\+\_\+delete.\+cpp}}\end{DoxyCompactItemize}

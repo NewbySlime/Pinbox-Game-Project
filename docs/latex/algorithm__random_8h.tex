@@ -1,0 +1,32 @@
+\doxysection{src/algorithm\+\_\+random.h File Reference}
+\hypertarget{algorithm__random_8h}{}\label{algorithm__random_8h}\index{src/algorithm\_random.h@{src/algorithm\_random.h}}
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/random\+\_\+number\+\_\+generator.\+hpp"{}}\newline
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}cstdlib"{}}\newline
+{\ttfamily \#include "{}utility"{}}\newline
+{\ttfamily \#include "{}vector"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Game\+::\+Misc\+::\+Algorithm\+::random\+\_\+chance\+\_\+data$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Chance data used for randomizing chances with other chances using get\+\_\+randomized\+\_\+chance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc}{Game\+::\+Misc}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game\+::\+Misc\+::\+Algorithm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data}}$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7abdfbe456eff9875748a8a9f0d3e763}{Game\+::\+Misc\+::\+Algorithm\+::init\+\_\+randomized\+\_\+chance\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Initialize \doxylink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data} function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_aa8c71e9d99c245a17a796a0496dba455}{Game\+::\+Misc\+::\+Algorithm\+::free\+\_\+randomized\+\_\+chance\+\_\+data}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data}}$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ \texorpdfstring{$\ast$}{*}data, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{deinit\+\_\+callback}})(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{obj}})=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\begin{DoxyCompactList}\small\item\em Function to remove/free the \doxylink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data} class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_add3512ba68a62ad8e88769327de96a94}{Game\+::\+Misc\+::\+Algorithm\+::add\+\_\+randomized\+\_\+chance\+\_\+data}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data}}$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ \texorpdfstring{$\ast$}{*}data, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{double}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{score}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{obj}})
+\begin{DoxyCompactList}\small\item\em Function to add another chance. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_ad5686498c17f5c5ac97efa88ee4aeda4}{Game\+::\+Misc\+::\+Algorithm\+::get\+\_\+randomized\+\_\+chance}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{random\+\_\+chance\+\_\+data}}$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{chance\+\_\+data}}, godot\+::\+Random\+Number\+Generator \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{\+\_\+rng}})
+\begin{DoxyCompactList}\small\item\em Function to get random chance within the data. \end{DoxyCompactList}\end{DoxyCompactItemize}

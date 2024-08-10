@@ -1,0 +1,76 @@
+\doxysection{modifier\+\_\+database.\+h}
+\hypertarget{modifier__database_8h_source}{}\label{modifier__database_8h_source}\index{src/modifier\_database.h@{src/modifier\_database.h}}
+\mbox{\hyperlink{modifier__database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODIFIER\_DATABASE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODIFIER\_DATABASE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{algorithm__random_8h}{algorithm\_random.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier_8h}{I\_modifier.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier__database__helper_8h}{I\_modifier\_database\_helper.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}string"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{namespace\ }Factory\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }modifier\_factory;}
+\DoxyCodeLine{00020\ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1modifier__database}{modifier\_database}}:\ \textcolor{keyword}{public}\ godot::Node\{}
+\DoxyCodeLine{00023\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1modifier__database}{modifier\_database}},\ godot::Node)}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ modifier\_folder)}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_item_1_1modifier__database_1_1modifier__metadata}{modifier\_metadata}}\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__database}{modifier\_database}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ chance\_score;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ metadata\_randomizer\_data;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1_item_1_1modifier__database_1_1modifier__metadata_a9d935705bce536a715b38009d04d28d5}{get\_chance\_score}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ chance\_score;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Game::Misc::Algorithm::random\_chance\_data<std::string>}}*\ \_chance\_modifier\_id;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ std::map<godot::String,\ modifier\_metadata>\ \_modifier\_metadata\_map;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_load\_modifier\_data(\textcolor{keyword}{const}\ godot::String\&\ folder\_dir);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__database_abdfa23010af14c85b2890e25dc0089b6}{\_bind\_methods}}();}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__database_ac546e36c8c48b2a52377120506db5e8e}{modifier\_database}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__database_a68aa0d9d8eb022fe8ebbfe9a2cb231ad}{\string~modifier\_database}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__database_a0c0750b3d76ac84173aff4dff2b9f8f4}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1modifier__factory}{Game::Item::Factory::modifier\_factory}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ std::string\ get\_random\_modifier\_id(godot::RandomNumberGenerator*\ rng);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ std::shared\_ptr<Game::Modifiers::I\_modifier>\ create\_specific\_modifier(std::string\ ID);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{comment}{//\ when\ there's\ an\ error,\ it\ throws\ a\ gdstr\_exception}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ randomize\_modifier(godot::RandomNumberGenerator*\ rng,\ std::shared\_ptr<Game::Modifiers::I\_modifier>\ modifier);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keyword}{const}\ modifier\_metadata*\ get\_metadata(std::string\ ID);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<Game::Modifiers::I\_modifier>(*\mbox{\hyperlink{namespace_game_1_1_item_abb25314ec5dafae9b1615c8c4943fb7c}{create\_modifier\_callback}})();}
+\DoxyCodeLine{00067\ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<GameUtils::Memory::custom\_memory>(*\mbox{\hyperlink{namespace_game_1_1_item_a015dd2633866f9af5bb0f8ddd7e56d06}{parse\_modifier\_data\_callback}})(godot::Dictionary*\ json\_data);}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

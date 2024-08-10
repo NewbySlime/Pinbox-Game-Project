@@ -1,0 +1,49 @@
+\doxysection{node2d\+\_\+object\+\_\+follower.\+h}
+\hypertarget{node2d__object__follower_8h_source}{}\label{node2d__object__follower_8h_source}\index{src/node2d\_object\_follower.h@{src/node2d\_object\_follower.h}}
+\mbox{\hyperlink{node2d__object__follower_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NODE2D\_OBJECT\_FOLLOWER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NODE2D\_OBJECT\_FOLLOWER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SIGNAL\_NODE2D\_OBJECT\_FOLLOWER\_POSITION\_UPDATE\ "{}sn2dofpu"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SIGNAL\_NODE2D\_OBJECT\_FOLLOWER\_DELETED\ "{}sn2dofd"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1node2d__object__follower}{node2d\_object\_follower}}:\ \textcolor{keyword}{public}\ godot\_sac::Node2D\_sac\{}
+\DoxyCodeLine{00013\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1node2d__object__follower}{node2d\_object\_follower}},\ godot\_sac::Node2D\_sac)}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}(\textcolor{keywordtype}{bool},\ disabled)}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}(\textcolor{keywordtype}{bool},\ use\_physics\_process)}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1node2d__object__follower_1_1signal__position__update}{signal\_position\_update}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower}{node2d\_object\_follower}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ godot::Vector2\ \_position;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{struct_game_1_1node2d__object__follower_1_1signal__position__update_a307ce4a9f42f5d2ef91d759e000d0126}{get\_position}}()\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_position;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower_acd981adc0d29eba4f0af42f68f5ec2e1}{\_bind\_methods}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower_a34a26479f88dc5245165ea67ecc00478}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower_a12a214626b5337e0cb33d388b56d2361}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower_aa68d0096fd34144c958be50c4659c5d0}{\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1node2d__object__follower_a404328660f5ffb13955e5db78d74af13}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

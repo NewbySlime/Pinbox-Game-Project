@@ -1,0 +1,58 @@
+<mxfile host="65bd71144e">
+    <diagram id="jR3fy5ABFlyTml2IPwJR" name="Page-1">
+        <mxGraphModel dx="919" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="entity_object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;The Purpose of Diagram&lt;/h1&gt;&lt;p&gt;Since the entity_object is complex, such as &quot;why does it uses generic Node instead of 2D or 3D counterpart&quot; and such. This is why the diagram exists, to explain some of the question.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="60" width="310" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;h1&gt;Using Generic Node&lt;/h1&gt;&lt;p&gt;By using generic Godot's Node, the object will not be restricted to only 2D or 3D. Instead, it might be a combination of both!&lt;/p&gt;&lt;p&gt;Apparently when trying out 2D space and 3D space in generic Node, it still works, but we don't know the transformation that it tied to (what parent that it uses for transformation). It could be that it tried to search for its parent and its grandparent, until Tree's root, for the parent that it can tied to with the same dimensional space.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="220" width="290" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;h1&gt;When to Get its Component?&lt;/h1&gt;&lt;p&gt;Take a look at object_component diagram.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="490" width="260" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="damageable_object&lt;br&gt;RigidBody" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="equippable_object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="705" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;startArrow=classic;startFill=1;" parent="1" source="2" target="8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="390" as="sourcePoint"/>
+                        <mxPoint x="520" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="390" as="sourcePoint"/>
+                        <mxPoint x="520" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Any Object" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="865" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="As Child" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="350" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Using position" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="280" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="As parent&lt;br&gt;Setting position" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="250" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;h1&gt;Position For Each Nodes/Components&lt;/h1&gt;&lt;p&gt;entity_object store a pivot for 2D and 3D and use that to control all object in 2D or 3D dimension like using RemoteTransformXD.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="640" width="250" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

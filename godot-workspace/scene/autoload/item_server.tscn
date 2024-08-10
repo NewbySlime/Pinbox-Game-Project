@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dny003seg2rs8"]
+
+[node name="item_server" type="item_server"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+item_data_json = "res://resource/json_data/item_data.json"
+item_container_premade_data_json = "res://resource/json_data/item_container_premade_data.json"
+item_world_entity_2d_handler_pckscene = "res://scene/game_object/item_world_entity_2d_handler.tscn"
+item_container_pckscene_array = PackedStringArray("res://scene/game_object/preset_objects/items/container/item_container.tscn", "res://scene/game_object/preset_objects/items/container/item_container_delete.tscn", "res://scene/game_object/preset_objects/items/container/item_container_infinite.tscn")
+script = null

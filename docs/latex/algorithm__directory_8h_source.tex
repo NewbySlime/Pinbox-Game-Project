@@ -1,0 +1,103 @@
+\doxysection{algorithm\+\_\+directory.\+h}
+\hypertarget{algorithm__directory_8h_source}{}\label{algorithm__directory_8h_source}\index{src/algorithm\_directory.h@{src/algorithm\_directory.h}}
+\mbox{\hyperlink{algorithm__directory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_DIRECTORY\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_DIRECTORY\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__error_8h}{godot\_error.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/dir\_access.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/file\_access.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game::Misc::Algorithm}}\{}
+\DoxyCodeLine{00018\ \ \ godot::String\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7ef11de12929fbbacbf13ec9a03553f5}{get\_filename\_extension}}(godot::String\ path,\ godot::String\ directory\_splitter\ =\ \textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ parameter\_type>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_aaacf5eba288b80a270686ac8f6ac74c9}{recurse\_folders}}(}
+\DoxyCodeLine{00036\ \ \ \ \ godot::String\ folder\_path,}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}(*callback)(parameter\_type*,\ godot::Ref<godot::FileAccess>),}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ godot::PackedStringArray\&\ allowed\_extension,}
+\DoxyCodeLine{00039\ \ \ \ \ parameter\_type*\ param\ =\ NULL}
+\DoxyCodeLine{00040\ \ \ )\{}
+\DoxyCodeLine{00041\ \ \ \ \ godot::String\ \_tmp\_error\_msg\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_error\_occurred\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ godot::Array\ \_paramarr;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ godot::Ref<godot::DirAccess>\ \_folder\_access\ =\ godot::DirAccess::open(folder\_path);}
+\DoxyCodeLine{00047\ \ \ \ \ godot::Error\ \_err\ =\ DirAccess::get\_open\_error();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}(\_err\ !=\ godot::Error::OK)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \_paramarr.clear();\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \_paramarr.append(folder\_path);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}(String(\textcolor{stringliteral}{"{}Cannot\ open\ folder.\ (Dir:\ '\{0\}')"{}}).format(\_paramarr),\ godot::ERR\_FILE\_BAD\_PATH);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ checks\ all\ folders}}
+\DoxyCodeLine{00057\ \ \ \ \ godot::PackedStringArray\ \_files\_list\ =\ \_folder\_access-\/>get\_files();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_files\_list.size();\ i++)\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ godot::String\ \_file\_name\ =\ \_files\_list[i];}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ godot::String\ \_filename\_ext\ =\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7ef11de12929fbbacbf13ec9a03553f5}{get\_filename\_extension}}(\_file\_name);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(allowed\_extension.size()\ >\ 0\ \&\&\ !allowed\_extension.find(\_filename\_ext))}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \_paramarr.clear();\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \_paramarr.append(folder\_path);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \_paramarr.append(\_file\_name);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ godot::String\ \_file\_dir\ =\ \mbox{\hyperlink{godot__macro_8h_a061309b41c64ad337c8732c5d58d48ab}{JOIN\_PATH\_STRING\_HELPER}}.format(\_paramarr);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ godot::Ref<godot::FileAccess>\ \_file\ =\ FileAccess::open(\_file\_dir,\ godot::FileAccess::ModeFlags::READ);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{comment}{//\ store\ error\ message}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ callback(param,\ \_file);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}\ e)\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \_error\_occurred\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \_paramarr.clear();\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \_paramarr.append(folder\_path);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \_paramarr.append(e.\mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception_abbc8677b608518b954eae6a19cf06a58}{what}}());}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \_tmp\_error\_msg\ +=\ String(\textcolor{stringliteral}{"{}Error\ when\ parsing\ data\ in\ '\{0\}'.\(\backslash\)nError\ Message:\ \{1\}\(\backslash\)n"{}}).format(\_paramarr);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ recurse\ the\ folders}}
+\DoxyCodeLine{00089\ \ \ \ \ godot::PackedStringArray\ \_folder\_list\ =\ \_folder\_access-\/>get\_directories();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_folder\_list.size();\ i++)\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ godot::String\ \_folder\_name\ =\ \_folder\_list[i];}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \_paramarr.clear();\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \_paramarr.append(folder\_path);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \_paramarr.append(\_folder\_name);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ String\ \_folder\_dir\ =\ \mbox{\hyperlink{godot__macro_8h_a061309b41c64ad337c8732c5d58d48ab}{JOIN\_PATH\_STRING\_HELPER}}.format(\_paramarr);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ error\ message}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//recurse\_folder(\_folder\_dir,\ callback,\ allowed\_extension,\ param);}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}\ e)\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \_error\_occurred\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \_tmp\_error\_msg\ +=\ e.\mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception_abbc8677b608518b954eae6a19cf06a58}{what}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{if}(\_error\_occurred)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}(\_tmp\_error\_msg,\ godot::ERR\_SKIP);}
+\DoxyCodeLine{00111\ \ \ \}}
+\DoxyCodeLine{00112\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

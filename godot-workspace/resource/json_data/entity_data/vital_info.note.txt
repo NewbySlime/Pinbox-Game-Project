@@ -1,0 +1,12 @@
+max_health_point: number
+  Max HP of the entity
+
+max_energy_point: number
+  Max EP of the entity
+
+ep_restore_delay: number
+  Cooldown delay for the entity to regain energy after using it
+
+ep_restore_rate: number
+  The unit is in count-per-second
+  The rate of the energy regain speed

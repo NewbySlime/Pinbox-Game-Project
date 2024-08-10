@@ -1,0 +1,44 @@
+\doxysection{src/item\+\_\+resource\+\_\+database.cpp File Reference}
+\hypertarget{item__resource__database_8cpp}{}\label{item__resource__database_8cpp}\index{src/item\_resource\_database.cpp@{src/item\_resource\_database.cpp}}
+{\ttfamily \#include "{}algorithm\+\_\+directory.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+item\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+resource\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}sprite\+\_\+resource\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/dir\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/file\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/json.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/scene\+\_\+tree.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__resource__database_8cpp_af7f872952752357608bb39e552cf5084}{ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+ID}}~"{}item\+\_\+id"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__resource__database_8cpp_ab74ae2cc9547e588769298a7178666d5}{ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+TYPE}}~"{}item\+\_\+type"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__resource__database_8cpp_aaf8287d7e0f1ca0b8662e3f1b83ef637}{ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+OBJECT}}~"{}data\+\_\+object"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{item__resource__database_8cpp_aaf8287d7e0f1ca0b8662e3f1b83ef637}\label{item__resource__database_8cpp_aaf8287d7e0f1ca0b8662e3f1b83ef637} 
+\index{item\_resource\_database.cpp@{item\_resource\_database.cpp}!ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}}
+\index{ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}!item\_resource\_database.cpp@{item\_resource\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}{ITEM\_RES\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+OBJECT~"{}data\+\_\+object"{}}
+
+\Hypertarget{item__resource__database_8cpp_af7f872952752357608bb39e552cf5084}\label{item__resource__database_8cpp_af7f872952752357608bb39e552cf5084} 
+\index{item\_resource\_database.cpp@{item\_resource\_database.cpp}!ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID}}
+\index{ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID}!item\_resource\_database.cpp@{item\_resource\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID}{ITEM\_RES\_DATABASE\_KEY\_ITEM\_ID}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+ID~"{}item\+\_\+id"{}}
+
+\Hypertarget{item__resource__database_8cpp_ab74ae2cc9547e588769298a7178666d5}\label{item__resource__database_8cpp_ab74ae2cc9547e588769298a7178666d5} 
+\index{item\_resource\_database.cpp@{item\_resource\_database.cpp}!ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE}}
+\index{ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE@{ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE}!item\_resource\_database.cpp@{item\_resource\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE}{ITEM\_RES\_DATABASE\_KEY\_ITEM\_TYPE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+RES\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+TYPE~"{}item\+\_\+type"{}}
+

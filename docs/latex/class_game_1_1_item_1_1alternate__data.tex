@@ -1,0 +1,121 @@
+\doxysection{Game\+::Item\+::alternate\+\_\+data Class Reference}
+\hypertarget{class_game_1_1_item_1_1alternate__data}{}\label{class_game_1_1_item_1_1alternate__data}\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+
+
+{\ttfamily \#include $<$alternate\+\_\+data.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::alternate\+\_\+data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_item_1_1alternate__data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_a55e9f80832330f02733054df073c7e3a}{copy\+\_\+subdata\+\_\+to}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}mem)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\const subdata\+\_\+class \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_a059ce6ff85a5d92be14da9a8f1795302}{get\+\_\+subdata}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} $>$ \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_a6fbafa227ccc94e1f7687037d7ee9824}{get\+\_\+subdata\+\_\+shared}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a0d76c1702d4fd01dd2a6902095269014}{custom\+\_\+data}} ()
+\item 
+virtual \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_ad5fbcc96275c546918342cac2635452e}{\texorpdfstring{$\sim$}{\string~}custom\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_aa467d70c0e6e46f3b3cf621d8a393c3a}{bind\+\_\+function}} ()
+\item 
+static godot\+::\+String \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_a97b9fef08034d2ab09ceaba3208a68f5}{get\+\_\+subdata\+\_\+name}} ()
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1alternate__data_a73e3223b703a16944db2487d3a53aeab}{parse\+\_\+dictionary\+\_\+to}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}mem, godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a53f7e68d0a712895ddb0e083b3870435}{custom\+\_\+data\+\_\+check}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(subdata\+\_\+container\+::\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a78fc3e0a85ed64adc69265271a16d0ca}{\+\_\+subdata\+\_\+function\+\_\+copy}}) (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}from, \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}to) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a477e464de4bfbfd2115b194db21d4b3e}{\+\_\+\+\_\+copy\+\_\+subdata\+\_\+to\+\_\+subdata}} (\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{subdata\+\_\+container}} \texorpdfstring{$\ast$}{*}container) const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a0c64d34b06d30732e4f98bf61fea8175}{\+\_\+\+\_\+create\+\_\+copy\+\_\+function}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}from, \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}to) const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a6a8cf5ede7347856f1ba4d910c3b31d1}{\+\_\+\+\_\+add\+\_\+new\+\_\+subdata}} (godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}\+\_\+data\+\_\+dict)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_adaefb2a4606ea0d35eaff086ebcac73b}{\+\_\+\+\_\+set\+\_\+subdata}} (subdata\+\_\+class \texorpdfstring{$\ast$}{*}from)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a16167141a734b664df3b3206a229b282}{\+\_\+\+\_\+set\+\_\+subdata\+\_\+ref}} (std\+::shared\+\_\+ptr$<$ subdata\+\_\+class $>$ ref\+\_\+ptr)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\subdata\+\_\+class \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a05d5d76b73fa5fc39ed072af3ca2ace8}{\+\_\+\+\_\+get\+\_\+subdata}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::weak\+\_\+ptr$<$ subdata\+\_\+class $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a4f9098d297a869604f52274adc5a019b}{\+\_\+\+\_\+get\+\_\+subdata\+\_\+weak}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a01cd0c47c9bd62887a2f8b8554e4562d}{\+\_\+\+\_\+get\+\_\+subdata\+\_\+shared}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a764c228934fbcb6c7c91d1c955d5e2d1}{\+\_\+\+\_\+remove\+\_\+subdata}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ godot\+::\+String, \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\+\_\+subdata\+\_\+metadata}} $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\+\_\+subdata\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1alternate__data_aa467d70c0e6e46f3b3cf621d8a393c3a}\label{class_game_1_1_item_1_1alternate__data_aa467d70c0e6e46f3b3cf621d8a393c3a} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!bind\_function@{bind\_function}}
+\index{bind\_function@{bind\_function}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{bind\_function()}{bind\_function()}}
+{\footnotesize\ttfamily void alternate\+\_\+data\+::bind\+\_\+function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1_item_1_1alternate__data_a55e9f80832330f02733054df073c7e3a}\label{class_game_1_1_item_1_1alternate__data_a55e9f80832330f02733054df073c7e3a} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!copy\_subdata\_to@{copy\_subdata\_to}}
+\index{copy\_subdata\_to@{copy\_subdata\_to}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{copy\_subdata\_to()}{copy\_subdata\_to()}}
+{\footnotesize\ttfamily void alternate\+\_\+data\+::copy\+\_\+subdata\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}}]{mem }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1alternate__data_a059ce6ff85a5d92be14da9a8f1795302}\label{class_game_1_1_item_1_1alternate__data_a059ce6ff85a5d92be14da9a8f1795302} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!get\_subdata@{get\_subdata}}
+\index{get\_subdata@{get\_subdata}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{get\_subdata()}{get\_subdata()}}
+{\footnotesize\ttfamily template$<$typename subdata\+\_\+class $>$ \\
+const subdata\+\_\+class \texorpdfstring{$\ast$}{*} Game\+::\+Item\+::alternate\+\_\+data\+::get\+\_\+subdata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_1_1_item_1_1alternate__data_a97b9fef08034d2ab09ceaba3208a68f5}\label{class_game_1_1_item_1_1alternate__data_a97b9fef08034d2ab09ceaba3208a68f5} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!get\_subdata\_name@{get\_subdata\_name}}
+\index{get\_subdata\_name@{get\_subdata\_name}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{get\_subdata\_name()}{get\_subdata\_name()}}
+{\footnotesize\ttfamily String alternate\+\_\+data\+::get\+\_\+subdata\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1_item_1_1alternate__data_a6fbafa227ccc94e1f7687037d7ee9824}\label{class_game_1_1_item_1_1alternate__data_a6fbafa227ccc94e1f7687037d7ee9824} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!get\_subdata\_shared@{get\_subdata\_shared}}
+\index{get\_subdata\_shared@{get\_subdata\_shared}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{get\_subdata\_shared()}{get\_subdata\_shared()}}
+{\footnotesize\ttfamily template$<$typename subdata\+\_\+class $>$ \\
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} $>$ Game\+::\+Item\+::alternate\+\_\+data\+::get\+\_\+subdata\+\_\+shared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_1_1_item_1_1alternate__data_a73e3223b703a16944db2487d3a53aeab}\label{class_game_1_1_item_1_1alternate__data_a73e3223b703a16944db2487d3a53aeab} 
+\index{Game::Item::alternate\_data@{Game::Item::alternate\_data}!parse\_dictionary\_to@{parse\_dictionary\_to}}
+\index{parse\_dictionary\_to@{parse\_dictionary\_to}!Game::Item::alternate\_data@{Game::Item::alternate\_data}}
+\doxysubsubsection{\texorpdfstring{parse\_dictionary\_to()}{parse\_dictionary\_to()}}
+{\footnotesize\ttfamily void alternate\+\_\+data\+::parse\+\_\+dictionary\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}}]{mem,  }\item[{godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{alternate__data_8h}{alternate\+\_\+data.\+h}}\item 
+src/\mbox{\hyperlink{alternate__data_8cpp}{alternate\+\_\+data.\+cpp}}\end{DoxyCompactItemize}

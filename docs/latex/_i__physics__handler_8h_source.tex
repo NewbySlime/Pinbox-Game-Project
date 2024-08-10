@@ -1,0 +1,27 @@
+\doxysection{I\+\_\+physics\+\_\+handler.\+h}
+\hypertarget{_i__physics__handler_8h_source}{}\label{_i__physics__handler_8h_source}\index{src/I\_physics\_handler.h@{src/I\_physics\_handler.h}}
+\mbox{\hyperlink{_i__physics__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_PHYSICS\_BODY\_MODIFIER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_PHYSICS\_BODY\_MODIFIER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/rigid\_body2d.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/physics\_direct\_body\_state2d.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_i__physics__handler}{I\_physics\_handler}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__physics__handler_a2bff7a30ba216d7e49a840ae9fa25093}{bind\_physics\_object}}(godot::Object*\ obj,\ uint32\_t\ type)\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ is\ modified}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_i__physics__handler_a1e9d60bdd1e2a8dbdd9de7d031d42200}{on\_physics\_update}}(\textcolor{keywordtype}{double}\ delta)\ =\ 0;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ is\ modifier}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_i__physics__handler_a598578f50a95ba0e1d56b312832bcac4}{on\_integrate\_forces}}(godot::PhysicsDirectBodyState2D*\ state)\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \};}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

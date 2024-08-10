@@ -1,0 +1,24 @@
+\doxysection{src/algorithm\+\_\+directory.h File Reference}
+\hypertarget{algorithm__directory_8h}{}\label{algorithm__directory_8h}\index{src/algorithm\_directory.h@{src/algorithm\_directory.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/dir\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/file\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc}{Game\+::\+Misc}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game\+::\+Misc\+::\+Algorithm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+godot\+::\+String \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7ef11de12929fbbacbf13ec9a03553f5}{Game\+::\+Misc\+::\+Algorithm\+::get\+\_\+filename\+\_\+extension}} (godot\+::\+String \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{path}}, godot\+::\+String \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{directory\+\_\+splitter}}="{}/"{})
+\begin{DoxyCompactList}\small\item\em This is to get the extension of the file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parameter\+\_\+type}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_aaacf5eba288b80a270686ac8f6ac74c9}{Game\+::\+Misc\+::\+Algorithm\+::recurse\+\_\+folders}} (godot\+::\+String \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{folder\+\_\+path}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{callback}})(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parameter\+\_\+type}} \texorpdfstring{$\ast$}{*}, godot\+::\+Ref$<$ godot\+::\+File\+Access $>$), \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} godot\+::\+Packed\+String\+Array \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{allowed\+\_\+extension}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parameter\+\_\+type}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{param}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\begin{DoxyCompactList}\small\item\em When there\textquotesingle{}s an error, it will throw \doxylink{class_game_1_1_error_1_1gdstr__exception}{Game\+::\+Error\+::gdstr\+\_\+exception} with both message and the appropriate error code List of possible error code\+: \end{DoxyCompactList}\end{DoxyCompactItemize}

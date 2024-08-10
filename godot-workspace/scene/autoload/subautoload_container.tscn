@@ -1,0 +1,32 @@
+[gd_scene load_steps=10 format=3 uid="uid://hvrf5qst1t2g"]
+
+[ext_resource type="PackedScene" uid="uid://u504chp0n8jn" path="res://scene/autoload/bus_event.tscn" id="1_jm3qi"]
+[ext_resource type="PackedScene" uid="uid://dny003seg2rs8" path="res://scene/autoload/item_server.tscn" id="2_20bml"]
+[ext_resource type="PackedScene" uid="uid://bv3pcnfdgmjyw" path="res://scene/autoload/modifier_factory.tscn" id="3_jr36o"]
+[ext_resource type="PackedScene" uid="uid://dy30pa61r28wr" path="res://scene/autoload/weapon_factory.tscn" id="4_qf2v8"]
+[ext_resource type="PackedScene" uid="uid://cgmeds048u80p" path="res://scene/autoload/hit_register_handler.tscn" id="5_0237f"]
+[ext_resource type="PackedScene" uid="uid://ysl6o8mucbxj" path="res://scene/autoload/cursor_follower_main_control.tscn" id="8_g6fby"]
+[ext_resource type="PackedScene" uid="uid://cyaarb6ncd2u5" path="res://scene/autoload/time_scaler.tscn" id="9_najd4"]
+[ext_resource type="PackedScene" uid="uid://cqddmtsa6y5cm" path="res://scene/autoload/damage_indicator_handler.tscn" id="9_wwsse"]
+[ext_resource type="PackedScene" uid="uid://bf77xw5epejj" path="res://scene/game_handler.tscn" id="11_lgmd3"]
+
+[node name="subautoload_container" type="subautoload_container"]
+
+[node name="bus_event" parent="." instance=ExtResource("1_jm3qi")]
+
+[node name="item_server" parent="." instance=ExtResource("2_20bml")]
+
+[node name="modifier_factory" parent="." instance=ExtResource("3_jr36o")]
+max_modifier_combination = 0
+
+[node name="weapon_factory" parent="." instance=ExtResource("4_qf2v8")]
+
+[node name="hit_register_handler" parent="." instance=ExtResource("5_0237f")]
+
+[node name="cursor_follower_control" parent="." instance=ExtResource("8_g6fby")]
+
+[node name="damage_indicator_handler" parent="." instance=ExtResource("9_wwsse")]
+
+[node name="game_handler" parent="." instance=ExtResource("11_lgmd3")]
+
+[node name="time_scaler" parent="." instance=ExtResource("9_najd4")]

@@ -1,0 +1,46 @@
+\doxysection{game\+\_\+runtime\+\_\+data.\+h}
+\hypertarget{game__runtime__data_8h_source}{}\label{game__runtime__data_8h_source}\index{src/game\_runtime\_data.h@{src/game\_runtime\_data.h}}
+\mbox{\hyperlink{game__runtime__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_RUNTIME\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_RUNTIME\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1game__runtime__data}{game\_runtime\_data}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}}\{}
+\DoxyCodeLine{00010\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1game__runtime__data}{game\_runtime\_data}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__runtime__data_ab828aec2ab6cee951beedfe58e39912a}{\_bind\_methods}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__runtime__data_af56a253d8afdf35b6cbeb5a41fc13236}{remove\_all\_subdata}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ subdata\_class*\ \mbox{\hyperlink{class_game_1_1game__runtime__data_a91c5d02dcb7d4217e44fdd27ea840ecb}{get\_subdata}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata<subdata\_class>();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::shared\_ptr<subdata\_class>\ \mbox{\hyperlink{class_game_1_1game__runtime__data_a8d528737e54fef78b893046ec724cd15}{get\_subdata\_shared}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata\_shared<subdata\_class>();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__runtime__data_a5ad85fc71f3313e9fe7ca47f3f26bf68}{set\_subdata}}(subdata\_class*\ from)\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_\_set\_subdata<subdata\_class>(from);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__runtime__data_a76ef3ad41c5002fd21ef5a204ab91ade}{remove\_subdata}}()\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \_\_remove\_subdata<subdata\_class>():}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

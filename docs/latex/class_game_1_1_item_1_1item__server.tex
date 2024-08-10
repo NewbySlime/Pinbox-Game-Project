@@ -1,0 +1,201 @@
+\doxysection{Game\+::Item\+::item\+\_\+server Class Reference}
+\hypertarget{class_game_1_1_item_1_1item__server}{}\label{class_game_1_1_item_1_1item__server}\index{Game::Item::item\_server@{Game::Item::item\_server}}
+
+
+{\ttfamily \#include $<$item\+\_\+server.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::item\+\_\+server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_item_1_1item__server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__server_a2cc03f10547be78859a1b3ed99a8c31e}{item\+\_\+server}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__server_aa6374b53b89e891962194142231d0575}{\texorpdfstring{$\sim$}{\string~}item\+\_\+server}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a688ac1ca6b900c5cfc5a7eaed941465b}{get\+\_\+item\+\_\+object}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game\+::\+Item\+::\+I\+\_\+item\+\_\+container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a8742b5ed5bd374a8ae43a9e9c855bbfe}{get\+\_\+item\+\_\+container}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{id}})
+\item 
+godot\+::\+Node \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_ab56ad1e25a41bdd839455cd38ebd07f1}{get\+\_\+item\+\_\+container\+\_\+node}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a95e4c685d020cfd37c8b2ef1c8bc8bbe}{find\+\_\+container\+\_\+has\+\_\+item}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a76ce054a7759ab3eb53b52e86af9a47a}{set\+\_\+item\+\_\+container\+\_\+filter\+\_\+type}} (\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game\+::\+Item\+::item\+\_\+container\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{id}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint32\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{new\+\_\+type}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a49efabfeaba3f4abc505ad2d602eefb7}{swap\+\_\+item}} (\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{pos\+\_\+from}}, \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{pos\+\_\+to}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a80b60155b4648a07107944a557b19612}{add\+\_\+to\+\_\+container}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} container\+\_\+id, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{index}}=-\/1)
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_ab89071e179ef1bf05751a5f134a99116}{remove\+\_\+from\+\_\+all\+\_\+container}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}}, std\+::set$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} $>$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{\+\_\+exception}}=std\+::set$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} $>$())
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_af7897867d81c3cbd7627e314aede763c}{remove\+\_\+from\+\_\+container}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} container\+\_\+id, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a97383617ccabb6aeab77bb70d35a359d}{remove\+\_\+from\+\_\+container\+\_\+index}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} container\+\_\+id, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{index}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_ae14a6254572989bf4a7e36a5b8bd170d}{delete\+\_\+item}} (\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a7f36037a00653e55474bd06654519bea}{delete\+\_\+item\+\_\+container}} (\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game\+::\+Item\+::item\+\_\+container\+\_\+inst\+\_\+id}} container\+\_\+id)
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a2b4da9f81dda73d7892c88a8429487a4}{drop\+\_\+item}} (\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+pos}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a73b2dd0743e2a92be973486b185443dc}{create\+\_\+item\+\_\+object}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{type}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} godot\+::\+String \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{item\+\_\+id}})
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game\+::\+Item\+::\+I\+\_\+item\+\_\+container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a0cc229fe21491cc967002ff353ff746f}{create\+\_\+item\+\_\+container}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}} container\+\_\+size, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint32\+\_\+t}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{container\+\_\+type}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{new\+\_\+id}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game\+::\+Item\+::item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a87a94a3abd012a2347d8e542ac6415fc}{get\+\_\+iwe2d\+\_\+handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_aa02a056dda995977a3445d9f1f4e69e6}{\+\_\+on\+\_\+gamenode\+\_\+ready}} () \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{override}}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_ac755a81d62f1ae7cdcb597b4b4bc9b65}{\+\_\+get\+\_\+item\+\_\+object\+\_\+mutable}} (\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{id}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{static}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{class_game_1_1_item_1_1item__server_a900ba67c572c2ba330af0cb502810eb8}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_item_1_1item__server_a2cc03f10547be78859a1b3ed99a8c31e}\label{class_game_1_1_item_1_1item__server_a2cc03f10547be78859a1b3ed99a8c31e} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!item\_server@{item\_server}}
+\index{item\_server@{item\_server}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{item\_server()}{item\_server()}}
+{\footnotesize\ttfamily item\+\_\+server\+::item\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_aa6374b53b89e891962194142231d0575}\label{class_game_1_1_item_1_1item__server_aa6374b53b89e891962194142231d0575} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!````~item\_server@{\texorpdfstring{$\sim$}{\string~}item\_server}}
+\index{````~item\_server@{\texorpdfstring{$\sim$}{\string~}item\_server}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}item\_server()}{\string~item\_server()}}
+{\footnotesize\ttfamily item\+\_\+server\+::\texorpdfstring{$\sim$}{\string~}item\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1item__server_a900ba67c572c2ba330af0cb502810eb8}\label{class_game_1_1_item_1_1item__server_a900ba67c572c2ba330af0cb502810eb8} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} item\+\_\+server\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_ac755a81d62f1ae7cdcb597b4b4bc9b65}\label{class_game_1_1_item_1_1item__server_ac755a81d62f1ae7cdcb597b4b4bc9b65} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!\_get\_item\_object\_mutable@{\_get\_item\_object\_mutable}}
+\index{\_get\_item\_object\_mutable@{\_get\_item\_object\_mutable}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{\_get\_item\_object\_mutable()}{\_get\_item\_object\_mutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{item\+\_\+object}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::\+\_\+get\+\_\+item\+\_\+object\+\_\+mutable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_aa02a056dda995977a3445d9f1f4e69e6}\label{class_game_1_1_item_1_1item__server_aa02a056dda995977a3445d9f1f4e69e6} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!\_on\_gamenode\_ready@{\_on\_gamenode\_ready}}
+\index{\_on\_gamenode\_ready@{\_on\_gamenode\_ready}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{\_on\_gamenode\_ready()}{\_on\_gamenode\_ready()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} item\+\_\+server\+::\+\_\+on\+\_\+gamenode\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a80b60155b4648a07107944a557b19612}\label{class_game_1_1_item_1_1item__server_a80b60155b4648a07107944a557b19612} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!add\_to\_container@{add\_to\_container}}
+\index{add\_to\_container@{add\_to\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{add\_to\_container()}{add\_to\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::add\+\_\+to\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{container\+\_\+id,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{item\+\_\+id,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}}}]{index = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a0cc229fe21491cc967002ff353ff746f}\label{class_game_1_1_item_1_1item__server_a0cc229fe21491cc967002ff353ff746f} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!create\_item\_container@{create\_item\_container}}
+\index{create\_item\_container@{create\_item\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{create\_item\_container()}{create\_item\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{I\+\_\+item\+\_\+container}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::create\+\_\+item\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}}}]{container\+\_\+size,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint32\+\_\+t}}}]{container\+\_\+type,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+id = {\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}}} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a73b2dd0743e2a92be973486b185443dc}\label{class_game_1_1_item_1_1item__server_a73b2dd0743e2a92be973486b185443dc} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!create\_item\_object@{create\_item\_object}}
+\index{create\_item\_object@{create\_item\_object}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{create\_item\_object()}{create\_item\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{item\+\_\+object}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::create\+\_\+item\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{type,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} godot\+::\+String \&}]{item\+\_\+id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_ae14a6254572989bf4a7e36a5b8bd170d}\label{class_game_1_1_item_1_1item__server_ae14a6254572989bf4a7e36a5b8bd170d} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!delete\_item@{delete\_item}}
+\index{delete\_item@{delete\_item}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{delete\_item()}{delete\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::delete\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}}}]{item\+\_\+id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a7f36037a00653e55474bd06654519bea}\label{class_game_1_1_item_1_1item__server_a7f36037a00653e55474bd06654519bea} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!delete\_item\_container@{delete\_item\_container}}
+\index{delete\_item\_container@{delete\_item\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{delete\_item\_container()}{delete\_item\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::delete\+\_\+item\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game\+::\+Item\+::item\+\_\+container\+\_\+inst\+\_\+id}}}]{container\+\_\+id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a2b4da9f81dda73d7892c88a8429487a4}\label{class_game_1_1_item_1_1item__server_a2b4da9f81dda73d7892c88a8429487a4} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!drop\_item@{drop\_item}}
+\index{drop\_item@{drop\_item}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{drop\_item()}{drop\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::drop\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&}]{item\+\_\+pos }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a95e4c685d020cfd37c8b2ef1c8bc8bbe}\label{class_game_1_1_item_1_1item__server_a95e4c685d020cfd37c8b2ef1c8bc8bbe} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!find\_container\_has\_item@{find\_container\_has\_item}}
+\index{find\_container\_has\_item@{find\_container\_has\_item}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{find\_container\_has\_item()}{find\_container\_has\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} item\+\_\+server\+::find\+\_\+container\+\_\+has\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{item\+\_\+id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a8742b5ed5bd374a8ae43a9e9c855bbfe}\label{class_game_1_1_item_1_1item__server_a8742b5ed5bd374a8ae43a9e9c855bbfe} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!get\_item\_container@{get\_item\_container}}
+\index{get\_item\_container@{get\_item\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{get\_item\_container()}{get\_item\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{I\+\_\+item\+\_\+container}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::get\+\_\+item\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_ab56ad1e25a41bdd839455cd38ebd07f1}\label{class_game_1_1_item_1_1item__server_ab56ad1e25a41bdd839455cd38ebd07f1} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!get\_item\_container\_node@{get\_item\_container\_node}}
+\index{get\_item\_container\_node@{get\_item\_container\_node}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{get\_item\_container\_node()}{get\_item\_container\_node()}}
+{\footnotesize\ttfamily Node \texorpdfstring{$\ast$}{*} item\+\_\+server\+::get\+\_\+item\+\_\+container\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a688ac1ca6b900c5cfc5a7eaed941465b}\label{class_game_1_1_item_1_1item__server_a688ac1ca6b900c5cfc5a7eaed941465b} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!get\_item\_object@{get\_item\_object}}
+\index{get\_item\_object@{get\_item\_object}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{get\_item\_object()}{get\_item\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{item\+\_\+object}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::get\+\_\+item\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a87a94a3abd012a2347d8e542ac6415fc}\label{class_game_1_1_item_1_1item__server_a87a94a3abd012a2347d8e542ac6415fc} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!get\_iwe2d\_handler@{get\_iwe2d\_handler}}
+\index{get\_iwe2d\_handler@{get\_iwe2d\_handler}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{get\_iwe2d\_handler()}{get\_iwe2d\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler}} \texorpdfstring{$\ast$}{*} item\+\_\+server\+::get\+\_\+iwe2d\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_ab89071e179ef1bf05751a5f134a99116}\label{class_game_1_1_item_1_1item__server_ab89071e179ef1bf05751a5f134a99116} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!remove\_from\_all\_container@{remove\_from\_all\_container}}
+\index{remove\_from\_all\_container@{remove\_from\_all\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_all\_container()}{remove\_from\_all\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} item\+\_\+server\+::remove\+\_\+from\+\_\+all\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{item\+\_\+id,  }\item[{std\+::set$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} $>$}]{\+\_\+exception = {\ttfamily std\+:\+:set$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}$>$()} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_af7897867d81c3cbd7627e314aede763c}\label{class_game_1_1_item_1_1item__server_af7897867d81c3cbd7627e314aede763c} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!remove\_from\_container@{remove\_from\_container}}
+\index{remove\_from\_container@{remove\_from\_container}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_container()}{remove\_from\_container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} item\+\_\+server\+::remove\+\_\+from\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{container\+\_\+id,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{item\+\_\+id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a97383617ccabb6aeab77bb70d35a359d}\label{class_game_1_1_item_1_1item__server_a97383617ccabb6aeab77bb70d35a359d} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!remove\_from\_container\_index@{remove\_from\_container\_index}}
+\index{remove\_from\_container\_index@{remove\_from\_container\_index}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_container\_index()}{remove\_from\_container\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}} item\+\_\+server\+::remove\+\_\+from\+\_\+container\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint64\+\_\+t}}}]{container\+\_\+id,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{int}}}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a76ce054a7759ab3eb53b52e86af9a47a}\label{class_game_1_1_item_1_1item__server_a76ce054a7759ab3eb53b52e86af9a47a} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!set\_item\_container\_filter\_type@{set\_item\_container\_filter\_type}}
+\index{set\_item\_container\_filter\_type@{set\_item\_container\_filter\_type}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{set\_item\_container\_filter\_type()}{set\_item\_container\_filter\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::set\+\_\+item\+\_\+container\+\_\+filter\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game\+::\+Item\+::item\+\_\+container\+\_\+inst\+\_\+id}}}]{id,  }\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{uint32\+\_\+t}}}]{new\+\_\+type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1item__server_a49efabfeaba3f4abc505ad2d602eefb7}\label{class_game_1_1_item_1_1item__server_a49efabfeaba3f4abc505ad2d602eefb7} 
+\index{Game::Item::item\_server@{Game::Item::item\_server}!swap\_item@{swap\_item}}
+\index{swap\_item@{swap\_item}!Game::Item::item\_server@{Game::Item::item\_server}}
+\doxysubsubsection{\texorpdfstring{swap\_item()}{swap\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} item\+\_\+server\+::swap\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&}]{pos\+\_\+from,  }\item[{\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&}]{pos\+\_\+to }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{item__server_8h}{item\+\_\+server.\+h}}\item 
+src/\mbox{\hyperlink{item__server_8cpp}{item\+\_\+server.\+cpp}}\end{DoxyCompactItemize}

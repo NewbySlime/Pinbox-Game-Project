@@ -1,0 +1,94 @@
+\doxysection{dash.\+h}
+\hypertarget{dash_8h_source}{}\label{dash_8h_source}\index{src/dash.h@{src/dash.h}}
+\mbox{\hyperlink{dash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_DASH\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYER\_DASH\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__action__class_8h}{I\_action\_class.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__graphics__handler_8h}{I\_graphics\_handler.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__physics__handler_8h}{I\_physics\_handler.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/collision\_shape2d.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/circle\_shape2d.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/gpu\_particles2d.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/rigid\_body2d.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/ray\_cast2d.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/vector2.hpp"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity_functionality}{Game::EntityFunctionality}}\{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action}{dash\_action}}:\ \mbox{\hyperlink{class_game_1_1_i__action__class}{Game::I\_action\_class}},\ \mbox{\hyperlink{class_game_1_1_i__physics__handler}{Game::I\_physics\_handler}},\ \mbox{\hyperlink{class_game_1_1_i__graphics__handler}{Game::I\_graphics\_handler}}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:\ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4}{dash\_action\_graphics\_obj}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4abfa99e9dd7e18f1799879a0c2952adeb}{dago\_gpu\_particle\_node}}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4}{dash\_action\_physics\_obj}}\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4a03a3eeee98a79f19de4145687aa83782}{dapo\_physics\_body}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4afa9ab36e9702237a9305f1ae0e5996c8}{dapo\_collision\_shape}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4ae716294b400df975b77fb7883ea1eab7}{dapo\_raycast}}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ physics\_body\_type\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ pbt\_rb2}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ dashing\_type\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ dt\_type\ =\ 0x00FF,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ dt\_no\_action\ =\ 0x0,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ dt\_normal\_dash\ =\ 0x1,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ dt\_ultra\_dash\ =\ 0x2,}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ dt\_opt\_flag\ =\ 0xFF00,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ dt\_opt\_init\ =\ 0x0100}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ godot::RayCast2D*\ \_raycast\ =\ NULL;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ godot::PhysicsBody2D*\ \_body\ =\ NULL;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ uint32\_t\ \_body\_type;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ uint16\_t\ \_dash\_type\ =\ dashing\_type::dt\_no\_action;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ godot::Vector2\ \_global\_pos;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ godot::Vector2\ \_target\_pos;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dash\_margin\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dash\_speed\ =\ 1000;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dash\_length;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ godot::Vector2\ \_dash\_start;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ godot::Vector2\ \_direction;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dash\_length\_normal\ =\ 100;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dash\_length\_ultra\ =\ 900;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ godot::GPUParticles2D*\ \_particle\_node;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_particle\_emit\_max\_length\ =\ 50;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a3c3d25b597af9131d56271fbd79c3368}{on\_action\_priming}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a913c99f703632a92b2f394884a7db8a6}{on\_action\_continuing}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a7a4044aa275a09ed529c9e9f5a417ff7}{on\_action\_cancelled}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_aa82c59666b9ec51b1a143ce37ad541ec}{is\_alternate\_viable}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a048c06d16d06223407edb8e7368d5915}{on\_alternate\_action\_priming}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a8c33302e0631aac7d31b4499d151c1db}{on\_alternate\_action\_continuing}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a81f2da8155a69c1ab387ee0347107dab}{on\_alternate\_action\_cancelled}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a413d24e5faa7ca84cf3a12d34007cde5}{on\_update}}(\textcolor{keyword}{const}\ action\_class\_update\_data\ \&update\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a38ea0d6da68e4fb553678d046b2eb647}{on\_physics\_update}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a2f7d31c1515c879a39c9b80b58f56e61}{on\_integrate\_forces}}(godot::PhysicsDirectBodyState2D*\ state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_adf4e8723aa45837cc170b3319a159857}{bind\_physics\_object}}(godot::Object*\ obj,\ uint32\_t\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_ac6af80ee1c78cc2ac3b4f75509684c56}{bind\_graphics\_object}}(godot::Object*\ obj,\ uint32\_t\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \ \ \};}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,117 @@
+\doxysection{hit\+\_\+register\+\_\+interface.\+h}
+\hypertarget{hit__register__interface_8h_source}{}\label{hit__register__interface_8h_source}\index{src/hit\_register\_interface.h@{src/hit\_register\_interface.h}}
+\mbox{\hyperlink{hit__register__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HIT\_REGISTER\_INTERFACE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HIT\_REGISTER\_INTERFACE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/area2d.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node2d.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/timer.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/ray\_cast2d.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{namespace\ }Item\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }weapon\_stats\_data;}
+\DoxyCodeLine{00021\ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71e}{hit\_register\_type\_enum}}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eac615ebfef565f31204d660d455f00b5b}{hrte\_raycast}}\ =\ 0,}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eaff5448d9523d6421400600f194339913}{hrte\_dome}},}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//hrte\_chain\_reaction\_dome,}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eae6bf7d83c4c95b5ba297382d6bf12626}{hrte\_arc}},}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea7cd5bbd9b68123325b0063f06c7e5f22}{hrte\_projectiles}},}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea806934b5f0bcc6cd6a787c9d620f7bad}{hrte\_thrown\_projectiles}},}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eae0e1e4f5638c7dc35d254c20bb0c0372}{hrte\_idle}},}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea40bdda768f6d530c0e2e03e29d91ea87}{hrte\_\_option\_flag}}\ =\ 0xff000000,}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea75c3e9f4aac0d87ade339e591690285f}{hrte\_\_type\_flag}}\ =\ 0x00ffffff,}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea7bf0c23f046818e145ff7080713ed8cc}{hrte\_with\_next}}\ =\ 0x80000000,}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eaeac5545b92b762431378182d16bde88b}{hrte\_ignore\_simultaneous\_deletion}}\ =\ 0x40000000}
+\DoxyCodeLine{00036\ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1hit__register__start__data}{hit\_register\_start\_data}}\{}
+\DoxyCodeLine{00039\ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data_a347658a132a950aaed0834c8882daa80}{position}};}
+\DoxyCodeLine{00040\ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data_a7be1f5c35c557231164f8ae5f6d7121e}{dir}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data_a692dbe30b96df11bee8084079d9c65b5}{length}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_1_1hit__register__start__data_ae2622feaf019d06dec8a2e1c7f6b8b8d}{is\_from\_player}};}
+\DoxyCodeLine{00044\ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1hit__register__state}{hit\_register\_state}}\{}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71e}{hit\_register\_type\_enum}}\ \mbox{\hyperlink{struct_game_1_1hit__register__state_a4b46c110550b88f134228003a336de2e}{hitreg\_type}};}
+\DoxyCodeLine{00048\ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{hit\_register\_pass\_data}}\{}
+\DoxyCodeLine{00051\ \ \ \ \ godot::CollisionObject2D*\ \mbox{\hyperlink{struct_game_1_1hit__register__pass__data_a58e3508bce8e7d779c6b8d32308d3ddb}{collider}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_1_1hit__register__pass__data_a8a5ed6b0585fcde77a2b3384568d3652}{do\_continue}};}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{hit\_register\_state}}*\ \mbox{\hyperlink{struct_game_1_1hit__register__pass__data_a10d395592f3d0f9f5da6f3ee8a5ffb4b}{current\_hitreg\_state}};}
+\DoxyCodeLine{00055\ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1hit__register__data}{hit\_register\_data}}\{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_game_1_1hit__register__data_aaf3eb3f7862616e4da06b3ae8c7a2fdb}{copy\_to}}(\mbox{\hyperlink{struct_game_1_1hit__register__data}{hit\_register\_data}}*\ to)\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ memcpy(to,\ \textcolor{keyword}{this},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_game_1_1hit__register__data}{hit\_register\_data}})}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ -\/\ \textcolor{keyword}{sizeof}(std::vector<hit\_register\_data*>)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ );}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ godot::String\ \mbox{\hyperlink{struct_game_1_1hit__register__data_a344956a65a0bfbcc4fd24983d7ba5a5f}{key}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71e}{hit\_register\_type\_enum}}\ \mbox{\hyperlink{struct_game_1_1hit__register__data_a31cdefc99c0ee91a3cbb5400c792efa6}{hitreg\_type}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ length\ of\ a\ ray/radius\ of\ a\ dome/radius\ of\ projectile's\ hitbox}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1hit__register__data_a2ffbb7ac0c1bf1135531fb4c95c49155}{length}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ only\ applicable\ for\ thrown\ projectiles}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ bool\ end\_on\_collision;}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ decay\ time\ of\ a\ dome/time\ on\ air/time\ idling}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1hit__register__data_ac5f88969223ecbde6b28f7be9d45cd5c}{time}};}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ use\ vector\ in\ case\ if\ the\ hitreg\ is\ branching}}
+\DoxyCodeLine{00078\ \ \ \ \ std::vector<hit\_register\_data*>\ \mbox{\hyperlink{struct_game_1_1hit__register__data_ae5f0923bcdf04aaf281006ff84412260}{\_next}};}
+\DoxyCodeLine{00079\ \ \ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_i__damager}{I\_damager}}\{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_i__damager_a1941630a8d8b30c18d3b635c423e6067}{\string~I\_damager}}()\{\}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__damager_a0ac488b63c6fd32d780c9343895a549b}{on\_hit}}(\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{hit\_register\_pass\_data}}*\ pass\_data)\ =\ 0;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__damager_ab1fc5833895d357dd9d2e4fb7e293732}{on\_hitreg\_changed}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{hit\_register\_state}}*\ new\_state\ =\ NULL)\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<I\_damager>\ \mbox{\hyperlink{class_game_1_1_i__damager_a94443ce5e64fb82afffb11ab5fe06089}{clone\_damager}}()\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_i__hit__register}{I\_hit\_register}}\{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_i__hit__register_a914f0ba4521ed9e5f1618e7e689cdcf9}{\string~I\_hit\_register}}()\{\}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__hit__register_acd7158a1e39873f1b668e8187070eba8}{start\_casting}}()\ =\ 0;}
+\DoxyCodeLine{00097\ \ \ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1hit__register__data__container}{hit\_register\_data\_container}};}
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1hit__register__handler}{hit\_register\_handler}};}
+\DoxyCodeLine{00102\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1hitreg__metadata}{hitreg\_metadata}}\{}
+\DoxyCodeLine{00103\ \ \ \ \ std::shared\_ptr<Game::I\_damager>\ \mbox{\hyperlink{struct_game_1_1hitreg__metadata_a7d3a52a58b425844de4a4fab9bba2427}{damager}}\ =\ std::shared\_ptr<Game::I\_damager>(NULL);}
+\DoxyCodeLine{00104\ \ \ \ \ std::shared\_ptr<Game::hit\_register\_data\_container>\ \mbox{\hyperlink{struct_game_1_1hitreg__metadata_a6e159cc68bc7b1eca7fa3df9422336f8}{data}}\ =\ std::shared\_ptr<Game::hit\_register\_data\_container>(NULL);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__data}{hit\_register\_data}}*\ \mbox{\hyperlink{struct_game_1_1hitreg__metadata_aa43ed7abd19c10ee4e2847c8f8e2f77a}{current\_hitreg\_data}};}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_game_1_1hit__register__handler}{hit\_register\_handler}}*\ \mbox{\hyperlink{struct_game_1_1hitreg__metadata_af748e1f6acde985c83e26eb05b500026}{handler}};}
+\DoxyCodeLine{00108\ \ \ \};}
+\DoxyCodeLine{00109\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

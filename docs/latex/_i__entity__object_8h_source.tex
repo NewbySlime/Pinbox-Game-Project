@@ -1,0 +1,36 @@
+\doxysection{I\+\_\+entity\+\_\+object.\+h}
+\hypertarget{_i__entity__object_8h_source}{}\label{_i__entity__object_8h_source}\index{src/I\_entity\_object.h@{src/I\_entity\_object.h}}
+\mbox{\hyperlink{_i__entity__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_ENTITY\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_ENTITY\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__data_8h}{entity\_data.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__resource__data_8h}{entity\_resource\_data.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id__types_8h}{id\_types.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }entity\_data;}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object}{I\_entity\_object}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object}{I\_entity\_object}})}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object_ab4aee0019140ec8e67b8b8c0e580a1ab}{get\_instance\_id}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{id__types_8h_a5d0c04d1b5354a0ef6bdb182cd8b9bc9}{ENTITY\_ID\_NULL}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game::Entity::entity\_data}}*\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object_aa5afb7df93a5c546cf58e1af775ec0e2}{get\_entity\_data}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game::Entity::entity\_resource\_data}}*\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object_a7c2123b12bf7710d0fabeebccfe62944}{get\_entity\_resource\_data}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

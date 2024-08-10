@@ -1,0 +1,147 @@
+\doxysection{Game\+Utils\+::Identification\+::runtime\+\_\+id\+\_\+container\texorpdfstring{$<$}{<} id\+\_\+object, item\+\_\+object \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container}{}\label{class_game_utils_1_1_identification_1_1runtime__id__container}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+
+
+{\ttfamily \#include $<$runtime\+\_\+id\+\_\+container.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{class\+\_\+error}} \{ \newline
+\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203aa5d54b8d70d17ec712fc66ceee2ce1ce}{rtic\+\_\+ce\+\_\+ok}}
+, \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36}{id\+\_\+not\+\_\+exist}}
+, \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a258f9eab8f19199b96d0b121151abb52}{id\+\_\+already\+\_\+exist}}
+, \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ab72734c16c282e76835a5d72d81e647c}{id\+\_\+is\+\_\+excluded}}
+, \newline
+\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ad2308bb26d404e0ba0745c45701158d8}{index\+\_\+out\+\_\+of\+\_\+range}}
+, \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203acffd1f3c3532234bcaf293b0b8b90d4e}{cannot\+\_\+create\+\_\+new\+\_\+id}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{class\+\_\+error}} \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9434adc505564f5c223a7cbad5e98186}{get\+\_\+last\+\_\+error}} ()
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a4a7795ee6ffc23dbfec3535d25e01f0b}{add\+\_\+to\+\_\+excluded\+\_\+id}} (id\+\_\+object id)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_aa8457a52738929f091da1ba6ffb247a4}{remove\+\_\+from\+\_\+excluded\+\_\+id}} (id\+\_\+object id)
+\item 
+id\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_ada05d6e434351d434e1abffb3b1867e6}{find\+\_\+new\+\_\+id}} ()
+\item 
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a6fcf56e8201885ec995aefb20f6aa32f}{get\+\_\+item}} (id\+\_\+object id, item\+\_\+object default\+\_\+item=item\+\_\+object())
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a079a214650da80fd9f8ed5cff4511e59}{add\+\_\+item}} (item\+\_\+object data, bool as\+\_\+reserved=false, id\+\_\+object reserved\+\_\+id=id\+\_\+object())
+\item 
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a15d89d3081ca931ba40a879a5d2a302b}{delete\+\_\+item}} (id\+\_\+object id, item\+\_\+object default\+\_\+item=item\+\_\+object())
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_aa7937c4d45de9ff6e9dade6f3bd9c35a}{get\+\_\+size}} ()
+\item 
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_ae869f9ae0b5f27b94ff74a4971f77bd2}{get\+\_\+item\+\_\+index}} (uint64\+\_\+t index, item\+\_\+object default\+\_\+item=item\+\_\+object())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!class\_error@{class\_error}}
+\index{class\_error@{class\_error}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{class\_error}{class\_error}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+enum \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container\+::class\+\_\+error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rtic\_ce\_ok@{rtic\_ce\_ok}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!rtic\_ce\_ok@{rtic\_ce\_ok}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203aa5d54b8d70d17ec712fc66ceee2ce1ce}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203aa5d54b8d70d17ec712fc66ceee2ce1ce} 
+rtic\+\_\+ce\+\_\+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{id\_not\_exist@{id\_not\_exist}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!id\_not\_exist@{id\_not\_exist}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36} 
+id\+\_\+not\+\_\+exist&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{id\_already\_exist@{id\_already\_exist}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!id\_already\_exist@{id\_already\_exist}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a258f9eab8f19199b96d0b121151abb52}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a258f9eab8f19199b96d0b121151abb52} 
+id\+\_\+already\+\_\+exist&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{id\_is\_excluded@{id\_is\_excluded}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!id\_is\_excluded@{id\_is\_excluded}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ab72734c16c282e76835a5d72d81e647c}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ab72734c16c282e76835a5d72d81e647c} 
+id\+\_\+is\+\_\+excluded&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{index\_out\_of\_range@{index\_out\_of\_range}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!index\_out\_of\_range@{index\_out\_of\_range}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ad2308bb26d404e0ba0745c45701158d8}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ad2308bb26d404e0ba0745c45701158d8} 
+index\+\_\+out\+\_\+of\+\_\+range&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cannot\_create\_new\_id@{cannot\_create\_new\_id}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!cannot\_create\_new\_id@{cannot\_create\_new\_id}}}\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203acffd1f3c3532234bcaf293b0b8b90d4e}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203acffd1f3c3532234bcaf293b0b8b90d4e} 
+cannot\+\_\+create\+\_\+new\+\_\+id&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a079a214650da80fd9f8ed5cff4511e59}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a079a214650da80fd9f8ed5cff4511e59} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!add\_item@{add\_item}}
+\index{add\_item@{add\_item}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{add\_item()}{add\_item()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::add\+\_\+item (\begin{DoxyParamCaption}\item[{item\+\_\+object}]{data,  }\item[{bool}]{as\+\_\+reserved = {\ttfamily false},  }\item[{id\+\_\+object}]{reserved\+\_\+id = {\ttfamily id\+\_\+object()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a4a7795ee6ffc23dbfec3535d25e01f0b}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a4a7795ee6ffc23dbfec3535d25e01f0b} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!add\_to\_excluded\_id@{add\_to\_excluded\_id}}
+\index{add\_to\_excluded\_id@{add\_to\_excluded\_id}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{add\_to\_excluded\_id()}{add\_to\_excluded\_id()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::add\+\_\+to\+\_\+excluded\+\_\+id (\begin{DoxyParamCaption}\item[{id\+\_\+object}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a15d89d3081ca931ba40a879a5d2a302b}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a15d89d3081ca931ba40a879a5d2a302b} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!delete\_item@{delete\_item}}
+\index{delete\_item@{delete\_item}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{delete\_item()}{delete\_item()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::delete\+\_\+item (\begin{DoxyParamCaption}\item[{id\+\_\+object}]{id,  }\item[{item\+\_\+object}]{default\+\_\+item = {\ttfamily item\+\_\+object()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_ada05d6e434351d434e1abffb3b1867e6}\label{class_game_utils_1_1_identification_1_1runtime__id__container_ada05d6e434351d434e1abffb3b1867e6} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!find\_new\_id@{find\_new\_id}}
+\index{find\_new\_id@{find\_new\_id}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{find\_new\_id()}{find\_new\_id()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+id\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::find\+\_\+new\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a6fcf56e8201885ec995aefb20f6aa32f}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a6fcf56e8201885ec995aefb20f6aa32f} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!get\_item@{get\_item}}
+\index{get\_item@{get\_item}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{get\_item()}{get\_item()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::get\+\_\+item (\begin{DoxyParamCaption}\item[{id\+\_\+object}]{id,  }\item[{item\+\_\+object}]{default\+\_\+item = {\ttfamily item\+\_\+object()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_ae869f9ae0b5f27b94ff74a4971f77bd2}\label{class_game_utils_1_1_identification_1_1runtime__id__container_ae869f9ae0b5f27b94ff74a4971f77bd2} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!get\_item\_index@{get\_item\_index}}
+\index{get\_item\_index@{get\_item\_index}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{get\_item\_index()}{get\_item\_index()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+item\+\_\+object \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::get\+\_\+item\+\_\+index (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{index,  }\item[{item\+\_\+object}]{default\+\_\+item = {\ttfamily item\+\_\+object()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_a9434adc505564f5c223a7cbad5e98186}\label{class_game_utils_1_1_identification_1_1runtime__id__container_a9434adc505564f5c223a7cbad5e98186} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!get\_last\_error@{get\_last\_error}}
+\index{get\_last\_error@{get\_last\_error}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{get\_last\_error()}{get\_last\_error()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{class\+\_\+error}} \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::get\+\_\+last\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_aa7937c4d45de9ff6e9dade6f3bd9c35a}\label{class_game_utils_1_1_identification_1_1runtime__id__container_aa7937c4d45de9ff6e9dade6f3bd9c35a} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_utils_1_1_identification_1_1runtime__id__container_aa8457a52738929f091da1ba6ffb247a4}\label{class_game_utils_1_1_identification_1_1runtime__id__container_aa8457a52738929f091da1ba6ffb247a4} 
+\index{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}!remove\_from\_excluded\_id@{remove\_from\_excluded\_id}}
+\index{remove\_from\_excluded\_id@{remove\_from\_excluded\_id}!GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$@{GameUtils::Identification::runtime\_id\_container$<$ id\_object, item\_object $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_excluded\_id()}{remove\_from\_excluded\_id()}}
+{\footnotesize\ttfamily template$<$typename id\+\_\+object , typename item\+\_\+object $>$ \\
+void \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{Game\+Utils\+::\+Identification\+::runtime\+\_\+id\+\_\+container}}$<$ id\+\_\+object, item\+\_\+object $>$\+::remove\+\_\+from\+\_\+excluded\+\_\+id (\begin{DoxyParamCaption}\item[{id\+\_\+object}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime__id__container_8h}{runtime\+\_\+id\+\_\+container.\+h}}\end{DoxyCompactItemize}

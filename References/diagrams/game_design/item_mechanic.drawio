@@ -1,0 +1,209 @@
+<mxfile host="65bd71144e">
+    <diagram id="PHpvrYNtdiym4RYi9IZB" name="Page-1">
+        <mxGraphModel dx="2009" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-150" y="30" width="550" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="UI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="95" y="50" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="30" width="370" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Interaction" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="605" y="60" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="30" width="370" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Handling&lt;br&gt;and Storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1012.5" y="60" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="item_server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="995" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="item_container" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="575" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="10" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="item_container_control" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="160" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="320" as="sourcePoint"/>
+                        <mxPoint x="530" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="adding interface for player interaction with the item_container" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="120" width="194" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="585" y="200" as="sourcePoint"/>
+                        <mxPoint x="307.5" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="as an interface to manage items from item_server" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="140" width="165" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1360" y="320" width="370" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Factories can also hold data for each item id listed in item server.&lt;br&gt;These factories only create the I_item objects.&lt;br&gt;If the object have to interact with player, then the I_item should be sent to &quot;action factories&quot;." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="16" vertex="1">
+                    <mxGeometry x="10" y="450" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Subdata Factory" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1477.5" y="350" width="135" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="16" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="modifier_factory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1462.5" y="420" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="weapon_factory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1462.5" y="520" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Creating subdata" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="395" width="165" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="item_frame_control" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-120" y="160" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="To give framing for each item in a container" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="28" y="120" width="194" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="inventory_control" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="335" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="UI for inventory handling" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="270" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="550" width="370" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Action Factory" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="605" y="580" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="equippable_factory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="552.5" y="650" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="The function of the factory(s) are to create an equippable object based on the item_object supplied." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="770" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="consumables_factory" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1462.5" y="620" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&lt;h1&gt;Item ID, and Item Server ID&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;Item ID is an persistant ID for all item in the game files.&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;While Item Server ID is an ID for the item in the runtime (while the game is running).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;The main difference is Item Server ID cannot be used for getting a data of an item of a certain type. But can be used to get an item in the while running game.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-770" y="100" width="400" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-150" y="550" width="550" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Gameplay" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="95" y="580" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="57" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="57" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="equippable_object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="650" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="37" target="57" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="620" as="targetPoint"/>
+                        <mxPoint x="1472.5" y="370" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="Sending item_object to&lt;br&gt;&amp;nbsp;certain action factory" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="695" y="490" width="165" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="weapon_handler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-90" y="650" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="consumables_handler" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-90" y="740" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Create an equippable object" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="630" width="165" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1850" y="30" width="360" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="2000" y="50" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="66" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="item_database" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1947.5" y="120" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Database is a type of server that holds all data about an item. The data itself is not a runtime data, meaning that it cannot be written." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1855" y="450" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="item_server only creates a item_object object then store it as a runtime object. When creating item_object from an ID, item_data is sent to factories to handle stuff like creating, saving, or loading sub-data." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="260" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;h1&gt;Item Object and Equippable&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;Item Objects (previously I_item with inheriting system) are an object in which the object holds the data of certain object. This object only holds data that identifies the item, not other types of data such as weapon_data, consumable_data, and such.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;The answer to &quot;how to make it a weapon or equippable&quot; is to use subdata_container. By using this system, item can hold other types of data at once without any inheriting. Also, it will help to catch an error where the item is actually not a weapon, thus stopping further inevitable crash of the game.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;And yes, by using this system, an item can be weapon, modifier, consumables or any other at the same time. This might be awkward, but introduces some new ideas.&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-770" y="365" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;h1&gt;Creating subdata for equippable&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;When an object requesting an item to become an equippable, the object will ask the&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-770" y="690" width="400" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;h1&gt;Saving those subdata(s)&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;When a game saves an item, item_server will pass those to all factories to create data representing the game save.&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-770" y="820" width="400" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="77" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Getting Modifier data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="78" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1397" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="modifier_database" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1947.5" y="335" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="82" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1119.9999999999995" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="82" value="item_resource_database" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1947.5" y="205" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;b&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;Subdata List&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="547.5" y="1245" width="610" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;h1&gt;modifier_container_item&lt;/h1&gt;&lt;div&gt;A subdata that holds many modifiers. Created by modfiier factory, and used with modifier_combination_helper. It's used by weapon_handler, after getting item_container in item_pouch_data subdata.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="1400" width="530" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;h1&gt;weapon_data&lt;/h1&gt;&lt;div&gt;Containing stats and hitreg data. Created by weapon_factory. Used by weapon_handler, which derived from equippable_handler.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="1400" width="530" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;h1&gt;consumables_data&lt;/h1&gt;&lt;div&gt;Containing consumables counterpart of stats. This subdata can also exist with weapon_data when the consum&lt;span style=&quot;background-color: initial;&quot;&gt;ables can be thrown (which in turn, have to use weapon_data).&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="1680" width="530" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;h1&gt;equippable_pouch&lt;/h1&gt;&lt;div&gt;This subdata has item_container inside of it. It holds the container and have several functions to modify the item_container. item_pouch_data is the counterpart of the static data.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;glass=0;sketch=0;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="1680" width="530" height="200" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

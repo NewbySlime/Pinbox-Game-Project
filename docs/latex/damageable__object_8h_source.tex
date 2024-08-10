@@ -1,0 +1,132 @@
+\doxysection{damageable\+\_\+object.\+h}
+\hypertarget{damageable__object_8h_source}{}\label{damageable__object_8h_source}\index{src/damageable\_object.h@{src/damageable\_object.h}}
+\mbox{\hyperlink{damageable__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DAMAGEABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DAMAGEABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__object_8h}{entity\_object.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__vital__object_8h}{I\_vital\_object.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/collision\_object2d.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/timer.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED\ "{}sdoohpc"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED\ "{}sdooheal"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED\ "{}sdoodmg"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD\ "{}sdooded"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED\ "{}sdoor"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED\ "{}sdooepc"{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{class\ }vital\_data;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{comment}{//\ TODO\ note:\ using\ PhysicsBody\ when\ a\ PhysicsBody\ is\ entering\ as\ a\ child}}
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ or\ bind\ it.}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{damageable\_object}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game::Entity::entity\_object}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object}{Game::Entity::I\_vital\_object}}\{}
+\DoxyCodeLine{00037\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{damageable\_object}},\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game::Entity::entity\_object}})}
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\_INTERFACE\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{damageable\_object}})}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{bool},\ is\_static)}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \_vital\_data\_cm;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data}{vital\_data}}*\ \_vital\_data;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_do\_restore\_energy\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ godot::Timer*\ \_cooldown\_ep\_timer;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_check\_health();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_cooldown\_ep\_timeout();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a24d729a5768a76982acd8e4bb03022e7}{\_bind\_methods}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ac01e3144f93e08d2cabe3f5d738c84ba}{\_on\_vital\_data\_changed}}()\{\}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{comment}{//\ these\ are\ callbacks\ for\ derived\ class\ for\ certain\ event\ without\ listening\ to\ signals}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{comment}{//\ parameters\ that\ passed\ within\ this\ function,\ can\ be\ edited}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a45c788f7d0993d5ec66191dbc7c31d66}{\_on\_hp\_changed}}()\{\}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ab1345266a6602f44ab3f9eadc2436c0e}{\_on\_damaged}}(\mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game::Entity::damage\_info}}\&\ d\_info)\{\}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_aa764b95da09f2051298164487d86bd8d}{\_on\_healed}}(\mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game::Entity::heal\_info}}\&\ h\_info)\{\}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a502383cefe02116d98651bc0596f976d}{\_on\_dead}}()\{\}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a997e2ce3df2ba99fe46e9e647963081a}{\_on\_revived}}(\mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game::Entity::revive\_info}}\&\ r\_info)\{\}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af9b3c3fe037a99800d7726e2904adf5b}{\_on\_ep\_changed}}(\textcolor{keywordtype}{double}\ new\_ep)\{\}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a5635d90e17359ed3711cf46ac5f32d82}{\_on\_energy\_exhausted}}()\{\}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a796a0f07dc13eb98efb1510009501811}{\_set\_max\_hp}}(\textcolor{keywordtype}{double}\ max\_hp,\ \textcolor{keywordtype}{bool}\ restore\_hp\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ad10edbb80d74e7d5e6635b83aaeea9ef}{\_set\_max\_ep}}(\textcolor{keywordtype}{double}\ max\_ep,\ \textcolor{keywordtype}{bool}\ restore\_ep\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a2259944336397e60a6f15e4bce87d66b}{\_set\_health\_point}}(\textcolor{keywordtype}{double}\ new\_hp,\ \textcolor{keywordtype}{bool}\ capped\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a02d571d179aa067673fa3f98e5c776af}{\_set\_energy\_point}}(\textcolor{keywordtype}{double}\ new\_ep,\ \textcolor{keywordtype}{bool}\ capped\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af6861ee332fe40a07980b722fc14f267}{\_set\_restore\_rate\_ep}}(\textcolor{keywordtype}{double}\ restore\_rate);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a97851d0bd483ed70a93ea6c4f6d13587}{\_set\_restore\_delay\_ep}}(\textcolor{keywordtype}{double}\ restore\_delay);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a95dde1ae40604e05939092bae23c7f28}{damageable\_object}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a0a33bd4447bce6edbf462b68d1e646a2}{\string~damageable\_object}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a5a0e260a4e329791d74e6ceaaa3dc385}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a1130f0b3671ff14c322a45bdd5f7cb0d}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af031e16d73c6de557c2bc1d942720f08}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a7b53ffd7d946c3339c195b14264ca791}{do\_damage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game::Entity::damage\_info}}\&\ d\_info)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ab2cf9e57ea8d7865057250b4a27e5375}{do\_heal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game::Entity::heal\_info}}\&\ h\_info)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a9bfdd6d1aef1a9249f00cf4c8277018b}{do\_revive}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game::Entity::revive\_info}}\&\ r\_info)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a2f71a76904e92d41cebf2209cef7bba9}{use\_energy}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ e\_point)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a09ddaa4b3aac268389401690d13b4c32}{get\_energy\_point}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data}{Game::Entity::vital\_data}}*\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a9ef2eba65df9470beefc04227d348df0}{get\_vital\_data}}();}
+\DoxyCodeLine{00096\ \ \ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1vital__data}{vital\_data}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game::Entity::damageable\_object}};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\_hp;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ current\_hp;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\_ep;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ current\_ep;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ restore\_rate\_ep;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ restore\_delay\_ep;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ define\ this}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_a7d3e15591746eaa64c4c84e3c6cada54}{get\_subdata\_name}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_ab7c4b46e6a5d051ef8c0f5baea153d34}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_a194a0b8dee5579fb33d3bb19be6b876d}{get\_max\_hp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_a5ef0f01a97af5f557f43373cd0a7b8b3}{get\_current\_hp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_a87cad89744e2fe7bc11093743e23ac8e}{get\_max\_ep}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data_a6f7259af9e6c233f3b289f25a48ae08b}{get\_current\_ep}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ \ \ \};}
+\DoxyCodeLine{00124\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

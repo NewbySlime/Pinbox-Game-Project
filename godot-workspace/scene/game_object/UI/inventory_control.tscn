@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=3 uid="uid://hm6miorkn6it"]
+
+[ext_resource type="PackedScene" uid="uid://b1uw21nacbjvp" path="res://scene/game_object/UI/item_container_control.tscn" id="1_131bk"]
+[ext_resource type="PackedScene" uid="uid://bgpe17eqncto6" path="res://scene/game_object/UI/item_deleter_control.tscn" id="2_wtrxo"]
+
+[sub_resource type="Animation" id="Animation_subk7"]
+resource_name = "hide"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o7eaw"]
+resource_name = "show"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_alc7c"]
+_data = {
+"hide": SubResource("Animation_subk7"),
+"show": SubResource("Animation_o7eaw")
+}
+
+[node name="inventory_control" type="inventory_control"]
+item_sprite_template_scene = "res://scene/game_object/preset_objects/items/UI/inventory_control/item_sprite_template.tscn"
+item_description_popout_scene = "res://scene/game_object/UI/item_description_popout.tscn"
+description_popout_idle_time = 1.2
+cursor_follower_item_sprite_size = 30
+animation_player = NodePath("AnimationPlayer")
+ui_drop_area = NodePath("MarginContainer/HBoxContainer/VBoxContainer/ui_drop_area")
+item_deleter_control = NodePath("MarginContainer/HBoxContainer/VBoxContainer2/item_deleter_contol")
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_process_mode = 2
+libraries = {
+"": SubResource("AnimationLibrary_alc7c")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="item_container_control" parent="MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("1_131bk")]
+use_premade_container = true
+premade_container_id = 2
+max_size = 60
+frame_horizontal_count = 4
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="ui_drop_area" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 5
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/VBoxContainer/ui_drop_area"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.188235)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="item_container_control" parent="MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("1_131bk")]
+use_premade_container = true
+premade_container_id = 1
+max_size = 60
+frame_horizontal_count = 4
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="item_deleter_contol" parent="MarginContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_wtrxo")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2

@@ -1,0 +1,73 @@
+\doxysection{entity\+\_\+actor.\+h}
+\hypertarget{entity__actor_8h_source}{}\label{entity__actor_8h_source}\index{src/entity\_actor.h@{src/entity\_actor.h}}
+\mbox{\hyperlink{entity__actor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTITY\_ACTOR\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTITY\_ACTOR\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__server_8h}{entity\_server.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__actor_8h}{I\_actor.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__container_8h}{subautoload\_container.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor}{entity\_actor}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_i__actor}{Game::I\_actor}}\ \{}
+\DoxyCodeLine{00014\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor}{entity\_actor}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\_INTERFACE\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor}{entity\_actor}})}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_overrider\_metadata\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ overrider\_packed\_scene;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ godot::Node*\ \_current\_instance\ =\ NULL;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__server}{Game::Entity::entity\_server}}*\ \_entity\_server;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ \_bound\_entity\_id;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ std::map<godot::String,\ \_overrider\_metadata*>\ \_overrider\_metadata\_map;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ std::map<uint64\_t,\ godot::String>\ \_instanced\_overrider\_backreference\_map;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_metadata\_delete(uint64\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_metadata\_delete(godot::String\ associated\_id);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ create\ overriders,\ or\ reparent\ when\ exists}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_add\_overrider\_to\_entity(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game::Entity::entity\_object}}*\ \_entity\_object);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ godot::Node*\ \_create\_overrider(godot::String\ associated\_id);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_overrider\_freed(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ param);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{comment}{//\ listens\ from\ damageable\_object\ (if\ possible)}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_entity\_killed();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{comment}{//\ listens\ from\ entity\_object}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_entity\_despawned();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_afe9b2c09bfaa86ed2fea5faaefee457d}{\_bind\_methods}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a7e50fe9a3dddca0a1ea20563ce99a6bb}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a514d2fe294f2638c0c209c1bab8ed5b7}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_ad1f8270cc054a50124dc666dcb695e42}{\_on\_entity\_killed\_callback}}()\{\}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a55dabaac063dddafa65998c1c3ca973e}{\_on\_entity\_despawned\_callback}}()\{\}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{comment}{//\ supplied\ overrider\ should\ have\ overrider\_base\ as\ base\ class\ and\ also\ predelete\_notifier\ attribute\ signals}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a4f5677ffb47420453fe6f046f0e19186}{\_add\_overrider}}(godot::String\ associated\_id,\ godot::Ref<godot::PackedScene>\ overrider\_pckscene);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a336c7aa19a74b380632aedb40abccb86}{\_remove\_overrider}}(godot::String\ associated\_id);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a8aaddd9c01bd9e0147c87afc1813484b}{\string~entity\_actor}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a14cea489b7ddc90375c8a1dee8345f39}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a975b874048faf5489fa8fda3d321ad80}{bind\_to\_entity}}(\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ entity\_id)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ \ \ \};}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

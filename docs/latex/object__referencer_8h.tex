@@ -1,0 +1,68 @@
+\doxysection{src/object\+\_\+referencer.h File Reference}
+\hypertarget{object__referencer_8h}{}\label{object__referencer_8h}\index{src/object\_referencer.h@{src/object\_referencer.h}}
+{\ttfamily \#include "{}predelete\+\_\+notifier.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/core/class\+\_\+db.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{object__referencer_8h_ae69af5afe94dd07402742bdb344f9144}{ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+INHERIT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{object__referencer_8h_a61f2cbe5c9599b4e91c4a3727926ee8f}{ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+DEFINE}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{object__referencer_8h_ad369ef01cb2ccc47745c326983d910d5}{ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+BIND\+\_\+\+GODOT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{object__referencer_8h_a6bcf8c86da29b192b7f80f8bb2105ee0}{ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+ON\+\_\+\+NOTIFICATION}}(code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{object__referencer_8h_ad369ef01cb2ccc47745c326983d910d5}\label{object__referencer_8h_ad369ef01cb2ccc47745c326983d910d5} 
+\index{object\_referencer.h@{object\_referencer.h}!ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT@{ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT}}
+\index{ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT@{ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT}!object\_referencer.h@{object\_referencer.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT}{ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+BIND\+\_\+\+GODOT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(godot::D\_METHOD(\textcolor{stringliteral}{"{}\_\_object\_referencer\_on\_node\_predelete"{}},\ \textcolor{stringliteral}{"{}param"{}}),\ \&origin\_class::\_\_object\_referencer\_on\_node\_predelete);\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(godot::D\_METHOD(\textcolor{stringliteral}{"{}\_\_object\_referencer\_on\_node\_exiting"{}}),\ \&origin\_class::\_\_object\_reference\_on\_node\_exiting);}
+
+\end{DoxyCode}
+\Hypertarget{object__referencer_8h_a61f2cbe5c9599b4e91c4a3727926ee8f}\label{object__referencer_8h_a61f2cbe5c9599b4e91c4a3727926ee8f} 
+\index{object\_referencer.h@{object\_referencer.h}!ATTR\_OBJECT\_REFERENCER\_DEFINE@{ATTR\_OBJECT\_REFERENCER\_DEFINE}}
+\index{ATTR\_OBJECT\_REFERENCER\_DEFINE@{ATTR\_OBJECT\_REFERENCER\_DEFINE}!object\_referencer.h@{object\_referencer.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OBJECT\_REFERENCER\_DEFINE}{ATTR\_OBJECT\_REFERENCER\_DEFINE}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{object__referencer_8h_ae69af5afe94dd07402742bdb344f9144}\label{object__referencer_8h_ae69af5afe94dd07402742bdb344f9144} 
+\index{object\_referencer.h@{object\_referencer.h}!ATTR\_OBJECT\_REFERENCER\_INHERIT@{ATTR\_OBJECT\_REFERENCER\_INHERIT}}
+\index{ATTR\_OBJECT\_REFERENCER\_INHERIT@{ATTR\_OBJECT\_REFERENCER\_INHERIT}!object\_referencer.h@{object\_referencer.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OBJECT\_REFERENCER\_INHERIT}{ATTR\_OBJECT\_REFERENCER\_INHERIT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+INHERIT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{struct\ }\_\_\_object\_referencer\_metadata\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ godot::Node*\ \_this\_node;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ godot::Node**\ \_reference\_var;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \};\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ std::map<uint64\_t,\ \_\_\_object\_referencer\_metadata>\ \_\_\_object\_referencer\_metadata\_map;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ std::map<uint64\_t,\ \_\_\_object\_referencer\_metadata>\ \_\_\_object\_referencer\_slow\_metadata\_map;\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \_\_object\_referencer\_on\_node\_exiting();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \_\_object\_referencer\_on\_node\_predelete(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ param);\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{protected}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ This\ will\ also\ change\ the\ reference\ if\ the\ target\ node\ is\ already\ added.\ */}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \_object\_referencer\_add\_reference(godot::Node*\ node,\ godot::Node**\ reference\_var);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \_object\_referencer\_remove\_reference(godot::Node*\ node);}
+
+\end{DoxyCode}
+\Hypertarget{object__referencer_8h_a6bcf8c86da29b192b7f80f8bb2105ee0}\label{object__referencer_8h_a6bcf8c86da29b192b7f80f8bb2105ee0} 
+\index{object\_referencer.h@{object\_referencer.h}!ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION@{ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION}}
+\index{ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION@{ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION}!object\_referencer.h@{object\_referencer.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION}{ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OBJECT\+\_\+\+REFERENCER\+\_\+\+ON\+\_\+\+NOTIFICATION(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+

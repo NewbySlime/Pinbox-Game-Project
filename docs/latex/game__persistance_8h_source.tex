@@ -1,0 +1,36 @@
+\doxysection{game\+\_\+persistance.\+h}
+\hypertarget{game__persistance_8h_source}{}\label{game__persistance_8h_source}\index{src/game\_persistance.h@{src/game\_persistance.h}}
+\mbox{\hyperlink{game__persistance_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_PERSISTANCE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_PERSISTANCE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_persistance}{Game::Persistance}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_persistance_1_1game__persistance}{game\_persistance}}:\ \textcolor{keyword}{public}\ godot::Node\{}
+\DoxyCodeLine{00014\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_persistance_1_1game__persistance}{game\_persistance}},\ godot::Node)}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ save\_helper\_pckscene)}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ load\_helper\_pckscene)}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ std::map<uint64\_t,\ godot::Node>\ \_helper\_instance;\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1game__persistance_af81c3fb6fc3fee953c15a2c48d250637}{\_bind\_methods}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

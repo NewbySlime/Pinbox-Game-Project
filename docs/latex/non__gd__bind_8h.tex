@@ -1,0 +1,55 @@
+\doxysection{src/non\+\_\+gd\+\_\+bind.h File Reference}
+\hypertarget{non__gd__bind_8h}{}\label{non__gd__bind_8h}\index{src/non\_gd\_bind.h@{src/non\_gd\_bind.h}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils}{Game\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{non__gd__bind_8h_ae9e66fcdceec210f69d87c69f7ac2253}{ADD\+\_\+\+BINDING\+\_\+\+FUNCTION}}(function\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{non__gd__bind_8h_a816460ef80575d0ca02ca21cb9091d15}{ADD\+\_\+\+BINDING\+\_\+\+CLASS\+\_\+\+FUNCTION}}(class\+\_\+name,  function\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_utils_ac23b4c7ea57634c47da386c60f9e751b}{Game\+Utils\+::binding\+\_\+function}}) ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_game_utils_aa6c132c2b17823c93398d9e58d1fa8f6}{Game\+Utils\+::add\+\_\+non\+\_\+gd\+\_\+binding}} (\mbox{\hyperlink{namespace_game_utils_ac23b4c7ea57634c47da386c60f9e751b}{binding\+\_\+function}} function)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{non__gd__bind_8h_a816460ef80575d0ca02ca21cb9091d15}\label{non__gd__bind_8h_a816460ef80575d0ca02ca21cb9091d15} 
+\index{non\_gd\_bind.h@{non\_gd\_bind.h}!ADD\_BINDING\_CLASS\_FUNCTION@{ADD\_BINDING\_CLASS\_FUNCTION}}
+\index{ADD\_BINDING\_CLASS\_FUNCTION@{ADD\_BINDING\_CLASS\_FUNCTION}!non\_gd\_bind.h@{non\_gd\_bind.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_BINDING\_CLASS\_FUNCTION}{ADD\_BINDING\_CLASS\_FUNCTION}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+BINDING\+\_\+\+CLASS\+\_\+\+FUNCTION(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{function\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{int}\ \_\_\_tmp\_\#\#class\_name\#\#\_appender\_binding\ =\ ([]()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GameUtils::add\_non\_gd\_binding(class\_name::function\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \})();}
+
+\end{DoxyCode}
+\Hypertarget{non__gd__bind_8h_ae9e66fcdceec210f69d87c69f7ac2253}\label{non__gd__bind_8h_ae9e66fcdceec210f69d87c69f7ac2253} 
+\index{non\_gd\_bind.h@{non\_gd\_bind.h}!ADD\_BINDING\_FUNCTION@{ADD\_BINDING\_FUNCTION}}
+\index{ADD\_BINDING\_FUNCTION@{ADD\_BINDING\_FUNCTION}!non\_gd\_bind.h@{non\_gd\_bind.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_BINDING\_FUNCTION}{ADD\_BINDING\_FUNCTION}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+BINDING\+\_\+\+FUNCTION(\begin{DoxyParamCaption}\item[{}]{function\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{int}\ \_\_\_tmp\#\#function\_name\#\#\_appender\_binding\ =\ ([]()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GameUtils::add\_non\_gd\_binding(function\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \})();}
+
+\end{DoxyCode}

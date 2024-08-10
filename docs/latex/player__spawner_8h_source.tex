@@ -1,0 +1,40 @@
+\doxysection{player\+\_\+spawner.\+h}
+\hypertarget{player__spawner_8h_source}{}\label{player__spawner_8h_source}\index{src/player\_spawner.h@{src/player\_spawner.h}}
+\mbox{\hyperlink{player__spawner_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_SPAWNER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYER\_SPAWNER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__spawner_8h}{I\_spawner.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{class\ }player\_actor;}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1player__spawner}{player\_spawner}}:\ \textcolor{keyword}{public}\ godot\_sac::Node2D\_sac,}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_i__spawner}{Game::I\_spawner}}\{}
+\DoxyCodeLine{00013\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1player__spawner}{player\_spawner}},\ godot\_sac::Node2D\_sac)}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\_INTERFACE\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1player__spawner}{player\_spawner}})}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1player__actor}{Game::player\_actor}}*\ \_player\_actor;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1player__spawner_afa8c5a6a2a9d4e81c82f65d34cfa39ba}{\_bind\_methods}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1player__spawner_ad996881fef70aaf6df675b824f1e08a7}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1player__spawner_ac0e9491033abb882a1f3926651d8f576}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1player__spawner_a460aae3e93bcb32f205c74c192788e10}{spawn\_entity}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{class_game_1_1player__spawner_a6f0dea9b63bc594973749536f316a9fc}{get\_spawn\_position}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \};}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

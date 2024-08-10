@@ -1,0 +1,37 @@
+\doxysection{hitreg\+\_\+data.\+h}
+\hypertarget{hitreg__data_8h_source}{}\label{hitreg__data_8h_source}\index{src/hitreg\_data.h@{src/hitreg\_data.h}}
+\mbox{\hyperlink{hitreg__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HITREG\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HITREG\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__data__container_8h}{hit\_register\_data\_container.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }weapon\_stats\_data;}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data}{hitreg\_data}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ std::shared\_ptr<Game::hit\_register\_data\_container>\ \_hitreg\_graph\ =\ std::shared\_ptr<Game::hit\_register\_data\_container>(NULL);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data_a8a80ac89d42829fb3dad3504c68e9843}{\string~hitreg\_data}}()\{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data_aac6c07acc9c09f6060675f9e2c6a0fcd}{get\_subdata\_name}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data_a18c1e0c7e14f038ac9e0b43c0de67f92}{parse\_dictionary\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem,\ godot::Dictionary*\ data);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data_ab48ef2b377f186b3a7195bd64626d846}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ std::shared\_ptr<Game::hit\_register\_data\_container>\ \mbox{\hyperlink{class_game_1_1_item_1_1hitreg__data_a8c8c607e368583283e190b07ecd2e1fc}{get\_hitreg\_graph}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \};}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

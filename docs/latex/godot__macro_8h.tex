@@ -1,0 +1,127 @@
+\doxysection{src/godot\+\_\+macro.h File Reference}
+\hypertarget{godot__macro_8h}{}\label{godot__macro_8h}\index{src/godot\_macro.h@{src/godot\_macro.h}}
+{\ttfamily \#include "{}godot\+\_\+cpp/core/class\+\_\+db.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a920a1394790836e1b00c5342b1d50f89}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY1}}(var)~\#var
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY}}(var)~\mbox{\hyperlink{godot__macro_8h_a920a1394790836e1b00c5342b1d50f89}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY1}}(var)
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a061309b41c64ad337c8732c5d58d48ab}{JOIN\+\_\+\+PATH\+\_\+\+STRING\+\_\+\+HELPER}}~godot\+::\+String("{}\{0\}/\{1\}"{})
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\+\_\+\+PROPERTY\+\_\+\+VAR}}(type,  var\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\+\_\+\+PROPERTY\+\_\+\+VAR\+\_\+\+WITHOUT\+\_\+\+DEF\+\_\+\+FUNC}}(type,  var\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_ad10d6eec7d09150eb45af4488dea5b5b}{GD\+\_\+\+PROPERTY\+\_\+\+SETTER\+\_\+\+FUNC}}(class\+\_\+name,  type,  var\+\_\+name)~  void class\+\_\+name\+::set\+\_\+\#\#var\+\_\+name(const type var\+\_\+\#\#var\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_ac9cc5cb7c05ebffe31d622f7c496a2ae}{GD\+\_\+\+PROPERTY\+\_\+\+GETTER\+\_\+\+FUNC}}(class\+\_\+name,  type,  var\+\_\+name)~  type class\+\_\+name\+::get\+\_\+\#\#var\+\_\+name() const
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a8c959d5d3b398e5d3c3b6dd5ff619315}{GD\+\_\+\+PROPERTY\+\_\+\+BIND}}(class\+\_\+name,  variant\+\_\+type,  var\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{godot__macro_8h_a8beab63e332b568ea8102446b635d17f}{GD\+\_\+\+PROPERTY\+\_\+\+BIND\+\_\+\+HINT}}(class\+\_\+name,  variant\+\_\+type,  var\+\_\+name,  property\+\_\+hint)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}\label{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6} 
+\index{godot\_macro.h@{godot\_macro.h}!\_\_\_MACRO\_STRINGIFY@{\_\_\_MACRO\_STRINGIFY}}
+\index{\_\_\_MACRO\_STRINGIFY@{\_\_\_MACRO\_STRINGIFY}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{\_\_\_MACRO\_STRINGIFY}{\_\_\_MACRO\_STRINGIFY}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~\mbox{\hyperlink{godot__macro_8h_a920a1394790836e1b00c5342b1d50f89}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY1}}(var)}
+
+\Hypertarget{godot__macro_8h_a920a1394790836e1b00c5342b1d50f89}\label{godot__macro_8h_a920a1394790836e1b00c5342b1d50f89} 
+\index{godot\_macro.h@{godot\_macro.h}!\_\_\_MACRO\_STRINGIFY1@{\_\_\_MACRO\_STRINGIFY1}}
+\index{\_\_\_MACRO\_STRINGIFY1@{\_\_\_MACRO\_STRINGIFY1}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{\_\_\_MACRO\_STRINGIFY1}{\_\_\_MACRO\_STRINGIFY1}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY1(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~\#var}
+
+\Hypertarget{godot__macro_8h_a8c959d5d3b398e5d3c3b6dd5ff619315}\label{godot__macro_8h_a8c959d5d3b398e5d3c3b6dd5ff619315} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_BIND@{GD\_PROPERTY\_BIND}}
+\index{GD\_PROPERTY\_BIND@{GD\_PROPERTY\_BIND}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_BIND}{GD\_PROPERTY\_BIND}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+BIND(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{variant\+\_\+type,  }\item[{}]{var\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(D\_METHOD(\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(set\_)\ \#var\_name,\ \#var\_name),\ \&class\_name::set\_\#\#var\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(D\_METHOD(\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(get\_)\ \#var\_name),\ \&class\_name::get\_\#\#var\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::ClassDB::add\_property(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \#class\_name,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ PropertyInfo(variant\_type,\ \#var\_name),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(set\_)\ \#var\_name,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(get\_)\ \#var\_name\ \(\backslash\)}
+\DoxyCodeLine{\ \ );}
+
+\end{DoxyCode}
+\Hypertarget{godot__macro_8h_a8beab63e332b568ea8102446b635d17f}\label{godot__macro_8h_a8beab63e332b568ea8102446b635d17f} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_BIND\_HINT@{GD\_PROPERTY\_BIND\_HINT}}
+\index{GD\_PROPERTY\_BIND\_HINT@{GD\_PROPERTY\_BIND\_HINT}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_BIND\_HINT}{GD\_PROPERTY\_BIND\_HINT}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+BIND\+\_\+\+HINT(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{variant\+\_\+type,  }\item[{}]{var\+\_\+name,  }\item[{}]{property\+\_\+hint }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(D\_METHOD(\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(set\_)\ \#var\_name,\ \#var\_name),\ \&class\_name::set\_\#\#var\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(D\_METHOD(\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(get\_)\ \#var\_name),\ \&class\_name::get\_\#\#var\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::ClassDB::add\_property(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \#class\_name,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ PropertyInfo(variant\_type,\ \#var\_name,\ property\_hint),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(set\_)\ \#var\_name,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\_\_\_MACRO\_STRINGIFY}}(get\_)\ \#var\_name\ \(\backslash\)}
+\DoxyCodeLine{\ \ );}
+
+\end{DoxyCode}
+\Hypertarget{godot__macro_8h_ac9cc5cb7c05ebffe31d622f7c496a2ae}\label{godot__macro_8h_ac9cc5cb7c05ebffe31d622f7c496a2ae} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_GETTER\_FUNC@{GD\_PROPERTY\_GETTER\_FUNC}}
+\index{GD\_PROPERTY\_GETTER\_FUNC@{GD\_PROPERTY\_GETTER\_FUNC}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_GETTER\_FUNC}{GD\_PROPERTY\_GETTER\_FUNC}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+GETTER\+\_\+\+FUNC(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{type,  }\item[{}]{var\+\_\+name }\end{DoxyParamCaption})~  type class\+\_\+name\+::get\+\_\+\#\#var\+\_\+name() const}
+
+\Hypertarget{godot__macro_8h_ad10d6eec7d09150eb45af4488dea5b5b}\label{godot__macro_8h_ad10d6eec7d09150eb45af4488dea5b5b} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_SETTER\_FUNC@{GD\_PROPERTY\_SETTER\_FUNC}}
+\index{GD\_PROPERTY\_SETTER\_FUNC@{GD\_PROPERTY\_SETTER\_FUNC}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_SETTER\_FUNC}{GD\_PROPERTY\_SETTER\_FUNC}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+SETTER\+\_\+\+FUNC(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{type,  }\item[{}]{var\+\_\+name }\end{DoxyParamCaption})~  void class\+\_\+name\+::set\+\_\+\#\#var\+\_\+name(const type var\+\_\+\#\#var\+\_\+name)}
+
+\Hypertarget{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}\label{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_VAR@{GD\_PROPERTY\_VAR}}
+\index{GD\_PROPERTY\_VAR@{GD\_PROPERTY\_VAR}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_VAR}{GD\_PROPERTY\_VAR}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+VAR(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{var\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ type\ var\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ set\_\#\#var\_name(\textcolor{keyword}{const}\ type\ var\_\#\#var\_name)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ var\_name\ =\ var\_\#\#var\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ type\ get\_\#\#var\_name()\textcolor{keyword}{\ const}\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ var\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}\label{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de} 
+\index{godot\_macro.h@{godot\_macro.h}!GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC@{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}
+\index{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC@{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}
+{\footnotesize\ttfamily \#define GD\+\_\+\+PROPERTY\+\_\+\+VAR\+\_\+\+WITHOUT\+\_\+\+DEF\+\_\+\+FUNC(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{var\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ type\ var\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ set\_\#\#var\_name(\textcolor{keyword}{const}\ type\ var\_\#\#var\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ type\ get\_\#\#var\_name()\ \textcolor{keyword}{const};}
+
+\end{DoxyCode}
+\Hypertarget{godot__macro_8h_a061309b41c64ad337c8732c5d58d48ab}\label{godot__macro_8h_a061309b41c64ad337c8732c5d58d48ab} 
+\index{godot\_macro.h@{godot\_macro.h}!JOIN\_PATH\_STRING\_HELPER@{JOIN\_PATH\_STRING\_HELPER}}
+\index{JOIN\_PATH\_STRING\_HELPER@{JOIN\_PATH\_STRING\_HELPER}!godot\_macro.h@{godot\_macro.h}}
+\doxysubsubsection{\texorpdfstring{JOIN\_PATH\_STRING\_HELPER}{JOIN\_PATH\_STRING\_HELPER}}
+{\footnotesize\ttfamily \#define JOIN\+\_\+\+PATH\+\_\+\+STRING\+\_\+\+HELPER~godot\+::\+String("{}\{0\}/\{1\}"{})}
+

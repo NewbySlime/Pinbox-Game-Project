@@ -1,0 +1,50 @@
+\doxysection{predelete\+\_\+notifier.\+h}
+\hypertarget{predelete__notifier_8h_source}{}\label{predelete__notifier_8h_source}\index{src/predelete\_notifier.h@{src/predelete\_notifier.h}}
+\mbox{\hyperlink{predelete__notifier_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PREDELETE\_NOTIFIER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PREDELETE\_NOTIFIER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE\ "{}spdnopd"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ ATTR\_PREDELETE\_NOTIFIER\_INHERIT(origin\_class)}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ATTR\_PREDELETE\_NOTIFIER\_DEFINE(origin\_class)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ ADD\_SIGNAL(godot::MethodInfo(SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE,\ godot::PropertyInfo(GDVAR\_CUSTOM\_VARIANT\_TYPE,\ "{}param"{})));}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION(code)\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ switch(code)\{\ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ break;\ case\ godot::Object::NOTIFICATION\_PREDELETE:\{\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ predelete\_notifier\_signal\_param\ \_param(this);\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ \ \ emit\_signal(SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE,\ GDVAR\_CUSTOM\_FROM(\_param));\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpredelete__notifier__signal__param}{predelete\_notifier\_signal\_param}}\{}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ godot::Node*\ \_this\_node;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classpredelete__notifier__signal__param_a014062b664536afb5cca85861dbb94dd}{predelete\_notifier\_signal\_param}}(godot::Node*\ node)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \_this\_node\ =\ node;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ godot::Node*\ \mbox{\hyperlink{classpredelete__notifier__signal__param_a3dcee835a571342dad18e9db6a25ee5f}{get\_node}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_this\_node;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

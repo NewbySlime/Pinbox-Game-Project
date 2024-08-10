@@ -1,0 +1,5 @@
+heal: number
+  How many health points the player will get when using the consumable
+
+is_throwable: boolean
+  Can the consumable be thrown

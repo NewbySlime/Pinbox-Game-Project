@@ -1,0 +1,7 @@
+Change of scenes will be handled by game_handler.
+Every change of the scenes also have the context codes that dictates what kind of scenes the game should handle.
+
+A folder called "game_context_scenes" list of folders that are dedicated for each context code.
+game_handler will emit a signal that notifies the connected node that the game_handler will change to certain context and the listener will have to complain.
+
+"game_context_listener_helper" is a helper that will listen to game_handler change of context and will change to appropriate scenes. Classes that use this should node_holder_helper and always check if the object is NULL.

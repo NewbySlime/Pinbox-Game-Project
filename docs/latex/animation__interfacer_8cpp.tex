@@ -1,0 +1,52 @@
+\doxysection{src/animation\+\_\+interfacer.cpp File Reference}
+\hypertarget{animation__interfacer_8cpp}{}\label{animation__interfacer_8cpp}\index{src/animation\_interfacer.cpp@{src/animation\_interfacer.cpp}}
+{\ttfamily \#include "{}animation\+\_\+interfacer.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/animated\+\_\+sprite2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/animation\+\_\+player.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/sprite\+\_\+frames.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/core/class\+\_\+db.\+hpp"{}}\newline
+{\ttfamily \#include "{}vector"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class__animation__interface__animation__player}{\+\_\+animation\+\_\+interface\+\_\+animation\+\_\+player}}
+\item 
+class \mbox{\hyperlink{class__animation__interface__animated__sprite2d}{\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\+\_\+animation}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{animation__interfacer_8cpp_a87747674753f7c45d1b27c721d0708ee}{\+\_\+animation\+\_\+interface\+\_\+instantiator}}) (Node \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{animation__interfacer_8cpp_a87747674753f7c45d1b27c721d0708ee}{\+\_\+animation\+\_\+interface\+\_\+instantiator}} $>$ \mbox{\hyperlink{animation__interfacer_8cpp_a563b9010fe24c4906b85d531884e2820}{\+\_\+interface\+\_\+instantiator\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{animation__interfacer_8cpp_a87747674753f7c45d1b27c721d0708ee}\label{animation__interfacer_8cpp_a87747674753f7c45d1b27c721d0708ee} 
+\index{animation\_interfacer.cpp@{animation\_interfacer.cpp}!\_animation\_interface\_instantiator@{\_animation\_interface\_instantiator}}
+\index{\_animation\_interface\_instantiator@{\_animation\_interface\_instantiator}!animation\_interfacer.cpp@{animation\_interfacer.cpp}}
+\doxysubsubsection{\texorpdfstring{\_animation\_interface\_instantiator}{\_animation\_interface\_instantiator}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\+\_\+animation}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \+\_\+animation\+\_\+interface\+\_\+instantiator) (Node \texorpdfstring{$\ast$}{*})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{animation__interfacer_8cpp_a563b9010fe24c4906b85d531884e2820}\label{animation__interfacer_8cpp_a563b9010fe24c4906b85d531884e2820} 
+\index{animation\_interfacer.cpp@{animation\_interfacer.cpp}!\_interface\_instantiator\_map@{\_interface\_instantiator\_map}}
+\index{\_interface\_instantiator\_map@{\_interface\_instantiator\_map}!animation\_interfacer.cpp@{animation\_interfacer.cpp}}
+\doxysubsubsection{\texorpdfstring{\_interface\_instantiator\_map}{\_interface\_instantiator\_map}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{animation__interfacer_8cpp_a87747674753f7c45d1b27c721d0708ee}{\+\_\+animation\+\_\+interface\+\_\+instantiator}}$>$ \+\_\+interface\+\_\+instantiator\+\_\+map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}AnimationPlayer"{}},\ \mbox{\hyperlink{class__animation__interface__animation__player_a57123da0975f5ca3c208c5c437167ad2}{\_animation\_interface\_animation\_player::create\_this\_interface}}\},}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}AnimatedSprite2D"{}},\ \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a04f89ed39c00b75532dca5fb1ef7e0e0}{\_animation\_interface\_animated\_sprite2d::create\_this\_interface}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

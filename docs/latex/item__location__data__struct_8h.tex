@@ -1,0 +1,37 @@
+\doxysection{src/item\+\_\+location\+\_\+data\+\_\+struct.h File Reference}
+\hypertarget{item__location__data__struct_8h}{}\label{item__location__data__struct_8h}\index{src/item\_location\_data\_struct.h@{src/item\_location\_data\_struct.h}}
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{item__location__data__struct_8h_ad8a84b8a18120a84752100155eb00b68}{ITEM\+\_\+\+POSITION\+\_\+\+DATA\+\_\+\+CLEAR}}(pos\+\_\+data)~pos\+\_\+data.\+container\+\_\+id = \mbox{\hyperlink{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}{ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL}}; pos\+\_\+data.\+index\+\_\+position = -\/1
+\item 
+\#define \mbox{\hyperlink{item__location__data__struct_8h_a91f30c6885aacf286d85e058ec9bfdd4}{ITEM\+\_\+\+POSITION\+\_\+\+DATA\+\_\+\+CHECK}}(pos\+\_\+data)~(pos\+\_\+data.\+container\+\_\+id != \mbox{\hyperlink{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}{ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL}} \&\& pos\+\_\+data.\+index\+\_\+position $>$= 0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{item__location__data__struct_8h_a91f30c6885aacf286d85e058ec9bfdd4}\label{item__location__data__struct_8h_a91f30c6885aacf286d85e058ec9bfdd4} 
+\index{item\_location\_data\_struct.h@{item\_location\_data\_struct.h}!ITEM\_POSITION\_DATA\_CHECK@{ITEM\_POSITION\_DATA\_CHECK}}
+\index{ITEM\_POSITION\_DATA\_CHECK@{ITEM\_POSITION\_DATA\_CHECK}!item\_location\_data\_struct.h@{item\_location\_data\_struct.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_POSITION\_DATA\_CHECK}{ITEM\_POSITION\_DATA\_CHECK}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+POSITION\+\_\+\+DATA\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{pos\+\_\+data }\end{DoxyParamCaption})~(pos\+\_\+data.\+container\+\_\+id != \mbox{\hyperlink{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}{ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL}} \&\& pos\+\_\+data.\+index\+\_\+position $>$= 0)}
+
+\Hypertarget{item__location__data__struct_8h_ad8a84b8a18120a84752100155eb00b68}\label{item__location__data__struct_8h_ad8a84b8a18120a84752100155eb00b68} 
+\index{item\_location\_data\_struct.h@{item\_location\_data\_struct.h}!ITEM\_POSITION\_DATA\_CLEAR@{ITEM\_POSITION\_DATA\_CLEAR}}
+\index{ITEM\_POSITION\_DATA\_CLEAR@{ITEM\_POSITION\_DATA\_CLEAR}!item\_location\_data\_struct.h@{item\_location\_data\_struct.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_POSITION\_DATA\_CLEAR}{ITEM\_POSITION\_DATA\_CLEAR}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+POSITION\+\_\+\+DATA\+\_\+\+CLEAR(\begin{DoxyParamCaption}\item[{}]{pos\+\_\+data }\end{DoxyParamCaption})~pos\+\_\+data.\+container\+\_\+id = \mbox{\hyperlink{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}{ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL}}; pos\+\_\+data.\+index\+\_\+position = -\/1}
+

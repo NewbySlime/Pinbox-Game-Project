@@ -1,0 +1,885 @@
+\doxysection{src/defines.h File Reference}
+\hypertarget{defines_8h}{}\label{defines_8h}\index{src/defines.h@{src/defines.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab4b7ac9b4c7afeda7ebd2cb63899417c}{COLLISION\+\_\+\+LAYER\+\_\+\+STATIC\+\_\+\+LAYER}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{defines_8h_a1efe9d5ced0fe12433f8d4290fa1641b}{COLLISION\+\_\+\+LAYER\+\_\+\+COLLISION\+\_\+\+LAYER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{defines_8h_a43a67a0c3d78185adcc8b8f38853e759}{COLLISION\+\_\+\+LAYER\+\_\+\+ITEM\+\_\+\+LAYER}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6e558f712448bf21e5d21211b6a81759}{COLLISION\+\_\+\+LAYER\+\_\+\+PROJECTILE\+\_\+\+LAYER}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{defines_8h_aa920e77a2ee54dbb85e0d178d7fb133b}{COLLISION\+\_\+\+LAYER\+\_\+\+ENEMY\+\_\+\+LAYER}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab66075cd4170130fb25646fe046ddd53}{COLLISION\+\_\+\+LAYER\+\_\+\+PLAYER\+\_\+\+LAYER}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{defines_8h_a45ca8068323ccbfcaa97d1fc2e585eda}{SAVEFILE\+\_\+\+PATH}}~"{}user\+://players/\{0\}/save.\+dat"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a8c8edc247fdb21a00abce17e567cd863}{CHARSYMBOL\+\_\+\+KEY\+\_\+\+SPLIT}}~"{}."{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a12945b1e8b9fda40c101847a8e1a5f61}{VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+LOGO\+\_\+\+SPRITE\+\_\+\+DIR}}~"{}logo\+\_\+sprite\+\_\+dir"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a23dbef767de451a3fcf892bd5491dc8d}{VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+BASE\+\_\+\+LIMIT}}~"{}base\+\_\+limit"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af7b21bc17ee8fe4d71d26981a599fd99}{VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+BASE\+\_\+\+MULTIPLIER}}~"{}base\+\_\+multiplier"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ad1eaeaaa76ee73caf33fb30d6ccaf775}{VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+MAX\+\_\+\+MULTIPLIER}}~"{}max\+\_\+multiplier"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae4c2441d274da4a25ebf5714576b04a3}{VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+MULTIPLIER\+\_\+\+DECREMENT}}~"{}multiplier\+\_\+decrement"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af4c36273e5db5464b6143a0e29514e1d}{VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+NAME}}~"{}name"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a99d642cb7127b59386db6254520873cc}{VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+DESCRIPTION}}~"{}desc"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}}~"{}weapon\+\_\+stats"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae6dfa12f26f9275cd891b85cfe28a4a2}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TYPE\+\_\+\+PRIMARY}}~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}} "{}\+:primary"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ac3e24010140a1f2c661ae20c97a1e6f2}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TYPE\+\_\+\+SECONDARY}}~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}} "{}\+:secondary"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a14c56f0e35e0bbfd55353f5793ed1c14}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+DAMAGE}}~"{}damage"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_abfc28c65cb332c34a31b7a9d6ce59bc7}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ENERGY\+\_\+\+COST}}~"{}energy\+\_\+cost"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a56ca2b3eff6906133bf0e947f27eeeb4}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ALTERNATE}}~"{}alternate\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a2d654ff65030fba36826f39aeaf23df6}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ALTERNATE\+\_\+\+WEAPON\+\_\+\+STATS}}~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a82261375b9bca95138cf36e47b749836}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA}}~"{}hitreg\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_afbdc9e6f4e7cfd40b0aeaf119761d6ec}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+TYPE}}~"{}type"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a65d5f746a9e107b4ff6fa1aff5d83b95}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+MAX\+\_\+\+LENGTH}}~"{}max\+\_\+length"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab236cfa7a1b623a010c169cab45ef435}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+TIME}}~"{}time"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_abf042a2e007269ebfdff5543a4baeda0}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+NEXT\+\_\+\+NODE}}~"{}next\+\_\+node"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ac63c2740577f14b9797459b8421c8898}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+CHARGE\+\_\+\+DELAY}}~"{}charge\+\_\+delay"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ad5f7fddb812d88e4e09eb4f765d93f82}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE}}~"{}fire\+\_\+mode"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a73b3fb0b3d46e757fc7bd5476badde4d}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+SINGLE}}~"{}single\+\_\+fire"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af3c76160f9abc16e8c0762a31a67bdc9}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+BURST}}~"{}burst\+\_\+fire"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae70ad4e345e6c084f8ee9fd16a5b6058}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+AUTOMATIC}}~"{}automatic"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a2d77eeb46525e4ee44054682099ab279}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+FULL\+\_\+\+EXHAUST}}~"{}full\+\_\+exhaust"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a87a3992d1ef4d6ea98a215096a6fd299}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+CHARGE}}~"{}charge"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a4e350ed60ed6b2a338537224d40d1e47}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+RATE}}~"{}fire\+\_\+rate"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af53410cd39c583e973c8dac52c8b62ea}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TAP\+\_\+\+RATE}}~"{}tap\+\_\+rate"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_aca61953ec7d4241542a173257d75fa42}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+BURST\+\_\+\+COUNT}}~"{}burst\+\_\+count"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a39df1e798caf8b2f0b0cb66dcf6b660e}{VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS}}~"{}consumable\+\_\+stats"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae59c0df73d93505ff4918e29153b3e7d}{VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS\+\_\+\+HEAL}}~"{}heal"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a866a708de132816968088c78b0041701}{VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS\+\_\+\+IS\+\_\+\+THROWABLE}}~"{}is\+\_\+throwable"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_aa3f0892a01f07a9c173a8af885ff0220}{VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA}}~"{}item\+\_\+pouch\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a15fa8c0ba566d738773f2fd41f2a7e66}{VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+SIZE}}~"{}pouch\+\_\+size"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a903233da600e3cf451a4440c18fb8cb1}{VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+TYPE}}~"{}container\+\_\+type"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a8b0b38842afdbbb3e6bbdf01ed0af9cb}{VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+FILTER}}~"{}item\+\_\+filter"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ad4e390de88d60b8b7728f476b0376e41}{VARNAME\+\_\+\+ITEM\+\_\+\+RESOURCE\+\_\+\+DATA}}~"{}item\+\_\+resource\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a4c34b6f819f381cca9320bf3c6dd843d}{VARNAME\+\_\+\+ITEM\+\_\+\+RES\+\_\+\+EQUIPPABLE\+\_\+\+SPRITE\+\_\+\+DATA}}~"{}equippable\+\_\+sprite"{},
+\item 
+\#define \mbox{\hyperlink{defines_8h_a4cdc27bee4c8141e0ab0b880ffd5f9e7}{VARNAME\+\_\+\+ITEM\+\_\+\+RES\+\_\+\+ITEM\+\_\+\+SPRITE\+\_\+\+DATA}}~"{}item\+\_\+sprite"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae861a7c020821e0752720d26093b9e33}{VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+STATIC}}~"{}static\+\_\+sprite"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a95ac10423a82972a18a2fbe26becd86e}{VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+ANIMATED}}~"{}animated\+\_\+sprite"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6aff01dd17a39ef731e22858131c221a}{VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+ANIMATION\+\_\+\+LIB}}~"{}animation\+\_\+library"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a19f239118ed33f854663f5acb889e86b}{VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+CUSTOM}}~"{}custom\+\_\+object\+\_\+sprite"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a14a6fc0feb19c34db6c461f0c1195fb5}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO}}~"{}vital\+\_\+info"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a1ad717728ea901b4dab04185ffe559c5}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+HEALTH}}~"{}max\+\_\+health\+\_\+point"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ae97223f02b1c2b8d5d60ae56479abd49}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+ENERGY}}~"{}max\+\_\+energy\+\_\+point"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a5fedadb1ebeb4e0b06e52a1085729edb}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+EP\+\_\+\+RESTORE\+\_\+\+DELAY}}~"{}ep\+\_\+restore\+\_\+delay"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a7db77d0962de0058dd3fd5522db6414e}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+EP\+\_\+\+RESTORE\+\_\+\+RATE}}~"{}ep\+\_\+restore\+\_\+rate"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_aa1e1226cf7bfd8ff449423bac95b28f4}{VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG}}~"{}inventory\+\_\+config"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a8112bd3c7b9d44f4b2357e961c5419bc}{VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG\+\_\+\+TYPE}}~"{}inventory\+\_\+type"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af1e1f7ec4a29b5ecfab25a648fa89615}{VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG\+\_\+\+SIZE}}~"{}size"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6c91cda356e37d754bbaa46cf8768505}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA}}~"{}entity\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6d39982693a592360cb284df64a281be}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+NAME}}~"{}name"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a7c53d3466a27e78ebe12c604063bdecf}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+DESCRIPTION}}~"{}description"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_abb0f7f3c88b3c07bfd29dd51ddaf2cc1}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+TYPE\+\_\+\+CLASS}}~"{}type\+\_\+class"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a588434f2ef3c45286db18a0684b7693b}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+VITAL\+\_\+\+INFO}}~\mbox{\hyperlink{defines_8h_a14a6fc0feb19c34db6c461f0c1195fb5}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO}}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a2ad85354fcfc3f0f7e581b34056a7aa3}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+INVENTORY\+\_\+\+CONFIG}}~"{}inventory"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ac30165ff07438b2d850dd22b048b3e6e}{VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+LOADOUT\+\_\+\+INVENTORY\+\_\+\+CONFIG}}~"{}loadout\+\_\+inventory"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a7b60301182cebea28e83c293a8857d4b}{VARNAME\+\_\+\+MODIFIER\+\_\+\+DATA\+\_\+\+CHANCE\+\_\+\+SCORE}}~"{}chance\+\_\+score"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a8b48b5fb699dec81d87d3688fbcc4466}{VARNAME\+\_\+\+MODIFIER\+\_\+\+DATA\+\_\+\+MODIFIER\+\_\+\+DATA}}~"{}modifier\+\_\+data"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab77c0780b6576c1a5a8b61c2bca148bb}{VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+IMAGE\+\_\+\+PATH}}~"{}image\+\_\+path"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_af5d37d127d954e5f4d0dfe1a207fcc20}{VARNAME\+\_\+\+ITEM\+\_\+\+CONTAINER\+\_\+\+PREMADE\+\_\+\+DATA\+\_\+\+SIZE}}~"{}size"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a39303f751baeec0bd2ca959ffd24933c}{ITEM\+\_\+\+DATA\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+START\+\_\+\+ID}}~"{}0"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_acef05918a9f94357930ebcd3bdab7d28}{ITEM\+\_\+\+TYPENAME\+\_\+\+CONSUMABLE}}~"{}consumable"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a0516574d86908e720c3562845a912abb}{ITEM\+\_\+\+TYPENAME\+\_\+\+MATERIAL}}~"{}material"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a34afdc6ff6932a3745ce12cbf3a94f4c}{ITEM\+\_\+\+TYPENAME\+\_\+\+MODIFIER}}~"{}modifier"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a792efcf8639b5fabd5f203105eac9ff9}{ITEM\+\_\+\+TYPENAME\+\_\+\+WEAPON}}~"{}weapon"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a0246ca82aba06eab33cc6b36241b5252}{ENTITY\+\_\+\+TYPENAME\+\_\+\+ENEMY}}~"{}enemy"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a413c741799b41a5bb783d10dda3e2f52}{ENTITY\+\_\+\+TYPENAME\+\_\+\+NPC}}~"{}npc"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a5ebd253dcd347ddea9e6b9cdd75012cd}{ENTITY\+\_\+\+TYPENAME\+\_\+\+PLAYER}}~"{}player"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ad8047695b15c89b34f4b65a0a7c72103}{VARNAME\+\_\+\+ENTITY\+\_\+\+SCENE\+\_\+\+CLASS\+\_\+\+PATH}}~"{}scene\+\_\+path"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a0829baa5985a13315a8f1e4af9a9d052}{\+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+DICT1}}(key,  varname,  type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_aedc9e2cf51a4594a18e21e4254d1a669}{\+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+DICT2}}(key,  varname,  type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a8d07472b8c75760f492048dfc4f3e869}{\+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+PACKED\+\_\+\+SCENE}}(pck,  classname)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a203ff027b4264a3299f871c6aac46592}{CREATE\+\_\+\+LOAD\+\_\+\+RESOURCE\+\_\+\+CHECKER}}(target,  path,  type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a9c121b425c7c128f53798edfc3ca97b3}{CREATE\+\_\+\+LOAD\+\_\+\+PACKED\+\_\+\+SCENE\+\_\+\+CHECKER}}(target,  path,  instantiated\+\_\+type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a9cbe90610426a8f51abf83dd26d4089b}{CREATE\+\_\+\+GET\+\_\+\+NODE\+\_\+\+TESTER}}(target,  node\+\_\+path,  type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_abcb0827d338c9f1b219ab2c074d16976}{PROCESS\+\_\+\+JSON\+\_\+\+PATH}}(json\+\_\+path,  process\+\_\+func)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a19ed3e61c8aa51813384da1f7a8a5425}{AUTOLOAD\+\_\+\+NODE\+\_\+\+DECLARE}}(class\+\_\+name)~  static class\+\_\+name\texorpdfstring{$\ast$}{*} get\+\_\+singleton();
+\item 
+\#define \mbox{\hyperlink{defines_8h_ac269a52e375438934faccd6983e279ea}{AUTOLOAD\+\_\+\+NODE\+\_\+\+DEFINE}}(class\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6f481b863ec1e39e6fba21fac88bcfc4}{AUTOLOAD\+\_\+\+NODE\+\_\+\+INIT}}(class\+\_\+name)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a95877b1b50fe86eb2e261fe973d7616a}{GAME\+\_\+\+CONTEXT\+\_\+\+SCENE\+\_\+\+FOLDER}}~"{}res\+://scene/game\+\_\+context\+\_\+scenes"{}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a5854b47b0f40e8033670c9a30f2deee4}{PARSE\+\_\+\+GAME\+\_\+\+CONTEXT\+\_\+\+SCENE\+\_\+\+PATH}}(target\+\_\+var,  context\+\_\+id,  class\+\_\+type)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a56c65d22ca71d0b890d976de11088773}{GDSTR\+\_\+\+TO\+\_\+\+STDSTR}}(gdstr)~std\+::string((char\texorpdfstring{$\ast$}{*})gdstr.\+to\+\_\+ascii\+\_\+buffer().ptr(), gdstr.\+length())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{defines_8h_a0829baa5985a13315a8f1e4af9a9d052}\label{defines_8h_a0829baa5985a13315a8f1e4af9a9d052} 
+\index{defines.h@{defines.h}!\_CREATE\_CHECKER\_DICT1@{\_CREATE\_CHECKER\_DICT1}}
+\index{\_CREATE\_CHECKER\_DICT1@{\_CREATE\_CHECKER\_DICT1}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{\_CREATE\_CHECKER\_DICT1}{\_CREATE\_CHECKER\_DICT1}}
+{\footnotesize\ttfamily \#define \+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+DICT1(\begin{DoxyParamCaption}\item[{}]{key,  }\item[{}]{varname,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}(\_v.get\_type()\ !=\ type)\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(key);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(varname);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(Variant::get\_type\_name(type));\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}(String(\textcolor{stringliteral}{"{}(\{0\}:\{1\})\ is\ not\ \{2\}."{}}).format(\_paramarr));\(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_aedc9e2cf51a4594a18e21e4254d1a669}\label{defines_8h_aedc9e2cf51a4594a18e21e4254d1a669} 
+\index{defines.h@{defines.h}!\_CREATE\_CHECKER\_DICT2@{\_CREATE\_CHECKER\_DICT2}}
+\index{\_CREATE\_CHECKER\_DICT2@{\_CREATE\_CHECKER\_DICT2}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{\_CREATE\_CHECKER\_DICT2}{\_CREATE\_CHECKER\_DICT2}}
+{\footnotesize\ttfamily \#define \+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+DICT2(\begin{DoxyParamCaption}\item[{}]{key,  }\item[{}]{varname,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \_v\ =\ \_data\_part[varname];\(\backslash\)}
+\DoxyCodeLine{\ \ \_CREATE\_CHECKER\_DICT1(key,\ varname,\ type)}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a8d07472b8c75760f492048dfc4f3e869}\label{defines_8h_a8d07472b8c75760f492048dfc4f3e869} 
+\index{defines.h@{defines.h}!\_CREATE\_CHECKER\_PACKED\_SCENE@{\_CREATE\_CHECKER\_PACKED\_SCENE}}
+\index{\_CREATE\_CHECKER\_PACKED\_SCENE@{\_CREATE\_CHECKER\_PACKED\_SCENE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{\_CREATE\_CHECKER\_PACKED\_SCENE}{\_CREATE\_CHECKER\_PACKED\_SCENE}}
+{\footnotesize\ttfamily \#define \+\_\+\+CREATE\+\_\+\+CHECKER\+\_\+\+PACKED\+\_\+\+SCENE(\begin{DoxyParamCaption}\item[{}]{pck,  }\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}(!pck-\/>is\_class(\#classname))\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(pck-\/>get\_path());\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(\#classname);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_game_1_1_error_1_1gdstr__exception}{Game::Error::gdstr\_exception}}(String(\textcolor{stringliteral}{"{}File\ '\{0\}'\ is\ not\ \{1\}."{}}).format(\_paramarr));\(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a19ed3e61c8aa51813384da1f7a8a5425}\label{defines_8h_a19ed3e61c8aa51813384da1f7a8a5425} 
+\index{defines.h@{defines.h}!AUTOLOAD\_NODE\_DECLARE@{AUTOLOAD\_NODE\_DECLARE}}
+\index{AUTOLOAD\_NODE\_DECLARE@{AUTOLOAD\_NODE\_DECLARE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{AUTOLOAD\_NODE\_DECLARE}{AUTOLOAD\_NODE\_DECLARE}}
+{\footnotesize\ttfamily \#define AUTOLOAD\+\_\+\+NODE\+\_\+\+DECLARE(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})~  static class\+\_\+name\texorpdfstring{$\ast$}{*} get\+\_\+singleton();}
+
+\Hypertarget{defines_8h_ac269a52e375438934faccd6983e279ea}\label{defines_8h_ac269a52e375438934faccd6983e279ea} 
+\index{defines.h@{defines.h}!AUTOLOAD\_NODE\_DEFINE@{AUTOLOAD\_NODE\_DEFINE}}
+\index{AUTOLOAD\_NODE\_DEFINE@{AUTOLOAD\_NODE\_DEFINE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{AUTOLOAD\_NODE\_DEFINE}{AUTOLOAD\_NODE\_DEFINE}}
+{\footnotesize\ttfamily \#define AUTOLOAD\+\_\+\+NODE\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ class\_name*\ \_\_this\_autoload\_\#\#class\_name\ =\ NULL;\ \(\backslash\)}
+\DoxyCodeLine{\ \ class\_name*\ class\_name::get\_singleton()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \_\_this\_autoload\_\#\#class\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a6f481b863ec1e39e6fba21fac88bcfc4}\label{defines_8h_a6f481b863ec1e39e6fba21fac88bcfc4} 
+\index{defines.h@{defines.h}!AUTOLOAD\_NODE\_INIT@{AUTOLOAD\_NODE\_INIT}}
+\index{AUTOLOAD\_NODE\_INIT@{AUTOLOAD\_NODE\_INIT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{AUTOLOAD\_NODE\_INIT}{AUTOLOAD\_NODE\_INIT}}
+{\footnotesize\ttfamily \#define AUTOLOAD\+\_\+\+NODE\+\_\+\+INIT(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}(!\_\_this\_autoload\_\#\#class\_name)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_this\_autoload\_\#\#class\_name\ =\ \textcolor{keyword}{this};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a8c8edc247fdb21a00abce17e567cd863}\label{defines_8h_a8c8edc247fdb21a00abce17e567cd863} 
+\index{defines.h@{defines.h}!CHARSYMBOL\_KEY\_SPLIT@{CHARSYMBOL\_KEY\_SPLIT}}
+\index{CHARSYMBOL\_KEY\_SPLIT@{CHARSYMBOL\_KEY\_SPLIT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CHARSYMBOL\_KEY\_SPLIT}{CHARSYMBOL\_KEY\_SPLIT}}
+{\footnotesize\ttfamily \#define CHARSYMBOL\+\_\+\+KEY\+\_\+\+SPLIT~"{}."{}}
+
+\Hypertarget{defines_8h_a1efe9d5ced0fe12433f8d4290fa1641b}\label{defines_8h_a1efe9d5ced0fe12433f8d4290fa1641b} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_COLLISION\_LAYER@{COLLISION\_LAYER\_COLLISION\_LAYER}}
+\index{COLLISION\_LAYER\_COLLISION\_LAYER@{COLLISION\_LAYER\_COLLISION\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_COLLISION\_LAYER}{COLLISION\_LAYER\_COLLISION\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+COLLISION\+\_\+\+LAYER~0x00000002}
+
+\Hypertarget{defines_8h_aa920e77a2ee54dbb85e0d178d7fb133b}\label{defines_8h_aa920e77a2ee54dbb85e0d178d7fb133b} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_ENEMY\_LAYER@{COLLISION\_LAYER\_ENEMY\_LAYER}}
+\index{COLLISION\_LAYER\_ENEMY\_LAYER@{COLLISION\_LAYER\_ENEMY\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_ENEMY\_LAYER}{COLLISION\_LAYER\_ENEMY\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+ENEMY\+\_\+\+LAYER~0x40000000}
+
+\Hypertarget{defines_8h_a43a67a0c3d78185adcc8b8f38853e759}\label{defines_8h_a43a67a0c3d78185adcc8b8f38853e759} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_ITEM\_LAYER@{COLLISION\_LAYER\_ITEM\_LAYER}}
+\index{COLLISION\_LAYER\_ITEM\_LAYER@{COLLISION\_LAYER\_ITEM\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_ITEM\_LAYER}{COLLISION\_LAYER\_ITEM\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+ITEM\+\_\+\+LAYER~0x00000004}
+
+\Hypertarget{defines_8h_ab66075cd4170130fb25646fe046ddd53}\label{defines_8h_ab66075cd4170130fb25646fe046ddd53} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_PLAYER\_LAYER@{COLLISION\_LAYER\_PLAYER\_LAYER}}
+\index{COLLISION\_LAYER\_PLAYER\_LAYER@{COLLISION\_LAYER\_PLAYER\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_PLAYER\_LAYER}{COLLISION\_LAYER\_PLAYER\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+PLAYER\+\_\+\+LAYER~0x80000000}
+
+\Hypertarget{defines_8h_a6e558f712448bf21e5d21211b6a81759}\label{defines_8h_a6e558f712448bf21e5d21211b6a81759} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_PROJECTILE\_LAYER@{COLLISION\_LAYER\_PROJECTILE\_LAYER}}
+\index{COLLISION\_LAYER\_PROJECTILE\_LAYER@{COLLISION\_LAYER\_PROJECTILE\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_PROJECTILE\_LAYER}{COLLISION\_LAYER\_PROJECTILE\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+PROJECTILE\+\_\+\+LAYER~0x20000000}
+
+\Hypertarget{defines_8h_ab4b7ac9b4c7afeda7ebd2cb63899417c}\label{defines_8h_ab4b7ac9b4c7afeda7ebd2cb63899417c} 
+\index{defines.h@{defines.h}!COLLISION\_LAYER\_STATIC\_LAYER@{COLLISION\_LAYER\_STATIC\_LAYER}}
+\index{COLLISION\_LAYER\_STATIC\_LAYER@{COLLISION\_LAYER\_STATIC\_LAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_LAYER\_STATIC\_LAYER}{COLLISION\_LAYER\_STATIC\_LAYER}}
+{\footnotesize\ttfamily \#define COLLISION\+\_\+\+LAYER\+\_\+\+STATIC\+\_\+\+LAYER~0x00000001}
+
+\Hypertarget{defines_8h_a9cbe90610426a8f51abf83dd26d4089b}\label{defines_8h_a9cbe90610426a8f51abf83dd26d4089b} 
+\index{defines.h@{defines.h}!CREATE\_GET\_NODE\_TESTER@{CREATE\_GET\_NODE\_TESTER}}
+\index{CREATE\_GET\_NODE\_TESTER@{CREATE\_GET\_NODE\_TESTER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_GET\_NODE\_TESTER}{CREATE\_GET\_NODE\_TESTER}}
+{\footnotesize\ttfamily \#define CREATE\+\_\+\+GET\+\_\+\+NODE\+\_\+\+TESTER(\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{node\+\_\+path,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ target\ =\ NULL;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ godot::Node*\ \_\_macro\_test\_node\ =\ get\_node<godot::Node>(node\_path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if(\_\_macro\_test\_node)\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ if(\_\_macro\_test\_node-\/>is\_class(\#type))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ target\ =\ (type*)\_\_macro\_test\_node;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{else}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \_paramarr.append(node\_path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \_paramarr.append(\#type);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}Fetched\ node\ (path:\ \{0\}),\ isn't\ a\ type\ of\ '\{1\}'."{}}).format(\_paramarr))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.append(node\_path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}Cannot\ get\ specified\ node.\ Path:\ '\{0\}'"{}}).format(\_paramarr))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a9c121b425c7c128f53798edfc3ca97b3}\label{defines_8h_a9c121b425c7c128f53798edfc3ca97b3} 
+\index{defines.h@{defines.h}!CREATE\_LOAD\_PACKED\_SCENE\_CHECKER@{CREATE\_LOAD\_PACKED\_SCENE\_CHECKER}}
+\index{CREATE\_LOAD\_PACKED\_SCENE\_CHECKER@{CREATE\_LOAD\_PACKED\_SCENE\_CHECKER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_LOAD\_PACKED\_SCENE\_CHECKER}{CREATE\_LOAD\_PACKED\_SCENE\_CHECKER}}
+{\footnotesize\ttfamily \#define CREATE\+\_\+\+LOAD\+\_\+\+PACKED\+\_\+\+SCENE\+\_\+\+CHECKER(\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{path,  }\item[{}]{instantiated\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{defines_8h_a203ff027b4264a3299f871c6aac46592}{CREATE\_LOAD\_RESOURCE\_CHECKER}}(target,\ path,\ PackedScene)\(\backslash\)}
+\DoxyCodeLine{\ \ if(target.is\_valid())\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Node*\ \_\_macro\_test\_node\ =\ target-\/>instantiate();\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if(!\_\_macro\_test\_node-\/>is\_class(instantiated\_type::get\_class\_static()))\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}Instantiated\ godot::PackedScene\ is\ not\ a(n)\ "{}}\ \#instantiated\_type))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a203ff027b4264a3299f871c6aac46592}\label{defines_8h_a203ff027b4264a3299f871c6aac46592} 
+\index{defines.h@{defines.h}!CREATE\_LOAD\_RESOURCE\_CHECKER@{CREATE\_LOAD\_RESOURCE\_CHECKER}}
+\index{CREATE\_LOAD\_RESOURCE\_CHECKER@{CREATE\_LOAD\_RESOURCE\_CHECKER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_LOAD\_RESOURCE\_CHECKER}{CREATE\_LOAD\_RESOURCE\_CHECKER}}
+{\footnotesize\ttfamily \#define CREATE\+\_\+\+LOAD\+\_\+\+RESOURCE\+\_\+\+CHECKER(\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{path,  }\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\(\backslash\)}
+\DoxyCodeLine{\ \ godot::ResourceLoader*\ \_\_macro\_res\_loader\ =\ godot::ResourceLoader::get\_singleton();\(\backslash\)}
+\DoxyCodeLine{\ \ godot::Ref<godot::Resource>\ \_\_macro\_var\_res\ =\ \_\_macro\_res\_loader-\/>load(path);\(\backslash\)}
+\DoxyCodeLine{\ \ target\ =\ Ref<type>();\(\backslash\)}
+\DoxyCodeLine{\ \ if(\_\_macro\_var\_res.ptr())\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if(\_\_macro\_var\_res-\/>is\_class(\#type))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ target\ =\ \_\_macro\_var\_res;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.append(path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.append(\#type);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}Resource\ (\{0\})\ loaded\ is\ not\ a\ type\ of\ \{1\}."{}}).format(\_paramarr))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{else}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}Resource\ (\{0\})\ cannot\ be\ loaded."{}}).format(\_paramarr))\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a0246ca82aba06eab33cc6b36241b5252}\label{defines_8h_a0246ca82aba06eab33cc6b36241b5252} 
+\index{defines.h@{defines.h}!ENTITY\_TYPENAME\_ENEMY@{ENTITY\_TYPENAME\_ENEMY}}
+\index{ENTITY\_TYPENAME\_ENEMY@{ENTITY\_TYPENAME\_ENEMY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ENTITY\_TYPENAME\_ENEMY}{ENTITY\_TYPENAME\_ENEMY}}
+{\footnotesize\ttfamily \#define ENTITY\+\_\+\+TYPENAME\+\_\+\+ENEMY~"{}enemy"{}}
+
+\Hypertarget{defines_8h_a413c741799b41a5bb783d10dda3e2f52}\label{defines_8h_a413c741799b41a5bb783d10dda3e2f52} 
+\index{defines.h@{defines.h}!ENTITY\_TYPENAME\_NPC@{ENTITY\_TYPENAME\_NPC}}
+\index{ENTITY\_TYPENAME\_NPC@{ENTITY\_TYPENAME\_NPC}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ENTITY\_TYPENAME\_NPC}{ENTITY\_TYPENAME\_NPC}}
+{\footnotesize\ttfamily \#define ENTITY\+\_\+\+TYPENAME\+\_\+\+NPC~"{}npc"{}}
+
+\Hypertarget{defines_8h_a5ebd253dcd347ddea9e6b9cdd75012cd}\label{defines_8h_a5ebd253dcd347ddea9e6b9cdd75012cd} 
+\index{defines.h@{defines.h}!ENTITY\_TYPENAME\_PLAYER@{ENTITY\_TYPENAME\_PLAYER}}
+\index{ENTITY\_TYPENAME\_PLAYER@{ENTITY\_TYPENAME\_PLAYER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ENTITY\_TYPENAME\_PLAYER}{ENTITY\_TYPENAME\_PLAYER}}
+{\footnotesize\ttfamily \#define ENTITY\+\_\+\+TYPENAME\+\_\+\+PLAYER~"{}player"{}}
+
+\Hypertarget{defines_8h_a95877b1b50fe86eb2e261fe973d7616a}\label{defines_8h_a95877b1b50fe86eb2e261fe973d7616a} 
+\index{defines.h@{defines.h}!GAME\_CONTEXT\_SCENE\_FOLDER@{GAME\_CONTEXT\_SCENE\_FOLDER}}
+\index{GAME\_CONTEXT\_SCENE\_FOLDER@{GAME\_CONTEXT\_SCENE\_FOLDER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_CONTEXT\_SCENE\_FOLDER}{GAME\_CONTEXT\_SCENE\_FOLDER}}
+{\footnotesize\ttfamily \#define GAME\+\_\+\+CONTEXT\+\_\+\+SCENE\+\_\+\+FOLDER~"{}res\+://scene/game\+\_\+context\+\_\+scenes"{}}
+
+\Hypertarget{defines_8h_a56c65d22ca71d0b890d976de11088773}\label{defines_8h_a56c65d22ca71d0b890d976de11088773} 
+\index{defines.h@{defines.h}!GDSTR\_TO\_STDSTR@{GDSTR\_TO\_STDSTR}}
+\index{GDSTR\_TO\_STDSTR@{GDSTR\_TO\_STDSTR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{GDSTR\_TO\_STDSTR}{GDSTR\_TO\_STDSTR}}
+{\footnotesize\ttfamily \#define GDSTR\+\_\+\+TO\+\_\+\+STDSTR(\begin{DoxyParamCaption}\item[{}]{gdstr }\end{DoxyParamCaption})~std\+::string((char\texorpdfstring{$\ast$}{*})gdstr.\+to\+\_\+ascii\+\_\+buffer().ptr(), gdstr.\+length())}
+
+\Hypertarget{defines_8h_a39303f751baeec0bd2ca959ffd24933c}\label{defines_8h_a39303f751baeec0bd2ca959ffd24933c} 
+\index{defines.h@{defines.h}!ITEM\_DATA\_HITREG\_DATA\_START\_ID@{ITEM\_DATA\_HITREG\_DATA\_START\_ID}}
+\index{ITEM\_DATA\_HITREG\_DATA\_START\_ID@{ITEM\_DATA\_HITREG\_DATA\_START\_ID}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DATA\_HITREG\_DATA\_START\_ID}{ITEM\_DATA\_HITREG\_DATA\_START\_ID}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+DATA\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+START\+\_\+\+ID~"{}0"{}}
+
+\Hypertarget{defines_8h_acef05918a9f94357930ebcd3bdab7d28}\label{defines_8h_acef05918a9f94357930ebcd3bdab7d28} 
+\index{defines.h@{defines.h}!ITEM\_TYPENAME\_CONSUMABLE@{ITEM\_TYPENAME\_CONSUMABLE}}
+\index{ITEM\_TYPENAME\_CONSUMABLE@{ITEM\_TYPENAME\_CONSUMABLE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_TYPENAME\_CONSUMABLE}{ITEM\_TYPENAME\_CONSUMABLE}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+TYPENAME\+\_\+\+CONSUMABLE~"{}consumable"{}}
+
+\Hypertarget{defines_8h_a0516574d86908e720c3562845a912abb}\label{defines_8h_a0516574d86908e720c3562845a912abb} 
+\index{defines.h@{defines.h}!ITEM\_TYPENAME\_MATERIAL@{ITEM\_TYPENAME\_MATERIAL}}
+\index{ITEM\_TYPENAME\_MATERIAL@{ITEM\_TYPENAME\_MATERIAL}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_TYPENAME\_MATERIAL}{ITEM\_TYPENAME\_MATERIAL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+TYPENAME\+\_\+\+MATERIAL~"{}material"{}}
+
+\Hypertarget{defines_8h_a34afdc6ff6932a3745ce12cbf3a94f4c}\label{defines_8h_a34afdc6ff6932a3745ce12cbf3a94f4c} 
+\index{defines.h@{defines.h}!ITEM\_TYPENAME\_MODIFIER@{ITEM\_TYPENAME\_MODIFIER}}
+\index{ITEM\_TYPENAME\_MODIFIER@{ITEM\_TYPENAME\_MODIFIER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_TYPENAME\_MODIFIER}{ITEM\_TYPENAME\_MODIFIER}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+TYPENAME\+\_\+\+MODIFIER~"{}modifier"{}}
+
+\Hypertarget{defines_8h_a792efcf8639b5fabd5f203105eac9ff9}\label{defines_8h_a792efcf8639b5fabd5f203105eac9ff9} 
+\index{defines.h@{defines.h}!ITEM\_TYPENAME\_WEAPON@{ITEM\_TYPENAME\_WEAPON}}
+\index{ITEM\_TYPENAME\_WEAPON@{ITEM\_TYPENAME\_WEAPON}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_TYPENAME\_WEAPON}{ITEM\_TYPENAME\_WEAPON}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+TYPENAME\+\_\+\+WEAPON~"{}weapon"{}}
+
+\Hypertarget{defines_8h_a5854b47b0f40e8033670c9a30f2deee4}\label{defines_8h_a5854b47b0f40e8033670c9a30f2deee4} 
+\index{defines.h@{defines.h}!PARSE\_GAME\_CONTEXT\_SCENE\_PATH@{PARSE\_GAME\_CONTEXT\_SCENE\_PATH}}
+\index{PARSE\_GAME\_CONTEXT\_SCENE\_PATH@{PARSE\_GAME\_CONTEXT\_SCENE\_PATH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{PARSE\_GAME\_CONTEXT\_SCENE\_PATH}{PARSE\_GAME\_CONTEXT\_SCENE\_PATH}}
+{\footnotesize\ttfamily \#define PARSE\+\_\+\+GAME\+\_\+\+CONTEXT\+\_\+\+SCENE\+\_\+\+PATH(\begin{DoxyParamCaption}\item[{}]{target\+\_\+var,  }\item[{}]{context\+\_\+id,  }\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Array\ \_\_macro\_paramarr;\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_\_macro\_paramarr.append(context\_id);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_\_macro\_paramarr.append(class\_type);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ target\_var\ =\ String(\mbox{\hyperlink{defines_8h_a95877b1b50fe86eb2e261fe973d7616a}{GAME\_CONTEXT\_SCENE\_FOLDER}}\ \textcolor{stringliteral}{"{}/\{0\}/\{1\}.tscn"{}}).format(\_\_macro\_paramarr);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_abcb0827d338c9f1b219ab2c074d16976}\label{defines_8h_abcb0827d338c9f1b219ab2c074d16976} 
+\index{defines.h@{defines.h}!PROCESS\_JSON\_PATH@{PROCESS\_JSON\_PATH}}
+\index{PROCESS\_JSON\_PATH@{PROCESS\_JSON\_PATH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{PROCESS\_JSON\_PATH}{PROCESS\_JSON\_PATH}}
+{\footnotesize\ttfamily \#define PROCESS\+\_\+\+JSON\+\_\+\+PATH(\begin{DoxyParamCaption}\item[{}]{json\+\_\+path,  }\item[{}]{process\+\_\+func }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Ref<FileAccess>\ \_data\ =\ FileAccess::open(json\_path,\ FileAccess::READ);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if(\_data.is\_null())\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.append(\#json\_path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_paramarr.append(json\_path);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ ERR\_ASSERT(String(\textcolor{stringliteral}{"{}\{0\}\ (dir:\ '\{1\}')\ is\ not\ a\ file"{}}).format(\_paramarr))\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ JSON\ \_json\_data\ =\ JSON();\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_json\_data.parse(\_data-\/>get\_as\_text());\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ Dictionary\ \_dict\_data\ =\ \_json\_data.get\_data();\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ process\_func(\&\_dict\_data);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a45ca8068323ccbfcaa97d1fc2e585eda}\label{defines_8h_a45ca8068323ccbfcaa97d1fc2e585eda} 
+\index{defines.h@{defines.h}!SAVEFILE\_PATH@{SAVEFILE\_PATH}}
+\index{SAVEFILE\_PATH@{SAVEFILE\_PATH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{SAVEFILE\_PATH}{SAVEFILE\_PATH}}
+{\footnotesize\ttfamily \#define SAVEFILE\+\_\+\+PATH~"{}user\+://players/\{0\}/save.\+dat"{}}
+
+\Hypertarget{defines_8h_a23dbef767de451a3fcf892bd5491dc8d}\label{defines_8h_a23dbef767de451a3fcf892bd5491dc8d} 
+\index{defines.h@{defines.h}!VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT@{VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT}}
+\index{VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT@{VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT}{VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+BASE\+\_\+\+LIMIT~"{}base\+\_\+limit"{}}
+
+\Hypertarget{defines_8h_af7b21bc17ee8fe4d71d26981a599fd99}\label{defines_8h_af7b21bc17ee8fe4d71d26981a599fd99} 
+\index{defines.h@{defines.h}!VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER@{VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER}}
+\index{VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER@{VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER}{VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+BASE\+\_\+\+MULTIPLIER~"{}base\+\_\+multiplier"{}}
+
+\Hypertarget{defines_8h_a12945b1e8b9fda40c101847a8e1a5f61}\label{defines_8h_a12945b1e8b9fda40c101847a8e1a5f61} 
+\index{defines.h@{defines.h}!VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR@{VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR}}
+\index{VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR@{VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR}{VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+LOGO\+\_\+\+SPRITE\+\_\+\+DIR~"{}logo\+\_\+sprite\+\_\+dir"{}}
+
+\Hypertarget{defines_8h_ad1eaeaaa76ee73caf33fb30d6ccaf775}\label{defines_8h_ad1eaeaaa76ee73caf33fb30d6ccaf775} 
+\index{defines.h@{defines.h}!VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER@{VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER}}
+\index{VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER@{VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER}{VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+MAX\+\_\+\+MULTIPLIER~"{}max\+\_\+multiplier"{}}
+
+\Hypertarget{defines_8h_ae4c2441d274da4a25ebf5714576b04a3}\label{defines_8h_ae4c2441d274da4a25ebf5714576b04a3} 
+\index{defines.h@{defines.h}!VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT@{VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT}}
+\index{VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT@{VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT}{VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+COMBO\+\_\+\+TRACKER\+\_\+\+MULTIPLIER\+\_\+\+DECREMENT~"{}multiplier\+\_\+decrement"{}}
+
+\Hypertarget{defines_8h_a39df1e798caf8b2f0b0cb66dcf6b660e}\label{defines_8h_a39df1e798caf8b2f0b0cb66dcf6b660e} 
+\index{defines.h@{defines.h}!VARNAME\_CONSUMABLE\_STATS@{VARNAME\_CONSUMABLE\_STATS}}
+\index{VARNAME\_CONSUMABLE\_STATS@{VARNAME\_CONSUMABLE\_STATS}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_CONSUMABLE\_STATS}{VARNAME\_CONSUMABLE\_STATS}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS~"{}consumable\+\_\+stats"{}}
+
+\Hypertarget{defines_8h_ae59c0df73d93505ff4918e29153b3e7d}\label{defines_8h_ae59c0df73d93505ff4918e29153b3e7d} 
+\index{defines.h@{defines.h}!VARNAME\_CONSUMABLE\_STATS\_HEAL@{VARNAME\_CONSUMABLE\_STATS\_HEAL}}
+\index{VARNAME\_CONSUMABLE\_STATS\_HEAL@{VARNAME\_CONSUMABLE\_STATS\_HEAL}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_CONSUMABLE\_STATS\_HEAL}{VARNAME\_CONSUMABLE\_STATS\_HEAL}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS\+\_\+\+HEAL~"{}heal"{}}
+
+\Hypertarget{defines_8h_a866a708de132816968088c78b0041701}\label{defines_8h_a866a708de132816968088c78b0041701} 
+\index{defines.h@{defines.h}!VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE@{VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE}}
+\index{VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE@{VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE}{VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+CONSUMABLE\+\_\+\+STATS\+\_\+\+IS\+\_\+\+THROWABLE~"{}is\+\_\+throwable"{}}
+
+\Hypertarget{defines_8h_a6c91cda356e37d754bbaa46cf8768505}\label{defines_8h_a6c91cda356e37d754bbaa46cf8768505} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA@{VARNAME\_ENTITY\_DATA}}
+\index{VARNAME\_ENTITY\_DATA@{VARNAME\_ENTITY\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA}{VARNAME\_ENTITY\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA~"{}entity\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a7c53d3466a27e78ebe12c604063bdecf}\label{defines_8h_a7c53d3466a27e78ebe12c604063bdecf} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_DESCRIPTION@{VARNAME\_ENTITY\_DATA\_DESCRIPTION}}
+\index{VARNAME\_ENTITY\_DATA\_DESCRIPTION@{VARNAME\_ENTITY\_DATA\_DESCRIPTION}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_DESCRIPTION}{VARNAME\_ENTITY\_DATA\_DESCRIPTION}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+DESCRIPTION~"{}description"{}}
+
+\Hypertarget{defines_8h_a2ad85354fcfc3f0f7e581b34056a7aa3}\label{defines_8h_a2ad85354fcfc3f0f7e581b34056a7aa3} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG@{VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG}}
+\index{VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG@{VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG}{VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+INVENTORY\+\_\+\+CONFIG~"{}inventory"{}}
+
+\Hypertarget{defines_8h_ac30165ff07438b2d850dd22b048b3e6e}\label{defines_8h_ac30165ff07438b2d850dd22b048b3e6e} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG@{VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG}}
+\index{VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG@{VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG}{VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+LOADOUT\+\_\+\+INVENTORY\+\_\+\+CONFIG~"{}loadout\+\_\+inventory"{}}
+
+\Hypertarget{defines_8h_a6d39982693a592360cb284df64a281be}\label{defines_8h_a6d39982693a592360cb284df64a281be} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_NAME@{VARNAME\_ENTITY\_DATA\_NAME}}
+\index{VARNAME\_ENTITY\_DATA\_NAME@{VARNAME\_ENTITY\_DATA\_NAME}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_NAME}{VARNAME\_ENTITY\_DATA\_NAME}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+NAME~"{}name"{}}
+
+\Hypertarget{defines_8h_abb0f7f3c88b3c07bfd29dd51ddaf2cc1}\label{defines_8h_abb0f7f3c88b3c07bfd29dd51ddaf2cc1} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_TYPE\_CLASS@{VARNAME\_ENTITY\_DATA\_TYPE\_CLASS}}
+\index{VARNAME\_ENTITY\_DATA\_TYPE\_CLASS@{VARNAME\_ENTITY\_DATA\_TYPE\_CLASS}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_TYPE\_CLASS}{VARNAME\_ENTITY\_DATA\_TYPE\_CLASS}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+TYPE\+\_\+\+CLASS~"{}type\+\_\+class"{}}
+
+\Hypertarget{defines_8h_a588434f2ef3c45286db18a0684b7693b}\label{defines_8h_a588434f2ef3c45286db18a0684b7693b} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_DATA\_VITAL\_INFO@{VARNAME\_ENTITY\_DATA\_VITAL\_INFO}}
+\index{VARNAME\_ENTITY\_DATA\_VITAL\_INFO@{VARNAME\_ENTITY\_DATA\_VITAL\_INFO}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_DATA\_VITAL\_INFO}{VARNAME\_ENTITY\_DATA\_VITAL\_INFO}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+DATA\+\_\+\+VITAL\+\_\+\+INFO~\mbox{\hyperlink{defines_8h_a14a6fc0feb19c34db6c461f0c1195fb5}{VARNAME\+\_\+\+VITAL\+\_\+\+INFO}}}
+
+\Hypertarget{defines_8h_ad8047695b15c89b34f4b65a0a7c72103}\label{defines_8h_ad8047695b15c89b34f4b65a0a7c72103} 
+\index{defines.h@{defines.h}!VARNAME\_ENTITY\_SCENE\_CLASS\_PATH@{VARNAME\_ENTITY\_SCENE\_CLASS\_PATH}}
+\index{VARNAME\_ENTITY\_SCENE\_CLASS\_PATH@{VARNAME\_ENTITY\_SCENE\_CLASS\_PATH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ENTITY\_SCENE\_CLASS\_PATH}{VARNAME\_ENTITY\_SCENE\_CLASS\_PATH}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ENTITY\+\_\+\+SCENE\+\_\+\+CLASS\+\_\+\+PATH~"{}scene\+\_\+path"{}}
+
+\Hypertarget{defines_8h_aa1e1226cf7bfd8ff449423bac95b28f4}\label{defines_8h_aa1e1226cf7bfd8ff449423bac95b28f4} 
+\index{defines.h@{defines.h}!VARNAME\_INVENTORY\_CONFIG@{VARNAME\_INVENTORY\_CONFIG}}
+\index{VARNAME\_INVENTORY\_CONFIG@{VARNAME\_INVENTORY\_CONFIG}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_INVENTORY\_CONFIG}{VARNAME\_INVENTORY\_CONFIG}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG~"{}inventory\+\_\+config"{}}
+
+\Hypertarget{defines_8h_af1e1f7ec4a29b5ecfab25a648fa89615}\label{defines_8h_af1e1f7ec4a29b5ecfab25a648fa89615} 
+\index{defines.h@{defines.h}!VARNAME\_INVENTORY\_CONFIG\_SIZE@{VARNAME\_INVENTORY\_CONFIG\_SIZE}}
+\index{VARNAME\_INVENTORY\_CONFIG\_SIZE@{VARNAME\_INVENTORY\_CONFIG\_SIZE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_INVENTORY\_CONFIG\_SIZE}{VARNAME\_INVENTORY\_CONFIG\_SIZE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG\+\_\+\+SIZE~"{}size"{}}
+
+\Hypertarget{defines_8h_a8112bd3c7b9d44f4b2357e961c5419bc}\label{defines_8h_a8112bd3c7b9d44f4b2357e961c5419bc} 
+\index{defines.h@{defines.h}!VARNAME\_INVENTORY\_CONFIG\_TYPE@{VARNAME\_INVENTORY\_CONFIG\_TYPE}}
+\index{VARNAME\_INVENTORY\_CONFIG\_TYPE@{VARNAME\_INVENTORY\_CONFIG\_TYPE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_INVENTORY\_CONFIG\_TYPE}{VARNAME\_INVENTORY\_CONFIG\_TYPE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+INVENTORY\+\_\+\+CONFIG\+\_\+\+TYPE~"{}inventory\+\_\+type"{}}
+
+\Hypertarget{defines_8h_af5d37d127d954e5f4d0dfe1a207fcc20}\label{defines_8h_af5d37d127d954e5f4d0dfe1a207fcc20} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE@{VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE}}
+\index{VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE@{VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE}{VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+CONTAINER\+\_\+\+PREMADE\+\_\+\+DATA\+\_\+\+SIZE~"{}size"{}}
+
+\Hypertarget{defines_8h_a99d642cb7127b59386db6254520873cc}\label{defines_8h_a99d642cb7127b59386db6254520873cc} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_DATA\_DESCRIPTION@{VARNAME\_ITEM\_DATA\_DESCRIPTION}}
+\index{VARNAME\_ITEM\_DATA\_DESCRIPTION@{VARNAME\_ITEM\_DATA\_DESCRIPTION}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_DATA\_DESCRIPTION}{VARNAME\_ITEM\_DATA\_DESCRIPTION}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+DESCRIPTION~"{}desc"{}}
+
+\Hypertarget{defines_8h_ab77c0780b6576c1a5a8b61c2bca148bb}\label{defines_8h_ab77c0780b6576c1a5a8b61c2bca148bb} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_DATA\_IMAGE\_PATH@{VARNAME\_ITEM\_DATA\_IMAGE\_PATH}}
+\index{VARNAME\_ITEM\_DATA\_IMAGE\_PATH@{VARNAME\_ITEM\_DATA\_IMAGE\_PATH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_DATA\_IMAGE\_PATH}{VARNAME\_ITEM\_DATA\_IMAGE\_PATH}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+IMAGE\+\_\+\+PATH~"{}image\+\_\+path"{}}
+
+\Hypertarget{defines_8h_af4c36273e5db5464b6143a0e29514e1d}\label{defines_8h_af4c36273e5db5464b6143a0e29514e1d} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_DATA\_NAME@{VARNAME\_ITEM\_DATA\_NAME}}
+\index{VARNAME\_ITEM\_DATA\_NAME@{VARNAME\_ITEM\_DATA\_NAME}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_DATA\_NAME}{VARNAME\_ITEM\_DATA\_NAME}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+NAME~"{}name"{}}
+
+\Hypertarget{defines_8h_aa3f0892a01f07a9c173a8af885ff0220}\label{defines_8h_aa3f0892a01f07a9c173a8af885ff0220} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_POUCH\_DATA@{VARNAME\_ITEM\_POUCH\_DATA}}
+\index{VARNAME\_ITEM\_POUCH\_DATA@{VARNAME\_ITEM\_POUCH\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_POUCH\_DATA}{VARNAME\_ITEM\_POUCH\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA~"{}item\+\_\+pouch\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a8b0b38842afdbbb3e6bbdf01ed0af9cb}\label{defines_8h_a8b0b38842afdbbb3e6bbdf01ed0af9cb} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_POUCH\_DATA\_FILTER@{VARNAME\_ITEM\_POUCH\_DATA\_FILTER}}
+\index{VARNAME\_ITEM\_POUCH\_DATA\_FILTER@{VARNAME\_ITEM\_POUCH\_DATA\_FILTER}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_POUCH\_DATA\_FILTER}{VARNAME\_ITEM\_POUCH\_DATA\_FILTER}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+FILTER~"{}item\+\_\+filter"{}}
+
+\Hypertarget{defines_8h_a15fa8c0ba566d738773f2fd41f2a7e66}\label{defines_8h_a15fa8c0ba566d738773f2fd41f2a7e66} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_POUCH\_DATA\_SIZE@{VARNAME\_ITEM\_POUCH\_DATA\_SIZE}}
+\index{VARNAME\_ITEM\_POUCH\_DATA\_SIZE@{VARNAME\_ITEM\_POUCH\_DATA\_SIZE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_POUCH\_DATA\_SIZE}{VARNAME\_ITEM\_POUCH\_DATA\_SIZE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+SIZE~"{}pouch\+\_\+size"{}}
+
+\Hypertarget{defines_8h_a903233da600e3cf451a4440c18fb8cb1}\label{defines_8h_a903233da600e3cf451a4440c18fb8cb1} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_POUCH\_DATA\_TYPE@{VARNAME\_ITEM\_POUCH\_DATA\_TYPE}}
+\index{VARNAME\_ITEM\_POUCH\_DATA\_TYPE@{VARNAME\_ITEM\_POUCH\_DATA\_TYPE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_POUCH\_DATA\_TYPE}{VARNAME\_ITEM\_POUCH\_DATA\_TYPE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+POUCH\+\_\+\+DATA\+\_\+\+TYPE~"{}container\+\_\+type"{}}
+
+\Hypertarget{defines_8h_a4c34b6f819f381cca9320bf3c6dd843d}\label{defines_8h_a4c34b6f819f381cca9320bf3c6dd843d} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA@{VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA}}
+\index{VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA@{VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA}{VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+RES\+\_\+\+EQUIPPABLE\+\_\+\+SPRITE\+\_\+\+DATA~"{}equippable\+\_\+sprite"{},}
+
+\Hypertarget{defines_8h_a4cdc27bee4c8141e0ab0b880ffd5f9e7}\label{defines_8h_a4cdc27bee4c8141e0ab0b880ffd5f9e7} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA@{VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA}}
+\index{VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA@{VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA}{VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+RES\+\_\+\+ITEM\+\_\+\+SPRITE\+\_\+\+DATA~"{}item\+\_\+sprite"{}}
+
+\Hypertarget{defines_8h_ad4e390de88d60b8b7728f476b0376e41}\label{defines_8h_ad4e390de88d60b8b7728f476b0376e41} 
+\index{defines.h@{defines.h}!VARNAME\_ITEM\_RESOURCE\_DATA@{VARNAME\_ITEM\_RESOURCE\_DATA}}
+\index{VARNAME\_ITEM\_RESOURCE\_DATA@{VARNAME\_ITEM\_RESOURCE\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_ITEM\_RESOURCE\_DATA}{VARNAME\_ITEM\_RESOURCE\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+ITEM\+\_\+\+RESOURCE\+\_\+\+DATA~"{}item\+\_\+resource\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a7b60301182cebea28e83c293a8857d4b}\label{defines_8h_a7b60301182cebea28e83c293a8857d4b} 
+\index{defines.h@{defines.h}!VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE@{VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE}}
+\index{VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE@{VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE}{VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+MODIFIER\+\_\+\+DATA\+\_\+\+CHANCE\+\_\+\+SCORE~"{}chance\+\_\+score"{}}
+
+\Hypertarget{defines_8h_a8b48b5fb699dec81d87d3688fbcc4466}\label{defines_8h_a8b48b5fb699dec81d87d3688fbcc4466} 
+\index{defines.h@{defines.h}!VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA@{VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA}}
+\index{VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA@{VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA}{VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+MODIFIER\+\_\+\+DATA\+\_\+\+MODIFIER\+\_\+\+DATA~"{}modifier\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a95ac10423a82972a18a2fbe26becd86e}\label{defines_8h_a95ac10423a82972a18a2fbe26becd86e} 
+\index{defines.h@{defines.h}!VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED@{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED}}
+\index{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED@{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED}{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+ANIMATED~"{}animated\+\_\+sprite"{}}
+
+\Hypertarget{defines_8h_a6aff01dd17a39ef731e22858131c221a}\label{defines_8h_a6aff01dd17a39ef731e22858131c221a} 
+\index{defines.h@{defines.h}!VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB@{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB}}
+\index{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB@{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB}{VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+ANIMATION\+\_\+\+LIB~"{}animation\+\_\+library"{}}
+
+\Hypertarget{defines_8h_a19f239118ed33f854663f5acb889e86b}\label{defines_8h_a19f239118ed33f854663f5acb889e86b} 
+\index{defines.h@{defines.h}!VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM@{VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM}}
+\index{VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM@{VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM}{VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+CUSTOM~"{}custom\+\_\+object\+\_\+sprite"{}}
+
+\Hypertarget{defines_8h_ae861a7c020821e0752720d26093b9e33}\label{defines_8h_ae861a7c020821e0752720d26093b9e33} 
+\index{defines.h@{defines.h}!VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC@{VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC}}
+\index{VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC@{VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC}{VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+SPRITE\+\_\+\+RESOURCE\+\_\+\+DATA\+\_\+\+STATIC~"{}static\+\_\+sprite"{}}
+
+\Hypertarget{defines_8h_a14a6fc0feb19c34db6c461f0c1195fb5}\label{defines_8h_a14a6fc0feb19c34db6c461f0c1195fb5} 
+\index{defines.h@{defines.h}!VARNAME\_VITAL\_INFO@{VARNAME\_VITAL\_INFO}}
+\index{VARNAME\_VITAL\_INFO@{VARNAME\_VITAL\_INFO}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_VITAL\_INFO}{VARNAME\_VITAL\_INFO}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+VITAL\+\_\+\+INFO~"{}vital\+\_\+info"{}}
+
+\Hypertarget{defines_8h_a5fedadb1ebeb4e0b06e52a1085729edb}\label{defines_8h_a5fedadb1ebeb4e0b06e52a1085729edb} 
+\index{defines.h@{defines.h}!VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY@{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY}}
+\index{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY@{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY}{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+EP\+\_\+\+RESTORE\+\_\+\+DELAY~"{}ep\+\_\+restore\+\_\+delay"{}}
+
+\Hypertarget{defines_8h_a7db77d0962de0058dd3fd5522db6414e}\label{defines_8h_a7db77d0962de0058dd3fd5522db6414e} 
+\index{defines.h@{defines.h}!VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE@{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE}}
+\index{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE@{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE}{VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+EP\+\_\+\+RESTORE\+\_\+\+RATE~"{}ep\+\_\+restore\+\_\+rate"{}}
+
+\Hypertarget{defines_8h_ae97223f02b1c2b8d5d60ae56479abd49}\label{defines_8h_ae97223f02b1c2b8d5d60ae56479abd49} 
+\index{defines.h@{defines.h}!VARNAME\_VITAL\_INFO\_MAX\_ENERGY@{VARNAME\_VITAL\_INFO\_MAX\_ENERGY}}
+\index{VARNAME\_VITAL\_INFO\_MAX\_ENERGY@{VARNAME\_VITAL\_INFO\_MAX\_ENERGY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_VITAL\_INFO\_MAX\_ENERGY}{VARNAME\_VITAL\_INFO\_MAX\_ENERGY}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+ENERGY~"{}max\+\_\+energy\+\_\+point"{}}
+
+\Hypertarget{defines_8h_a1ad717728ea901b4dab04185ffe559c5}\label{defines_8h_a1ad717728ea901b4dab04185ffe559c5} 
+\index{defines.h@{defines.h}!VARNAME\_VITAL\_INFO\_MAX\_HEALTH@{VARNAME\_VITAL\_INFO\_MAX\_HEALTH}}
+\index{VARNAME\_VITAL\_INFO\_MAX\_HEALTH@{VARNAME\_VITAL\_INFO\_MAX\_HEALTH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_VITAL\_INFO\_MAX\_HEALTH}{VARNAME\_VITAL\_INFO\_MAX\_HEALTH}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+VITAL\+\_\+\+INFO\+\_\+\+MAX\+\_\+\+HEALTH~"{}max\+\_\+health\+\_\+point"{}}
+
+\Hypertarget{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}\label{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS@{VARNAME\_WEAPON\_STATS}}
+\index{VARNAME\_WEAPON\_STATS@{VARNAME\_WEAPON\_STATS}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS}{VARNAME\_WEAPON\_STATS}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS~"{}weapon\+\_\+stats"{}}
+
+\Hypertarget{defines_8h_a56ca2b3eff6906133bf0e947f27eeeb4}\label{defines_8h_a56ca2b3eff6906133bf0e947f27eeeb4} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_ALTERNATE@{VARNAME\_WEAPON\_STATS\_ALTERNATE}}
+\index{VARNAME\_WEAPON\_STATS\_ALTERNATE@{VARNAME\_WEAPON\_STATS\_ALTERNATE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_ALTERNATE}{VARNAME\_WEAPON\_STATS\_ALTERNATE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ALTERNATE~"{}alternate\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a2d654ff65030fba36826f39aeaf23df6}\label{defines_8h_a2d654ff65030fba36826f39aeaf23df6} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS@{VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS}}
+\index{VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS@{VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS}{VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ALTERNATE\+\_\+\+WEAPON\+\_\+\+STATS~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}}}
+
+\Hypertarget{defines_8h_aca61953ec7d4241542a173257d75fa42}\label{defines_8h_aca61953ec7d4241542a173257d75fa42} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_BURST\_COUNT@{VARNAME\_WEAPON\_STATS\_BURST\_COUNT}}
+\index{VARNAME\_WEAPON\_STATS\_BURST\_COUNT@{VARNAME\_WEAPON\_STATS\_BURST\_COUNT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_BURST\_COUNT}{VARNAME\_WEAPON\_STATS\_BURST\_COUNT}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+BURST\+\_\+\+COUNT~"{}burst\+\_\+count"{}}
+
+\Hypertarget{defines_8h_ac63c2740577f14b9797459b8421c8898}\label{defines_8h_ac63c2740577f14b9797459b8421c8898} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY@{VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY}}
+\index{VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY@{VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY}{VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+CHARGE\+\_\+\+DELAY~"{}charge\+\_\+delay"{}}
+
+\Hypertarget{defines_8h_a14c56f0e35e0bbfd55353f5793ed1c14}\label{defines_8h_a14c56f0e35e0bbfd55353f5793ed1c14} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_DAMAGE@{VARNAME\_WEAPON\_STATS\_DAMAGE}}
+\index{VARNAME\_WEAPON\_STATS\_DAMAGE@{VARNAME\_WEAPON\_STATS\_DAMAGE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_DAMAGE}{VARNAME\_WEAPON\_STATS\_DAMAGE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+DAMAGE~"{}damage"{}}
+
+\Hypertarget{defines_8h_abfc28c65cb332c34a31b7a9d6ce59bc7}\label{defines_8h_abfc28c65cb332c34a31b7a9d6ce59bc7} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_ENERGY\_COST@{VARNAME\_WEAPON\_STATS\_ENERGY\_COST}}
+\index{VARNAME\_WEAPON\_STATS\_ENERGY\_COST@{VARNAME\_WEAPON\_STATS\_ENERGY\_COST}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_ENERGY\_COST}{VARNAME\_WEAPON\_STATS\_ENERGY\_COST}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+ENERGY\+\_\+\+COST~"{}energy\+\_\+cost"{}}
+
+\Hypertarget{defines_8h_ad5f7fddb812d88e4e09eb4f765d93f82}\label{defines_8h_ad5f7fddb812d88e4e09eb4f765d93f82} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE~"{}fire\+\_\+mode"{}}
+
+\Hypertarget{defines_8h_ae70ad4e345e6c084f8ee9fd16a5b6058}\label{defines_8h_ae70ad4e345e6c084f8ee9fd16a5b6058} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+AUTOMATIC~"{}automatic"{}}
+
+\Hypertarget{defines_8h_af3c76160f9abc16e8c0762a31a67bdc9}\label{defines_8h_af3c76160f9abc16e8c0762a31a67bdc9} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+BURST~"{}burst\+\_\+fire"{}}
+
+\Hypertarget{defines_8h_a87a3992d1ef4d6ea98a215096a6fd299}\label{defines_8h_a87a3992d1ef4d6ea98a215096a6fd299} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+CHARGE~"{}charge"{}}
+
+\Hypertarget{defines_8h_a2d77eeb46525e4ee44054682099ab279}\label{defines_8h_a2d77eeb46525e4ee44054682099ab279} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+FULL\+\_\+\+EXHAUST~"{}full\+\_\+exhaust"{}}
+
+\Hypertarget{defines_8h_a73b3fb0b3d46e757fc7bd5476badde4d}\label{defines_8h_a73b3fb0b3d46e757fc7bd5476badde4d} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE@{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE}{VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+MODE\+\_\+\+SINGLE~"{}single\+\_\+fire"{}}
+
+\Hypertarget{defines_8h_a4e350ed60ed6b2a338537224d40d1e47}\label{defines_8h_a4e350ed60ed6b2a338537224d40d1e47} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_FIRE\_RATE@{VARNAME\_WEAPON\_STATS\_FIRE\_RATE}}
+\index{VARNAME\_WEAPON\_STATS\_FIRE\_RATE@{VARNAME\_WEAPON\_STATS\_FIRE\_RATE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_FIRE\_RATE}{VARNAME\_WEAPON\_STATS\_FIRE\_RATE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+FIRE\+\_\+\+RATE~"{}fire\+\_\+rate"{}}
+
+\Hypertarget{defines_8h_a82261375b9bca95138cf36e47b749836}\label{defines_8h_a82261375b9bca95138cf36e47b749836} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_HITREG\_DATA@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA}}
+\index{VARNAME\_WEAPON\_STATS\_HITREG\_DATA@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_HITREG\_DATA}{VARNAME\_WEAPON\_STATS\_HITREG\_DATA}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA~"{}hitreg\+\_\+data"{}}
+
+\Hypertarget{defines_8h_a65d5f746a9e107b4ff6fa1aff5d83b95}\label{defines_8h_a65d5f746a9e107b4ff6fa1aff5d83b95} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH}}
+\index{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH}{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+MAX\+\_\+\+LENGTH~"{}max\+\_\+length"{}}
+
+\Hypertarget{defines_8h_abf042a2e007269ebfdff5543a4baeda0}\label{defines_8h_abf042a2e007269ebfdff5543a4baeda0} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE}}
+\index{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE}{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+NEXT\+\_\+\+NODE~"{}next\+\_\+node"{}}
+
+\Hypertarget{defines_8h_ab236cfa7a1b623a010c169cab45ef435}\label{defines_8h_ab236cfa7a1b623a010c169cab45ef435} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME}}
+\index{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME}{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+TIME~"{}time"{}}
+
+\Hypertarget{defines_8h_afbdc9e6f4e7cfd40b0aeaf119761d6ec}\label{defines_8h_afbdc9e6f4e7cfd40b0aeaf119761d6ec} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE}}
+\index{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE@{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE}{VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+HITREG\+\_\+\+DATA\+\_\+\+TYPE~"{}type"{}}
+
+\Hypertarget{defines_8h_af53410cd39c583e973c8dac52c8b62ea}\label{defines_8h_af53410cd39c583e973c8dac52c8b62ea} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_TAP\_RATE@{VARNAME\_WEAPON\_STATS\_TAP\_RATE}}
+\index{VARNAME\_WEAPON\_STATS\_TAP\_RATE@{VARNAME\_WEAPON\_STATS\_TAP\_RATE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_TAP\_RATE}{VARNAME\_WEAPON\_STATS\_TAP\_RATE}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TAP\+\_\+\+RATE~"{}tap\+\_\+rate"{}}
+
+\Hypertarget{defines_8h_ae6dfa12f26f9275cd891b85cfe28a4a2}\label{defines_8h_ae6dfa12f26f9275cd891b85cfe28a4a2} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY@{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY}}
+\index{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY@{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY}{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TYPE\+\_\+\+PRIMARY~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}} "{}\+:primary"{}}
+
+\Hypertarget{defines_8h_ac3e24010140a1f2c661ae20c97a1e6f2}\label{defines_8h_ac3e24010140a1f2c661ae20c97a1e6f2} 
+\index{defines.h@{defines.h}!VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY@{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY}}
+\index{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY@{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY}{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY}}
+{\footnotesize\ttfamily \#define VARNAME\+\_\+\+WEAPON\+\_\+\+STATS\+\_\+\+TYPE\+\_\+\+SECONDARY~\mbox{\hyperlink{defines_8h_a0d4f55bb6feb1c4d5d7f089c94687a48}{VARNAME\+\_\+\+WEAPON\+\_\+\+STATS}} "{}\+:secondary"{}}
+

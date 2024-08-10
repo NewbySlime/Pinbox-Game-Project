@@ -1,0 +1,73 @@
+\doxysection{src/overrider\+\_\+base.h File Reference}
+\hypertarget{overrider__base_8h}{}\label{overrider__base_8h}\index{src/overrider\_base.h@{src/overrider\_base.h}}
+{\ttfamily \#include "{}interface\+\_\+helper.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1overrider__base}{Game\+::overrider\+\_\+base}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{overrider__base_8h_ac64d22c47f2420d7673cb94c0d62cad3}{ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+INHERIT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{overrider__base_8h_aeceba8a495c32c03013d4dbb97bb7906}{ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+DEFINE}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{overrider__base_8h_ab5da238fff8e025c132f62bb344ae505}{ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+BIND\+\_\+\+GODOT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{overrider__base_8h_ad08b68959d92b6fddb811099db8946cb}{ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+ON\+\_\+\+NOTIFICATION}}(code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{overrider__base_8h_ab5da238fff8e025c132f62bb344ae505}\label{overrider__base_8h_ab5da238fff8e025c132f62bb344ae505} 
+\index{overrider\_base.h@{overrider\_base.h}!ATTR\_OVERRIDER\_BASE\_BIND\_GODOT@{ATTR\_OVERRIDER\_BASE\_BIND\_GODOT}}
+\index{ATTR\_OVERRIDER\_BASE\_BIND\_GODOT@{ATTR\_OVERRIDER\_BASE\_BIND\_GODOT}!overrider\_base.h@{overrider\_base.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OVERRIDER\_BASE\_BIND\_GODOT}{ATTR\_OVERRIDER\_BASE\_BIND\_GODOT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+BIND\+\_\+\+GODOT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{overrider__base_8h_aeceba8a495c32c03013d4dbb97bb7906}\label{overrider__base_8h_aeceba8a495c32c03013d4dbb97bb7906} 
+\index{overrider\_base.h@{overrider\_base.h}!ATTR\_OVERRIDER\_BASE\_DEFINE@{ATTR\_OVERRIDER\_BASE\_DEFINE}}
+\index{ATTR\_OVERRIDER\_BASE\_DEFINE@{ATTR\_OVERRIDER\_BASE\_DEFINE}!overrider\_base.h@{overrider\_base.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OVERRIDER\_BASE\_DEFINE}{ATTR\_OVERRIDER\_BASE\_DEFINE}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ godot::String\ origin\_class::get\_overrider\_id\_static()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ origin\_class::\_get\_overrider\_static\_id();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ godot::String\ origin\_class::\_\_\_overrider\_base\_get\_custom\_id\_from\_static()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ origin\_class::\_get\_overrider\_static\_id();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{overrider__base_8h_ac64d22c47f2420d7673cb94c0d62cad3}\label{overrider__base_8h_ac64d22c47f2420d7673cb94c0d62cad3} 
+\index{overrider\_base.h@{overrider\_base.h}!ATTR\_OVERRIDER\_BASE\_INHERIT@{ATTR\_OVERRIDER\_BASE\_INHERIT}}
+\index{ATTR\_OVERRIDER\_BASE\_INHERIT@{ATTR\_OVERRIDER\_BASE\_INHERIT}!overrider\_base.h@{overrider\_base.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OVERRIDER\_BASE\_INHERIT}{ATTR\_OVERRIDER\_BASE\_INHERIT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+INHERIT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{protected}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ godot::String\ \_\_\_overrider\_base\_get\_custom\_id\_from\_static()\ \textcolor{keyword}{override};\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ godot::String\ get\_overrider\_id\_static();\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:}
+
+\end{DoxyCode}
+\Hypertarget{overrider__base_8h_ad08b68959d92b6fddb811099db8946cb}\label{overrider__base_8h_ad08b68959d92b6fddb811099db8946cb} 
+\index{overrider\_base.h@{overrider\_base.h}!ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION@{ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION}}
+\index{ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION@{ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION}!overrider\_base.h@{overrider\_base.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION}{ATTR\_OVERRIDER\_BASE\_ON\_NOTIFICATION}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+OVERRIDER\+\_\+\+BASE\+\_\+\+ON\+\_\+\+NOTIFICATION(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+

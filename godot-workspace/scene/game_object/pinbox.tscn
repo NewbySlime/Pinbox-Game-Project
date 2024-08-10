@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnf6al7xhi3qr"]
+
+[ext_resource type="Texture2D" uid="uid://bgfflvmeqmk5e" path="res://resource/pinbox.png" id="1_ww58o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cpxiy"]
+friction = 0.25
+bounce = 0.2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvau7"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yufu7"]
+
+[node name="pinbox" type="pinbox"]
+start_player_velocity = 1000.0
+hitbox_node = NodePath("RigidBody2D")
+particle_node = NodePath("GPUParticles2D")
+rigidbody_collision_body = NodePath("CollisionShape2D")
+dash_raycast = NodePath("dash_raycast")
+collision_layer = 2147483650
+collision_mask = 1073741827
+mass = 0.3
+physics_material_override = SubResource("PhysicsMaterial_cpxiy")
+max_contacts_reported = 2
+contact_monitor = true
+can_sleep = false
+freeze_mode = 1
+
+[node name="dash_raycast" type="RayCast2D" parent="."]
+enabled = false
+collide_with_areas = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-3.5, 3.5)
+scale = Vector2(7, 7)
+texture = ExtResource("1_ww58o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mvau7")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 2147483656
+collision_mask = 1610612736
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_yufu7")

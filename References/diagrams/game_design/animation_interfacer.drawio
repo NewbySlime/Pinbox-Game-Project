@@ -1,0 +1,96 @@
+<mxfile host="65bd71144e">
+    <diagram id="MEZjFEANrr1xLmUqCtAp" name="Page-1">
+        <mxGraphModel dx="1159" dy="747" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;html=1;curved=1;" parent="1" source="4" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="810" y="430"/>
+                            <mxPoint x="1110" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="animation_interfacer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="game object&lt;br&gt;(Node2D)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="animation_player" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="custom animated node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;" parent="1" source="5" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="720" y="540" as="sourcePoint"/>
+                        <mxPoint x="770" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;html=1;" parent="1" source="5" target="8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="720" y="540" as="sourcePoint"/>
+                        <mxPoint x="770" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;" parent="1" source="5" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="720" y="540" as="sourcePoint"/>
+                        <mxPoint x="770" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="Interfacer uses animation interface class to communicate with non pure Godot objects" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="450" width="175" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;h1&gt;Item Animation Handling&lt;/h1&gt;&lt;p&gt;Due to there's a possibility that in a resource data that there will not always the same object when instantiating, this will make things complicated.&lt;/p&gt;&lt;p&gt;Thus, animation_Interfacer is the solution. It works by sending signals for custom node to listen to, or the interfacer itself look for pure Godot object to call functions in that object.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="170" width="220" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Interfacer calls animation functions to Godot's object" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="440" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;h1&gt;Functions&lt;/h1&gt;&lt;p&gt;All the functions in the interfacer provides have to be needed functions when it comes to animation functions. For example, playing, stopping, pausing and such.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="430" width="190" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="resource_instancer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="endArrow=classic;html=1;" parent="1" source="5" target="24" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="360" as="sourcePoint"/>
+                        <mxPoint x="660" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="As parent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="200" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="5" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="610" y="360" as="sourcePoint"/>
+                        <mxPoint x="660" y="310" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="490" y="170"/>
+                            <mxPoint x="490" y="450"/>
+                            <mxPoint x="780" y="450"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="Communicating with interfacer provided by resource_instancer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="315" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;html=1;curved=1;" parent="1" source="4" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="820" y="370" as="sourcePoint"/>
+                        <mxPoint x="1120" y="370" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="810" y="410"/>
+                            <mxPoint x="960" y="410"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

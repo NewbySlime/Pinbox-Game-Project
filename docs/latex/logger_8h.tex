@@ -1,0 +1,154 @@
+\doxysection{src/logger.h File Reference}
+\hypertarget{logger_8h}{}\label{logger_8h}\index{src/logger.h@{src/logger.h}}
+{\ttfamily \#include "{}godot\+\_\+cpp/godot.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/file\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/variant.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/array.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_utils_1_1logger}{Game\+Utils\+::logger}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils}{Game\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logger_8h_a7f493eea0b36f61f49200fa07c17f707}{\+\_\+\+\_\+\+ASSERT\+\_\+\+PART}}(msg)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a3b457757aed1a36778983b195e381641}{INIT\+\_\+\+ASSERT}}()
+\item 
+\#define \mbox{\hyperlink{logger_8h_a2fc2b49a5c17a5b534a0050d2141a137}{LOG\+\_\+\+ASSERT}}(msg)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a133e62bca024a4d9f5ecd75dd24634d2}{LOG\+\_\+\+ASSERT\+\_\+\+EVAL}}(msg,  eval)
+\item 
+\#define \mbox{\hyperlink{logger_8h_ad9034eec624f6373f0254698dbd20225}{WARN\+\_\+\+ASSERT}}(msg)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a888955d039a400b31caaa20974ee3c5e}{WARN\+\_\+\+ASSERT\+\_\+\+EVAL}}(msg,  eval)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a89c5ca56c0fad84e4236d900060321d6}{ERR\+\_\+\+ASSERT}}(msg)
+\item 
+\#define \mbox{\hyperlink{logger_8h_acac6e16c341600f1fb649b4c37ec1207}{ERR\+\_\+\+ASSERT\+\_\+\+EVAL}}(msg,  eval)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{logger_8h_a7f493eea0b36f61f49200fa07c17f707}\label{logger_8h_a7f493eea0b36f61f49200fa07c17f707} 
+\index{logger.h@{logger.h}!\_\_ASSERT\_PART@{\_\_ASSERT\_PART}}
+\index{\_\_ASSERT\_PART@{\_\_ASSERT\_PART}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ASSERT\_PART}{\_\_ASSERT\_PART}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+ASSERT\+\_\+\+PART(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_paramarr.clear();\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_paramarr.append(\_\_func\_name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_paramarr.append(\_\_src\_line);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_paramarr.append(msg);\ \(\backslash\)}
+\DoxyCodeLine{\}\ \_\_assert\_msg\ =\ String(\textcolor{stringliteral}{"{}\{0\}:\{1\}\ \{2\}"{}}).format(\_\_paramarr);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a89c5ca56c0fad84e4236d900060321d6}\label{logger_8h_a89c5ca56c0fad84e4236d900060321d6} 
+\index{logger.h@{logger.h}!ERR\_ASSERT@{ERR\_ASSERT}}
+\index{ERR\_ASSERT@{ERR\_ASSERT}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_ASSERT}{ERR\_ASSERT}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{\_\_ASSERT\_PART(msg);\ \(\backslash\)}
+\DoxyCodeLine{GameUtils::logger::print\_err\_static(\_\_assert\_msg);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_acac6e16c341600f1fb649b4c37ec1207}\label{logger_8h_acac6e16c341600f1fb649b4c37ec1207} 
+\index{logger.h@{logger.h}!ERR\_ASSERT\_EVAL@{ERR\_ASSERT\_EVAL}}
+\index{ERR\_ASSERT\_EVAL@{ERR\_ASSERT\_EVAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_ASSERT\_EVAL}{ERR\_ASSERT\_EVAL}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+ASSERT\+\_\+\+EVAL(\begin{DoxyParamCaption}\item[{}]{msg,  }\item[{}]{eval }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{if(eval)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_ASSERT\_PART(msg);\ \(\backslash\)}
+\DoxyCodeLine{\ \ GameUtils::logger::print\_err\_static(\_\_assert\_msg);\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a3b457757aed1a36778983b195e381641}\label{logger_8h_a3b457757aed1a36778983b195e381641} 
+\index{logger.h@{logger.h}!INIT\_ASSERT@{INIT\_ASSERT}}
+\index{INIT\_ASSERT@{INIT\_ASSERT}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{INIT\_ASSERT}{INIT\_ASSERT}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+ASSERT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{String\ \_\_func\_name\ =\ \_\_FUNCTION\_\_;\ \(\backslash\)}
+\DoxyCodeLine{Array\ \_\_paramarr;\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \_\_src\_line;\ \(\backslash\)}
+\DoxyCodeLine{String\ \_\_assert\_msg;}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a2fc2b49a5c17a5b534a0050d2141a137}\label{logger_8h_a2fc2b49a5c17a5b534a0050d2141a137} 
+\index{logger.h@{logger.h}!LOG\_ASSERT@{LOG\_ASSERT}}
+\index{LOG\_ASSERT@{LOG\_ASSERT}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_ASSERT}{LOG\_ASSERT}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{\_\_ASSERT\_PART(msg)\ \(\backslash\)}
+\DoxyCodeLine{GameUtils::logger::print\_log\_static(\_\_assert\_msg);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a133e62bca024a4d9f5ecd75dd24634d2}\label{logger_8h_a133e62bca024a4d9f5ecd75dd24634d2} 
+\index{logger.h@{logger.h}!LOG\_ASSERT\_EVAL@{LOG\_ASSERT\_EVAL}}
+\index{LOG\_ASSERT\_EVAL@{LOG\_ASSERT\_EVAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_ASSERT\_EVAL}{LOG\_ASSERT\_EVAL}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+ASSERT\+\_\+\+EVAL(\begin{DoxyParamCaption}\item[{}]{msg,  }\item[{}]{eval }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{if(eval)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_ASSERT\_PART(msg);\ \(\backslash\)}
+\DoxyCodeLine{\ \ GameUtils::logger::print\_log\_static(\_\_assert\_msg);\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_ad9034eec624f6373f0254698dbd20225}\label{logger_8h_ad9034eec624f6373f0254698dbd20225} 
+\index{logger.h@{logger.h}!WARN\_ASSERT@{WARN\_ASSERT}}
+\index{WARN\_ASSERT@{WARN\_ASSERT}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{WARN\_ASSERT}{WARN\_ASSERT}}
+{\footnotesize\ttfamily \#define WARN\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{\_\_ASSERT\_PART(msg)\ \(\backslash\)}
+\DoxyCodeLine{GameUtils::logger::print\_warn\_static(\_\_assert\_msg);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a888955d039a400b31caaa20974ee3c5e}\label{logger_8h_a888955d039a400b31caaa20974ee3c5e} 
+\index{logger.h@{logger.h}!WARN\_ASSERT\_EVAL@{WARN\_ASSERT\_EVAL}}
+\index{WARN\_ASSERT\_EVAL@{WARN\_ASSERT\_EVAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{WARN\_ASSERT\_EVAL}{WARN\_ASSERT\_EVAL}}
+{\footnotesize\ttfamily \#define WARN\+\_\+\+ASSERT\+\_\+\+EVAL(\begin{DoxyParamCaption}\item[{}]{msg,  }\item[{}]{eval }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_src\_line\ =\ \_\_LINE\_\_;\ \(\backslash\)}
+\DoxyCodeLine{if(eval)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \_\_ASSERT\_PART(msg)\ \(\backslash\)}
+\DoxyCodeLine{\ \ GameUtils::logger::print\_warn\_static(\_\_assert\_msg);\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

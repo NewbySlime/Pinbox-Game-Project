@@ -1,0 +1,31 @@
+variable name in json object
+  equippable_sprite: item_resource_data
+    This sprite will be visible when the player model equips the object
+
+  item_sprite: item_resource_data
+    This sprite will be visible on the inventory control
+
+
+object data note
+  item_resource_data:
+    static_sprite: (Image file)
+      Path to image of the sprite
+      NOTE: animated_sprite cannot exist at the same time
+
+    animated_sprite: (Godot's Resource file, .res, .tres)
+      (I_animation priority 2)
+      Path to SpriteFrames file
+      NOTE: static_sprite cannot exist at the same time
+
+    animation_library: (Godot's Resource file, .res, .tres)
+      (I_animation priority 1)
+      A path to AnimationLibrary file
+      It should had the same structure for this library (check resource/diagram/animated_sprite.drawio)
+
+    custom_object_sprite: (Godot's Scene file, .tcsn)\
+      (I_animation priority 0)
+      Path to custom object scene (will also handle some animation passed by the game)
+      This custom object should have I_animation interface
+      This object can access any sprite_data handler object (Sprite2D, AnimatedSprite2D, AnimationPlayer) by getting parent's child
+
+    Note: Only one variable that can be contained in item_resource_data.

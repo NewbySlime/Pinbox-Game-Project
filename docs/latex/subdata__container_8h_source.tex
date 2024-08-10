@@ -1,0 +1,144 @@
+\doxysection{subdata\+\_\+container.\+h}
+\hypertarget{subdata__container_8h_source}{}\label{subdata__container_8h_source}\index{src/subdata\_container.h@{src/subdata\_container.h}}
+\mbox{\hyperlink{subdata__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUBDATA\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUBDATA\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SUBDATA\_OVERRIDE\_NAME(origin\_class,\ new\_class\_name,\ new\_subdata\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{class\ new\_class\_name:\ public\ origin\_class\{\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ static\ godot::String\ get\_subdata\_name()\{\ return\ new\_subdata\_name;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\};}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_parsing_helper}{GameUtils::ParsingHelper}}\{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{subdata\_container}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ void(\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{subdata\_container}}::*\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a78fc3e0a85ed64adc69265271a16d0ca}{\_subdata\_function\_copy}})(\mbox{\hyperlink{namespace_game_utils}{GameUtils}}::Memory::custom\_memory*\ from,\ \mbox{\hyperlink{namespace_game_utils}{GameUtils}}::Memory::custom\_memory*\ to)\ const;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\_subdata\_metadata}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a0c2b6e3f8e0057456cceeec0cb760e4c}{\_is\_reference}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ std::weak\_ptr<void>\ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a8620ccb334971bd625cd8e8886a5086f}{\_subdata\_ref}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a57f8df91c10d9fa9d74358425f4982b5}{\_subdata\_memory}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a78fc3e0a85ed64adc69265271a16d0ca}{\_subdata\_function\_copy}}\ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_abd16b33eee5f40903b9beb774150cc53}{\_subdata\_copy\_function}}\ =\ NULL;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ std::map<godot::String,\ \_subdata\_metadata>\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a477e464de4bfbfd2115b194db21d4b3e}{\_\_copy\_subdata\_to\_subdata}}(\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{subdata\_container}}*\ container)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{comment}{//\ don't\ worry\ about\ deinstantiate\ this\ class}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{comment}{//\ since\ std::map\ will\ deinstantiate\ all\ objects\ contained}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{comment}{//\ and\ the\ custom\ data\ uses\ std::shared\_ptr}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{comment}{//\ \string~subdata\_container();}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Why\ all\ functions\ in\ protected?\ The\ scope\ of\ this\ function\ is\ based\ on\ the\ inheriting\ class}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a0c64d34b06d30732e4f98bf61fea8175}{\_\_create\_copy\_function}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ from,\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ to)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ subdata\_class*\ \_subdata\ =\ from-\/>\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a6e900691469eff84f307029e27928471}{get\_data}}<subdata\_class>();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \_subdata-\/>copy\_subdata\_to(to);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there's\ an\ error,\ it\ will\ throw\ an\ object\ of\ gdstr\_exception}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a6a8cf5ede7347856f1ba4d910c3b31d1}{\_\_add\_new\_subdata}}(godot::Dictionary*\ \_data\_dict)\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_memory}{GameUtils::Memory}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\_subdata\_metadata}}\ \_metadata;\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a0c2b6e3f8e0057456cceeec0cb760e4c}{\_is\_reference}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a57f8df91c10d9fa9d74358425f4982b5}{\_subdata\_memory}}\ =\ custom\_memory::create\_shared();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_abd16b33eee5f40903b9beb774150cc53}{\_subdata\_copy\_function}}\ =\ \&subdata\_container::\_\_create\_copy\_function<subdata\_class>;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ subdata\_class::parse\_dictionary\_to(\_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a57f8df91c10d9fa9d74358425f4982b5}{\_subdata\_memory}}.get(),\ \_data\_dict);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}[\_subdata\_name]\ =\ \_metadata;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_adaefb2a4606ea0d35eaff086ebcac73b}{\_\_set\_subdata}}(subdata\_class*\ from)\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_memory}{GameUtils::Memory}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\_subdata\_metadata}}\ \_metadata;\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a0c2b6e3f8e0057456cceeec0cb760e4c}{\_is\_reference}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a57f8df91c10d9fa9d74358425f4982b5}{\_subdata\_memory}}\ =\ custom\_memory::create\_shared();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_abd16b33eee5f40903b9beb774150cc53}{\_subdata\_copy\_function}}\ =\ \&subdata\_container::\_\_create\_copy\_function<subdata\_class>;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ from-\/>copy\_subdata\_to(\_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a57f8df91c10d9fa9d74358425f4982b5}{\_subdata\_memory}}.get());}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}[\_subdata\_name]\ =\ \_metadata;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a16167141a734b664df3b3206a229b282}{\_\_set\_subdata\_ref}}(std::shared\_ptr<subdata\_class>\ ref\_ptr)\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_memory}{GameUtils::Memory}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\_subdata\_metadata}}\ \_metadata;\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a0c2b6e3f8e0057456cceeec0cb760e4c}{\_is\_reference}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_a8620ccb334971bd625cd8e8886a5086f}{\_subdata\_ref}}\ =\ ref\_ptr;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \_metadata.\mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata_abd16b33eee5f40903b9beb774150cc53}{\_subdata\_copy\_function}}\ =\ NULL;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}[\_subdata\_name]\ =\ \_metadata;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ subdata\_class*\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a05d5d76b73fa5fc39ed072af3ca2ace8}{\_\_get\_subdata}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.find(\_subdata\_name);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.end())}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter-\/>second.\_is\_reference)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (subdata\_class*)\_iter-\/>second.\_subdata\_ref.lock().get();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (subdata\_class*)\_iter-\/>second.\_subdata\_memory.get();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ return\ null\ if\ the\ subdata\ is\ not\ reference}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::weak\_ptr<subdata\_class>\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a4f9098d297a869604f52274adc5a019b}{\_\_get\_subdata\_weak}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.find(\_subdata\_name);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.end())}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::weak\_ptr<subdata\_class>();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_iter-\/>second.\_subdata\_ref;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ return\ null\ if\ the\ subdata\ is\ as\ reference}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a01cd0c47c9bd62887a2f8b8554e4562d}{\_\_get\_subdata\_shared}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.find(\_subdata\_name);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.end())}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::shared\_ptr<GameUtils::Memory::custom\_memory>();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_iter-\/>second.\_subdata\_memory;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a764c228934fbcb6c7c91d1c955d5e2d1}{\_\_remove\_subdata}}()\{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ godot::String\ \_subdata\_name\ =\ subdata\_class::get\_subdata\_name();}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.find(\_subdata\_name);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.end())}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\_subdata\_map}}.erase(\_iter);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \};}
+\DoxyCodeLine{00136\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram id="efLBzJBHUzcaAWqEoPFJ" name="Page-1">
+        <mxGraphModel dx="919" dy="747" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;I_item_handle&lt;/h1&gt;&lt;p&gt;This is an interface class that give the function and let other object know that this class can handle and/or process item_object.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="80" width="190" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;Item Usage Scope&lt;/h1&gt;&lt;p&gt;This scope is based on the parent to decide where and how far it has to pass the item_object in possession.&lt;/p&gt;&lt;p&gt;The normal or standard for the scope is one layer of child in a parent who poesses the item_object. Since if the child needed to pass the item_object to deeper layer, it is suggested to pass it in only one layer deep (its child only).&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="240" width="230" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;h1&gt;The reasoning behind&lt;/h1&gt;&lt;p&gt;Why does it need to use this structuring of the system?&lt;/p&gt;&lt;p&gt;It needs to be like this not only it will not make the developer to reference a child to pass the item_object, any object that are as a child of the parent, doesn't need to use reference parent or parent referencing child to pass the item_object.&lt;/p&gt;&lt;p&gt;Whether it is a resource/graphical object or game functionality object, or debugging object, any object can use it with the correct structure.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="490" width="260" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="I_item_handle" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Game Object" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="340" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Game Object&lt;br&gt;has item_object" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="7" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="430" as="sourcePoint"/>
+                        <mxPoint x="620" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="8" target="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="270" as="sourcePoint"/>
+                        <mxPoint x="560" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="As a parent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="270" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Has interface" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="400" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="8" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="400" as="sourcePoint"/>
+                        <mxPoint x="620" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="680" y="210"/>
+                            <mxPoint x="680" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Give the item_object for the interface" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="220" width="120" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

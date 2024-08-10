@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dy30pa61r28wr"]
+
+[node name="weapon_factory" type="weapon_factory"]
+weapon_data_json = "res://resource/json_data/weapon_handler.json"
+weapon_handler_pckscene = "res://scene/game_object/preset_objects/weapon_handler.tscn"

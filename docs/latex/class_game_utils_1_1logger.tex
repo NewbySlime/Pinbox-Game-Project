@@ -1,0 +1,165 @@
+\doxysection{Game\+Utils\+::logger Class Reference}
+\hypertarget{class_game_utils_1_1logger}{}\label{class_game_utils_1_1logger}\index{GameUtils::logger@{GameUtils::logger}}
+
+
+{\ttfamily \#include $<$logger.\+h$>$}
+
+Inheritance diagram for Game\+Utils\+::logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_utils_1_1logger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}} \{ \mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a4bdfb8785958024af692675ee154d159}{ST\+\_\+\+LOG}}
+, \mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0ae3e1931d100f670a11276917184909ea}{ST\+\_\+\+WARNING}}
+, \mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a21ea5643092f035eef3b074c4abe966b}{ST\+\_\+\+ERROR}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_utils_1_1logger_a1d7c3397e045dc70400903b9427e82ef}{\+\_\+ready}} () override
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_a08cc3b367370e8d247cac14184c81793}{print\+\_\+log}} (const String \&log)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_a457bb2df1d82e79d09b4f232fd24ab32}{print\+\_\+warn}} (const String \&warning)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_a74f4f0c8d5794903a8b4978cf820c2c2}{print\+\_\+err}} (const String \&err)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_acc36c69aa0c19c62ae10847cfd7779e9}{print}} (\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}} type, const String \&msg)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_a78243df38696a1d3d5f2d2946a76e21c}{print}} (\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}} type, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_aff17c7d2a740af07a641f11c9ed1cc71}{print\+\_\+func}} (\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}} type, const char \texorpdfstring{$\ast$}{*}func\+\_\+name, const char \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1logger_aff7b4ddd0320ee10efc6a805c9888d88}{print\+\_\+func\+\_\+line}} (\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}} type, const char \texorpdfstring{$\ast$}{*}func\+\_\+name, int line\+\_\+code, const char \texorpdfstring{$\ast$}{*}msg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_utils_1_1logger}{logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_utils_1_1logger_aa13db114c826e681803147f3cce56d3d}{get\+\_\+static\+\_\+logger}} ()
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1logger_a5a512825ad2dc01ce12177dd743cc6fa}{print\+\_\+log\+\_\+static}} (const String \&log)
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1logger_a300934f096b2ea01aca762ca24f14f4f}{print\+\_\+warn\+\_\+static}} (const String \&warning)
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1logger_a40f78608bcdb2db96b3429fa65ad60fe}{print\+\_\+err\+\_\+static}} (const String \&err)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1logger_ab13a23174e09476407032a139c737186}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}\label{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0} 
+\index{GameUtils::logger@{GameUtils::logger}!std\_type@{std\_type}}
+\index{std\_type@{std\_type}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{std\_type}{std\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{Game\+Utils\+::logger\+::std\+\_\+type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_LOG@{ST\_LOG}!GameUtils::logger@{GameUtils::logger}}\index{GameUtils::logger@{GameUtils::logger}!ST\_LOG@{ST\_LOG}}}\Hypertarget{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a4bdfb8785958024af692675ee154d159}\label{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a4bdfb8785958024af692675ee154d159} 
+ST\+\_\+\+LOG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_WARNING@{ST\_WARNING}!GameUtils::logger@{GameUtils::logger}}\index{GameUtils::logger@{GameUtils::logger}!ST\_WARNING@{ST\_WARNING}}}\Hypertarget{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0ae3e1931d100f670a11276917184909ea}\label{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0ae3e1931d100f670a11276917184909ea} 
+ST\+\_\+\+WARNING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ST\_ERROR@{ST\_ERROR}!GameUtils::logger@{GameUtils::logger}}\index{GameUtils::logger@{GameUtils::logger}!ST\_ERROR@{ST\_ERROR}}}\Hypertarget{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a21ea5643092f035eef3b074c4abe966b}\label{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0a21ea5643092f035eef3b074c4abe966b} 
+ST\+\_\+\+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_utils_1_1logger_ab13a23174e09476407032a139c737186}\label{class_game_utils_1_1logger_ab13a23174e09476407032a139c737186} 
+\index{GameUtils::logger@{GameUtils::logger}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily void logger\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_utils_1_1logger_a1d7c3397e045dc70400903b9427e82ef}\label{class_game_utils_1_1logger_a1d7c3397e045dc70400903b9427e82ef} 
+\index{GameUtils::logger@{GameUtils::logger}!\_ready@{\_ready}}
+\index{\_ready@{\_ready}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{\_ready()}{\_ready()}}
+{\footnotesize\ttfamily void logger\+::\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_game_utils_1_1logger_aa13db114c826e681803147f3cce56d3d}\label{class_game_utils_1_1logger_aa13db114c826e681803147f3cce56d3d} 
+\index{GameUtils::logger@{GameUtils::logger}!get\_static\_logger@{get\_static\_logger}}
+\index{get\_static\_logger@{get\_static\_logger}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{get\_static\_logger()}{get\_static\_logger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_utils_1_1logger}{logger}} \texorpdfstring{$\ast$}{*} logger\+::get\+\_\+static\+\_\+logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_utils_1_1logger_a78243df38696a1d3d5f2d2946a76e21c}\label{class_game_utils_1_1logger_a78243df38696a1d3d5f2d2946a76e21c} 
+\index{GameUtils::logger@{GameUtils::logger}!print@{print}}
+\index{print@{print}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void logger\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}}}]{type,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_acc36c69aa0c19c62ae10847cfd7779e9}\label{class_game_utils_1_1logger_acc36c69aa0c19c62ae10847cfd7779e9} 
+\index{GameUtils::logger@{GameUtils::logger}!print@{print}}
+\index{print@{print}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void logger\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}}}]{type,  }\item[{const String \&}]{msg }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_a74f4f0c8d5794903a8b4978cf820c2c2}\label{class_game_utils_1_1logger_a74f4f0c8d5794903a8b4978cf820c2c2} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_err@{print\_err}}
+\index{print\_err@{print\_err}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_err()}{print\_err()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+err (\begin{DoxyParamCaption}\item[{const String \&}]{err }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_a40f78608bcdb2db96b3429fa65ad60fe}\label{class_game_utils_1_1logger_a40f78608bcdb2db96b3429fa65ad60fe} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_err\_static@{print\_err\_static}}
+\index{print\_err\_static@{print\_err\_static}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_err\_static()}{print\_err\_static()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+err\+\_\+static (\begin{DoxyParamCaption}\item[{const String \&}]{err }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_utils_1_1logger_aff17c7d2a740af07a641f11c9ed1cc71}\label{class_game_utils_1_1logger_aff17c7d2a740af07a641f11c9ed1cc71} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_func@{print\_func}}
+\index{print\_func@{print\_func}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_func()}{print\_func()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}}}]{type,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{func\+\_\+name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_aff7b4ddd0320ee10efc6a805c9888d88}\label{class_game_utils_1_1logger_aff7b4ddd0320ee10efc6a805c9888d88} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_func\_line@{print\_func\_line}}
+\index{print\_func\_line@{print\_func\_line}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_func\_line()}{print\_func\_line()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+func\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1logger_a6ffe716f8938d70c983382b01dd6a5c0}{std\+\_\+type}}}]{type,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{func\+\_\+name,  }\item[{int}]{line\+\_\+code,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_a08cc3b367370e8d247cac14184c81793}\label{class_game_utils_1_1logger_a08cc3b367370e8d247cac14184c81793} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_log@{print\_log}}
+\index{print\_log@{print\_log}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_log()}{print\_log()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+log (\begin{DoxyParamCaption}\item[{const String \&}]{log }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_a5a512825ad2dc01ce12177dd743cc6fa}\label{class_game_utils_1_1logger_a5a512825ad2dc01ce12177dd743cc6fa} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_log\_static@{print\_log\_static}}
+\index{print\_log\_static@{print\_log\_static}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_log\_static()}{print\_log\_static()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+log\+\_\+static (\begin{DoxyParamCaption}\item[{const String \&}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_utils_1_1logger_a457bb2df1d82e79d09b4f232fd24ab32}\label{class_game_utils_1_1logger_a457bb2df1d82e79d09b4f232fd24ab32} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_warn@{print\_warn}}
+\index{print\_warn@{print\_warn}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_warn()}{print\_warn()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+warn (\begin{DoxyParamCaption}\item[{const String \&}]{warning }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_utils_1_1logger_a300934f096b2ea01aca762ca24f14f4f}\label{class_game_utils_1_1logger_a300934f096b2ea01aca762ca24f14f4f} 
+\index{GameUtils::logger@{GameUtils::logger}!print\_warn\_static@{print\_warn\_static}}
+\index{print\_warn\_static@{print\_warn\_static}!GameUtils::logger@{GameUtils::logger}}
+\doxysubsubsection{\texorpdfstring{print\_warn\_static()}{print\_warn\_static()}}
+{\footnotesize\ttfamily void logger\+::print\+\_\+warn\+\_\+static (\begin{DoxyParamCaption}\item[{const String \&}]{warning }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{logger_8h}{logger.\+h}}\item 
+src/\mbox{\hyperlink{logger_8cpp}{logger.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\doxysection{src/\+I\+\_\+modifier\+\_\+database\+\_\+helper.h File Reference}
+\hypertarget{_i__modifier__database__helper_8h}{}\label{_i__modifier__database__helper_8h}\index{src/I\_modifier\_database\_helper.h@{src/I\_modifier\_database\_helper.h}}
+{\ttfamily \#include "{}subautoload\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/random\+\_\+number\+\_\+generator.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/dictionary.\+hpp"{}}\newline
+{\ttfamily \#include "{}memory"{}}\newline
+{\ttfamily \#include "{}string"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1_i__modifier__database__helper}{Game\+::\+Item\+::\+I\+\_\+modifier\+\_\+database\+\_\+helper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_i__modifier__database__helper_8h_a8ba7748d0cb1c953d4e0948abfd4102f}{MODDB\+\_\+\+HELPER\+\_\+\+GET\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER}}(class\+\_\+name)~  class\+\_\+name\+::parse\+\_\+json\+\_\+data\+\_\+static
+\item 
+\#define \mbox{\hyperlink{_i__modifier__database__helper_8h_aed4bf88af0bec639450f5c866582c413}{MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER\+\_\+\+DECLARE}}()~  static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}}$>$ parse\+\_\+json\+\_\+data\+\_\+static(godot\+::\+Dictionary\texorpdfstring{$\ast$}{*} json\+\_\+data);
+\item 
+\#define \mbox{\hyperlink{_i__modifier__database__helper_8h_a20073e2fbdcfb522d5f817ad110ed567}{MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER\+\_\+\+DEFINE}}(class\+\_\+name)~  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}}$>$ class\+\_\+name\+::parse\+\_\+json\+\_\+data\+\_\+static(godot\+::\+Dictionary\texorpdfstring{$\ast$}{*} json\+\_\+data)
+\item 
+\#define \mbox{\hyperlink{_i__modifier__database__helper_8h_a6951f63de14e69a8697b6cb332178c1b}{MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+ID\+\_\+\+GETTER}}(associated\+\_\+id)
+\item 
+\#define \mbox{\hyperlink{_i__modifier__database__helper_8h_a1a4f19752d01c81b017092faa59a453a}{MODDB\+\_\+\+HELPER\+\_\+\+GET\+\_\+\+ASSOCIATED\+\_\+\+ID}}(class\+\_\+name)~  class\+\_\+name\+::get\+\_\+associated\+\_\+id()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_i__modifier__database__helper_8h_a6951f63de14e69a8697b6cb332178c1b}\label{_i__modifier__database__helper_8h_a6951f63de14e69a8697b6cb332178c1b} 
+\index{I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}!MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER@{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}}
+\index{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER@{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}!I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}}
+{\footnotesize\ttfamily \#define MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+ID\+\_\+\+GETTER(\begin{DoxyParamCaption}\item[{}]{associated\+\_\+id }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ std::string\ get\_associated\_id()\{\ \textcolor{keywordflow}{return}\ associated\_id;\ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ std::string\ get\_modifier\_class()\textcolor{keyword}{\ override}\{\ \textcolor{keywordflow}{return}\ associated\_id;\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_i__modifier__database__helper_8h_aed4bf88af0bec639450f5c866582c413}\label{_i__modifier__database__helper_8h_aed4bf88af0bec639450f5c866582c413} 
+\index{I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}!MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE@{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}}
+\index{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE@{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}!I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}}
+{\footnotesize\ttfamily \#define MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER\+\_\+\+DECLARE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~  static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}}$>$ parse\+\_\+json\+\_\+data\+\_\+static(godot\+::\+Dictionary\texorpdfstring{$\ast$}{*} json\+\_\+data);}
+
+\Hypertarget{_i__modifier__database__helper_8h_a20073e2fbdcfb522d5f817ad110ed567}\label{_i__modifier__database__helper_8h_a20073e2fbdcfb522d5f817ad110ed567} 
+\index{I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}!MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE@{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE}}
+\index{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE@{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE}!I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE}{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DEFINE}}
+{\footnotesize\ttfamily \#define MODDB\+\_\+\+HELPER\+\_\+\+ADD\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})~  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}}$>$ class\+\_\+name\+::parse\+\_\+json\+\_\+data\+\_\+static(godot\+::\+Dictionary\texorpdfstring{$\ast$}{*} json\+\_\+data)}
+
+\Hypertarget{_i__modifier__database__helper_8h_a1a4f19752d01c81b017092faa59a453a}\label{_i__modifier__database__helper_8h_a1a4f19752d01c81b017092faa59a453a} 
+\index{I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}!MODDB\_HELPER\_GET\_ASSOCIATED\_ID@{MODDB\_HELPER\_GET\_ASSOCIATED\_ID}}
+\index{MODDB\_HELPER\_GET\_ASSOCIATED\_ID@{MODDB\_HELPER\_GET\_ASSOCIATED\_ID}!I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MODDB\_HELPER\_GET\_ASSOCIATED\_ID}{MODDB\_HELPER\_GET\_ASSOCIATED\_ID}}
+{\footnotesize\ttfamily \#define MODDB\+\_\+\+HELPER\+\_\+\+GET\+\_\+\+ASSOCIATED\+\_\+\+ID(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})~  class\+\_\+name\+::get\+\_\+associated\+\_\+id()}
+
+\Hypertarget{_i__modifier__database__helper_8h_a8ba7748d0cb1c953d4e0948abfd4102f}\label{_i__modifier__database__helper_8h_a8ba7748d0cb1c953d4e0948abfd4102f} 
+\index{I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}!MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER@{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER}}
+\index{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER@{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER}!I\_modifier\_database\_helper.h@{I\_modifier\_database\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER}{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER}}
+{\footnotesize\ttfamily \#define MODDB\+\_\+\+HELPER\+\_\+\+GET\+\_\+\+STATIC\+\_\+\+JSON\+\_\+\+PARSER(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})~  class\+\_\+name\+::parse\+\_\+json\+\_\+data\+\_\+static}
+

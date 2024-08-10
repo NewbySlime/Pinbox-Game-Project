@@ -1,0 +1,44 @@
+\doxysection{algorithm\+\_\+node.\+h}
+\hypertarget{algorithm__node_8h_source}{}\label{algorithm__node_8h_source}\index{src/algorithm\_node.h@{src/algorithm\_node.h}}
+\mbox{\hyperlink{algorithm__node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_NODE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_NODE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/collision\_shape2d.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/shape2d.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/typed\_array.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game::Misc::Algorithm}}\{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T*\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7af96c5161941cdac346da173e699275}{find\_child\_node\_type}}(godot::Node*\ parent,\ T*\ default\_value\ =\ NULL)\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \_child\_count\ =\ parent-\/>get\_child\_count();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_child\_count;\ i++)\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ godot::Node*\ \_child\_node\ =\ parent-\/>get\_child(i);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_child\_node-\/>is\_class(T::get\_class\_static()))}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)\_child\_node;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ default\_value;}
+\DoxyCodeLine{00027\ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T*\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a00a840b55a29994b6bc7baeae1e6a01d}{get\_collision\_shape}}(godot::CollisionShape2D*\ shape,\ T*\ default\_value\ =\ NULL)\{}
+\DoxyCodeLine{00035\ \ \ \ \ godot::Ref<godot::Shape2D>\ \_shape\_type\ =\ shape-\/>get\_shape();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(!\_shape\_type-\/>is\_class(T::get\_class\_static()))}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_value;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)\_shape\_type.ptr();}
+\DoxyCodeLine{00040\ \ \ \}}
+\DoxyCodeLine{00041\ \ \ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a8a9e3819049f79970c02f50db63ca441}{is\_node\_in\_child}}(godot::Node*\ parent,\ godot::Node*\ target\_obj,\ \textcolor{keywordtype}{bool}\ check\_recursive\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a83e5a0715b4b90142d34ce7f1eb68f82}{remove\_all\_child}}(godot::Node*\ parent,\ \textcolor{keywordtype}{void}(*removed\_callback)(godot::Node*));}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a78e45cbc9cd0980b16bfc1b11ee0e18e}{remove\_all\_child\_filter}}(godot::Node*\ parent,\ \textcolor{keywordtype}{void}(*removed\_callback)(godot::Node*),\ std::vector<godot::Node*>*\ filter\ =\ NULL);}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

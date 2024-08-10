@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnf6al7xhi3qr"]
+
+[ext_resource type="Texture2D" uid="uid://bgfflvmeqmk5e" path="res://resource/pinbox.png" id="1_ww58o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cpxiy"]
+friction = 0.25
+bounce = 0.2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvau7"]
+radius = 8.0
+
+[node name="pinbox" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_cpxiy")
+gravity_scale = 0.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-1, 1)
+scale = Vector2(2.61328, 2.61328)
+texture = ExtResource("1_ww58o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mvau7")

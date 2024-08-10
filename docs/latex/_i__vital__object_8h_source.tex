@@ -1,0 +1,45 @@
+\doxysection{I\+\_\+vital\+\_\+object.\+h}
+\hypertarget{_i__vital__object_8h_source}{}\label{_i__vital__object_8h_source}\index{src/I\_vital\_object.h@{src/I\_vital\_object.h}}
+\mbox{\hyperlink{_i__vital__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_VITAL\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_VITAL\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{revive\_info}}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info_affd77cba46b750305ace64b1a38d57ec}{full\_revive}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info_abe6371e7ee7e3034c994f9a98ac3fbf0}{hp}};}
+\DoxyCodeLine{00011\ \ \ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{heal\_info}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info_a84d67e923a28030d26d8537104e47203}{heal\_amount}};}
+\DoxyCodeLine{00015\ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{damage\_info}}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info_a07f8433af9005d2b8700b1091c854806}{damage}};}
+\DoxyCodeLine{00019\ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object}{I\_vital\_object}}\{}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object}{I\_vital\_object}})}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ the\ damage\ value}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_afc23ce2a003b93464d792b28b8c5aeab}{do\_damage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game::Entity::damage\_info}}\&\ d\_info)\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ the\ healing\ value}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_ae619d72ea2c0c52a3cf329beb56a6cb8}{do\_heal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game::Entity::heal\_info}}\&\ h\_info)\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ the\ healing\ value}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_a0c61f43e19fbe549150db9d14b4dc1d9}{do\_revive}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game::Entity::revive\_info}}\&\ r\_info)\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_a8dd13b12bbe479df7b98f4dca85c3106}{get\_health\_point}}()\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_adcb1b2d7299d4b1b2a6945e9e761f4b6}{use\_energy}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ e\_point)\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_ad571801df51fc63da906d698cba29b0c}{get\_energy\_point}}()\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00036\ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

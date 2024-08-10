@@ -1,0 +1,162 @@
+\doxysection{Game\+::Persistance\+::persistance\+\_\+context Class Reference}
+\hypertarget{class_game_1_1_persistance_1_1persistance__context}{}\label{class_game_1_1_persistance_1_1persistance__context}\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+
+
+{\ttfamily \#include $<$persistance\+\_\+context.\+h$>$}
+
+Inheritance diagram for Game\+::Persistance\+::persistance\+\_\+context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_persistance_1_1persistance__context}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{persistance\+\_\+metadata}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a178245a6bda3ac7fed9de86404a820ec}{persistance\+\_\+context}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a91832c92c199a8f1cd230a646b37590c}{\texorpdfstring{$\sim$}{\string~}persistance\+\_\+context}} ()
+\item 
+std\+::set$<$ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} $>$ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a4543ee2ac22015779afcb4fa5b9e4621}{get\+\_\+available\+\_\+persistance}} ()
+\item 
+const \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{persistance\+\_\+metadata}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a67c73350aebee583c5caea631e50e3ff}{get\+\_\+metadata}} (\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} id)
+\item 
+\mbox{\hyperlink{class_game_1_1_persistance_1_1_i__persistance__data}{Game\+::\+Persistance\+::\+I\+\_\+persistance\+\_\+data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a1883bd3203d3b40241b72adcaaedd9c9}{get\+\_\+current\+\_\+persistance\+\_\+data}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_persistance_1_1_i__persistance__data}{Game\+::\+Persistance\+::\+I\+\_\+persistance\+\_\+data}} $>$ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_aa0f41416e57df3fba5f884390c93635c}{get\+\_\+persistance\+\_\+data}} (\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_af0ce9735947c917ebee4933fc2ecf3b5}{false\+\_\+persistance}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a822579a8badcd03f10f46871d515474a}{\+\_\+on\+\_\+gamenode\+\_\+ready}} () override
+\item 
+\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a65a3df076dd21eba1412689ce56733ca}{create\+\_\+new\+\_\+persistance}} ()
+\item 
+bool \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a51a6777d67e04670f67d4b71d399c860}{change\+\_\+persistance}} (\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} id)
+\item 
+bool \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_ab9fede147e9e0ff09372544390c9d2a1}{change\+\_\+persistance\+\_\+name}} (\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} id, godot\+::\+String new\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_ac8173a2201f31c17980938a3aa29eaa4}{trigger\+\_\+save}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a26cf6d4a17dbc6616cf9797c33196688}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}\label{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!persistance\_id@{persistance\_id}}
+\index{persistance\_id@{persistance\_id}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{persistance\_id}{persistance\_id}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{Game\+::\+Persistance\+::persistance\+\_\+context\+::persistance\+\_\+id}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a178245a6bda3ac7fed9de86404a820ec}\label{class_game_1_1_persistance_1_1persistance__context_a178245a6bda3ac7fed9de86404a820ec} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!persistance\_context@{persistance\_context}}
+\index{persistance\_context@{persistance\_context}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{persistance\_context()}{persistance\_context()}}
+{\footnotesize\ttfamily persistance\+\_\+context\+::persistance\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a91832c92c199a8f1cd230a646b37590c}\label{class_game_1_1_persistance_1_1persistance__context_a91832c92c199a8f1cd230a646b37590c} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!````~persistance\_context@{\texorpdfstring{$\sim$}{\string~}persistance\_context}}
+\index{````~persistance\_context@{\texorpdfstring{$\sim$}{\string~}persistance\_context}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}persistance\_context()}{\string~persistance\_context()}}
+{\footnotesize\ttfamily persistance\+\_\+context\+::\texorpdfstring{$\sim$}{\string~}persistance\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a26cf6d4a17dbc6616cf9797c33196688}\label{class_game_1_1_persistance_1_1persistance__context_a26cf6d4a17dbc6616cf9797c33196688} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily void persistance\+\_\+context\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a822579a8badcd03f10f46871d515474a}\label{class_game_1_1_persistance_1_1persistance__context_a822579a8badcd03f10f46871d515474a} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!\_on\_gamenode\_ready@{\_on\_gamenode\_ready}}
+\index{\_on\_gamenode\_ready@{\_on\_gamenode\_ready}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{\_on\_gamenode\_ready()}{\_on\_gamenode\_ready()}}
+{\footnotesize\ttfamily void persistance\+\_\+context\+::\+\_\+on\+\_\+gamenode\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a51a6777d67e04670f67d4b71d399c860}\label{class_game_1_1_persistance_1_1persistance__context_a51a6777d67e04670f67d4b71d399c860} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!change\_persistance@{change\_persistance}}
+\index{change\_persistance@{change\_persistance}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{change\_persistance()}{change\_persistance()}}
+{\footnotesize\ttfamily bool persistance\+\_\+context\+::change\+\_\+persistance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_ab9fede147e9e0ff09372544390c9d2a1}\label{class_game_1_1_persistance_1_1persistance__context_ab9fede147e9e0ff09372544390c9d2a1} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!change\_persistance\_name@{change\_persistance\_name}}
+\index{change\_persistance\_name@{change\_persistance\_name}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{change\_persistance\_name()}{change\_persistance\_name()}}
+{\footnotesize\ttfamily bool Game\+::\+Persistance\+::persistance\+\_\+context\+::change\+\_\+persistance\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}}}]{id,  }\item[{godot\+::\+String}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a65a3df076dd21eba1412689ce56733ca}\label{class_game_1_1_persistance_1_1persistance__context_a65a3df076dd21eba1412689ce56733ca} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!create\_new\_persistance@{create\_new\_persistance}}
+\index{create\_new\_persistance@{create\_new\_persistance}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{create\_new\_persistance()}{create\_new\_persistance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} Game\+::\+Persistance\+::persistance\+\_\+context\+::create\+\_\+new\+\_\+persistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a4543ee2ac22015779afcb4fa5b9e4621}\label{class_game_1_1_persistance_1_1persistance__context_a4543ee2ac22015779afcb4fa5b9e4621} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!get\_available\_persistance@{get\_available\_persistance}}
+\index{get\_available\_persistance@{get\_available\_persistance}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{get\_available\_persistance()}{get\_available\_persistance()}}
+{\footnotesize\ttfamily std\+::set$<$ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} $>$ Game\+::\+Persistance\+::persistance\+\_\+context\+::get\+\_\+available\+\_\+persistance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a1883bd3203d3b40241b72adcaaedd9c9}\label{class_game_1_1_persistance_1_1persistance__context_a1883bd3203d3b40241b72adcaaedd9c9} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!get\_current\_persistance\_data@{get\_current\_persistance\_data}}
+\index{get\_current\_persistance\_data@{get\_current\_persistance\_data}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{get\_current\_persistance\_data()}{get\_current\_persistance\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_persistance_1_1_i__persistance__data}{I\+\_\+persistance\+\_\+data}} \texorpdfstring{$\ast$}{*} persistance\+\_\+context\+::get\+\_\+current\+\_\+persistance\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_a67c73350aebee583c5caea631e50e3ff}\label{class_game_1_1_persistance_1_1persistance__context_a67c73350aebee583c5caea631e50e3ff} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!get\_metadata@{get\_metadata}}
+\index{get\_metadata@{get\_metadata}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{get\_metadata()}{get\_metadata()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{persistance\+\_\+metadata}} \texorpdfstring{$\ast$}{*} Game\+::\+Persistance\+::persistance\+\_\+context\+::get\+\_\+metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_aa0f41416e57df3fba5f884390c93635c}\label{class_game_1_1_persistance_1_1persistance__context_aa0f41416e57df3fba5f884390c93635c} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!get\_persistance\_data@{get\_persistance\_data}}
+\index{get\_persistance\_data@{get\_persistance\_data}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{get\_persistance\_data()}{get\_persistance\_data()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_persistance_1_1_i__persistance__data}{Game\+::\+Persistance\+::\+I\+\_\+persistance\+\_\+data}} $>$ Game\+::\+Persistance\+::persistance\+\_\+context\+::get\+\_\+persistance\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}}}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_ac8173a2201f31c17980938a3aa29eaa4}\label{class_game_1_1_persistance_1_1persistance__context_ac8173a2201f31c17980938a3aa29eaa4} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!trigger\_save@{trigger\_save}}
+\index{trigger\_save@{trigger\_save}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{trigger\_save()}{trigger\_save()}}
+{\footnotesize\ttfamily void persistance\+\_\+context\+::trigger\+\_\+save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_1_1_persistance_1_1persistance__context_af0ce9735947c917ebee4933fc2ecf3b5}\label{class_game_1_1_persistance_1_1persistance__context_af0ce9735947c917ebee4933fc2ecf3b5} 
+\index{Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}!false\_persistance@{false\_persistance}}
+\index{false\_persistance@{false\_persistance}!Game::Persistance::persistance\_context@{Game::Persistance::persistance\_context}}
+\doxysubsubsection{\texorpdfstring{false\_persistance}{false\_persistance}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\+\_\+id}} Game\+::\+Persistance\+::persistance\+\_\+context\+::false\+\_\+persistance = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{persistance__context_8h}{persistance\+\_\+context.\+h}}\item 
+src/\mbox{\hyperlink{persistance__context_8cpp}{persistance\+\_\+context.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\doxysection{src/time\+\_\+scaler.cpp File Reference}
+\hypertarget{time__scaler_8cpp}{}\label{time__scaler_8cpp}\index{src/time\_scaler.cpp@{src/time\_scaler.cpp}}
+{\ttfamily \#include "{}time\+\_\+scaler.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+bezier.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/core/class\+\_\+db.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/scene\+\_\+tree.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/core/math.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{time__scaler_8cpp_a3a91c6f6a2ff1561023f660350fbde50}{MINIMUM\+\_\+\+SPEED\+\_\+\+TO\+\_\+\+PAUSE}}~0.\+001
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{time__scaler_8cpp_a40d73e72c83e102197b1e50d067f4a83}{CONTINUE\+\_\+\+TIME}}~0.\+2
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{time__scaler_8cpp_ae0edb34f25808edbd9c240ce645d36db}{PAUSE\+\_\+\+TIME}}~0.\+8
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{time__scaler_8cpp_a40d73e72c83e102197b1e50d067f4a83}\label{time__scaler_8cpp_a40d73e72c83e102197b1e50d067f4a83} 
+\index{time\_scaler.cpp@{time\_scaler.cpp}!CONTINUE\_TIME@{CONTINUE\_TIME}}
+\index{CONTINUE\_TIME@{CONTINUE\_TIME}!time\_scaler.cpp@{time\_scaler.cpp}}
+\doxysubsubsection{\texorpdfstring{CONTINUE\_TIME}{CONTINUE\_TIME}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} CONTINUE\+\_\+\+TIME~0.\+2}
+
+\Hypertarget{time__scaler_8cpp_a3a91c6f6a2ff1561023f660350fbde50}\label{time__scaler_8cpp_a3a91c6f6a2ff1561023f660350fbde50} 
+\index{time\_scaler.cpp@{time\_scaler.cpp}!MINIMUM\_SPEED\_TO\_PAUSE@{MINIMUM\_SPEED\_TO\_PAUSE}}
+\index{MINIMUM\_SPEED\_TO\_PAUSE@{MINIMUM\_SPEED\_TO\_PAUSE}!time\_scaler.cpp@{time\_scaler.cpp}}
+\doxysubsubsection{\texorpdfstring{MINIMUM\_SPEED\_TO\_PAUSE}{MINIMUM\_SPEED\_TO\_PAUSE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} MINIMUM\+\_\+\+SPEED\+\_\+\+TO\+\_\+\+PAUSE~0.\+001}
+
+\Hypertarget{time__scaler_8cpp_ae0edb34f25808edbd9c240ce645d36db}\label{time__scaler_8cpp_ae0edb34f25808edbd9c240ce645d36db} 
+\index{time\_scaler.cpp@{time\_scaler.cpp}!PAUSE\_TIME@{PAUSE\_TIME}}
+\index{PAUSE\_TIME@{PAUSE\_TIME}!time\_scaler.cpp@{time\_scaler.cpp}}
+\doxysubsubsection{\texorpdfstring{PAUSE\_TIME}{PAUSE\_TIME}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} PAUSE\+\_\+\+TIME~0.\+8}
+

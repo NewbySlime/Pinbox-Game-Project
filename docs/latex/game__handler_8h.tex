@@ -1,0 +1,55 @@
+\doxysection{src/game\+\_\+handler.h File Reference}
+\hypertarget{game__handler_8h}{}\label{game__handler_8h}\index{src/game\_handler.h@{src/game\_handler.h}}
+{\ttfamily \#include "{}game\+\_\+context\+\_\+listener\+\_\+helper.\+h"{}}\newline
+{\ttfamily \#include "{}game\+\_\+scene\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}player\+\_\+actor.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1game__handler}{Game\+::game\+\_\+handler}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game__handler_8h_ae8a8fc49fa889a6b1c438a7d67d7cf60}{SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+GAME\+\_\+\+STARTING}}~"{}sghgs"{}
+\item 
+\#define \mbox{\hyperlink{game__handler_8h_aff23c36c173f1310d5dce01b6f1e7c72}{SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+RESUMING}}~"{}sghr"{}
+\item 
+\#define \mbox{\hyperlink{game__handler_8h_ad28685c67e37fd4e2f4dbdd9a23f705b}{SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+PAUSING}}~"{}sgp"{}
+\item 
+\#define \mbox{\hyperlink{game__handler_8h_a244972bff19d20f6f2df7f6f226197ad}{SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+INITIALIZE\+\_\+\+GAME\+\_\+\+OBJECT}}~"{}sghigo"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{game__handler_8h_ae8a8fc49fa889a6b1c438a7d67d7cf60}\label{game__handler_8h_ae8a8fc49fa889a6b1c438a7d67d7cf60} 
+\index{game\_handler.h@{game\_handler.h}!SIGNAL\_GAME\_HANDLER\_GAME\_STARTING@{SIGNAL\_GAME\_HANDLER\_GAME\_STARTING}}
+\index{SIGNAL\_GAME\_HANDLER\_GAME\_STARTING@{SIGNAL\_GAME\_HANDLER\_GAME\_STARTING}!game\_handler.h@{game\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_GAME\_HANDLER\_GAME\_STARTING}{SIGNAL\_GAME\_HANDLER\_GAME\_STARTING}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+GAME\+\_\+\+STARTING~"{}sghgs"{}}
+
+\Hypertarget{game__handler_8h_a244972bff19d20f6f2df7f6f226197ad}\label{game__handler_8h_a244972bff19d20f6f2df7f6f226197ad} 
+\index{game\_handler.h@{game\_handler.h}!SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT@{SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT}}
+\index{SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT@{SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT}!game\_handler.h@{game\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT}{SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+INITIALIZE\+\_\+\+GAME\+\_\+\+OBJECT~"{}sghigo"{}}
+
+\Hypertarget{game__handler_8h_ad28685c67e37fd4e2f4dbdd9a23f705b}\label{game__handler_8h_ad28685c67e37fd4e2f4dbdd9a23f705b} 
+\index{game\_handler.h@{game\_handler.h}!SIGNAL\_GAME\_HANDLER\_PAUSING@{SIGNAL\_GAME\_HANDLER\_PAUSING}}
+\index{SIGNAL\_GAME\_HANDLER\_PAUSING@{SIGNAL\_GAME\_HANDLER\_PAUSING}!game\_handler.h@{game\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_GAME\_HANDLER\_PAUSING}{SIGNAL\_GAME\_HANDLER\_PAUSING}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+PAUSING~"{}sgp"{}}
+
+\Hypertarget{game__handler_8h_aff23c36c173f1310d5dce01b6f1e7c72}\label{game__handler_8h_aff23c36c173f1310d5dce01b6f1e7c72} 
+\index{game\_handler.h@{game\_handler.h}!SIGNAL\_GAME\_HANDLER\_RESUMING@{SIGNAL\_GAME\_HANDLER\_RESUMING}}
+\index{SIGNAL\_GAME\_HANDLER\_RESUMING@{SIGNAL\_GAME\_HANDLER\_RESUMING}!game\_handler.h@{game\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_GAME\_HANDLER\_RESUMING}{SIGNAL\_GAME\_HANDLER\_RESUMING}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+GAME\+\_\+\+HANDLER\+\_\+\+RESUMING~"{}sghr"{}}
+

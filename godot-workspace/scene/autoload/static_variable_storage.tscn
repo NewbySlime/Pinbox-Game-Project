@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bj5ykabb8y1tq"]
+
+[node name="static_variable_storage" type="static_variable_storage"]

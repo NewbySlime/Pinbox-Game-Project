@@ -1,0 +1,104 @@
+\doxysection{object\+\_\+referencer.\+h}
+\hypertarget{object__referencer_8h_source}{}\label{object__referencer_8h_source}\index{src/object\_referencer.h@{src/object\_referencer.h}}
+\mbox{\hyperlink{object__referencer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OBJECT\_REFERENCER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OBJECT\_REFERENCER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{predelete__notifier_8h}{predelete\_notifier.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/core/class\_db.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ATTR\_OBJECT\_REFERENCER\_INHERIT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \ private:\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ struct\ \_\_\_object\_referencer\_metadata\{\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \ \ godot::Node*\ \_this\_node;\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \ \ godot::Node**\ \_reference\_var;\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \};\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ std::map<uint64\_t,\ \_\_\_object\_referencer\_metadata>\ \_\_\_object\_referencer\_metadata\_map;\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ std::map<uint64\_t,\ \_\_\_object\_referencer\_metadata>\ \_\_\_object\_referencer\_slow\_metadata\_map;\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ void\ \_\_object\_referencer\_on\_node\_exiting();\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ void\ \_\_object\_referencer\_on\_node\_predelete(gdvar\_custom\_object\ param);\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ protected:\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ }\textcolor{comment}{/*\ This\ will\ also\ change\ the\ reference\ if\ the\ target\ node\ is\ already\ added.\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ void\ \_object\_referencer\_add\_reference(godot::Node*\ node,\ godot::Node**\ reference\_var);\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ void\ \_object\_referencer\_remove\_reference(godot::Node*\ node);}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ ATTR\_OBJECT\_REFERENCER\_DEFINE(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ void\ origin\_class::\_\_object\_referencer\_on\_node\_exiting()\{\ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ std::map<uint64\_t,\ \_\_\_object\_referencer\_metadata>\ \_list\_delete;\ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ for(auto\ \_pair:\ \_\_\_object\_referencer\_slow\_metadata\_map)\{\ \(\backslash\)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ if(\_pair.second.\_this\_node-\/>is\_queued\_for\_deletion())\ \(\backslash\)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_list\_delete[\_pair.first]\ =\ \_pair.second;\ \(\backslash\)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ for(auto\ \_pair:\ \_list\_delete)\{\ \(\backslash\)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \ \ *\_pair.second.\_reference\_var\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_\_object\_referencer\_slow\_metadata\_map.erase(\_pair.first);\ \(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ void\ origin\_class::\_\_object\_referencer\_on\_node\_predelete(gdvar\_custom\_object\ param)\{\ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ predelete\_notifier\_signal\_param\ *\_param\ =\ GDVAR\_CUSTOM\_TO(param,\ predelete\_notifier\_signal\_param);\ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ uint64\_t\ \_node\_id\ =\ \_param-\/>get\_node()-\/>get\_instance\_id();\ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ auto\ \_iter\ =\ \_\_\_object\_referencer\_metadata\_map.find(\_node\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ if(\_iter\ ==\ \_\_\_object\_referencer\_metadata\_map.end())\ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \ \ return;\ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ *\_iter-\/>second.\_reference\_var\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \_\_\_object\_referencer\_metadata\_map.erase(\_iter);\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ void\ origin\_class::\_object\_referencer\_add\_reference(godot::Node*\ node,\ godot::Node**\ reference\_var)\{\ \(\backslash\)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ uint64\_t\ \_node\_id\ =\ node-\/>get\_instance\_id();\ \(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \_\_\_object\_referencer\_metadata\ \_metadata;\{\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \ \ \_metadata.\_this\_node\ =\ node;\ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ \ \ \_metadata.\_reference\_var\ =\ reference\_var;\ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \ \ }\textcolor{comment}{/*\ put\ it\ in\ predelete\ method\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ if(node-\/>has\_signal(SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE))\{\ \(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \ \ \ \ node-\/>connect(SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE,\ godot::Callable(this,\ "{}\_\_object\_referencer\_on\_node\_predelete"{}));\ \(\backslash\)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_\_object\_referencer\_metadata\_map[\_node\_id]\ =\ \_metadata;\ \(\backslash\)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\ \ \ \ }\textcolor{comment}{/*\ put\ it\ in\ slow\ method\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ \ \ else\{\ \(\backslash\)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\ \ \ \ \ \ node-\/>connect("{}tree\_exiting"{},\ godot::Callable(this,\ "{}\_\_object\_referencer\_on\_node\_exiting"{}));\ \(\backslash\)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_\_object\_referencer\_slow\_metadata\_map[\_node\_id]\ =\ \_metadata;\ \(\backslash\)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ void\ origin\_class::\_object\_referencer\_remove\_reference(godot::Node*\ node)\{\ \(\backslash\)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\ \ \ \ uint64\_t\ \_node\_id\ =\ node-\/>get\_instance\_id();\ \(\backslash\)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \ \ \{auto\ \_iter\ =\ \_\_\_object\_referencer\_metadata\_map.find(\_node\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \ \ \ \ if(\_iter\ !=\ \_\_\_object\_referencer\_metadata\_map.end())\ \(\backslash\)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_\_\_object\_referencer\_metadata\_map.erase(\_iter);\ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \{auto\ \_iter\ =\ \_\_\_object\_referencer\_slow\_metadata\_map.find(\_node\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ \ \ if(\_iter\ !=\ \_\_\_object\_referencer\_slow\_metadata\_map.end())\ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_\_\_object\_referencer\_slow\_metadata\_map.erase(\_iter);\ \(\backslash\)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ ATTR\_OBJECT\_REFERENCER\_BIND\_GODOT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(godot::D\_METHOD("{}\_\_object\_referencer\_on\_node\_predelete"{},\ "{}param"{}),\ \&origin\_class::\_\_object\_referencer\_on\_node\_predelete);\ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(godot::D\_METHOD("{}\_\_object\_referencer\_on\_node\_exiting"{}),\ \&origin\_class::\_\_object\_reference\_on\_node\_exiting);}}
+\DoxyCodeLine{00094\ \ \ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ ATTR\_OBJECT\_REFERENCER\_ON\_NOTIFICATION(code)}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

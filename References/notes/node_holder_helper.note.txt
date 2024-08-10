@@ -1,0 +1,5 @@
+node_holder_helper has features more than just storing node address memory, like:
+  Object freeing listening;
+    When a node is freeing (or freed), another node that referenced it doesn't know if it already freed.
+    Thus this class is to help this problem. The class will listen to the node and act accordingly, by referencing NULL to a variable in the class that referencing to that node.
+    NOTE: This method needs to bind the node and also giving the detail of the node beforehand.

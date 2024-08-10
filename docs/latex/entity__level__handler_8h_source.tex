@@ -1,0 +1,31 @@
+\doxysection{entity\+\_\+level\+\_\+handler.\+h}
+\hypertarget{entity__level__handler_8h_source}{}\label{entity__level__handler_8h_source}\index{src/entity\_level\_handler.h@{src/entity\_level\_handler.h}}
+\mbox{\hyperlink{entity__level__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTITY\_LEVEL\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTITY\_LEVEL\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__server_8h}{entity\_server.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1entity__level__handler}{entity\_level\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00010\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__level__handler}{entity\_level\_handler}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__server}{Game::Entity::entity\_server}}*\ \_entity\_server;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__level__handler_a1c7cff8d0ca380df130bdce54ee86b8a}{\_bind\_methods}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__level__handler_a5f989c7fee20fa1b397f6d4c7c00b75c}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__level__handler_a774b765c8f22328aebd736a562d279e1}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \};}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

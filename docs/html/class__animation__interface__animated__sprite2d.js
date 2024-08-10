@@ -1,0 +1,26 @@
+var class__animation__interface__animated__sprite2d =
+[
+    [ "_animation_interface_animated_sprite2d", "class__animation__interface__animated__sprite2d.html#a0cc6ec422f7be37655ec4a2799c87c77", null ],
+    [ "~_animation_interface_animated_sprite2d", "class__animation__interface__animated__sprite2d.html#ade234f14c1bc59c8d74dece1820d6954", null ],
+    [ "get_animation_length", "class__animation__interface__animated__sprite2d.html#a2f93b9d640b575c001f122cf86251c7e", null ],
+    [ "get_animation_position", "class__animation__interface__animated__sprite2d.html#aa8c2dbaf15dbe478e1f78dc7aba81a83", null ],
+    [ "get_centered", "class__animation__interface__animated__sprite2d.html#aacaf58f52aa69def13dec39e65bdc7fc", null ],
+    [ "get_flip_h", "class__animation__interface__animated__sprite2d.html#a6018f1bcbcfda583e278edf6c53b1e34", null ],
+    [ "get_flip_v", "class__animation__interface__animated__sprite2d.html#a8274cc6f77810a972dfda6249b1d8ca4", null ],
+    [ "get_looping", "class__animation__interface__animated__sprite2d.html#a213ae5131f2ddf6512ec3b2245878922", null ],
+    [ "get_offset", "class__animation__interface__animated__sprite2d.html#a80236bfdd69dbada694c912259d906da", null ],
+    [ "get_speed_scale", "class__animation__interface__animated__sprite2d.html#ac7351b6cf768564829b5d669744f086f", null ],
+    [ "is_playing", "class__animation__interface__animated__sprite2d.html#adb1da6975426b778b06da9a1b398ec7e", null ],
+    [ "on_update", "class__animation__interface__animated__sprite2d.html#ab833f11e1781aec138b12003e23f258d", null ],
+    [ "pause", "class__animation__interface__animated__sprite2d.html#ad6ec228763bb15cc43be45a2e6bbc5ae", null ],
+    [ "play", "class__animation__interface__animated__sprite2d.html#a0a9b8d15d24d7a8f3b4a21435178fec5", null ],
+    [ "play_backwards", "class__animation__interface__animated__sprite2d.html#a0e51eaff7769fc5dd4d410d7fc5be4ab", null ],
+    [ "seek", "class__animation__interface__animated__sprite2d.html#a292da6503e13145745642da9f2fa0107", null ],
+    [ "set_centered", "class__animation__interface__animated__sprite2d.html#a7c07bccd3d108c42d6f9bd825e1fe967", null ],
+    [ "set_flip_h", "class__animation__interface__animated__sprite2d.html#af154df2415182d8e691d91873adf0bee", null ],
+    [ "set_flip_v", "class__animation__interface__animated__sprite2d.html#a8e309bab0799b9ee8be1a5756352bebc", null ],
+    [ "set_looping", "class__animation__interface__animated__sprite2d.html#a17d833bf800be3d55741809ab9e8cdf4", null ],
+    [ "set_offset", "class__animation__interface__animated__sprite2d.html#a7fac51f93a33c99b1e0391b0b3ee2c52", null ],
+    [ "set_speed_scale", "class__animation__interface__animated__sprite2d.html#aa3bd32cdaca3e8b8ef6dc4ef08ed5184", null ],
+    [ "stop", "class__animation__interface__animated__sprite2d.html#a6e3b74fea3aa0e387d428a6e00cb302f", null ]
+];

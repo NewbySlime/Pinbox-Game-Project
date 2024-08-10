@@ -1,0 +1,214 @@
+\doxysection{Game\+::Entity\+Functionality\+::dash\+\_\+action Class Reference}
+\hypertarget{class_game_1_1_entity_functionality_1_1dash__action}{}\label{class_game_1_1_entity_functionality_1_1dash__action}\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+
+
+{\ttfamily \#include $<$dash.\+h$>$}
+
+Inheritance diagram for Game\+::Entity\+Functionality\+::dash\+\_\+action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.588652cm]{class_game_1_1_entity_functionality_1_1dash__action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4}{dash\+\_\+action\+\_\+graphics\+\_\+obj}} \{ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4abfa99e9dd7e18f1799879a0c2952adeb}{dago\+\_\+gpu\+\_\+particle\+\_\+node}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4}{dash\+\_\+action\+\_\+physics\+\_\+obj}} \{ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4a03a3eeee98a79f19de4145687aa83782}{dapo\+\_\+physics\+\_\+body}}
+, \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4afa9ab36e9702237a9305f1ae0e5996c8}{dapo\+\_\+collision\+\_\+shape}}
+, \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4ae716294b400df975b77fb7883ea1eab7}{dapo\+\_\+raycast}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a3c3d25b597af9131d56271fbd79c3368}{on\+\_\+action\+\_\+priming}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a913c99f703632a92b2f394884a7db8a6}{on\+\_\+action\+\_\+continuing}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a7a4044aa275a09ed529c9e9f5a417ff7}{on\+\_\+action\+\_\+cancelled}} () override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_aa82c59666b9ec51b1a143ce37ad541ec}{is\+\_\+alternate\+\_\+viable}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a048c06d16d06223407edb8e7368d5915}{on\+\_\+alternate\+\_\+action\+\_\+priming}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a8c33302e0631aac7d31b4499d151c1db}{on\+\_\+alternate\+\_\+action\+\_\+continuing}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a81f2da8155a69c1ab387ee0347107dab}{on\+\_\+alternate\+\_\+action\+\_\+cancelled}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a413d24e5faa7ca84cf3a12d34007cde5}{on\+\_\+update}} (const \mbox{\hyperlink{struct_game_1_1action__class__update__data}{action\+\_\+class\+\_\+update\+\_\+data}} \&update\+\_\+data) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a38ea0d6da68e4fb553678d046b2eb647}{on\+\_\+physics\+\_\+update}} (double delta) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a2f7d31c1515c879a39c9b80b58f56e61}{on\+\_\+integrate\+\_\+forces}} (godot\+::\+Physics\+Direct\+Body\+State2D \texorpdfstring{$\ast$}{*}state) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_adf4e8723aa45837cc170b3319a159857}{bind\+\_\+physics\+\_\+object}} (godot\+::\+Object \texorpdfstring{$\ast$}{*}obj, uint32\+\_\+t type) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_ac6af80ee1c78cc2ac3b4f75509684c56}{bind\+\_\+graphics\+\_\+object}} (godot\+::\+Object \texorpdfstring{$\ast$}{*}obj, uint32\+\_\+t type) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4}\label{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dash\_action\_graphics\_obj@{dash\_action\_graphics\_obj}}
+\index{dash\_action\_graphics\_obj@{dash\_action\_graphics\_obj}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{dash\_action\_graphics\_obj}{dash\_action\_graphics\_obj}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4}{Game\+::\+Entity\+Functionality\+::dash\+\_\+action\+::dash\+\_\+action\+\_\+graphics\+\_\+obj}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dago\_gpu\_particle\_node@{dago\_gpu\_particle\_node}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dago\_gpu\_particle\_node@{dago\_gpu\_particle\_node}}}\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4abfa99e9dd7e18f1799879a0c2952adeb}\label{class_game_1_1_entity_functionality_1_1dash__action_a1c514ae9001a6e37966566dcd0f5c7a4abfa99e9dd7e18f1799879a0c2952adeb} 
+dago\+\_\+gpu\+\_\+particle\+\_\+node&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4}\label{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dash\_action\_physics\_obj@{dash\_action\_physics\_obj}}
+\index{dash\_action\_physics\_obj@{dash\_action\_physics\_obj}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{dash\_action\_physics\_obj}{dash\_action\_physics\_obj}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4}{Game\+::\+Entity\+Functionality\+::dash\+\_\+action\+::dash\+\_\+action\+\_\+physics\+\_\+obj}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dapo\_physics\_body@{dapo\_physics\_body}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dapo\_physics\_body@{dapo\_physics\_body}}}\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4a03a3eeee98a79f19de4145687aa83782}\label{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4a03a3eeee98a79f19de4145687aa83782} 
+dapo\+\_\+physics\+\_\+body&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dapo\_collision\_shape@{dapo\_collision\_shape}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dapo\_collision\_shape@{dapo\_collision\_shape}}}\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4afa9ab36e9702237a9305f1ae0e5996c8}\label{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4afa9ab36e9702237a9305f1ae0e5996c8} 
+dapo\+\_\+collision\+\_\+shape&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dapo\_raycast@{dapo\_raycast}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!dapo\_raycast@{dapo\_raycast}}}\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4ae716294b400df975b77fb7883ea1eab7}\label{class_game_1_1_entity_functionality_1_1dash__action_a5aa5ab1bd9a0fba764ed3124fee2b8d4ae716294b400df975b77fb7883ea1eab7} 
+dapo\+\_\+raycast&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_ac6af80ee1c78cc2ac3b4f75509684c56}\label{class_game_1_1_entity_functionality_1_1dash__action_ac6af80ee1c78cc2ac3b4f75509684c56} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!bind\_graphics\_object@{bind\_graphics\_object}}
+\index{bind\_graphics\_object@{bind\_graphics\_object}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{bind\_graphics\_object()}{bind\_graphics\_object()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::bind\+\_\+graphics\+\_\+object (\begin{DoxyParamCaption}\item[{godot\+::\+Object \texorpdfstring{$\ast$}{*}}]{obj,  }\item[{uint32\+\_\+t}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__graphics__handler_a28d084504d9a9bbc7216127165bbd219}{Game\+::\+I\+\_\+graphics\+\_\+handler}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_adf4e8723aa45837cc170b3319a159857}\label{class_game_1_1_entity_functionality_1_1dash__action_adf4e8723aa45837cc170b3319a159857} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!bind\_physics\_object@{bind\_physics\_object}}
+\index{bind\_physics\_object@{bind\_physics\_object}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{bind\_physics\_object()}{bind\_physics\_object()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::bind\+\_\+physics\+\_\+object (\begin{DoxyParamCaption}\item[{godot\+::\+Object \texorpdfstring{$\ast$}{*}}]{obj,  }\item[{uint32\+\_\+t}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__physics__handler_a2bff7a30ba216d7e49a840ae9fa25093}{Game\+::\+I\+\_\+physics\+\_\+handler}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_aa82c59666b9ec51b1a143ce37ad541ec}\label{class_game_1_1_entity_functionality_1_1dash__action_aa82c59666b9ec51b1a143ce37ad541ec} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!is\_alternate\_viable@{is\_alternate\_viable}}
+\index{is\_alternate\_viable@{is\_alternate\_viable}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{is\_alternate\_viable()}{is\_alternate\_viable()}}
+{\footnotesize\ttfamily bool dash\+\_\+action\+::is\+\_\+alternate\+\_\+viable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a2aac8fcae15e134296cf6dc6d9f48feb}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a7a4044aa275a09ed529c9e9f5a417ff7}\label{class_game_1_1_entity_functionality_1_1dash__action_a7a4044aa275a09ed529c9e9f5a417ff7} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_action\_cancelled@{on\_action\_cancelled}}
+\index{on\_action\_cancelled@{on\_action\_cancelled}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_action\_cancelled()}{on\_action\_cancelled()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+action\+\_\+cancelled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a9bd99a9dfef32ddde669980ebe944993}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a913c99f703632a92b2f394884a7db8a6}\label{class_game_1_1_entity_functionality_1_1dash__action_a913c99f703632a92b2f394884a7db8a6} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_action\_continuing@{on\_action\_continuing}}
+\index{on\_action\_continuing@{on\_action\_continuing}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_action\_continuing()}{on\_action\_continuing()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+action\+\_\+continuing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a36f69068f2c568bfab0e22ff71fae8f7}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a3c3d25b597af9131d56271fbd79c3368}\label{class_game_1_1_entity_functionality_1_1dash__action_a3c3d25b597af9131d56271fbd79c3368} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_action\_priming@{on\_action\_priming}}
+\index{on\_action\_priming@{on\_action\_priming}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_action\_priming()}{on\_action\_priming()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+action\+\_\+priming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a0415c418fcdb54c79398aaf22dee30c4}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a81f2da8155a69c1ab387ee0347107dab}\label{class_game_1_1_entity_functionality_1_1dash__action_a81f2da8155a69c1ab387ee0347107dab} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_alternate\_action\_cancelled@{on\_alternate\_action\_cancelled}}
+\index{on\_alternate\_action\_cancelled@{on\_alternate\_action\_cancelled}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_alternate\_action\_cancelled()}{on\_alternate\_action\_cancelled()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+alternate\+\_\+action\+\_\+cancelled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a31729ffb39aab24813ba6ea6797074cb}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a8c33302e0631aac7d31b4499d151c1db}\label{class_game_1_1_entity_functionality_1_1dash__action_a8c33302e0631aac7d31b4499d151c1db} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_alternate\_action\_continuing@{on\_alternate\_action\_continuing}}
+\index{on\_alternate\_action\_continuing@{on\_alternate\_action\_continuing}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_alternate\_action\_continuing()}{on\_alternate\_action\_continuing()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+alternate\+\_\+action\+\_\+continuing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_a367debf724c5a76349109374085d6c36}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a048c06d16d06223407edb8e7368d5915}\label{class_game_1_1_entity_functionality_1_1dash__action_a048c06d16d06223407edb8e7368d5915} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_alternate\_action\_priming@{on\_alternate\_action\_priming}}
+\index{on\_alternate\_action\_priming@{on\_alternate\_action\_priming}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_alternate\_action\_priming()}{on\_alternate\_action\_priming()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+alternate\+\_\+action\+\_\+priming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_afd90bf87f97c848cd010f024acdd9641}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a2f7d31c1515c879a39c9b80b58f56e61}\label{class_game_1_1_entity_functionality_1_1dash__action_a2f7d31c1515c879a39c9b80b58f56e61} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_integrate\_forces@{on\_integrate\_forces}}
+\index{on\_integrate\_forces@{on\_integrate\_forces}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_integrate\_forces()}{on\_integrate\_forces()}}
+{\footnotesize\ttfamily bool dash\+\_\+action\+::on\+\_\+integrate\+\_\+forces (\begin{DoxyParamCaption}\item[{godot\+::\+Physics\+Direct\+Body\+State2D \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__physics__handler_a598578f50a95ba0e1d56b312832bcac4}{Game\+::\+I\+\_\+physics\+\_\+handler}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a38ea0d6da68e4fb553678d046b2eb647}\label{class_game_1_1_entity_functionality_1_1dash__action_a38ea0d6da68e4fb553678d046b2eb647} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_physics\_update@{on\_physics\_update}}
+\index{on\_physics\_update@{on\_physics\_update}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_physics\_update()}{on\_physics\_update()}}
+{\footnotesize\ttfamily bool dash\+\_\+action\+::on\+\_\+physics\+\_\+update (\begin{DoxyParamCaption}\item[{double}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__physics__handler_a1e9d60bdd1e2a8dbdd9de7d031d42200}{Game\+::\+I\+\_\+physics\+\_\+handler}}.
+
+\Hypertarget{class_game_1_1_entity_functionality_1_1dash__action_a413d24e5faa7ca84cf3a12d34007cde5}\label{class_game_1_1_entity_functionality_1_1dash__action_a413d24e5faa7ca84cf3a12d34007cde5} 
+\index{Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}!on\_update@{on\_update}}
+\index{on\_update@{on\_update}!Game::EntityFunctionality::dash\_action@{Game::EntityFunctionality::dash\_action}}
+\doxysubsubsection{\texorpdfstring{on\_update()}{on\_update()}}
+{\footnotesize\ttfamily void dash\+\_\+action\+::on\+\_\+update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1action__class__update__data}{action\+\_\+class\+\_\+update\+\_\+data}} \&}]{update\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__action__class_aa0807fafdfd93ce2fc6d5993637ced4f}{Game\+::\+I\+\_\+action\+\_\+class}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{dash_8h}{dash.\+h}}\item 
+src/\mbox{\hyperlink{dash_8cpp}{dash.\+cpp}}\end{DoxyCompactItemize}

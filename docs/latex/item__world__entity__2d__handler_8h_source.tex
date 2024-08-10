@@ -1,0 +1,172 @@
+\doxysection{item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler.\+h}
+\hypertarget{item__world__entity__2d__handler_8h_source}{}\label{item__world__entity__2d__handler_8h_source}\index{src/item\_world\_entity\_2d\_handler.h@{src/item\_world\_entity\_2d\_handler.h}}
+\mbox{\hyperlink{item__world__entity__2d__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_WORLD\_ENTITY\_2D\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_WORLD\_ENTITY\_2D\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__handler_8h}{game\_handler.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__signal_8h}{godot\_signal.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__location__data__struct_8h}{item\_location\_data\_struct.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__dropper_8h}{item\_dropper.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__picker__area_8h}{item\_picker\_area.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__world__entity__2d_8h}{item\_world\_entity\_2d.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rng__server_8h}{rng\_server.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}set"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED\ "{}siwe2dhoned"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED\ "{}siwe2dhonpd"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED\ "{}siwe2dhondd"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{class\ }item\_server;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{item\_world\_entity\_2d\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00032\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{item\_world\_entity\_2d\_handler}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ random\_speed)}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ maximum\_throw\_speed)}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ item\_dropper\_pckscene)}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ item\_picker\_area\_pckscene)}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ item\_world\_entity\_pckscene)}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_item\_dropper\_metadata\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ uint64\_t\ \_item\_dropper\_id;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::set<uint64\_t>\ \_bound\_containers\_id;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__dropper}{Game::Item::item\_dropper}}*\ \_node;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_item\_picker\_area\_metadata\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ uint64\_t\ \_item\_picker\_id;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ uint64\_t\ \_bound\_container\_id;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{Game::Item::item\_picker\_area}}*\ \_node;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_item\_world\_entity\_metadata\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ uint64\_t\ \_item\_id;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d}{Game::Item::item\_world\_entity\_2d}}*\ \_node;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1game__handler}{Game::game\_handler}}*\ \_game\_handler;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1rng__server}{Game::rng\_server}}*\ \_rng\_server;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ uint64\_t\ \_drop\_container\_id;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ godot::Node2D*\ \_root\_drop;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_item\_dropper\_pckscene;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_item\_picker\_area\_pckscene;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_item\_world\_entity\_pckscene;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{comment}{//\ these\ ids\ are\ based\ on\ their\ respective\ objects}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ std::map<uint64\_t,\ \_item\_dropper\_metadata*>\ \_item\_dropper\_map;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ std::map<uint64\_t,\ \_item\_picker\_area\_metadata*>\ \_item\_picker\_area\_map;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{comment}{//\ ids\ are\ the\ bound\ containers\ from\ where\ the\ item\ would\ be\ dropped}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ std::map<uint64\_t,\ \_item\_dropper\_metadata*>\ \_bound\_dropper\_containers\_map;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{comment}{//\ ids\ are\ the\ bound\ container\ where\ the\ item\ would\ be\ added\ when\ the\ picker\ picked\ something}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ std::map<uint64\_t,\ \_item\_picker\_area\_metadata*>\ \_bound\_picker\_containers\_map;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{comment}{//\ ids\ are\ the\ I\_item-\/s\ id\ with\ respective\ world\ entity\ objects\ in\ it}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ std::map<uint64\_t,\ \_item\_world\_entity\_metadata*>\ \_dropped\_item\_map;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game::Item::item\_dropper\_inst\_id}}\ \_get\_new\_dropper\_id();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \_get\_new\_picker\_id();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_item\_removed(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ item\_id);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_item\_container\_deleted(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ container\_id);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a976e6edb02f3eaf5daaf783ce84df234}{\_bind\_methods}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_abb77fd7599524c0c2b2d3352ec00b194}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a0dc0bc896ded2a4434d93d1920488687}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__dropper}{Game::Item::item\_dropper}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d}{Game::Item::item\_world\_entity\_2d}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{Game::Item::item\_picker\_area}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_afc0ae836b9ed7c6a10031ab1f30eb1cb}{\_delete\_dropper}}(\mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game::Item::item\_dropper\_inst\_id}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{bool}\ inst\_already\_deleted\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a8ce31f41a12e5190eda7d4fbd76d0e48}{\_delete\_iwe2d}}(\mbox{\hyperlink{namespace_game_1_1_item_ac4fde3f3728102441e102121094b1cf3}{Game::Item::iwe2d\_inst\_id}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{bool}\ inst\_already\_deleted\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_aa7a45b2f75c1a0ca701b22455348c8c5}{\_delete\_picker\_area}}(\mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{bool}\ inst\_already\_deleted\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_ac07b9144078dfc03e489c36d1e5ea00c}{item\_world\_entity\_2d\_handler}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_ad8234b1e7fb9db90d00afd64192fe85b}{\string~item\_world\_entity\_2d\_handler}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a4cb7e9326fa5887b57cc2498b0a39324}{drop\_item}}(uint64\_t\ \textcolor{keywordtype}{id},\ godot::Vector2\ additional\_speed\ =\ godot::Vector2(0,\ 0));}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_ade028087c97239bd7be972cec022c1fd}{drop\_item\_random}}(uint64\_t\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_aab555f9d80d10b87f9a9715f43abacc3}{pick\_item}}(\mbox{\hyperlink{namespace_game_1_1_item_ac4fde3f3728102441e102121094b1cf3}{Game::Item::iwe2d\_inst\_id}}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ picker\_id);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a39c17ea4a905e9558873368dc0679895}{bind\_container\_dropper}}(uint64\_t\ container\_id,\ uint64\_t\ dropper\_id);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_ae9a9f9c5b0a13a31c1537b7b4e878589}{bind\_container\_picker}}(uint64\_t\ container\_id,\ uint64\_t\ picker\_id);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a75e608da8b1a92f55641ee01837c9d43}{unbind\_container\_dropper}}(uint64\_t\ container\_id,\ uint64\_t\ dropper\_id);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a7af3d143b5a56259df21fd095ce2ec00}{unbind\_container\_picker}}(uint64\_t\ container\_id,\ uint64\_t\ picker\_id);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__dropper}{Game::Item::item\_dropper}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a305ddd810078b229367d56e82f52e40a}{create\_item\_dropper}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{Game::Item::item\_picker\_area}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a05b22791a7080d7a5e771b680739de33}{create\_item\_picker\_area}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__dropper}{Game::Item::item\_dropper}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a947db57077cec75119744ad8f38f7447}{get\_item\_dropper}}(uint64\_t\ dropper\_id);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{Game::Item::item\_picker\_area}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a3119f8b0bd514e3d6ec1eba4519cf1f1}{get\_item\_picker\_area}}(uint64\_t\ picker\_id);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_a8c6e267f4472efc5ee599eb4c0c00d2e}{delete\_item\_dropper}}(\mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game::Item::item\_dropper\_inst\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler_ac18bcca575330697b21bd421090fdfcd}{delete\_item\_picker\_area}}(\mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00135\ \ \ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__dropper__deleted__param}{iwe2d\_handler\_dropper\_deleted\_param}}\{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game::Item::item\_dropper\_inst\_id}}\ \_id;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game::Item::item\_dropper\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__dropper__deleted__param_af463d3d64302f81dda9537787912bb20}{get\_id}}()\{\ \textcolor{keywordflow}{return}\ \_id;\ \}}
+\DoxyCodeLine{00145\ \ \ \};}
+\DoxyCodeLine{00146\ \ \ }
+\DoxyCodeLine{00147\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__entity__deleted__param}{iwe2d\_handler\_entity\_deleted\_param}}\{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_ac4fde3f3728102441e102121094b1cf3}{Game::Item::iwe2d\_inst\_id}}\ \_id;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_ac4fde3f3728102441e102121094b1cf3}{Game::Item::iwe2d\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__entity__deleted__param_a3b740f6c77a1bc1989ba0b2e698b1d03}{get\_id}}()\{\ \textcolor{keywordflow}{return}\ \_id;\ \}}
+\DoxyCodeLine{00154\ \ \ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__picker__deleted__param}{iwe2d\_handler\_picker\_deleted\_param}}\{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \_id;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__picker__deleted__param_ac2fef64b702b27ba06d4e651aba2ff53}{get\_id}}()\{\ \textcolor{keywordflow}{return}\ \_id;\ \}}
+\DoxyCodeLine{00163\ \ \ \};}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

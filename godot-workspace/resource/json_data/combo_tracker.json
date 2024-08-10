@@ -1,0 +1,10 @@
+{
+  "0":{
+    "name": "bumper_combo",
+    "logo_sprite_dir": "res://icon.svg",
+    "base_limit": 10,
+    "base_multiplier": 2,
+    "max_multiplier": 5,
+    "multiplier_decrement": 10
+  }
+}

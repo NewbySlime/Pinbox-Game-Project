@@ -1,0 +1,80 @@
+\doxysection{src/damageable\+\_\+object.h File Reference}
+\hypertarget{damageable__object_8h}{}\label{damageable__object_8h}\index{src/damageable\_object.h@{src/damageable\_object.h}}
+{\ttfamily \#include "{}custom\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}entity\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}interface\+\_\+helper.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+{\ttfamily \#include "{}I\+\_\+vital\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/collision\+\_\+object2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/timer.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game\+::\+Entity\+::damageable\+\_\+object}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data}{Game\+::\+Entity\+::vital\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_entity}{Game\+::\+Entity}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_ad03381b847eb6a96cb5d0af26d130904}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+HP\+\_\+\+CHANGED}}~"{}sdoohpc"{}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_a43057cf32f714393ae8712b12bece1b4}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+HEALED}}~"{}sdooheal"{}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_a1609178a29f7b20bd93f2b0efc534def}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+DAMAGED}}~"{}sdoodmg"{}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_a6dd2cd21d0760017173a1e42a986e803}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+DEAD}}~"{}sdooded"{}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_a2e68181d93dab10c78f70a6634f0bf1f}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+REVIVED}}~"{}sdoor"{}
+\item 
+\#define \mbox{\hyperlink{damageable__object_8h_afd713aa1b384081df0b7928818f6981c}{SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+EP\+\_\+\+CHANGED}}~"{}sdooepc"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{damageable__object_8h_a1609178a29f7b20bd93f2b0efc534def}\label{damageable__object_8h_a1609178a29f7b20bd93f2b0efc534def} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DAMAGED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+DAMAGED~"{}sdoodmg"{}}
+
+\Hypertarget{damageable__object_8h_a6dd2cd21d0760017173a1e42a986e803}\label{damageable__object_8h_a6dd2cd21d0760017173a1e42a986e803} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_DEAD}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+DEAD~"{}sdooded"{}}
+
+\Hypertarget{damageable__object_8h_afd713aa1b384081df0b7928818f6981c}\label{damageable__object_8h_afd713aa1b384081df0b7928818f6981c} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_EP\_CHANGED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+EP\+\_\+\+CHANGED~"{}sdooepc"{}}
+
+\Hypertarget{damageable__object_8h_a43057cf32f714393ae8712b12bece1b4}\label{damageable__object_8h_a43057cf32f714393ae8712b12bece1b4} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HEALED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+HEALED~"{}sdooheal"{}}
+
+\Hypertarget{damageable__object_8h_ad03381b847eb6a96cb5d0af26d130904}\label{damageable__object_8h_ad03381b847eb6a96cb5d0af26d130904} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_HP\_CHANGED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+HP\+\_\+\+CHANGED~"{}sdoohpc"{}}
+
+\Hypertarget{damageable__object_8h_a2e68181d93dab10c78f70a6634f0bf1f}\label{damageable__object_8h_a2e68181d93dab10c78f70a6634f0bf1f} 
+\index{damageable\_object.h@{damageable\_object.h}!SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED}}
+\index{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED@{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED}!damageable\_object.h@{damageable\_object.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED}{SIGNAL\_DAMAGEABLE\_OBJECT\_ON\_REVIVED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+DAMAGEABLE\+\_\+\+OBJECT\+\_\+\+ON\+\_\+\+REVIVED~"{}sdoor"{}}
+

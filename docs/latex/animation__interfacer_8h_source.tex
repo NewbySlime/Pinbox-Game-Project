@@ -1,0 +1,119 @@
+\doxysection{animation\+\_\+interfacer.\+h}
+\hypertarget{animation__interfacer_8h_source}{}\label{animation__interfacer_8h_source}\index{src/animation\_interfacer.h@{src/animation\_interfacer.h}}
+\mbox{\hyperlink{animation__interfacer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ANIMATION\_INTERFACER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ANIMATION\_INTERFACER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__animation_8h}{I\_animation.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parent__child__watcher__helper_8h}{parent\_child\_watcher\_helper.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_animation}{Game::Animation}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer}{animation\_interfacer}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper}{GameUtils::Helper::parent\_child\_watcher\_helper}}}
+\DoxyCodeLine{00014\ \ \ \{}
+\DoxyCodeLine{00015\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer}{animation\_interfacer}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{parent__child__watcher__helper_8h_affc32f7a8714bf9a5577ca9aa7265677}{ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer}{animation\_interfacer}})}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_interface\_metadata\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ godot::Node*\ \_this\_node;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}*\ \_animation\_interface;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_using\_own\_interfacer\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ std::map<uint64\_t,\ \_interface\_metadata>\ \_node\_metadata;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_entered(godot::Node*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_exited(godot::Node*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_remove\_all\_metadata();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a7f11d815c14ad937aa0491f8d9857c53}{\_bind\_methods}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_accfa2db116731e9f26d359a77fa54287}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_af123a8872b61f078d6a493d93c1de57a}{\string~animation\_interfacer}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_af40d23d10c7e5611cc446d6b855a0f17}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ad47e1f51a4c56c08258eaafad1642820}{play}}(godot::StringName\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{float}\ custom\_blend\ =\ -\/1,\ \textcolor{keywordtype}{float}\ custom\_speed\ =\ 1,\ \textcolor{keywordtype}{bool}\ from\_end\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ab663fbfb4534654afcb10957d8ed09af}{play\_backwards}}(godot::StringName\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{float}\ custom\_blend\ =\ -\/1);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a5aff830ae40d57290abfb6786f8c670c}{pause}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a462ffc68e668f53e0791cb25d68807d3}{stop}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ std::map<uint64\_t,\ bool>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a36e8364963c6487edd33703893a6a76c}{is\_playing}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ std::map<uint64\_t,\ float>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a08fb7336eeb01586eb55046dae60dfa3}{get\_speed\_scale}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a7aada6d632d3b655634d238570e63b4b}{set\_speed\_scale}}(\textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a457622a71c128c2f83b0a7939deb54bd}{seek}}(\textcolor{keywordtype}{float}\ seconds,\ \textcolor{keywordtype}{bool}\ update\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ update\_only\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ std::map<uint64\_t,\ float>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a17182fcf422652a3a93de14da31e593b}{get\_animation\_length}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ std::map<uint64\_t,\ float>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a28295ddfcf9fe72fb9737f4bf21c6dea}{get\_animation\_position}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ std::map<uint64\_t,\ bool>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a3ceedfd58c1ec6e9e4c3af370572201e}{get\_looping}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ae67858d022af4a8176e9321d3a662e75}{set\_looping}}(\textcolor{keywordtype}{bool}\ looping);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ std::map<uint64\_t,\ bool>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a8216e3f0914d031e806f7434a72371c5}{get\_centered}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a8147771b65e29864c5a1ac65e64de389}{set\_centered}}(\textcolor{keywordtype}{bool}\ centered);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ std::map<uint64\_t,\ bool>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a6a6e6ff7179f40663dd45abe1c43a36a}{get\_flip\_h}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a067ec327a0cfc2019578f1c17c441589}{set\_flip\_h}}(\textcolor{keywordtype}{bool}\ flip);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ std::map<uint64\_t,\ bool>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ab5bd80a3d18c7bed97349713c353c808}{get\_flip\_v}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_a338526468da6dc72f7d23eb39eb7d504}{set\_flip\_v}}(\textcolor{keywordtype}{bool}\ flip);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ std::map<uint64\_t,\ godot::Vector2>\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ab333c51e888e024cb23902d4be3f824c}{get\_offset}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_ace00ace8d78745c610e1d670a550e1ed}{set\_offset}}(godot::Vector2\ offset);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer_af89de89f61698ee50b5ae96419b15b38}{on\_update}}(godot::StringName\ anim\_name);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ return\_type,\ \textcolor{keyword}{typename}...\ argument\_types>}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ std::map<uint64\_t,\ return\_type>\ \_start\_func\_interface(return\_type(\mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}::*\_interface\_function)(argument\_types...),\ argument\_types...\ args)\{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::map<uint64\_t,\ return\_type>\ \_res;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ \_node\_metadata)\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}*\ \_interface\ =\ \_pair.second.\_animation\_interface;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \_res[\_pair.first]\ =\ (\_interface-\/>*\_interface\_function)(args...);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ return\_type,\ \textcolor{keyword}{typename}...\ argument\_types>}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ std::map<uint64\_t,\ return\_type>\ \_start\_funcconst\_interface(return\_type(\mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}::*\_interface\_function)(argument\_types...)\ \textcolor{keyword}{const},\ argument\_types...\ args)\ \textcolor{keyword}{const}\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::map<uint64\_t,\ return\_type>\ \_res;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ \_node\_metadata)\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}*\ \_interface\ =\ \_pair.second.\_animation\_interface;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \_res[\_pair.first]\ =\ (\_interface-\/>*\_interface\_function)(args...);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ argument\_types>}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_start\_voidfunc\_interface(\textcolor{keywordtype}{void}(\mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}::*\_interface\_function)(argument\_types...),\ argument\_types...\ args)\{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ \_node\_metadata)\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game::Animation::I\_animation}}*\ \_interface\ =\ \_pair.second.\_animation\_interface;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ (\_interface-\/>*\_interface\_function)(args...);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \};}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

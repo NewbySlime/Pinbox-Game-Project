@@ -1,0 +1,91 @@
+\doxysection{parent\+\_\+child\+\_\+watcher\+\_\+helper.\+h}
+\hypertarget{parent__child__watcher__helper_8h_source}{}\label{parent__child__watcher__helper_8h_source}\index{src/parent\_child\_watcher\_helper.h@{src/parent\_child\_watcher\_helper.h}}
+\mbox{\hyperlink{parent__child__watcher__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARENT\_CHILD\_WATCHER\_HELPER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARENT\_CHILD\_WATCHER\_HELPER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ NOTE:\ class\ that\ uses\ this\ have\ to\ use\ \_\_child\_watcher\_change\_parent\ function\ at\ least\ once\ to\ work}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_INHERIT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ private:\ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ godot::Node*\ \_\_\_child\_watcher\_parent\_node\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ std::map<uint64\_t,\ godot::Node*>\ \_\_\_child\_watcher\_child\_list;\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ void\ \_\_child\_watcher\_change\_parent(godot::Node*\ parent\_node);\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ void\ \_\_child\_watcher\_child\_reordered();}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_DEFINE(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{void\ origin\_class::\_\_child\_watcher\_change\_parent(godot::Node*\ parent\_node)\{\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ godot::Callable\ \_child\_reordered\_callable\ =\ godot::Callable(this,\ "{}\_\_child\_watcher\_change\_reordered"{});\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \_\_\_child\_watcher\_child\_list.clear();\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ if(\_\_\_child\_watcher\_parent\_node)\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \_\_\_child\_watcher\_parent\_node-\/>disconnect("{}child\_order\_changed"{},\ \_child\_reordered\_callable);\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ if(parent\_node)\ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ parent\_node-\/>connect("{}child\_order\_changed"{},\ \_child\_reordered\_callable);\ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \_\_\_child\_watcher\_parent\_node\ =\ parent\_node;\ \(\backslash\)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \_\_child\_watcher\_child\_reordered();\ \(\backslash\)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\}\ \(\backslash\)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{void\ origin\_class::\_\_child\_watcher\_child\_reordered()\{\ \(\backslash\)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ if(!\_\_\_child\_watcher\_parent\_node)\ \(\backslash\)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ return;\ \(\backslash\)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ int\ \_child\_count\ =\ \_\_\_child\_watcher\_parent\_node-\/>get\_child\_count();\ \(\backslash\)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ }\textcolor{comment}{/*\ also\ as\ exited\ list\ */}\textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ std::map<uint64\_t,\ godot::Node*>\ \_tmp\_list\ =\ \_\_\_child\_watcher\_child\_list;\ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ std::vector<godot::Node*>\ \_entered\_list;\ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ for(int\ i\ =\ 0;\ i\ <\ \_child\_count;\ i++)\{\ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ godot::Node*\ \_curr\_child\ =\ \_\_\_child\_watcher\_parent\_node-\/>get\_child(i);\ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ auto\ \_iter\ =\ \_\_\_child\_watcher\_child\_list.find(\_curr\_child-\/>get\_instance\_id());\ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ if(\_iter\ ==\ \_\_\_child\_watcher\_child\_list.end())\ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \ \ \_entered\_list.insert(\_entered\_list.end(),\ \_curr\_child);\ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ else\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \_tmp\_list.erase(\_curr\_child-\/>get\_instance\_id());\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ for(int\ i\ =\ 0;\ i\ <\ \_entered\_list.size();\ i++)\{\ \(\backslash\)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ godot::Node*\ \_curr\_child\ =\ \_entered\_list[i];\ \(\backslash\)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \_\_\_child\_watcher\_child\_list[\_curr\_child-\/>get\_instance\_id()]\ =\ \_curr\_child;\ \(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ this-\/>\_on\_child\_entered(\_curr\_child);\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ for(auto\ \_pair:\ \_tmp\_list)\{\ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ \_\_\_child\_watcher\_child\_list.erase(\_pair.first);\ \(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \(\backslash\)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ this-\/>\_on\_child\_exited(\_pair.second);\ \(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_BIND\_GODOT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ ClassDB::bind\_method(D\_METHOD("{}\_\_child\_watcher\_child\_reordered"{}),\ \&origin\_class::\_\_child\_watcher\_child\_reordered);}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_ON\_NOTIFICATION(code)}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_helper}{GameUtils::Helper}}\{}
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper}{parent\_child\_watcher\_helper}}\{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper_aab7264f52fc34958956d0237072ed0b3}{\_on\_child\_entered}}(godot::Node*\ child)\{\}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper_a4ed52caf5c57ce7d09299fecde89e184}{\_on\_child\_exited}}(godot::Node*\ child)\{\}}
+\DoxyCodeLine{00082\ \ \ \};}
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

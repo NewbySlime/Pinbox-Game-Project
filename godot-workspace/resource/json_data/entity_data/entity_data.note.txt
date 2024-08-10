@@ -1,0 +1,20 @@
+name_id: Dictionary
+  Format of the entity id
+
+  name: String
+    The user-readable name of the entity
+
+  desc: String
+    Description of the entity
+
+  type_class: String
+    The type of the entity when created
+
+  vital_info: vital_info
+    Vital stats of the object
+
+  inventory: inventory_config
+    Inventory configuration data
+
+  loadout_inventory: inventory_config
+    Configuration for loadout inventory

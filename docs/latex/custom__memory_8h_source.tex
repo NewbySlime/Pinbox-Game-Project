@@ -1,0 +1,81 @@
+\doxysection{custom\+\_\+memory.\+h}
+\hypertarget{custom__memory_8h_source}{}\label{custom__memory_8h_source}\index{src/custom\_memory.h@{src/custom\_memory.h}}
+\mbox{\hyperlink{custom__memory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CUSTOM\_MEMORY\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CUSTOM\_MEMORY\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_memory}{GameUtils::Memory}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{custom\_data}}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a0d76c1702d4fd01dd2a6902095269014}{custom\_data}}()\{\}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a53f7e68d0a712895ddb0e083b3870435}{custom\_data\_check}}()\{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_ad5fbcc96275c546918342cac2635452e}{\string~custom\_data}}()\{\}}
+\DoxyCodeLine{00018\ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{custom\_memory}}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ uint32\_t\ \_cm\_data\_size;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{custom\_data}}*\ \_cm\_data\_address\ =\ NULL;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a673f74ff52e8de2b0b28cbb81a10d67b}{change\_data}}()\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ class}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ T::custom\_data\_check();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_cm\_data\_address)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_cm\_data\_address;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \_cm\_data\_size\ =\ \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \_cm\_data\_address\ =\ (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{custom\_data}}*)\textcolor{keyword}{new}\ T();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T*\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a6e900691469eff84f307029e27928471}{get\_data}}()\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)\_cm\_data\_address;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a4f914a92116b2f7521e0493436151787}{get\_data\_size}}()\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_cm\_data\_size;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ custom\_data>\ \textcolor{keyword}{static}\ std::shared\_ptr<custom\_memory>\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_ab13664f453020717fee59d51dd9839b6}{create\_shared}}()\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ class\ check}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ T::custom\_data\_check();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::shared\_ptr<custom\_memory>\ \_res\ =\ std::make\_shared<custom\_memory>();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \_res-\/>change\_data<T>();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ custom\_data>\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{custom\_memory}}*\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a6ff947abd3158c20651e2e32960ec18b}{create}}()\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ class\ check}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ T::custom\_data\_check();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{custom\_memory}}*\ \_res\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a1a419241127e2e988c617d8ed8dea794}{custom\_memory}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \_res-\/>\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a673f74ff52e8de2b0b28cbb81a10d67b}{change\_data}}<T>();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a1a419241127e2e988c617d8ed8dea794}{custom\_memory}}()\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ change\_data<custom\_data>();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory_a884b3f25b135d94fa27d9b77ad3815bc}{\string~custom\_memory}}()\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_cm\_data\_address;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \};}
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

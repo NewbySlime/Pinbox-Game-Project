@@ -1,0 +1,55 @@
+\doxysection{I\+\_\+animation.\+h}
+\hypertarget{_i__animation_8h_source}{}\label{_i__animation_8h_source}\index{src/I\_animation.h@{src/I\_animation.h}}
+\mbox{\hyperlink{_i__animation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_ANIMATION\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_ANIMATION\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_animation}{Game::Animation}}\{}
+\DoxyCodeLine{00008\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\_animation}}\{}
+\DoxyCodeLine{00009\ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\_animation}})}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a004ed17f412baea49049b4c14789ea63}{\string~I\_animation}}()\{\}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_aa3a24e63fdd93f6b3048645d82685ec2}{play}}(godot::StringName\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{float}\ custom\_blend\ =\ -\/1,\ \textcolor{keywordtype}{float}\ custom\_speed\ =\ 1,\ \textcolor{keywordtype}{bool}\ from\_end\ =\ \textcolor{keyword}{false})\{\}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a77c9ccfec705f87c74e4bb3fce5993e2}{play\_backwards}}(godot::StringName\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{float}\ custom\_blend\ =\ -\/1)\{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac461d44d34350859af709b4d713fb22e}{pause}}()\{\}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a4c6ed51b52d748213d1329c2d2f68782}{stop}}()\{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af0018d6e1ed977d3b0a9f2dec3e71699}{is\_playing}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_acec5592ea2eac3087ddb35efd3ae1fbc}{get\_speed\_scale}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ad071f6332bc4badec6c67cc364f401fc}{set\_speed\_scale}}(\textcolor{keywordtype}{float}\ speed)\{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a80f63cb4d6dfe412a9d623209a7c48e6}{seek}}(\textcolor{keywordtype}{float}\ seconds,\ \textcolor{keywordtype}{bool}\ update\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ update\_only\ =\ \textcolor{keyword}{false})\{\}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac15e47cb6337b536c81a8d20b7651c9d}{get\_animation\_length}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ab31bb75c340bff5167b26330b47ceccb}{get\_animation\_position}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac29e62786a83c5f74138ddb1e65b8044}{get\_looping}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a1eef4dbddadb0f6872334dcbb445fbf8}{set\_looping}}(\textcolor{keywordtype}{bool}\ looping)\{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_adff1b5bcc7d3ca368337f46ad237dcba}{get\_centered}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a0c9d8c2c7ac1f1ce3f71740b7cedf6d3}{set\_centered}}(\textcolor{keywordtype}{bool}\ centered)\{\}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a195b142f9755e8c341164ee654559f47}{get\_flip\_h}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a7a1cfe9389fd34f4e8824fc1b83e7281}{set\_flip\_h}}(\textcolor{keywordtype}{bool}\ flip)\{\}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a96e4ef413daa6a6f3c24e8223404571d}{get\_flip\_v}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_aeead56e3145d30bc75de6cd9dfa8babe}{set\_flip\_v}}(\textcolor{keywordtype}{bool}\ flip)\{\}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ godot::Vector2\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af98c13a7ab4781e3a2d4c26cbebec3c2}{get\_offset}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ godot::Vector2(0,0);\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ae6f08b50c04241ef3c6ae86f6962ff62}{set\_offset}}(godot::Vector2\ offset)\{\}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af2c0208ab8a7f15834b48d0a28569185}{on\_update}}(godot::StringName\ anim\_name)\{\}}
+\DoxyCodeLine{00046\ \ \ \};}
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

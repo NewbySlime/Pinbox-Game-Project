@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="K8LoQaNqDkR1xkjL0vZa" name="Page-1">
+        <mxGraphModel dx="780" dy="312" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Class Attribute" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Game Classes" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="785" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Godot's Class" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="785" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="4" target="3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="820" y="490" as="sourcePoint"/>
+                        <mxPoint x="870" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;entryX=0.568;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="820" y="490" as="sourcePoint"/>
+                        <mxPoint x="870" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Inheriting" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="440" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Using Attribute macros" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="390" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;h1&gt;Class Attributes&lt;/h1&gt;&lt;p&gt;Class Attributes are macros that can be used to give more functionality to the classes.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="315" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;h1&gt;List of macros&lt;/h1&gt;&lt;p&gt;ATTR_CLASS_NAME_INHERIT(origin_class) - This will give functions and variables that the attribute depends on.&lt;/p&gt;&lt;p&gt;ATTR_CLASS_NAME_DEFINE(origin_class) - This defines (give code for the attribute function) all functions that the attribute declare in the class.&lt;/p&gt;&lt;p&gt;ATTR_CLASS_NAME_BIND_GODOT(origin_class) - Attributes will bind functions and variables to Godot's functionality based on the origin class.&lt;/p&gt;&lt;p&gt;ATTR_CLASS_NAME_ON_NOTIFICATION(notification_code) - Attributes can use the notification from the origin class to complete its functionality.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="750" width="360" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;h1&gt;Why This?&lt;/h1&gt;&lt;p&gt;Since multiple inheritance is kind of prohibited (the binding errors are a hit and miss), by using macros to inject the class, this is a workaround to this rule.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="435" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;h1&gt;Abstract Class&lt;/h1&gt;&lt;p&gt;Multiple inheritence is kind of prohibited, as explained before. But since this is a template class, this class only provides virtual functions.&lt;/p&gt;&lt;p&gt;NOTE: This only exist when possible.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="570" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Abstract Class" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;startArrow=classic;startFill=1;" parent="1" source="3" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="780" y="640" as="sourcePoint"/>
+                        <mxPoint x="830" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;html=1;" parent="1" source="2" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="780" y="640" as="sourcePoint"/>
+                        <mxPoint x="830" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Communicating with the derived class with the abstract class" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="560" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Inherits the template class" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="440" width="90" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

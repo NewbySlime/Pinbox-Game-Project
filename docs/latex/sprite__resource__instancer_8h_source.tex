@@ -1,0 +1,109 @@
+\doxysection{sprite\+\_\+resource\+\_\+instancer.\+h}
+\hypertarget{sprite__resource__instancer_8h_source}{}\label{sprite__resource__instancer_8h_source}\index{src/sprite\_resource\_instancer.h@{src/sprite\_resource\_instancer.h}}
+\mbox{\hyperlink{sprite__resource__instancer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SPRITE\_RESOURCE\_INSTANCER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SPRITE\_RESOURCE\_INSTANCER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{animation__interfacer_8h}{animation\_interfacer.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__data_8h}{entity\_data.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__resource__data_8h}{entity\_resource\_data.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__entity__handler_8h}{I\_entity\_handler.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__item__handler_8h}{I\_item\_handler.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node__free__filter_8h}{node\_free\_filter.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parent__child__watcher__helper_8h}{parent\_child\_watcher\_helper.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sprite__resource__data_8h}{sprite\_resource\_data.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/viewport\_texture.hpp"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{sprite\_resource\_instancer}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper}{GameUtils::Helper::parent\_child\_watcher\_helper}},}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__handler}{Game::Entity::I\_entity\_handler}},}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__handler}{Game::Item::I\_item\_handler}}\{}
+\DoxyCodeLine{00027\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{sprite\_resource\_instancer}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\_INTERFACE\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{sprite\_resource\_instancer}})}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{parent__child__watcher__helper_8h_affc32f7a8714bf9a5577ca9aa7265677}{ATTR\_PARENT\_CHILD\_WATCHER\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{sprite\_resource\_instancer}})}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ animation\_interfacer\_pckscene\_path)}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ instance\_animation\_node\_pckscene\_path)}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ normal\_case\_pivot\_node\_pckscene\_path)}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ subviewport\_node\_pckscene\_path)}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ animation\_interfacer\_pckscene,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ instance\_animation\_node\_pckscene,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ normal\_case\_pivot\_node\_pckscene,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ subviewport\_node\_pckscene}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ godot::Node*\ \_pivot\_point\ =\ NULL;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer}{Game::Animation::animation\_interfacer}}*\ \_anim\_interfacer\ =\ NULL;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \_current\_item\_object;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game::Entity::entity\_data}}*\ \_current\_entity\_data;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game::Entity::entity\_resource\_data}}*\ \_current\_entity\_res\_data;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ custom\_memory\ serve\ as\ fail\ save\ if\ xx\_object\ already\ deleted}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ std::shared\_ptr<const\ GameUtils::Memory::custom\_memory>\ \_resource\_data\_cm;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1sprite__resource__data}{Game::sprite\_resource\_data}}*\ \_resource\_data\ =\ NULL;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ is\ for\ setting\ two\ entity\ data\ and\ then\ trigger\ entity\_changed\ once\ on\ \_process}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_entity\_updated\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ std::map<uint64\_t,\ Game::Entity::I\_entity\_handler*>\ \_interface\_entity\_list;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ std::map<uint64\_t,\ Game::Item::I\_item\_handler*>\ \_interface\_item\_list;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_create\_resource\_nodes();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_clear\_resource\_nodes();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_entity\_changed();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_item\_changed();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_notify\_entity\_handler\_node(uint64\_t\ node\_id);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_notify\_item\_handler\_node(uint64\_t\ node\_id);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_entered(godot::Node*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_exited(godot::Node*\ child)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_set\_sprite\_resource\_data(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1sprite__resource__data}{Game::sprite\_resource\_data}}*\ res\_data);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a146d2a1dcdd59e106076e11a69799542}{\_bind\_methods}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_ad5315dc8c282b8ff4e6c3f59d85e8fb8}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a5ce81adb9f34e1a7922b66c96e35ead7}{\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a7e16557524025c3d1ab3af70a16c3392}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_ac691229199fca983cc58a9884cfadf97}{set\_item\_object}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a2afd82c8d3b2032aee080751d13bbc25}{set\_entity\_data}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game::Entity::entity\_data}}*\ data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a73a3d99d5be28cad977b875367c7ba47}{set\_entity\_resource\_data}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game::Entity::entity\_resource\_data}}*\ res\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ godot::Node*\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a05c795c6d0ef6d216c94654267844d80}{get\_pivot\_node}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{comment}{//\ useable\ when\ parent\ node\ is\ not\ a\ Node2D,\ else\ it\ will\ return\ a\ null\ reference}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ godot::Ref<godot::ViewportTexture>\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_a36c9a1c8c739e473859175d14ffefa73}{as\_viewport\_texture}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_animation_1_1animation__interfacer}{Game::Animation::animation\_interfacer}}*\ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer_af09b20e013870fccdfcc51aa3b674410}{get\_animation\_interface}}();}
+\DoxyCodeLine{00100\ \ \ \};}
+\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

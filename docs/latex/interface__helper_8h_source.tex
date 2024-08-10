@@ -1,0 +1,89 @@
+\doxysection{interface\+\_\+helper.\+h}
+\hypertarget{interface__helper_8h_source}{}\label{interface__helper_8h_source}\index{src/interface\_helper.h@{src/interface\_helper.h}}
+\mbox{\hyperlink{interface__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERFACE\_HELPER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERFACE\_HELPER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}string"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}set"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ INTERFACE\_GET(p\_node,\ interface\_type,\ target)\{\ \(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ gdvar\_custom\_object\ \_obj\ =\ p\_node-\/>call("{}interface\_helper\_get\_interface"{},\ interface\_type::get\_id());\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ target\ =\ (interface\_type*)\_obj;\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ INTERFACE\_CHECK(object\_type,\ interface\_type)\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ object\_type::\_\_\#\#interface\_type\#\#\_check()}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ INTERFACE\_DEFINE\_INTERFACE\_CLASS(interface\_type)\ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ static\ godot::String\ get\_id()\{return\ \#interface\_type;\}\ \(\backslash\)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ static\ void\ \_\_\#\#interface\_type\#\#\_check()\{\}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ ATTR\_INTERFACE\_HELPER\_BIND\_GODOT(class\_type)\ \(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(\ \(\backslash\)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ godot::D\_METHOD(\ \(\backslash\)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \ \ \ "{}interface\_helper\_get\_interface"{},\ \(\backslash\)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ \ \ "{}interface\_name"{}\ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ ),\ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \&class\_type::interface\_helper\_get\_interface\ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ );}}
+\DoxyCodeLine{00047\ \ \ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ ATTR\_INTERFACE\_HELPER\_INHERIT(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ static\ std::vector<std::string>\ interface\_helper\_get\_list\_interface();\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ gdvar\_custom\_object\ interface\_helper\_get\_interface(godot::String\ interface\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ private:}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ ATTR\_INTERFACE\_HELPER\_DEFINE(origin\_class)\ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ static\ std::set<std::string>\ \_\_interface\_list;\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ template<typename\ interface\_type>\ static\ void\ interface\_helper\_add\_interface()\{\ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ godot::String\ \_interface\_id\ =\ interface\_type::get\_id();\ \(\backslash\)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\ \ \ \ std::string\ \_interface\_id\_cstr\ =\ GDSTR\_TO\_STDSTR(\_interface\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ \_\_interface\_list.insert(\_interface\_id\_cstr);\ \(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\ \ template<typename\ class\_before>\ static\ void\ interface\_helper\_from\_derived()\{\ \(\backslash\)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ std::vector<std::string>\ \_\_before\_interface\_list\ =\ class\_before::interface\_helper\_get\_list\_interface();\ \(\backslash\)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\ \ \ \ for(std::string\ \_interface\_name:\ \_\_before\_interface\_list)\ \(\backslash\)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_interface\_list.insert(\_interface\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ std::vector<std::string>\ origin\_class::interface\_helper\_get\_list\_interface()\{\ \(\backslash\)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ std::vector<std::string>\ \_list\_string;\ \(\backslash\)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \ \ for(auto\ \_data:\ \_\_interface\_list)\ \(\backslash\)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \ \ \_list\_string.insert(\_list\_string.end(),\ \_data);\ \(\backslash\)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\ \ \ \ return\ \_list\_string;\ \(\backslash\)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \}\(\backslash\)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ gdvar\_custom\_object\ origin\_class::interface\_helper\_get\_interface(godot::String\ interface\_id)\{\ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ std::string\ \_interface\_id\_cstr\ =\ GDSTR\_TO\_STDSTR(interface\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \ \ auto\ \_iter\ =\ \_\_interface\_list.find(\_interface\_id\_cstr);\ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ if(\_iter\ ==\ \_\_interface\_list.end())\ \(\backslash\)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \ \ \ \ return\ GDVAR\_CUSTOM\_FROM\_PTR(NULL);\ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \ \ return\ GDVAR\_CUSTOM\_FROM\_PTR(this);\ \(\backslash\)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION(code)}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

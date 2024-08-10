@@ -1,0 +1,56 @@
+\doxysection{src/godot\+\_\+var\+\_\+extended.h File Reference}
+\hypertarget{godot__var__extended_8h}{}\label{godot__var__extended_8h}\index{src/godot\_var\_extended.h@{src/godot\_var\_extended.h}}
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/variant.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{godot__var__extended_8h_aca6bcc16c38b0ac6fc4f509e83d3b9c8}{GDVAR\+\_\+\+CUSTOM\+\_\+\+TO}}(variable,  type)~  (type\texorpdfstring{$\ast$}{*})variable
+\item 
+\#define \mbox{\hyperlink{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM}}(variable)~  (uint64\+\_\+t)\&variable
+\item 
+\#define \mbox{\hyperlink{godot__var__extended_8h_a76df0b378a85ee88a2ba74a212d884e4}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM\+\_\+\+PTR}}(variable)~  (uint64\+\_\+t)variable
+\item 
+\#define \mbox{\hyperlink{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}{GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}~Variant\+::\+INT
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\+\_\+custom\+\_\+object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a}\label{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a} 
+\index{godot\_var\_extended.h@{godot\_var\_extended.h}!GDVAR\_CUSTOM\_FROM@{GDVAR\_CUSTOM\_FROM}}
+\index{GDVAR\_CUSTOM\_FROM@{GDVAR\_CUSTOM\_FROM}!godot\_var\_extended.h@{godot\_var\_extended.h}}
+\doxysubsubsection{\texorpdfstring{GDVAR\_CUSTOM\_FROM}{GDVAR\_CUSTOM\_FROM}}
+{\footnotesize\ttfamily \#define GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM(\begin{DoxyParamCaption}\item[{}]{variable }\end{DoxyParamCaption})~  (uint64\+\_\+t)\&variable}
+
+\Hypertarget{godot__var__extended_8h_a76df0b378a85ee88a2ba74a212d884e4}\label{godot__var__extended_8h_a76df0b378a85ee88a2ba74a212d884e4} 
+\index{godot\_var\_extended.h@{godot\_var\_extended.h}!GDVAR\_CUSTOM\_FROM\_PTR@{GDVAR\_CUSTOM\_FROM\_PTR}}
+\index{GDVAR\_CUSTOM\_FROM\_PTR@{GDVAR\_CUSTOM\_FROM\_PTR}!godot\_var\_extended.h@{godot\_var\_extended.h}}
+\doxysubsubsection{\texorpdfstring{GDVAR\_CUSTOM\_FROM\_PTR}{GDVAR\_CUSTOM\_FROM\_PTR}}
+{\footnotesize\ttfamily \#define GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM\+\_\+\+PTR(\begin{DoxyParamCaption}\item[{}]{variable }\end{DoxyParamCaption})~  (uint64\+\_\+t)variable}
+
+\Hypertarget{godot__var__extended_8h_aca6bcc16c38b0ac6fc4f509e83d3b9c8}\label{godot__var__extended_8h_aca6bcc16c38b0ac6fc4f509e83d3b9c8} 
+\index{godot\_var\_extended.h@{godot\_var\_extended.h}!GDVAR\_CUSTOM\_TO@{GDVAR\_CUSTOM\_TO}}
+\index{GDVAR\_CUSTOM\_TO@{GDVAR\_CUSTOM\_TO}!godot\_var\_extended.h@{godot\_var\_extended.h}}
+\doxysubsubsection{\texorpdfstring{GDVAR\_CUSTOM\_TO}{GDVAR\_CUSTOM\_TO}}
+{\footnotesize\ttfamily \#define GDVAR\+\_\+\+CUSTOM\+\_\+\+TO(\begin{DoxyParamCaption}\item[{}]{variable,  }\item[{}]{type }\end{DoxyParamCaption})~  (type\texorpdfstring{$\ast$}{*})variable}
+
+\Hypertarget{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}\label{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1} 
+\index{godot\_var\_extended.h@{godot\_var\_extended.h}!GDVAR\_CUSTOM\_VARIANT\_TYPE@{GDVAR\_CUSTOM\_VARIANT\_TYPE}}
+\index{GDVAR\_CUSTOM\_VARIANT\_TYPE@{GDVAR\_CUSTOM\_VARIANT\_TYPE}!godot\_var\_extended.h@{godot\_var\_extended.h}}
+\doxysubsubsection{\texorpdfstring{GDVAR\_CUSTOM\_VARIANT\_TYPE}{GDVAR\_CUSTOM\_VARIANT\_TYPE}}
+{\footnotesize\ttfamily \#define GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE~Variant\+::\+INT}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}\label{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393} 
+\index{godot\_var\_extended.h@{godot\_var\_extended.h}!gdvar\_custom\_object@{gdvar\_custom\_object}}
+\index{gdvar\_custom\_object@{gdvar\_custom\_object}!godot\_var\_extended.h@{godot\_var\_extended.h}}
+\doxysubsubsection{\texorpdfstring{gdvar\_custom\_object}{gdvar\_custom\_object}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\+\_\+custom\+\_\+object}}}
+

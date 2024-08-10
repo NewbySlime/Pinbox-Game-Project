@@ -1,0 +1,71 @@
+\doxysection{src/node\+\_\+free\+\_\+filter.h File Reference}
+\hypertarget{node__free__filter_8h}{}\label{node__free__filter_8h}\index{src/node\_free\_filter.h@{src/node\_free\_filter.h}}
+{\ttfamily \#include "{}algorithm\+\_\+node.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+{\ttfamily \#include "{}vector"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{node__free__filter_8h_acdc096c7036eaf6e6ea1eb054f261317}{ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+INHERIT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{node__free__filter_8h_a1d7271fc56f1ecd4bd5d06c2a1f4b43c}{ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+DEFINE}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{node__free__filter_8h_a61938a3f5d0976a6810f36f383faff12}{ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+BIND\+\_\+\+GODOT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{node__free__filter_8h_ab9903960b4f52eeef8e78157d80bb7ed}{ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+ON\+\_\+\+NOTIFICATION}}(notification\+\_\+code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{node__free__filter_8h_a61938a3f5d0976a6810f36f383faff12}\label{node__free__filter_8h_a61938a3f5d0976a6810f36f383faff12} 
+\index{node\_free\_filter.h@{node\_free\_filter.h}!ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT@{ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT}}
+\index{ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT@{ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT}!node\_free\_filter.h@{node\_free\_filter.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT}{ATTR\_NODE\_FREE\_FILTER\_BIND\_GODOT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+BIND\+\_\+\+GODOT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{node__free__filter_8h_a1d7271fc56f1ecd4bd5d06c2a1f4b43c}\label{node__free__filter_8h_a1d7271fc56f1ecd4bd5d06c2a1f4b43c} 
+\index{node\_free\_filter.h@{node\_free\_filter.h}!ATTR\_NODE\_FREE\_FILTER\_DEFINE@{ATTR\_NODE\_FREE\_FILTER\_DEFINE}}
+\index{ATTR\_NODE\_FREE\_FILTER\_DEFINE@{ATTR\_NODE\_FREE\_FILTER\_DEFINE}!node\_free\_filter.h@{node\_free\_filter.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_NODE\_FREE\_FILTER\_DEFINE}{ATTR\_NODE\_FREE\_FILTER\_DEFINE}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{node__free__filter_8h_acdc096c7036eaf6e6ea1eb054f261317}\label{node__free__filter_8h_acdc096c7036eaf6e6ea1eb054f261317} 
+\index{node\_free\_filter.h@{node\_free\_filter.h}!ATTR\_NODE\_FREE\_FILTER\_INHERIT@{ATTR\_NODE\_FREE\_FILTER\_INHERIT}}
+\index{ATTR\_NODE\_FREE\_FILTER\_INHERIT@{ATTR\_NODE\_FREE\_FILTER\_INHERIT}!node\_free\_filter.h@{node\_free\_filter.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_NODE\_FREE\_FILTER\_INHERIT}{ATTR\_NODE\_FREE\_FILTER\_INHERIT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+INHERIT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ std::set<uint64\_t>\ \_node\_free\_filter\_map;\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ add\_node\_free\_filter(godot::Node*\ target\_node);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ remove\_node\_free\_filter(godot::Node*\ target\_node);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ queue\_free\_filter();}
+
+\end{DoxyCode}
+\Hypertarget{node__free__filter_8h_ab9903960b4f52eeef8e78157d80bb7ed}\label{node__free__filter_8h_ab9903960b4f52eeef8e78157d80bb7ed} 
+\index{node\_free\_filter.h@{node\_free\_filter.h}!ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION@{ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION}}
+\index{ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION@{ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION}!node\_free\_filter.h@{node\_free\_filter.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION}{ATTR\_NODE\_FREE\_FILTER\_ON\_NOTIFICATION}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+NODE\+\_\+\+FREE\+\_\+\+FILTER\+\_\+\+ON\+\_\+\+NOTIFICATION(\begin{DoxyParamCaption}\item[{}]{notification\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}(notification\_code)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ godot::Node::NOTIFICATION\_READY:\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ add\_node\_free\_filter(\textcolor{keyword}{this});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ godot::Node::NOTIFICATION\_PARENTED:\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_node\_free\_filter\_map.clear();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ add\_node\_free\_filter(\textcolor{keyword}{this});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}

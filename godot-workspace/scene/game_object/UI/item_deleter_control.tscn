@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgpe17eqncto6"]
+
+[ext_resource type="PackedScene" uid="uid://b1uw21nacbjvp" path="res://scene/game_object/UI/item_container_control.tscn" id="1_5jtj8"]
+
+[node name="Control" type="item_deleter_control"]
+deleter_container_size = 3
+button_delete_node = NodePath("VBoxContainer/MarginContainer/Button")
+item_container_control_node = NodePath("VBoxContainer/item_container_control")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="item_container_control" parent="VBoxContainer" instance=ExtResource("1_5jtj8")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

@@ -1,0 +1,9 @@
+list of functions that a subdata need
+  static godot::String get_subdata_name():
+    Function to get the subdata name, either for parsing json data or just as an identifier
+
+  static void parse_dictionary_to(GameUtils::Memory::custom_memory* mem, godot::Dictionary* data):
+    Function to parse dictionary data to a memory. This is an unnecessary function if not used a as a json data holder.
+
+  void copy_subdata_to(GameUtils::Memory::custom_memory* mem):
+    Copy function.

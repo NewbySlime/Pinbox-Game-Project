@@ -1,0 +1,41 @@
+\doxysection{cursor\+\_\+follower\+\_\+control.\+h}
+\hypertarget{cursor__follower__control_8h_source}{}\label{cursor__follower__control_8h_source}\index{src/cursor\_follower\_control.h@{src/cursor\_follower\_control.h}}
+\mbox{\hyperlink{cursor__follower__control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CURSOR\_FOLLOWER\_CONTROL\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CURSOR\_FOLLOWER\_CONTROL\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/control.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node2d.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1cursor__follower__control}{cursor\_follower\_control}}:\ \textcolor{keyword}{public}\ godot\_sac::Control\_sac\{}
+\DoxyCodeLine{00014\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1cursor__follower__control}{cursor\_follower\_control}},\ godot\_sac::Control\_sac)}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ godot::Node2D*\ \_follower;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1cursor__follower__control_a4ec1d73b8a47bc00ca9ea7a4f289c64d}{\_bind\_methods}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1cursor__follower__control_ab3911baebcad532e9f5e0d86287f1335}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1cursor__follower__control_adbdac105aeabd551240cea82cf635334}{cursor\_follower\_control}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1cursor__follower__control_ad22a65709539895a3d11937f9fe61b80}{\string~cursor\_follower\_control}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1cursor__follower__control_a1f0456cd300d9a0b6058df1248871973}{\_unhandled\_input}}(\textcolor{keyword}{const}\ godot::Ref<godot::InputEvent>\&\ \_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1cursor__follower__control_aa5446ca401406add26cf2559c23f70b0}{add\_child\_node}}(godot::Node*\ \_node);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1cursor__follower__control_a587bd2f21bd247521c6f517665f02a58}{remove\_child\_node}}(godot::Node*\ \_node);}
+\DoxyCodeLine{00032\ \ \ \};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,104 @@
+\doxysection{entity\+\_\+object.\+h}
+\hypertarget{entity__object_8h_source}{}\label{entity__object_8h_source}\index{src/entity\_object.h@{src/entity\_object.h}}
+\mbox{\hyperlink{entity__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTITY\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTITY\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__data_8h}{entity\_data.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__database_8h}{entity\_database.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__resource__data_8h}{entity\_resource\_data.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__entity__object_8h}{I\_entity\_object.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id__types_8h}{id\_types.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ SIGNAL\_ENTITY\_OBJECT\_ON\_DESPAWNED\ "{}seoods"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ USAGE\_GENERIC\_ENTITY\_ACTION\ "{}ACTION\_OVERRIDER"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ USAGE\_GENERIC\_ENTITY\_MOVEMENT\ "{}MOVEMENT\_OVERRIDER"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{class\ }entity\_server;}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{entity\_object}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}},}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_entity_1_1_i__entity__object}{Game::Entity::I\_entity\_object}}}
+\DoxyCodeLine{00024\ \ \ \{}
+\DoxyCodeLine{00025\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{entity\_object}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\_INTERFACE\_HELPER\_INHERIT}}(\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{entity\_object}})}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ space2d\_pivot\_point)}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ space3d\_pivot\_point)}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__server}{Game::Entity::entity\_server}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__server}{entity\_server}}*\ \_this\_server;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ std::map<uint64\_t,\ godot::Node2D*>\ \_space2d\_child\_list;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ std::map<uint64\_t,\ godot::Node3D*>\ \_space3d\_child\_list;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ godot::Node2D*\ \_space2d\_point;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::Node3D*\ \_space3d\_point;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ \_inst\_id;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game::Entity::entity\_data}}*\ \_this\_data;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game::Entity::entity\_resource\_data}}*\ \_this\_res\_data;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_entered(godot::Node*\ child);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_exited(godot::Node*\ child);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a733ebc4d5eab328f7a54a8ef6294982e}{\_bind\_methods}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{comment}{//\ when\ creating\ save\ files,\ make\ sure\ to\ create\ the\ virtual\ function\ (the\ derived\ class\ can\ use)}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{comment}{//\ and\ the\ original\ one\ (the\ server\ can\ use)}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a5bdd98bf3bc7d19cc9706b4273e06c45}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a9f95b2a532c377a73aa73b4de8327918}{entity\_object}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a6c71023051def5c258efc442c6bf00ee}{\string~entity\_object}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aebef9343b0c770cad04ed7d9fb4add3b}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a7efd0ab317a618fe3ac7b9b6f24dc15e}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_addc89e6c5ee4cbd3a28f932971c9fe74}{get\_instance\_id}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game::Entity::entity\_data}}*\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aebfca16d16def1c6479b82f7fd9ddb70}{get\_entity\_data}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game::Entity::entity\_resource\_data}}*\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a36e40ee8f6b6fac4e1975fc98f81e04c}{get\_entity\_resource\_data}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a92da7f296b75ca039cf20eb9ade7f65b}{\_set\_subdata}}(subdata\_class*\ from)\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ if\ the\ object\ has\ interface\ I\_persistance\_object}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interface__helper_8h_aaecc67570dd231f7b31eea2b1c3e26bf}{INTERFACE\_CHECK}}(subdata\_class,\ I\_persistance\_object);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \_\_set\_subdata<subdata\_class>(from);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a815c7aa4c4131e9b63183e6aefcbdce5}{\_set\_subdata\_ref}}(std::shared\_ptr<subdata\_class>\ ref\_ptr)\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \_\_set\_subdata\_ref<subdata\_class>(ref\_ptr);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keyword}{const}\ subdata\_class*\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a156fb637c357ddfd1e4a27694552a4df}{get\_subdata}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata<subdata\_class>();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::shared\_ptr<const\ GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a3957a3249ff46728b762f2ccd9decd77}{get\_subdata\_shared}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata\_shared<subdata\_class>();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::weak\_ptr<const\ subdata\_class>\ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aafc856edca969dbb6f54c34c39ae9599}{get\_subdata\_ref}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata\_ref<subdata\_class>();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \};}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

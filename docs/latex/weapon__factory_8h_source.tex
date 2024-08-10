@@ -1,0 +1,38 @@
+\doxysection{weapon\+\_\+factory.\+h}
+\hypertarget{weapon__factory_8h_source}{}\label{weapon__factory_8h_source}\index{src/weapon\_factory.h@{src/weapon\_factory.h}}
+\mbox{\hyperlink{weapon__factory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WEAPON\_FACTORY\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WEAPON\_FACTORY\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__item__factory_8h}{I\_item\_factory.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item_1_1_factory}{Game::Item::Factory}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory}{weapon\_factory}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1_i__item__factory}{Game::Item::Factory::I\_item\_factory}}\{}
+\DoxyCodeLine{00012\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory}{weapon\_factory}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_is\_item\_prepped(\mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \_item\_object);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory_a3a3349c0e7d1a84bb44031cc50c97433}{\_bind\_methods}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory_ac86a9b6b55f1ec9e004fd06dbcae32f6}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory_abc05ce257a6fdcd5762b7c5139875385}{prep\_item}}(\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory_ac137a6c966f07ef0f6d483fec8639b82}{randomize\_item\_stats}}(\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \};}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

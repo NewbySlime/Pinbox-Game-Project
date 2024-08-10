@@ -1,0 +1,61 @@
+\doxysection{algorithm\+\_\+identification.\+h}
+\hypertarget{algorithm__identification_8h_source}{}\label{algorithm__identification_8h_source}\index{src/algorithm\_identification.h@{src/algorithm\_identification.h}}
+\mbox{\hyperlink{algorithm__identification_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_IDENTIFICATION\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_IDENTIFICATION\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{runtime__id__container_8h}{runtime\_id\_container.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game::Misc::Algorithm}}\{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_value>\ uint64\_t\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_adaa8a994f605c6421de42090b974d822}{get\_new\_id\_from\_map}}(std::map<uint64\_t,\ \_value>\&\ \_map,\ uint64\_t\ default\_null\_id\ =\ NULL)\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(\_map.size()\ <=\ 0)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_null\_id+1;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \_map.begin();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_map.end())}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_next\_iter\ =\ \_iter++;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ uint64\_t\ \_start\_idx,\ \_finish\_idx;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_map.begin()\ \&\&\ 0\ <\ \_iter-\/>first)\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \_start\_idx\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_finish\_idx\ =\ \_iter-\/>first;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\_next\_iter\ ==\ \_map.end())\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \_start\_idx\ =\ \_iter-\/>first;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \_finish\_idx\ =\ UINT64\_MAX;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \_iter\ =\ \_next\_iter;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_start\_idx\ =\ \_iter-\/>first;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \_finish\_idx\ =\ \_next\_iter-\/>first;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \_iter\ =\ \_next\_iter;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_start\_idx\ !=\ default\_null\_id)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_start\_idx;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_start\_idx\ ==\ \_finish\_idx)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \_start\_idx++;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ default\_null\_id;}
+\DoxyCodeLine{00057\ \ \ \}}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

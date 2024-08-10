@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhwkvj6kw6liu"]
+
+[node name="item_world_entity_2d_handler" type="item_world_entity_2d_handler"]
+random_speed = 300.0
+maximum_throw_speed = 100.0
+item_dropper_pckscene = "res://scene/game_object/preset_objects/items/item_dropper.tscn"
+item_picker_area_pckscene = "res://scene/game_object/preset_objects/items/item_picker_area.tscn"
+item_world_entity_pckscene = "res://scene/game_object/preset_objects/items/iwe2d.tscn"

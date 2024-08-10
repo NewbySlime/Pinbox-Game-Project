@@ -1,0 +1,141 @@
+[gd_scene load_steps=8 format=3 uid="uid://di4r2p6e3r5qw"]
+
+[sub_resource type="Animation" id="Animation_pxmvc"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_eo1a2"]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.25, 0, 0, -0.25, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_ayir5"]
+resource_name = "popout"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 1, 1, -0.25, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="Animation" id="Animation_1kn21"]
+resource_name = "scroll_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:set_vscroll_norm")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m1e4q"]
+resource_name = "scroll_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:set_vscroll_norm")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 2),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1qyck"]
+resource_name = "waiting_next"
+length = 3.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b102q"]
+_data = {
+"RESET": SubResource("Animation_pxmvc"),
+"hide": SubResource("Animation_eo1a2"),
+"popout": SubResource("Animation_ayir5"),
+"scroll_down": SubResource("Animation_1kn21"),
+"scroll_up": SubResource("Animation_m1e4q"),
+"waiting_next": SubResource("Animation_1qyck")
+}
+
+[node name="item_description_popout" type="item_description_popout"]
+animation_player = NodePath("AnimationPlayer")
+scroll_container = NodePath("Panel/ScrollContainer")
+label_container = NodePath("Panel/ScrollContainer/MarginContainer")
+rich_text_label = NodePath("Panel/ScrollContainer/MarginContainer/RichTextLabel")
+scroll_speed = 40.0
+offset_right = 100.0
+offset_bottom = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b102q")
+}
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 20.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "testing
+testing
+testing
+testing
+testing
+testing"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

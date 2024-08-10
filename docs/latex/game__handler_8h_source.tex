@@ -1,0 +1,43 @@
+\doxysection{game\+\_\+handler.\+h}
+\hypertarget{game__handler_8h_source}{}\label{game__handler_8h_source}\index{src/game\_handler.h@{src/game\_handler.h}}
+\mbox{\hyperlink{game__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__context__listener__helper_8h}{game\_context\_listener\_helper.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__scene__handler_8h}{game\_scene\_handler.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player__actor_8h}{player\_actor.h}}"{}}d}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_GAME\_STARTING\ "{}sghgs"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_RESUMING\ "{}sghr"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_PAUSING\ "{}sgp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_INITIALIZE\_GAME\_OBJECT\ "{}sghigo"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1game__handler}{game\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::SubViewport\_sac\{}
+\DoxyCodeLine{00019\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1game__handler}{game\_handler}},\ godot\_sac::SubViewport\_sac)}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1game__scene__handler}{Game::game\_scene\_handler}}*\ \_game\_scene\_handler;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper}{GameUtils::game\_context\_listener\_helper}}*\ \_context\_helper;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_game\_scene\_changing();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_game\_scene\_done\_changing(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__handler_a10548938a29d2efbd6f8dfde35ea99c2}{\_bind\_methods}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__handler_a7d05214d359a82d57cbc678fdb3f10c1}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__handler_a8fc958275d519de72708f2ba8aa748bc}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \};}
+\DoxyCodeLine{00035\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

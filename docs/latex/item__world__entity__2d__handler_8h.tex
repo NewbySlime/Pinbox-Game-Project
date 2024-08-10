@@ -1,0 +1,63 @@
+\doxysection{src/item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler.h File Reference}
+\hypertarget{item__world__entity__2d__handler_8h}{}\label{item__world__entity__2d__handler_8h}\index{src/item\_world\_entity\_2d\_handler.h@{src/item\_world\_entity\_2d\_handler.h}}
+{\ttfamily \#include "{}game\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+signal.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+location\+\_\+data\+\_\+struct.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+dropper.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+picker\+\_\+area.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+world\+\_\+entity\+\_\+2d.\+h"{}}\newline
+{\ttfamily \#include "{}rng\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/packed\+\_\+scene.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game\+::\+Item\+::item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__dropper__deleted__param}{Game\+::\+Item\+::iwe2d\+\_\+handler\+\_\+dropper\+\_\+deleted\+\_\+param}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__entity__deleted__param}{Game\+::\+Item\+::iwe2d\+\_\+handler\+\_\+entity\+\_\+deleted\+\_\+param}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1iwe2d__handler__picker__deleted__param}{Game\+::\+Item\+::iwe2d\+\_\+handler\+\_\+picker\+\_\+deleted\+\_\+param}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{item__world__entity__2d__handler_8h_af0865e52e1165943af90f5d9e96d52ed}{SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+ENTITY\+\_\+\+DELETED}}~"{}siwe2dhoned"{}
+\item 
+\#define \mbox{\hyperlink{item__world__entity__2d__handler_8h_abe09af328cb85cba87541addc06ae852}{SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+PICKER\+\_\+\+DELETED}}~"{}siwe2dhonpd"{}
+\item 
+\#define \mbox{\hyperlink{item__world__entity__2d__handler_8h_a881cfc17b396d1adc39e7550ae047ef7}{SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+DROPPER\+\_\+\+DELETED}}~"{}siwe2dhondd"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{item__world__entity__2d__handler_8h_a881cfc17b396d1adc39e7550ae047ef7}\label{item__world__entity__2d__handler_8h_a881cfc17b396d1adc39e7550ae047ef7} 
+\index{item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}!SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED@{SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED}}
+\index{SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED@{SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED}!item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED}{SIGNAL\_IWE2DH\_ON\_DROPPER\_DELETED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+DROPPER\+\_\+\+DELETED~"{}siwe2dhondd"{}}
+
+\Hypertarget{item__world__entity__2d__handler_8h_af0865e52e1165943af90f5d9e96d52ed}\label{item__world__entity__2d__handler_8h_af0865e52e1165943af90f5d9e96d52ed} 
+\index{item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}!SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED@{SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED}}
+\index{SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED@{SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED}!item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED}{SIGNAL\_IWE2DH\_ON\_ENTITY\_DELETED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+ENTITY\+\_\+\+DELETED~"{}siwe2dhoned"{}}
+
+\Hypertarget{item__world__entity__2d__handler_8h_abe09af328cb85cba87541addc06ae852}\label{item__world__entity__2d__handler_8h_abe09af328cb85cba87541addc06ae852} 
+\index{item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}!SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED@{SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED}}
+\index{SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED@{SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED}!item\_world\_entity\_2d\_handler.h@{item\_world\_entity\_2d\_handler.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED}{SIGNAL\_IWE2DH\_ON\_PICKER\_DELETED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+IWE2\+DH\+\_\+\+ON\+\_\+\+PICKER\+\_\+\+DELETED~"{}siwe2dhonpd"{}}
+

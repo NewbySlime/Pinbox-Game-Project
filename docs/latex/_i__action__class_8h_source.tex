@@ -1,0 +1,40 @@
+\doxysection{I\+\_\+action\+\_\+class.\+h}
+\hypertarget{_i__action__class_8h_source}{}\label{_i__action__class_8h_source}\index{src/I\_action\_class.h@{src/I\_action\_class.h}}
+\mbox{\hyperlink{_i__action__class_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_ACTION\_CLASS\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_ACTION\_CLASS\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/vector2.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1action__class__update__data}{action\_class\_update\_data}}\{}
+\DoxyCodeLine{00011\ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{struct_game_1_1action__class__update__data_a7e5f8535ef6b5708746be4d8fc8b242e}{global\_pos}};}
+\DoxyCodeLine{00012\ \ \ \ \ godot::Vector2\ \mbox{\hyperlink{struct_game_1_1action__class__update__data_a6c6396cf454bf8bae77b63a6ac9d556d}{target\_global\_pos}};}
+\DoxyCodeLine{00013\ \ \ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_i__action__class}{I\_action\_class}}\{}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_1_1_i__action__class}{I\_action\_class}})}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_i__action__class_ab6225efb0b008d1d38a6e8bd10fd7702}{\string~I\_action\_class}}()\{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a0415c418fcdb54c79398aaf22dee30c4}{on\_action\_priming}}()\{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a36f69068f2c568bfab0e22ff71fae8f7}{on\_action\_continuing}}()\{\}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a9bd99a9dfef32ddde669980ebe944993}{on\_action\_cancelled}}()\{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a2aac8fcae15e134296cf6dc6d9f48feb}{is\_alternate\_viable}}()\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_afd90bf87f97c848cd010f024acdd9641}{on\_alternate\_action\_priming}}()\{\}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a367debf724c5a76349109374085d6c36}{on\_alternate\_action\_continuing}}()\{\}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_a31729ffb39aab24813ba6ea6797074cb}{on\_alternate\_action\_cancelled}}()\{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_i__action__class_aa0807fafdfd93ce2fc6d5993637ced4f}{on\_update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1action__class__update__data}{action\_class\_update\_data}}\ \&update\_data)\{\}}
+\DoxyCodeLine{00031\ \ \ \};}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

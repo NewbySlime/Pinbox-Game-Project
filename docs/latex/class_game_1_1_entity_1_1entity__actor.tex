@@ -1,0 +1,126 @@
+\doxysection{Game\+::Entity\+::entity\+\_\+actor Class Reference}
+\hypertarget{class_game_1_1_entity_1_1entity__actor}{}\label{class_game_1_1_entity_1_1entity__actor}\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+
+
+{\ttfamily \#include $<$entity\+\_\+actor.\+h$>$}
+
+Inheritance diagram for Game\+::Entity\+::entity\+\_\+actor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_1_1_entity_1_1entity__actor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a8aaddd9c01bd9e0147c87afc1813484b}{\texorpdfstring{$\sim$}{\string~}entity\+\_\+actor}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a14cea489b7ddc90375c8a1dee8345f39}{\+\_\+notification}} (int code)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a975b874048faf5489fa8fda3d321ad80}{bind\+\_\+to\+\_\+entity}} (\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game\+::\+Entity\+::entity\+\_\+inst\+\_\+id}} entity\+\_\+id) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_i__actor}{Game\+::\+I\+\_\+actor}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_i__actor_ad9f801f0682c3ccd6f1be3ceb934a82a}{\texorpdfstring{$\sim$}{\string~}\+I\+\_\+actor}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a7e50fe9a3dddca0a1ea20563ce99a6bb}{\+\_\+bind\+\_\+subautoload}} (\mbox{\hyperlink{class_game_1_1subautoload__container}{Game\+::subautoload\+\_\+container}} \texorpdfstring{$\ast$}{*}sa\+\_\+container) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a514d2fe294f2638c0c209c1bab8ed5b7}{\+\_\+on\+\_\+gamenode\+\_\+ready}} () override
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_ad1f8270cc054a50124dc666dcb695e42}{\+\_\+on\+\_\+entity\+\_\+killed\+\_\+callback}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a55dabaac063dddafa65998c1c3ca973e}{\+\_\+on\+\_\+entity\+\_\+despawned\+\_\+callback}} ()
+\item 
+bool \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a4f5677ffb47420453fe6f046f0e19186}{\+\_\+add\+\_\+overrider}} (godot\+::\+String associated\+\_\+id, godot\+::\+Ref$<$ godot\+::\+Packed\+Scene $>$ overrider\+\_\+pckscene)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_a336c7aa19a74b380632aedb40abccb86}{\+\_\+remove\+\_\+overrider}} (godot\+::\+String associated\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__actor_afe9b2c09bfaa86ed2fea5faaefee457d}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a8aaddd9c01bd9e0147c87afc1813484b}\label{class_game_1_1_entity_1_1entity__actor_a8aaddd9c01bd9e0147c87afc1813484b} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!````~entity\_actor@{\texorpdfstring{$\sim$}{\string~}entity\_actor}}
+\index{````~entity\_actor@{\texorpdfstring{$\sim$}{\string~}entity\_actor}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}entity\_actor()}{\string~entity\_actor()}}
+{\footnotesize\ttfamily entity\+\_\+actor\+::\texorpdfstring{$\sim$}{\string~}entity\+\_\+actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a4f5677ffb47420453fe6f046f0e19186}\label{class_game_1_1_entity_1_1entity__actor_a4f5677ffb47420453fe6f046f0e19186} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_add\_overrider@{\_add\_overrider}}
+\index{\_add\_overrider@{\_add\_overrider}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_add\_overrider()}{\_add\_overrider()}}
+{\footnotesize\ttfamily bool entity\+\_\+actor\+::\+\_\+add\+\_\+overrider (\begin{DoxyParamCaption}\item[{godot\+::\+String}]{associated\+\_\+id,  }\item[{godot\+::\+Ref$<$ godot\+::\+Packed\+Scene $>$}]{overrider\+\_\+pckscene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_afe9b2c09bfaa86ed2fea5faaefee457d}\label{class_game_1_1_entity_1_1entity__actor_afe9b2c09bfaa86ed2fea5faaefee457d} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a7e50fe9a3dddca0a1ea20563ce99a6bb}\label{class_game_1_1_entity_1_1entity__actor_a7e50fe9a3dddca0a1ea20563ce99a6bb} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_bind\_subautoload@{\_bind\_subautoload}}
+\index{\_bind\_subautoload@{\_bind\_subautoload}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_bind\_subautoload()}{\_bind\_subautoload()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::\+\_\+bind\+\_\+subautoload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1subautoload__container}{Game\+::subautoload\+\_\+container}} \texorpdfstring{$\ast$}{*}}]{sa\+\_\+container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a14cea489b7ddc90375c8a1dee8345f39}\label{class_game_1_1_entity_1_1entity__actor_a14cea489b7ddc90375c8a1dee8345f39} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_notification@{\_notification}}
+\index{\_notification@{\_notification}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_notification()}{\_notification()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::\+\_\+notification (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a55dabaac063dddafa65998c1c3ca973e}\label{class_game_1_1_entity_1_1entity__actor_a55dabaac063dddafa65998c1c3ca973e} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_on\_entity\_despawned\_callback@{\_on\_entity\_despawned\_callback}}
+\index{\_on\_entity\_despawned\_callback@{\_on\_entity\_despawned\_callback}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_on\_entity\_despawned\_callback()}{\_on\_entity\_despawned\_callback()}}
+{\footnotesize\ttfamily virtual void Game\+::\+Entity\+::entity\+\_\+actor\+::\+\_\+on\+\_\+entity\+\_\+despawned\+\_\+callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_ad1f8270cc054a50124dc666dcb695e42}\label{class_game_1_1_entity_1_1entity__actor_ad1f8270cc054a50124dc666dcb695e42} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_on\_entity\_killed\_callback@{\_on\_entity\_killed\_callback}}
+\index{\_on\_entity\_killed\_callback@{\_on\_entity\_killed\_callback}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_on\_entity\_killed\_callback()}{\_on\_entity\_killed\_callback()}}
+{\footnotesize\ttfamily virtual void Game\+::\+Entity\+::entity\+\_\+actor\+::\+\_\+on\+\_\+entity\+\_\+killed\+\_\+callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a514d2fe294f2638c0c209c1bab8ed5b7}\label{class_game_1_1_entity_1_1entity__actor_a514d2fe294f2638c0c209c1bab8ed5b7} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_on\_gamenode\_ready@{\_on\_gamenode\_ready}}
+\index{\_on\_gamenode\_ready@{\_on\_gamenode\_ready}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_on\_gamenode\_ready()}{\_on\_gamenode\_ready()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::\+\_\+on\+\_\+gamenode\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a336c7aa19a74b380632aedb40abccb86}\label{class_game_1_1_entity_1_1entity__actor_a336c7aa19a74b380632aedb40abccb86} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!\_remove\_overrider@{\_remove\_overrider}}
+\index{\_remove\_overrider@{\_remove\_overrider}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{\_remove\_overrider()}{\_remove\_overrider()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::\+\_\+remove\+\_\+overrider (\begin{DoxyParamCaption}\item[{godot\+::\+String}]{associated\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1entity__actor_a975b874048faf5489fa8fda3d321ad80}\label{class_game_1_1_entity_1_1entity__actor_a975b874048faf5489fa8fda3d321ad80} 
+\index{Game::Entity::entity\_actor@{Game::Entity::entity\_actor}!bind\_to\_entity@{bind\_to\_entity}}
+\index{bind\_to\_entity@{bind\_to\_entity}!Game::Entity::entity\_actor@{Game::Entity::entity\_actor}}
+\doxysubsubsection{\texorpdfstring{bind\_to\_entity()}{bind\_to\_entity()}}
+{\footnotesize\ttfamily void entity\+\_\+actor\+::bind\+\_\+to\+\_\+entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game\+::\+Entity\+::entity\+\_\+inst\+\_\+id}}}]{entity\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_i__actor_a7cd54dbf91564cf62851903e0510a49e}{Game\+::\+I\+\_\+actor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1player__actor_a6df91a9c9f56c245aadc57dfc042f1c6}{Game\+::player\+\_\+actor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{entity__actor_8h}{entity\+\_\+actor.\+h}}\item 
+src/\mbox{\hyperlink{entity__actor_8cpp}{entity\+\_\+actor.\+cpp}}\end{DoxyCompactItemize}

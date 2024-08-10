@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cqddmtsa6y5cm"]
+
+[node name="damage_indicator_handler" type="damage_indicator_handler"]
+damage_indicator_object = "res://scene/game_object/effects/damage_indicator.tscn"

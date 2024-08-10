@@ -1,0 +1,2 @@
+weapon_stats:
+  The stats of the alternate version of the weapon

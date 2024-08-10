@@ -1,0 +1,95 @@
+\doxysection{Game\+::generic\+\_\+damager Class Reference}
+\hypertarget{class_game_1_1generic__damager}{}\label{class_game_1_1generic__damager}\index{Game::generic\_damager@{Game::generic\_damager}}
+
+
+{\ttfamily \#include $<$generic\+\_\+damager.\+h$>$}
+
+Inheritance diagram for Game\+::generic\+\_\+damager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1generic__damager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1generic__damager_ab8e380b0d9717cfad7efe474e793507d}{\texorpdfstring{$\sim$}{\string~}generic\+\_\+damager}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1generic__damager_a596155e49d4c15decc1b437724e1c526}{generic\+\_\+damager}} (\mbox{\hyperlink{class_game_1_1bus__event}{Game\+::bus\+\_\+event}} \texorpdfstring{$\ast$}{*}\+\_\+bus\+\_\+event)
+\item 
+void \mbox{\hyperlink{class_game_1_1generic__damager_a85b5b01796134c2fa5d2bbd2ab186fec}{on\+\_\+hit}} (\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{Game\+::hit\+\_\+register\+\_\+pass\+\_\+data}} \texorpdfstring{$\ast$}{*}pass\+\_\+data) override
+\item 
+void \mbox{\hyperlink{class_game_1_1generic__damager_ac8da102b4ee978a1a38721b7c40250a9}{on\+\_\+hitreg\+\_\+changed}} (const \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game\+::hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}new\+\_\+state=NULL) override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{Game\+::\+I\+\_\+damager}} $>$ \mbox{\hyperlink{class_game_1_1generic__damager_a8e0de38c5370f1da3f9a104963dbd305}{clone\+\_\+damager}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_i__damager}{Game\+::\+I\+\_\+damager}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_game_1_1_i__damager_a1941630a8d8b30c18d3b635c423e6067}{\texorpdfstring{$\sim$}{\string~}\+I\+\_\+damager}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{Game\+::\+I\+\_\+damager}} $>$ \mbox{\hyperlink{class_game_1_1generic__damager_a461f8cc583bc98fd8e0a43c00ae4ac93}{create\+\_\+from\+\_\+data}} (const \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game\+::\+Item\+::weapon\+\_\+stats\+\_\+data}} \texorpdfstring{$\ast$}{*}w\+\_\+item, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper}{Game\+::\+Modifiers\+::modifier\+\_\+combination\+\_\+helper}} $>$ mod\+\_\+combination, \mbox{\hyperlink{class_game_1_1bus__event}{Game\+::bus\+\_\+event}} \texorpdfstring{$\ast$}{*}bus)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1generic__damager_ab8e380b0d9717cfad7efe474e793507d}\label{class_game_1_1generic__damager_ab8e380b0d9717cfad7efe474e793507d} 
+\index{Game::generic\_damager@{Game::generic\_damager}!````~generic\_damager@{\texorpdfstring{$\sim$}{\string~}generic\_damager}}
+\index{````~generic\_damager@{\texorpdfstring{$\sim$}{\string~}generic\_damager}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}generic\_damager()}{\string~generic\_damager()}}
+{\footnotesize\ttfamily Game\+::generic\+\_\+damager\+::\texorpdfstring{$\sim$}{\string~}generic\+\_\+damager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_1_1generic__damager_a596155e49d4c15decc1b437724e1c526}\label{class_game_1_1generic__damager_a596155e49d4c15decc1b437724e1c526} 
+\index{Game::generic\_damager@{Game::generic\_damager}!generic\_damager@{generic\_damager}}
+\index{generic\_damager@{generic\_damager}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{generic\_damager()}{generic\_damager()}}
+{\footnotesize\ttfamily generic\+\_\+damager\+::generic\+\_\+damager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1bus__event}{Game\+::bus\+\_\+event}} \texorpdfstring{$\ast$}{*}}]{\+\_\+bus\+\_\+event }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1generic__damager_a8e0de38c5370f1da3f9a104963dbd305}\label{class_game_1_1generic__damager_a8e0de38c5370f1da3f9a104963dbd305} 
+\index{Game::generic\_damager@{Game::generic\_damager}!clone\_damager@{clone\_damager}}
+\index{clone\_damager@{clone\_damager}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{clone\_damager()}{clone\_damager()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{I\+\_\+damager}} $>$ generic\+\_\+damager\+::clone\+\_\+damager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__damager_a94443ce5e64fb82afffb11ab5fe06089}{Game\+::\+I\+\_\+damager}}.
+
+\Hypertarget{class_game_1_1generic__damager_a461f8cc583bc98fd8e0a43c00ae4ac93}\label{class_game_1_1generic__damager_a461f8cc583bc98fd8e0a43c00ae4ac93} 
+\index{Game::generic\_damager@{Game::generic\_damager}!create\_from\_data@{create\_from\_data}}
+\index{create\_from\_data@{create\_from\_data}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{create\_from\_data()}{create\_from\_data()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{I\+\_\+damager}} $>$ generic\+\_\+damager\+::create\+\_\+from\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game\+::\+Item\+::weapon\+\_\+stats\+\_\+data}} \texorpdfstring{$\ast$}{*}}]{w\+\_\+item,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper}{Game\+::\+Modifiers\+::modifier\+\_\+combination\+\_\+helper}} $>$}]{mod\+\_\+combination,  }\item[{\mbox{\hyperlink{class_game_1_1bus__event}{Game\+::bus\+\_\+event}} \texorpdfstring{$\ast$}{*}}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1generic__damager_a85b5b01796134c2fa5d2bbd2ab186fec}\label{class_game_1_1generic__damager_a85b5b01796134c2fa5d2bbd2ab186fec} 
+\index{Game::generic\_damager@{Game::generic\_damager}!on\_hit@{on\_hit}}
+\index{on\_hit@{on\_hit}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{on\_hit()}{on\_hit()}}
+{\footnotesize\ttfamily void generic\+\_\+damager\+::on\+\_\+hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{Game\+::hit\+\_\+register\+\_\+pass\+\_\+data}} \texorpdfstring{$\ast$}{*}}]{pass\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__damager_a0ac488b63c6fd32d780c9343895a549b}{Game\+::\+I\+\_\+damager}}.
+
+\Hypertarget{class_game_1_1generic__damager_ac8da102b4ee978a1a38721b7c40250a9}\label{class_game_1_1generic__damager_ac8da102b4ee978a1a38721b7c40250a9} 
+\index{Game::generic\_damager@{Game::generic\_damager}!on\_hitreg\_changed@{on\_hitreg\_changed}}
+\index{on\_hitreg\_changed@{on\_hitreg\_changed}!Game::generic\_damager@{Game::generic\_damager}}
+\doxysubsubsection{\texorpdfstring{on\_hitreg\_changed()}{on\_hitreg\_changed()}}
+{\footnotesize\ttfamily void generic\+\_\+damager\+::on\+\_\+hitreg\+\_\+changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game\+::hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+state = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game_1_1_i__damager_ab1fc5833895d357dd9d2e4fb7e293732}{Game\+::\+I\+\_\+damager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{generic__damager_8h}{generic\+\_\+damager.\+h}}\item 
+src/\mbox{\hyperlink{generic__damager_8cpp}{generic\+\_\+damager.\+cpp}}\end{DoxyCompactItemize}

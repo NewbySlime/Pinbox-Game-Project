@@ -1,0 +1,57 @@
+\doxysection{item\+\_\+deleter\+\_\+control.\+h}
+\hypertarget{item__deleter__control_8h_source}{}\label{item__deleter__control_8h_source}\index{src/item\_deleter\_control.h@{src/item\_deleter\_control.h}}
+\mbox{\hyperlink{item__deleter__control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_DELETER\_CONTROL\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_DELETER\_CONTROL\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__signal_8h}{godot\_signal.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__container_8h}{subautoload\_container.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container__control_8h}{item\_container\_control.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container__delete_8h}{item\_container\_delete.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/button.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/control.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control}{item\_deleter\_control}}:\ \textcolor{keyword}{public}\ godot\_sac::Control\_sac\{}
+\DoxyCodeLine{00019\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control}{item\_deleter\_control}},\ godot\_sac::Control\_sac)}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(uint64\_t,\ deleter\_container\_size)}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ button\_delete\_node)}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ item\_container\_control\_node)}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_item\_container\_control;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ godot::Button*\ \_delete\_button;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container__delete}{Game::Item::item\_container\_delete}}*\ \_deleter\_container;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ \_deleter\_container\_id;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_container\_deleted(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ param);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_button\_released();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control_a2bdea17c97ae1a73ff2f720b65883679}{\_bind\_methods}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control_a3e88fbebdd1a53f02a5e2fa55ad7696b}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control_adff6e81dc4627a09b18593d421774f6c}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control_a0da95ca59de23afa4facb3572ee03a50}{item\_deleter\_control}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control_aa34599d67b8060097ca64388021e64cf}{\string~item\_deleter\_control}}();}
+\DoxyCodeLine{00048\ \ \ \};}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

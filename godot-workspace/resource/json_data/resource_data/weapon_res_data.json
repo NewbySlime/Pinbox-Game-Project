@@ -1,0 +1,11 @@
+{
+  "weapon.pistol":{
+    "equippable_sprite":{
+      "animated_sprite": ""
+    },
+
+    "item_sprite":{
+      "animated_sprite": ""
+    }
+  }
+}

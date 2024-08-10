@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bdlo8fogxdv2y"]
+
+[node name="item_container_infinite" type="item_container_infinite"]

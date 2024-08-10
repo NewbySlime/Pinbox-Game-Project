@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://24xmqm8plc8m"]
+
+[node name="flipper_handler" type="flipper_handler"]

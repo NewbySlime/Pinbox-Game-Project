@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgmeds048u80p"]
+
+[ext_resource type="PackedScene" uid="uid://bfsw800ij36cl" path="res://scene/game_object/preset_objects/hitregs/hr_raycast.tscn" id="1_ad243"]
+
+[node name="hit_register_handler" type="hit_register_handler"]
+hit_reg_node_packed_scene = {
+"0": ExtResource("1_ad243")
+}

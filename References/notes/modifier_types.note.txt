@@ -1,0 +1,19 @@
+There are two types of modifier when it comes when to apply it. It's passive modifiers and active modifiers.
+  Passive modifiers
+    Modifiers that only modifies base stats of the weapon.
+
+  Active modifiers
+    These modifiers will be applied everytime the hitreg changes phases state. Active modifiers can only exist whenever there are one or more conditional modifiers.
+  
+A modifier can manifest these two types of modifier. But passive modifiers are considered more scarce than Active modifiers. These might be caused by passive modifiers takes more resource than the capability of the weapons. Also can be caused by passive modifiers uses more scarce materials for manufacturing.
+
+  
+Not only "timing types", there are modifiers that dictate how to apply it. Those are;
+  Direct modifiers
+    Modifiers that directly modifying weapon stats. Some modifiers can only exist with conditional modifiers for balancing purposes.
+
+  Conditional modifiers
+    These modifiers are a way to check certain state. Therefore when conditions are met, another modifiers can be applied.
+  
+  Hitreg modifiers
+    When a hitreg hits something, the modifier will add another hitreg. These hitreg can only exist with conditional modifiers.

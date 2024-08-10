@@ -1,0 +1,61 @@
+\doxysection{camera2d\+\_\+entity.\+h}
+\hypertarget{camera2d__entity_8h_source}{}\label{camera2d__entity_8h_source}\index{src/camera2d\_entity.h@{src/camera2d\_entity.h}}
+\mbox{\hyperlink{camera2d__entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAMERA2D\_ENTITY\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAMERA2D\_ENTITY\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity__server_8h}{entity\_server.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id__types_8h}{id\_types.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node2d__object__follower_8h}{node2d\_object\_follower.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity}{camera2d\_entity}}:\ \textcolor{keyword}{public}\ godot\_sac::Camera2D\_sac\{}
+\DoxyCodeLine{00017\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity}{camera2d\_entity}},\ godot\_sac::Camera2D\_sac)}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ entity\_follower\_pckscene\_path)\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__server}{Game::Entity::entity\_server}}*\ \_entity\_server;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_entity\_follower\_pckscene;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{comment}{//\ node\ instance\ id,\ entity\ instance\ id}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ std::map<uint64\_t,\ Game::Entity::entity\_inst\_id>\ \_node\_inst\_map;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{comment}{//\ entity\ instance\ id,\ follower\ node}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ std::map<Game::Entity::entity\_inst\_id,\ Game::node2d\_object\_follower*>\ \_entity\_follower\_inst\_map;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ godot::Vector2\ \_target\_follow;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ \_last\_follow\_entity;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_node\_follower\_deleted(\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ inst\_id);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_node\_follower\_position\_update(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ data);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_ad6180d0cc33e8cbd309cfe8d4e1f43de}{\_bind\_methods}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_a872306182d3e538d5af70ddd7591c317}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ \_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_a6386a8a31482109b35f150aa6732139c}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_acad564504bfa287dc32fc7329203e28f}{camera2d\_entity}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_ac702d991e9aa92c5839bb853bde2ee58}{\string~camera2d\_entity}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_a27d6b81a7a23dc4162f70cd6587ff7db}{\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_entity_1_1camera2d__entity_a6abc2f5699aa62b4393a2d4944cec894}{follow\_entity}}(\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game::Entity::entity\_inst\_id}}\ entity\_id);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \};}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

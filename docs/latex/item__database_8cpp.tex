@@ -1,0 +1,92 @@
+\doxysection{src/item\+\_\+database.cpp File Reference}
+\hypertarget{item__database_8cpp}{}\label{item__database_8cpp}\index{src/item\_database.cpp@{src/item\_database.cpp}}
+{\ttfamily \#include "{}algorithm\+\_\+directory.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+item\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include "{}consumable\+\_\+stats\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}hitreg\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+pouch\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}weapon\+\_\+stats\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/dir\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/file\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/json.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/scene\+\_\+tree.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/os.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__database_8cpp_a52b9ee3a9b759c389e44c1d2c702682a}{ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+ID}}~"{}item\+\_\+id"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__database_8cpp_ad5e5637ca72ea95110c3f439f99ac319}{ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+TYPE}}~"{}item\+\_\+type"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__database_8cpp_a5237df8689ecabf0cca03d1702509050}{ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+RARITY}}~"{}item\+\_\+rarity"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__database_8cpp_a202819ef8d85c9f3e62288655a0118b4}{ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+OBJECT}}~"{}data\+\_\+object"{}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{item__database_8cpp_a630f79072e44d7315accf95e81d89599}{\+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER}}(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{subdata\+\_\+name}})~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&item\+\_\+data\+::\+\_\+add\+\_\+new\+\_\+subdata$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{subdata\+\_\+name}}$>$\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typedef}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(item\+\_\+data\+::\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{item__database_8cpp_a387061fed01b67ff834cb6e71f05b13c}{subdata\+\_\+parser\+\_\+function}}) (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Dictionary}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{String}}, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}} $>$ \mbox{\hyperlink{item__database_8cpp_a82aaa0238d8db742a8af508453ea8f0a}{\+\_\+subdata\+\_\+parser\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{item__database_8cpp_a630f79072e44d7315accf95e81d89599}\label{item__database_8cpp_a630f79072e44d7315accf95e81d89599} 
+\index{item\_database.cpp@{item\_database.cpp}!\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+\index{\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{\_SUBDATA\_PARSER\_MAP\_HELPER}{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{subdata\+\_\+name}} }\end{DoxyParamCaption})~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&item\+\_\+data\+::\+\_\+add\+\_\+new\+\_\+subdata$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{subdata\+\_\+name}}$>$\}}
+
+\Hypertarget{item__database_8cpp_a202819ef8d85c9f3e62288655a0118b4}\label{item__database_8cpp_a202819ef8d85c9f3e62288655a0118b4} 
+\index{item\_database.cpp@{item\_database.cpp}!ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT@{ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}}
+\index{ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT@{ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}{ITEM\_DATABASE\_KEY\_ITEM\_DATA\_OBJECT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+DATA\+\_\+\+OBJECT~"{}data\+\_\+object"{}}
+
+\Hypertarget{item__database_8cpp_a52b9ee3a9b759c389e44c1d2c702682a}\label{item__database_8cpp_a52b9ee3a9b759c389e44c1d2c702682a} 
+\index{item\_database.cpp@{item\_database.cpp}!ITEM\_DATABASE\_KEY\_ITEM\_ID@{ITEM\_DATABASE\_KEY\_ITEM\_ID}}
+\index{ITEM\_DATABASE\_KEY\_ITEM\_ID@{ITEM\_DATABASE\_KEY\_ITEM\_ID}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DATABASE\_KEY\_ITEM\_ID}{ITEM\_DATABASE\_KEY\_ITEM\_ID}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+ID~"{}item\+\_\+id"{}}
+
+\Hypertarget{item__database_8cpp_a5237df8689ecabf0cca03d1702509050}\label{item__database_8cpp_a5237df8689ecabf0cca03d1702509050} 
+\index{item\_database.cpp@{item\_database.cpp}!ITEM\_DATABASE\_KEY\_ITEM\_RARITY@{ITEM\_DATABASE\_KEY\_ITEM\_RARITY}}
+\index{ITEM\_DATABASE\_KEY\_ITEM\_RARITY@{ITEM\_DATABASE\_KEY\_ITEM\_RARITY}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DATABASE\_KEY\_ITEM\_RARITY}{ITEM\_DATABASE\_KEY\_ITEM\_RARITY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+RARITY~"{}item\+\_\+rarity"{}}
+
+\Hypertarget{item__database_8cpp_ad5e5637ca72ea95110c3f439f99ac319}\label{item__database_8cpp_ad5e5637ca72ea95110c3f439f99ac319} 
+\index{item\_database.cpp@{item\_database.cpp}!ITEM\_DATABASE\_KEY\_ITEM\_TYPE@{ITEM\_DATABASE\_KEY\_ITEM\_TYPE}}
+\index{ITEM\_DATABASE\_KEY\_ITEM\_TYPE@{ITEM\_DATABASE\_KEY\_ITEM\_TYPE}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DATABASE\_KEY\_ITEM\_TYPE}{ITEM\_DATABASE\_KEY\_ITEM\_TYPE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ITEM\+\_\+\+DATABASE\+\_\+\+KEY\+\_\+\+ITEM\+\_\+\+TYPE~"{}item\+\_\+type"{}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{item__database_8cpp_a387061fed01b67ff834cb6e71f05b13c}\label{item__database_8cpp_a387061fed01b67ff834cb6e71f05b13c} 
+\index{item\_database.cpp@{item\_database.cpp}!subdata\_parser\_function@{subdata\_parser\_function}}
+\index{subdata\_parser\_function@{subdata\_parser\_function}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{subdata\_parser\_function}{subdata\_parser\_function}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typedef}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(item\+\_\+data\+::\texorpdfstring{$\ast$}{*} subdata\+\_\+parser\+\_\+function) (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Dictionary}} \texorpdfstring{$\ast$}{*})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{item__database_8cpp_a82aaa0238d8db742a8af508453ea8f0a}\label{item__database_8cpp_a82aaa0238d8db742a8af508453ea8f0a} 
+\index{item\_database.cpp@{item\_database.cpp}!\_subdata\_parser\_map@{\_subdata\_parser\_map}}
+\index{\_subdata\_parser\_map@{\_subdata\_parser\_map}!item\_database.cpp@{item\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{\_subdata\_parser\_map}{\_subdata\_parser\_map}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{String}}, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}}$>$ \+\_\+subdata\+\_\+parser\+\_\+map}
+

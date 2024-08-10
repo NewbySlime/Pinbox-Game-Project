@@ -1,0 +1,49 @@
+\doxysection{src/\+I\+\_\+caller\+\_\+context.h File Reference}
+\hypertarget{_i__caller__context_8h}{}\label{_i__caller__context_8h}\index{src/I\_caller\_context.h@{src/I\_caller\_context.h}}
+{\ttfamily \#include "{}interface\+\_\+helper.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_utils_1_1_function_1_1caller__data}{Game\+Utils\+::\+Function\+::caller\+\_\+data}}
+\item 
+class \mbox{\hyperlink{class_game_utils_1_1_function_1_1_i__caller__context}{Game\+Utils\+::\+Function\+::\+I\+\_\+caller\+\_\+context}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils}{Game\+Utils}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils_1_1_function}{Game\+Utils\+::\+Function}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_i__caller__context_8h_a479cda30b6ddb1d1c758bb5775674a30}{CALLER\+\_\+\+CONTEXT\+\_\+\+WRAPPER}}(p\+\_\+target\+\_\+node,  context\+\_\+data,  function, ...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_i__caller__context_8h_a479cda30b6ddb1d1c758bb5775674a30}\label{_i__caller__context_8h_a479cda30b6ddb1d1c758bb5775674a30} 
+\index{I\_caller\_context.h@{I\_caller\_context.h}!CALLER\_CONTEXT\_WRAPPER@{CALLER\_CONTEXT\_WRAPPER}}
+\index{CALLER\_CONTEXT\_WRAPPER@{CALLER\_CONTEXT\_WRAPPER}!I\_caller\_context.h@{I\_caller\_context.h}}
+\doxysubsubsection{\texorpdfstring{CALLER\_CONTEXT\_WRAPPER}{CALLER\_CONTEXT\_WRAPPER}}
+{\footnotesize\ttfamily \#define CALLER\+\_\+\+CONTEXT\+\_\+\+WRAPPER(\begin{DoxyParamCaption}\item[{}]{p\+\_\+target\+\_\+node,  }\item[{}]{context\+\_\+data,  }\item[{}]{function,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{auto}\ \_\_macro\_function\_var\ =\ function;\ \(\backslash\)}
+\DoxyCodeLine{\ \ I\_caller\_context*\ \_\_macro\_interface\_context\ =\ NULL;\ \(\backslash\)}
+\DoxyCodeLine{\ \ INTERFACE\_GET(p\_target\_node,\ I\_caller\_context,\ \_\_macro\_interface\_context)\ \(\backslash\)}
+\DoxyCodeLine{\ \ if(\_\_macro\_interface\_context)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_macro\_interface\_context-\/>add\_current\_context(context\_data);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_macro\_function\_var(\_\_VA\_ARGS\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_macro\_interface\_context-\/>delete\_current\_context();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{else}\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_macro\_function\_var(\_\_VA\_ARGS\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

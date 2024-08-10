@@ -1,0 +1,28 @@
+\doxysection{godot\+\_\+var\+\_\+extended.\+h}
+\hypertarget{godot__var__extended_8h_source}{}\label{godot__var__extended_8h_source}\index{src/godot\_var\_extended.h@{src/godot\_var\_extended.h}}
+\mbox{\hyperlink{godot__var__extended_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GODOT\_VARIANT\_EXTENDED\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GODOT\_VARIANT\_EXTENDED\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/variant.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ uint64\_t\ \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GDVAR\_CUSTOM\_TO(variable,\ type)\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ (type*)variable}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ GDVAR\_CUSTOM\_FROM(variable)\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ (uint64\_t)\&variable}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ GDVAR\_CUSTOM\_FROM\_PTR(variable)\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ (uint64\_t)variable}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ GDVAR\_CUSTOM\_VARIANT\_TYPE\ Variant::INT}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

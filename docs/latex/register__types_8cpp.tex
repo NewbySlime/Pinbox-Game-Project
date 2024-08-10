@@ -1,0 +1,114 @@
+\doxysection{src/register\+\_\+types.cpp File Reference}
+\hypertarget{register__types_8cpp}{}\label{register__types_8cpp}\index{src/register\_types.cpp@{src/register\_types.cpp}}
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+{\ttfamily \#include "{}animation\+\_\+interfacer.\+h"{}}\newline
+{\ttfamily \#include "{}breakable\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}bus\+\_\+event.\+h"{}}\newline
+{\ttfamily \#include "{}camera2d\+\_\+entity.\+h"{}}\newline
+{\ttfamily \#include "{}cursor\+\_\+follower\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}damage\+\_\+indicator\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}damage\+\_\+indicator.\+h"{}}\newline
+{\ttfamily \#include "{}damageable\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}entity\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}entity\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}entity\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}equippable\+\_\+factory.\+h"{}}\newline
+{\ttfamily \#include "{}equippable\+\_\+object.\+h"{}}\newline
+{\ttfamily \#include "{}flipper.\+h"{}}\newline
+{\ttfamily \#include "{}flipper\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}game\+\_\+context\+\_\+listener\+\_\+helper.\+h"{}}\newline
+{\ttfamily \#include "{}game\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}game\+\_\+persistance.\+h"{}}\newline
+{\ttfamily \#include "{}game\+\_\+scene\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}hit\+\_\+register\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}hit\+\_\+registers.\+h"{}}\newline
+{\ttfamily \#include "{}inventory\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+container\+\_\+action.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+container\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+container\+\_\+delete.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+container\+\_\+infinite.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+deleter\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+description\+\_\+popout.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+dropper.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+frame\+\_\+control.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+picker\+\_\+area.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+resource\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+world\+\_\+entity\+\_\+2d.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}level\+\_\+generator.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}modifier\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}modifier\+\_\+factory.\+h"{}}\newline
+{\ttfamily \#include "{}node2d\+\_\+object\+\_\+follower.\+h"{}}\newline
+{\ttfamily \#include "{}persistance\+\_\+context.\+h"{}}\newline
+{\ttfamily \#include "{}rng\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}spawner.\+h"{}}\newline
+{\ttfamily \#include "{}sprite\+\_\+resource\+\_\+instancer.\+h"{}}\newline
+{\ttfamily \#include "{}structure\+\_\+holder\+\_\+node.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}time\+\_\+scaler.\+h"{}}\newline
+{\ttfamily \#include "{}ui\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}weapon\+\_\+factory.\+h"{}}\newline
+{\ttfamily \#include "{}weapon\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include $<$gdextension\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$godot\+\_\+cpp/core/class\+\_\+db.\+hpp$>$}\newline
+{\ttfamily \#include $<$godot\+\_\+cpp/core/defs.\+hpp$>$}\newline
+{\ttfamily \#include $<$godot\+\_\+cpp/godot.\+hpp$>$}\newline
+{\ttfamily \#include "{}set"{}}\newline
+{\ttfamily \#include "{}non\+\_\+gd\+\_\+bind.\+h"{}}\newline
+{\ttfamily \#include "{}vector"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{register__types_8cpp_afc8834bce34e5e8b84a17b2f96120733}{\+\_\+init\+\_\+non\+\_\+gd\+\_\+binding}} ()
+\item 
+void \mbox{\hyperlink{register__types_8cpp_adb009ab6913650d77d06413a492481e3}{initialize\+\_\+gdextension\+\_\+module}} (Module\+Initialization\+Level p\+\_\+level)
+\item 
+void \mbox{\hyperlink{register__types_8cpp_afeb78804f31b677cb675461ce9f164c1}{uninitialize\+\_\+gdextension\+\_\+module}} (Module\+Initialization\+Level p\+\_\+level)
+\item 
+GDExtension\+Bool GDE\+\_\+\+EXPORT \mbox{\hyperlink{register__types_8cpp_a12ad1ac9810a359dc253deef59dac843}{gdextension\+\_\+library\+\_\+init}} (GDExtension\+Interface\+Get\+Proc\+Address p\+\_\+get\+\_\+proc\+\_\+address, const GDExtension\+Class\+Library\+Ptr p\+\_\+library, GDExtension\+Initialization \texorpdfstring{$\ast$}{*}r\+\_\+initialization)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ \mbox{\hyperlink{namespace_game_utils_ac23b4c7ea57634c47da386c60f9e751b}{Game\+Utils\+::binding\+\_\+function}} $>$ \mbox{\hyperlink{register__types_8cpp_a66b77dc380dc0064eef89d077730eb38}{\+\_\+non\+\_\+gd\+\_\+bind\+\_\+function\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{register__types_8cpp_afc8834bce34e5e8b84a17b2f96120733}\label{register__types_8cpp_afc8834bce34e5e8b84a17b2f96120733} 
+\index{register\_types.cpp@{register\_types.cpp}!\_init\_non\_gd\_binding@{\_init\_non\_gd\_binding}}
+\index{\_init\_non\_gd\_binding@{\_init\_non\_gd\_binding}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{\_init\_non\_gd\_binding()}{\_init\_non\_gd\_binding()}}
+{\footnotesize\ttfamily void \+\_\+init\+\_\+non\+\_\+gd\+\_\+binding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{register__types_8cpp_a12ad1ac9810a359dc253deef59dac843}\label{register__types_8cpp_a12ad1ac9810a359dc253deef59dac843} 
+\index{register\_types.cpp@{register\_types.cpp}!gdextension\_library\_init@{gdextension\_library\_init}}
+\index{gdextension\_library\_init@{gdextension\_library\_init}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{gdextension\_library\_init()}{gdextension\_library\_init()}}
+{\footnotesize\ttfamily GDExtension\+Bool GDE\+\_\+\+EXPORT gdextension\+\_\+library\+\_\+init (\begin{DoxyParamCaption}\item[{GDExtension\+Interface\+Get\+Proc\+Address}]{p\+\_\+get\+\_\+proc\+\_\+address,  }\item[{const GDExtension\+Class\+Library\+Ptr}]{p\+\_\+library,  }\item[{GDExtension\+Initialization \texorpdfstring{$\ast$}{*}}]{r\+\_\+initialization }\end{DoxyParamCaption})}
+
+\Hypertarget{register__types_8cpp_adb009ab6913650d77d06413a492481e3}\label{register__types_8cpp_adb009ab6913650d77d06413a492481e3} 
+\index{register\_types.cpp@{register\_types.cpp}!initialize\_gdextension\_module@{initialize\_gdextension\_module}}
+\index{initialize\_gdextension\_module@{initialize\_gdextension\_module}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{initialize\_gdextension\_module()}{initialize\_gdextension\_module()}}
+{\footnotesize\ttfamily void initialize\+\_\+gdextension\+\_\+module (\begin{DoxyParamCaption}\item[{Module\+Initialization\+Level}]{p\+\_\+level }\end{DoxyParamCaption})}
+
+\Hypertarget{register__types_8cpp_afeb78804f31b677cb675461ce9f164c1}\label{register__types_8cpp_afeb78804f31b677cb675461ce9f164c1} 
+\index{register\_types.cpp@{register\_types.cpp}!uninitialize\_gdextension\_module@{uninitialize\_gdextension\_module}}
+\index{uninitialize\_gdextension\_module@{uninitialize\_gdextension\_module}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{uninitialize\_gdextension\_module()}{uninitialize\_gdextension\_module()}}
+{\footnotesize\ttfamily void uninitialize\+\_\+gdextension\+\_\+module (\begin{DoxyParamCaption}\item[{Module\+Initialization\+Level}]{p\+\_\+level }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{register__types_8cpp_a66b77dc380dc0064eef89d077730eb38}\label{register__types_8cpp_a66b77dc380dc0064eef89d077730eb38} 
+\index{register\_types.cpp@{register\_types.cpp}!\_non\_gd\_bind\_function\_list@{\_non\_gd\_bind\_function\_list}}
+\index{\_non\_gd\_bind\_function\_list@{\_non\_gd\_bind\_function\_list}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{\_non\_gd\_bind\_function\_list}{\_non\_gd\_bind\_function\_list}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{namespace_game_utils_ac23b4c7ea57634c47da386c60f9e751b}{Game\+Utils\+::binding\+\_\+function}}$>$ \+\_\+non\+\_\+gd\+\_\+bind\+\_\+function\+\_\+list}
+

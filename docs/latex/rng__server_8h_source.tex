@@ -1,0 +1,49 @@
+\doxysection{rng\+\_\+server.\+h}
+\hypertarget{rng__server_8h_source}{}\label{rng__server_8h_source}\index{src/rng\_server.h@{src/rng\_server.h}}
+\mbox{\hyperlink{rng__server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RNG\_SERVER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RNG\_SERVER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/random\_number\_generator.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7d}{rng\_types}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7dae903906b6917cfbe7e69d1146a2cf68e}{rng\_type\_global}}\ =\ 0,}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7da155717b4cd51d2342e2b201ba821fc3b}{rng\_type\_item\_generation}}\ =\ 1,}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7da2962bf7e4e70fd592b7d05fa6738cde3}{rng\_type\_enemy\_generation}}\ =\ 2,}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7da39d1d08fc5e6224fa386d57e9165cb8d}{rng\_type\_dungeon\_generation}}\ =\ 3,}
+\DoxyCodeLine{00017\ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1rng__server}{rng\_server}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00020\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1rng__server}{rng\_server}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ std::map<rng\_types,\ godot::RandomNumberGenerator*>\ \_rng\_type\_map;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_current\_seed;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1rng__server_a113b14b7d87a5ec5acc40efb8d30d1cf}{\_bind\_methods}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1rng__server_a5a37ff106626946c430c87f90d276d31}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1rng__server_a50ca60952e4c0cb9e49a0f824d557f89}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1rng__server_ac28108f332665630e0a45c4b37db3fca}{\string~rng\_server}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1rng__server_a7d876ac927901acc2e4f2b4e868474a3}{get\_seed}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1rng__server_aa5ce4a5efa34d1efc427185ee3a1573d}{set\_seed}}(\textcolor{keywordtype}{int}\ seed);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1rng__server_aa951e9b2604ca7167d2922e97b4e5f30}{set\_seed\_random}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::RandomNumberGenerator*\ \mbox{\hyperlink{class_game_1_1rng__server_aaba6674113cd45f7687386425e1a037e}{get\_randomizer}}(\mbox{\hyperlink{namespace_game_adf91a912d618ce3c0552f9c0bd8e5b7d}{rng\_types}}\ rtype);}
+\DoxyCodeLine{00040\ \ \ \};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

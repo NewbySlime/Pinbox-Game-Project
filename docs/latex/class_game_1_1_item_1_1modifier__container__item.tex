@@ -1,0 +1,139 @@
+\doxysection{Game\+::Item\+::modifier\+\_\+container\+\_\+item Class Reference}
+\hypertarget{class_game_1_1_item_1_1modifier__container__item}{}\label{class_game_1_1_item_1_1modifier__container__item}\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+
+
+{\ttfamily \#include $<$modifier\+\_\+container\+\_\+item.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::modifier\+\_\+container\+\_\+item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_item_1_1modifier__container__item}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a19026d53af3761654a5fdf1fede77e14}{\texorpdfstring{$\sim$}{\string~}modifier\+\_\+container\+\_\+item}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a0784b42b04b76f824074183c4682fbc5}{modify\+\_\+weapon\+\_\+stats}} (\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game\+::\+Item\+::weapon\+\_\+stats\+\_\+data}} \texorpdfstring{$\ast$}{*}stats, const \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game\+::hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}hitreg\+\_\+state) const override
+\item 
+godot\+::\+String \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a1cf10ce849169e2dc7dbca75ee151a04}{get\+\_\+modifier\+\_\+title}} () const override
+\item 
+godot\+::\+String \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a5eb8bf2c08a793cbc265627ec82de130}{get\+\_\+modifier\+\_\+description}} () const override
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a367ede0ae6e3b46fd2e8d5ea8133007e}{add\+\_\+modifier}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}} $>$ modifier)
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a01b7d6516b31bd1f413e10f9c658f2ae}{clear\+\_\+modifiers}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_aacb7c111bdbc20d08739fdc574bce3f1}{get\+\_\+modifier\+\_\+count}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}} $>$ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a8653362ff3f00ef1233a4c55f2a68160}{get\+\_\+modifier\+\_\+index}} (uint64\+\_\+t index)
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_ab859c959d3c01e099bd79f296cf31f5c}{copy\+\_\+subdata\+\_\+to}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}mem) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a8b81090ca2d98d7de4b5a943d92e4c06}{\texorpdfstring{$\sim$}{\string~}\+I\+\_\+modifier}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a0d76c1702d4fd01dd2a6902095269014}{custom\+\_\+data}} ()
+\item 
+virtual \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_ad5fbcc96275c546918342cac2635452e}{\texorpdfstring{$\sim$}{\string~}custom\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static godot\+::\+String \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_ab537b98d45d31f2fd1a062ca584dbdf9}{get\+\_\+subdata\+\_\+name}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a53f7e68d0a712895ddb0e083b3870435}{custom\+\_\+data\+\_\+check}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a19026d53af3761654a5fdf1fede77e14}\label{class_game_1_1_item_1_1modifier__container__item_a19026d53af3761654a5fdf1fede77e14} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!````~modifier\_container\_item@{\texorpdfstring{$\sim$}{\string~}modifier\_container\_item}}
+\index{````~modifier\_container\_item@{\texorpdfstring{$\sim$}{\string~}modifier\_container\_item}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}modifier\_container\_item()}{\string~modifier\_container\_item()}}
+{\footnotesize\ttfamily modifier\+\_\+container\+\_\+item\+::\texorpdfstring{$\sim$}{\string~}modifier\+\_\+container\+\_\+item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a367ede0ae6e3b46fd2e8d5ea8133007e}\label{class_game_1_1_item_1_1modifier__container__item_a367ede0ae6e3b46fd2e8d5ea8133007e} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!add\_modifier@{add\_modifier}}
+\index{add\_modifier@{add\_modifier}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{add\_modifier()}{add\_modifier()}}
+{\footnotesize\ttfamily void modifier\+\_\+container\+\_\+item\+::add\+\_\+modifier (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}} $>$}]{modifier }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a01b7d6516b31bd1f413e10f9c658f2ae}\label{class_game_1_1_item_1_1modifier__container__item_a01b7d6516b31bd1f413e10f9c658f2ae} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!clear\_modifiers@{clear\_modifiers}}
+\index{clear\_modifiers@{clear\_modifiers}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{clear\_modifiers()}{clear\_modifiers()}}
+{\footnotesize\ttfamily void modifier\+\_\+container\+\_\+item\+::clear\+\_\+modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_ab859c959d3c01e099bd79f296cf31f5c}\label{class_game_1_1_item_1_1modifier__container__item_ab859c959d3c01e099bd79f296cf31f5c} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!copy\_subdata\_to@{copy\_subdata\_to}}
+\index{copy\_subdata\_to@{copy\_subdata\_to}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{copy\_subdata\_to()}{copy\_subdata\_to()}}
+{\footnotesize\ttfamily void modifier\+\_\+container\+\_\+item\+::copy\+\_\+subdata\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}}]{mem }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_aacb7c111bdbc20d08739fdc574bce3f1}\label{class_game_1_1_item_1_1modifier__container__item_aacb7c111bdbc20d08739fdc574bce3f1} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!get\_modifier\_count@{get\_modifier\_count}}
+\index{get\_modifier\_count@{get\_modifier\_count}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{get\_modifier\_count()}{get\_modifier\_count()}}
+{\footnotesize\ttfamily uint64\+\_\+t modifier\+\_\+container\+\_\+item\+::get\+\_\+modifier\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a5eb8bf2c08a793cbc265627ec82de130}\label{class_game_1_1_item_1_1modifier__container__item_a5eb8bf2c08a793cbc265627ec82de130} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!get\_modifier\_description@{get\_modifier\_description}}
+\index{get\_modifier\_description@{get\_modifier\_description}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{get\_modifier\_description()}{get\_modifier\_description()}}
+{\footnotesize\ttfamily String modifier\+\_\+container\+\_\+item\+::get\+\_\+modifier\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a6912bb0160597f164124f48bb2f68ed3}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}}.
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a8653362ff3f00ef1233a4c55f2a68160}\label{class_game_1_1_item_1_1modifier__container__item_a8653362ff3f00ef1233a4c55f2a68160} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!get\_modifier\_index@{get\_modifier\_index}}
+\index{get\_modifier\_index@{get\_modifier\_index}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{get\_modifier\_index()}{get\_modifier\_index()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\+\_\+modifier}} $>$ modifier\+\_\+container\+\_\+item\+::get\+\_\+modifier\+\_\+index (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a1cf10ce849169e2dc7dbca75ee151a04}\label{class_game_1_1_item_1_1modifier__container__item_a1cf10ce849169e2dc7dbca75ee151a04} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!get\_modifier\_title@{get\_modifier\_title}}
+\index{get\_modifier\_title@{get\_modifier\_title}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{get\_modifier\_title()}{get\_modifier\_title()}}
+{\footnotesize\ttfamily String modifier\+\_\+container\+\_\+item\+::get\+\_\+modifier\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a1ccba80c56713f6724426bab68663a5b}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}}.
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_ab537b98d45d31f2fd1a062ca584dbdf9}\label{class_game_1_1_item_1_1modifier__container__item_ab537b98d45d31f2fd1a062ca584dbdf9} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!get\_subdata\_name@{get\_subdata\_name}}
+\index{get\_subdata\_name@{get\_subdata\_name}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{get\_subdata\_name()}{get\_subdata\_name()}}
+{\footnotesize\ttfamily String modifier\+\_\+container\+\_\+item\+::get\+\_\+subdata\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1_item_1_1modifier__container__item_a0784b42b04b76f824074183c4682fbc5}\label{class_game_1_1_item_1_1modifier__container__item_a0784b42b04b76f824074183c4682fbc5} 
+\index{Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}!modify\_weapon\_stats@{modify\_weapon\_stats}}
+\index{modify\_weapon\_stats@{modify\_weapon\_stats}!Game::Item::modifier\_container\_item@{Game::Item::modifier\_container\_item}}
+\doxysubsubsection{\texorpdfstring{modify\_weapon\_stats()}{modify\_weapon\_stats()}}
+{\footnotesize\ttfamily void modifier\+\_\+container\+\_\+item\+::modify\+\_\+weapon\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game\+::\+Item\+::weapon\+\_\+stats\+\_\+data}} \texorpdfstring{$\ast$}{*}}]{stats,  }\item[{const \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game\+::hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{hitreg\+\_\+state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a1987f4528448bc78acc9157aa7393661}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{modifier__container__item_8h}{modifier\+\_\+container\+\_\+item.\+h}}\item 
+src/\mbox{\hyperlink{modifier__container__item_8cpp}{modifier\+\_\+container\+\_\+item.\+cpp}}\end{DoxyCompactItemize}

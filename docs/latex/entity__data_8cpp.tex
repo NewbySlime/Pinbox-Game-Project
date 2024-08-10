@@ -1,0 +1,51 @@
+\doxysection{src/entity\+\_\+data.cpp File Reference}
+\hypertarget{entity__data_8cpp}{}\label{entity__data_8cpp}\index{src/entity\_data.cpp@{src/entity\_data.cpp}}
+{\ttfamily \#include "{}entity\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}inventory\+\_\+config.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}vital\+\_\+info.\+h"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{entity__data_8cpp_a630f79072e44d7315accf95e81d89599}{\+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER}}(subdata\+\_\+name)~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&entity\+\_\+data\+::\+\_\+\+\_\+add\+\_\+new\+\_\+subdata$<$subdata\+\_\+name$>$\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(entity\+\_\+data\+::\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{entity__data_8cpp_adcf580c2eab0d485498d84bc1a79f248}{subdata\+\_\+parser\+\_\+function}}) (Dictionary \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ String, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}} $>$ \mbox{\hyperlink{entity__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a}{\+\_\+subdata\+\_\+parser\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{entity__data_8cpp_a630f79072e44d7315accf95e81d89599}\label{entity__data_8cpp_a630f79072e44d7315accf95e81d89599} 
+\index{entity\_data.cpp@{entity\_data.cpp}!\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+\index{\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}!entity\_data.cpp@{entity\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{\_SUBDATA\_PARSER\_MAP\_HELPER}{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+{\footnotesize\ttfamily \#define \+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER(\begin{DoxyParamCaption}\item[{}]{subdata\+\_\+name }\end{DoxyParamCaption})~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&entity\+\_\+data\+::\+\_\+\+\_\+add\+\_\+new\+\_\+subdata$<$subdata\+\_\+name$>$\}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{entity__data_8cpp_adcf580c2eab0d485498d84bc1a79f248}\label{entity__data_8cpp_adcf580c2eab0d485498d84bc1a79f248} 
+\index{entity\_data.cpp@{entity\_data.cpp}!subdata\_parser\_function@{subdata\_parser\_function}}
+\index{subdata\_parser\_function@{subdata\_parser\_function}!entity\_data.cpp@{entity\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{subdata\_parser\_function}{subdata\_parser\_function}}
+{\footnotesize\ttfamily typedef void(entity\+\_\+data\+::\texorpdfstring{$\ast$}{*} subdata\+\_\+parser\+\_\+function) (Dictionary \texorpdfstring{$\ast$}{*})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{entity__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a}\label{entity__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a} 
+\index{entity\_data.cpp@{entity\_data.cpp}!\_subdata\_parser\_map@{\_subdata\_parser\_map}}
+\index{\_subdata\_parser\_map@{\_subdata\_parser\_map}!entity\_data.cpp@{entity\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{\_subdata\_parser\_map}{\_subdata\_parser\_map}}
+{\footnotesize\ttfamily std\+::map$<$String, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}}$>$ \+\_\+subdata\+\_\+parser\+\_\+map}
+

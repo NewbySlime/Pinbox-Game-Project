@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram id="iFB0BiGTb0n0qN9w1g-C" name="Page-1">
+        <mxGraphModel dx="899" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="persistance_context" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="player_instance" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="item_server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="440" as="sourcePoint"/>
+                        <mxPoint x="460" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="When Loading" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="50" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="4" target="2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="440" as="sourcePoint"/>
+                        <mxPoint x="460" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Objects that uses persistance will ask persistance_context for data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="230" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="persistance_context" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="630" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="player _instance" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="item_server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endFill=0;" parent="1" source="14" target="13" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="920" as="sourcePoint"/>
+                        <mxPoint x="460" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="When Saving" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="530" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endFill=0;" parent="1" source="15" target="13" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="920" as="sourcePoint"/>
+                        <mxPoint x="460" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Objects that uses persistance listens to persistance_context for save trigger event" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="710" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="350" as="sourcePoint"/>
+                        <mxPoint x="720" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="player_instance asks for container instance_id" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="585" y="350" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="instance_id should be the same when the server load and save" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="325" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;h1&gt;Persistance Context&lt;/h1&gt;&lt;p&gt;The context is set the persistance_context and choosen by the player by UI interaction. The context will be loaded as soon as the context choosen.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="120" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;h1&gt;Loading/Saving the persistance&lt;/h1&gt;&lt;p&gt;Objects that want to get the save data, can get it by asking persistance_context for data.&lt;/p&gt;&lt;p&gt;The objects that listen to saving signal, will be given the interface to save the objects' data.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="260" width="250" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;h1&gt;Loading/Saving the persistance&lt;/h1&gt;&lt;p&gt;Objects that want to get the save data, can get it by asking persistance_context for data.&lt;/p&gt;&lt;p&gt;The objects that listen to saving signal, will be given the interface to save the objects' data.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="460" width="250" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;h1&gt;I_persistance_input&lt;/h1&gt;&lt;p&gt;This is given by the persistance_context when save signal triggered.&lt;/p&gt;&lt;p&gt;This object serve as an interface to input data that will be saved to a filesave.&lt;/p&gt;&lt;p&gt;When an object wants to store data about itself, it should change the part_id first.&lt;/p&gt;&lt;p&gt;Data format for each part is based on the implementation for each part.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="120" width="270" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;h1&gt;I_persistance_data&lt;/h1&gt;&lt;p&gt;This will always be available to get in persistance_context, even if no context was choosen (new save file).&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="350" width="270" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

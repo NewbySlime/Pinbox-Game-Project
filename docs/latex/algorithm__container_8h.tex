@@ -1,0 +1,22 @@
+\doxysection{src/algorithm\+\_\+container.h File Reference}
+\hypertarget{algorithm__container_8h}{}\label{algorithm__container_8h}\index{src/algorithm\_container.h@{src/algorithm\_container.h}}
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc}{Game\+::\+Misc}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game\+::\+Misc\+::\+Algorithm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} key , \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ }\\std\+::map$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}}, key $>$ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a8897f7ae06d31275e6e7fdeb522b0620}{Game\+::\+Misc\+::\+Algorithm\+::create\+\_\+inverse\+\_\+of\+\_\+map}} (std\+::map$<$ key, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{original\+\_\+map}})
+\begin{DoxyCompactList}\small\item\em Helper function to create the reversed types of the key and value of the provided map container. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} key , \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ }\\std\+::set$<$ key $>$ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a72639b12e989a10f71747b4a96186d8f}{Game\+::\+Misc\+::\+Algorithm\+::create\+\_\+set\+\_\+of\+\_\+key}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ key, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{from}})
+\begin{DoxyCompactList}\small\item\em Helper function to create a container filled with only the key. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} key , \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ }\\std\+::set$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a1d85139a6483ba273e6622cb2a063bee}{Game\+::\+Misc\+::\+Algorithm\+::create\+\_\+set\+\_\+of\+\_\+value}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ key, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{value}} $>$ \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{from}})
+\begin{DoxyCompactList}\small\item\em Helper function to create a container filled with only the value. \end{DoxyCompactList}\end{DoxyCompactItemize}

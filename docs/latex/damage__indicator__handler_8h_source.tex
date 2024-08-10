@@ -1,0 +1,46 @@
+\doxysection{damage\+\_\+indicator\+\_\+handler.\+h}
+\hypertarget{damage__indicator__handler_8h_source}{}\label{damage__indicator__handler_8h_source}\index{src/damage\_indicator\_handler.h@{src/damage\_indicator\_handler.h}}
+\mbox{\hyperlink{damage__indicator__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DAMAGE\_INDICATOR\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DAMAGE\_INDICATOR\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bus__event_8h}{bus\_event.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/resource\_loader.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/vector2.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_effect}{Game::Effect}}\{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler}{damage\_indicator\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00018\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler}{damage\_indicator\_handler}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ damage\_indicator\_object)}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1bus__event}{Game::bus\_event}}*\ \_bus\_event;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_damage\_indicator\_object;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ godot::Node*\ \_root\_node;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_damageable\_damaged(godot::Vector2\ origin,\ \textcolor{keywordtype}{double}\ damage);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler_a2140ab757ad90cb06a099c4efd42f82b}{\_bind\_methods}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler_a04abc4079a953d7ce0b69de4efaa0b2a}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler_a3d5a85596fb45c0efbf2d5486ee4a852}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator__handler_ab96b1de59bf5dddbb321f893c5f5ae82}{set\_parent\_target}}(godot::Node*\ \_node);}
+\DoxyCodeLine{00037\ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

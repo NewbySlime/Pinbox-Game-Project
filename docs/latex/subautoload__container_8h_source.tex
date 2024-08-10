@@ -1,0 +1,170 @@
+\doxysection{subautoload\+\_\+container.\+h}
+\hypertarget{subautoload__container_8h_source}{}\label{subautoload__container_8h_source}\index{src/subautoload\_container.h@{src/subautoload\_container.h}}
+\mbox{\hyperlink{subautoload__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUBAUTOLOAD\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ SIGNAL\_SUBAUTOLOAD\_ON\_READY\ "{}ssaor"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ GET\_SUBAUTOLOAD(type\_class,\ p\_container,\ target)\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ target\ =\ (p\_container)-\/>get\_singleton\_node<type\_class>();\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ if(target\ ==\ NULL)\{\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ INIT\_ASSERT()\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ godot::Array\ \_paramarr;\{\ \(\backslash\)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(type\_class::get\_class\_static());\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ ERR\_ASSERT(godot::String("{}Cannot\ get\ '\{0\}'\ subautoload."{}).format(\_paramarr));\ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ throw\ godot::Error::ERR\_UNCONFIGURED;\ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1subautoload__container}{subautoload\_container}}:\ \textcolor{keyword}{public}\ godot::Node\{}
+\DoxyCodeLine{00035\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1subautoload__container}{subautoload\_container}},\ godot::Node)}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_autoload\_metadata\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ godot::Node*\ \_this\_node;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ uint64\_t\ \_node\_inst\_id;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ std::map<godot::String,\ \_autoload\_metadata>\ \_nodes\_map;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_check\_autoloads();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_bind\_autoload(godot::Node*\ node);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_child\_call\_bind(godot::Node*\ node);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_child\_call\_ready(godot::Node*\ node);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_check\_child\_recursively(godot::Node*\ from,\ \textcolor{keywordtype}{bool}\ is\_autoload\_layer\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_autoload\_exiting\_tree(godot::Node*\ node);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_child\_added(godot::Node*\ child);}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1subautoload__container_aa596c1cb7a2439cc719edd2711aa0f2f}{\_bind\_methods}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1subautoload__container_ad6f6965983b975ed4229b57107c5af96}{\_ready}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1subautoload__container_a45d3012d4a3422c84c82d1d0e8f453a7}{bind\_node}}(godot::Node*\ node);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{comment}{//\ since\ the\ container\ is\ initiated\ last,\ the\ order\ of\ the\ child\ autoloads\ doens't\ matter}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T*\ \mbox{\hyperlink{class_game_1_1subautoload__container_aba409d8012e7ff6bf3b74b150a268678}{get\_singleton\_node}}()\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a3b457757aed1a36778983b195e381641}{INIT\_ASSERT}}()}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ godot::Array\ \_paramarr;\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \_paramarr.append(T::get\_class\_static());}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a2fc2b49a5c17a5b534a0050d2141a137}{LOG\_ASSERT}}(String(\textcolor{stringliteral}{"{}get\ singleton\ \{0\}"{}}).format(\_paramarr))}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \_nodes\_map.find(T::get\_class\_static());}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_nodes\_map.end())\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a3b457757aed1a36778983b195e381641}{INIT\_ASSERT}}()}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ godot::Array\ \_paramarr;\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \_paramarr.append(T::get\_class\_static());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a89c5ca56c0fad84e4236d900060321d6}{ERR\_ASSERT}}(String(\textcolor{stringliteral}{"{}Subautoload\ doesn't\ have\ \{0\}\ autoload\ node."{}}).format(\_paramarr))}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \_paramarr.clear();\{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \_paramarr.append((uint64\_t)\_iter-\/>second.\_this\_node);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a2fc2b49a5c17a5b534a0050d2141a137}{LOG\_ASSERT}}(String(\textcolor{stringliteral}{"{}address\ \{0\}"{}}).format(\_paramarr))}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (T*)\_iter-\/>second.\_this\_node;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \};}
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ ADD\_CHILD\_SA(node)\ \(\backslash\)}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\ \ add\_child(node);\ \(\backslash\)}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ get\_subautoload\_root()-\/>bind\_node(node);}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_USER\_BINDFUNC\ \_\_\_set\_bound\_subautoload}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_USER\_BINDFUNCSTR\ \_\_\_MACRO\_STRINGIFY(SUBAUTOLOAD\_USER\_BINDFUNC)}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_USER\_READYFUNC\ \_\_\_on\_ready\_subautoload}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_USER\_READYFUNCSTR\ \_\_\_MACRO\_STRINGIFY(SUBAUTOLOAD\_USER\_READYFUNC)}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME(class\_name)\ class\_name\#\#\_sac}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE(class\_name,\ inherit\_from)\ \(\backslash\)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\ \ class\ class\_name\#\#\_sac:\ public\ inherit\_from\{\ \(\backslash\)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\ \ GDCLASS(class\_name\#\#\_sac,\ inherit\_from)\ \(\backslash\)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\ \ \ \ private:\ \(\backslash\)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \ \ \ \ Game::subautoload\_container*\ \_\_\_bound\_subautoload\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \ \ \ \ bool\ \_\_\_is\_ready\ =\ false;\ \(\backslash\)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\ \ \ \ \ \ void\ SUBAUTOLOAD\_USER\_BINDFUNC(gdvar\_custom\_object\ subautoload\_ref);\ \(\backslash\)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\ \ \ \ \ \ void\ SUBAUTOLOAD\_USER\_READYFUNC();\ \(\backslash\)}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\ \ \ \ protected:\ \(\backslash\)}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\ \ \ \ \ \ static\ void\ \_bind\_methods();\ \(\backslash\)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ \ \ virtual\ void\ \_bind\_subautoload(Game::subautoload\_container*\ sa\_container)\{\}\ \(\backslash\)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\ \ \ \ \ \ virtual\ void\ \_on\_gamenode\_ready()\{\}\ \(\backslash\)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\ \ \ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\ \ \ \ \ \ Game::subautoload\_container*\ get\_subautoload\_root();\ \(\backslash\)}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\ \ \};}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE(class\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\ \ void\ class\_name::SUBAUTOLOAD\_USER\_BINDFUNC(gdvar\_custom\_object\ \_\_\_ref)\{\ \(\backslash\)}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\ \ \ \ if(\_\_\_bound\_subautoload)\ \(\backslash\)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\ \ \ \ \ \ return;\ \(\backslash\)}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\ \ \ \ Game::subautoload\_container*\ \_container\ =\ GDVAR\_CUSTOM\_TO(\_\_\_ref,\ Game::subautoload\_container);\ \(\backslash\)}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \ \ \_\_\_bound\_subautoload\ =\ \_container;\ \(\backslash\)}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\ \ \ \ \_bind\_subautoload(\_container);\ \(\backslash\)}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ void\ class\_name::SUBAUTOLOAD\_USER\_READYFUNC()\{\ \(\backslash\)}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\ \ \ \ if(\_\_\_is\_ready)\ \(\backslash\)}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\ \ \ \ \ \ return;\ \(\backslash\)}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\ \ \ \ \_\_\_is\_ready\ =\ true;\ \(\backslash\)}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\ \ \ \ \_on\_gamenode\_ready();\ \(\backslash\)}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\ \ void\ class\_name::\_bind\_methods()\{\ \(\backslash\)}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\ \ \ \ godot::ClassDB::bind\_method(\ \(\backslash\)}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \ \ \ \ \ D\_METHOD(SUBAUTOLOAD\_USER\_BINDFUNCSTR,\ \(\backslash\)}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ "{}container"{}\ \(\backslash\)}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\ \ \ \ \ \ ),\ \(\backslash\)}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\ \ \ \ \ \ \&class\_name::SUBAUTOLOAD\_USER\_BINDFUNC\ \(\backslash\)}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\ \ \ \ );\ \(\backslash\)}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\ \ \ \ godot::ClassDB::bind\_method(\ \(\backslash\)}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\ \ \ \ \ \ D\_METHOD(SUBAUTOLOAD\_USER\_READYFUNCSTR),\ \(\backslash\)}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\ \ \ \ \ \ \&class\_name::SUBAUTOLOAD\_USER\_READYFUNC\ \(\backslash\)}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\ \ \ \ );\ \(\backslash\)}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\ \ \(\backslash\)}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\ \ Game::subautoload\_container*\ class\_name::get\_subautoload\_root()\{\ \(\backslash\)}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\ \ \ \ return\ \_\_\_bound\_subautoload;\ \(\backslash\)}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bf77xw5epejj"]
+
+[node name="game_handler" type="game_handler"]
+game_current_context = 1
+main_view = "res://scene/main_view.tscn"
+ui_inventory_control_scene = "res://scene/game_object/UI/inventory_control.tscn"
+process_mode = 3

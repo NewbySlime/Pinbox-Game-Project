@@ -1,0 +1,9 @@
+{
+  "player_item_container":{
+    "size": 16
+  },
+
+  "player_weapon_item_container":{
+    "size": 3
+  }
+}

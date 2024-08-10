@@ -1,0 +1,44 @@
+\doxysection{game\+\_\+context\+\_\+listener\+\_\+helper.\+h}
+\hypertarget{game__context__listener__helper_8h_source}{}\label{game__context__listener__helper_8h_source}\index{src/game\_context\_listener\_helper.h@{src/game\_context\_listener\_helper.h}}
+\mbox{\hyperlink{game__context__listener__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_CONTEXT\_LISTENER\_HELPER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_CONTEXT\_LISTENER\_HELPER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/engine.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/resource\_loader.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__scene__handler_8h}{game\_scene\_handler.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{logger.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node__free__filter_8h}{node\_free\_filter.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{structure__holder__node_8h}{structure\_holder\_node.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils}{GameUtils}}\{}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper}{game\_context\_listener\_helper}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00017\ \ \ GDCLASS(\mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper}{game\_context\_listener\_helper}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{node__free__filter_8h_acdc096c7036eaf6e6ea1eb054f261317}{ATTR\_NODE\_FREE\_FILTER\_INHERIT}}(\mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper}{game\_context\_listener\_helper}})}
+\DoxyCodeLine{00019\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ godot::String\ \_parent\_class\_name;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1game__scene__handler}{Game::game\_scene\_handler}}*\ \_game\_scene\_handler;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_game\_context\_changing(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ \_param);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper_ad99ca26e20ac13f3fd4708584a46dd2f}{\_bind\_methods}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper_ab77c23f4b573b457e27fe2d51834eb57}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1game__context__listener__helper_a103e46919827fdc8a82b7e68e0abd380}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \};}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

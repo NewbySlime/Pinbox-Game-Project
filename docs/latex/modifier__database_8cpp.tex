@@ -1,0 +1,72 @@
+\doxysection{src/modifier\+\_\+database.cpp File Reference}
+\hypertarget{modifier__database_8cpp}{}\label{modifier__database_8cpp}\index{src/modifier\_database.cpp@{src/modifier\_database.cpp}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+directory.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}modifiers.\+h"{}}\newline
+{\ttfamily \#include "{}modifier\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/dir\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/file\+\_\+access.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/json.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmodifier__init__data}{modifier\+\_\+init\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} \mbox{\hyperlink{modifier__database_8cpp_a6a9899def81c4f5f3f8327b0b2044a74}{ADD\+\_\+\+TO\+\_\+\+CREATE\+\_\+\+CALLBACK\+\_\+\+MACRO}}(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{class\+\_\+name}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ std\+::string, \mbox{\hyperlink{structmodifier__init__data}{modifier\+\_\+init\+\_\+data}} $>$ \mbox{\hyperlink{modifier__database_8cpp_a9e0aea5d4e16734169f2841d82167961}{modifier\+\_\+init\+\_\+data\+\_\+map}}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{modifier__database_8cpp_a4d17df9dda23acb8d4d82afeb4646fd5}{modifier\+\_\+list\+\_\+set}} = create\+\_\+set\+\_\+of\+\_\+key(\mbox{\hyperlink{modifier__database_8cpp_a9e0aea5d4e16734169f2841d82167961}{modifier\+\_\+init\+\_\+data\+\_\+map}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{modifier__database_8cpp_a6a9899def81c4f5f3f8327b0b2044a74}\label{modifier__database_8cpp_a6a9899def81c4f5f3f8327b0b2044a74} 
+\index{modifier\_database.cpp@{modifier\_database.cpp}!ADD\_TO\_CREATE\_CALLBACK\_MACRO@{ADD\_TO\_CREATE\_CALLBACK\_MACRO}}
+\index{ADD\_TO\_CREATE\_CALLBACK\_MACRO@{ADD\_TO\_CREATE\_CALLBACK\_MACRO}!modifier\_database.cpp@{modifier\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{ADD\_TO\_CREATE\_CALLBACK\_MACRO}{ADD\_TO\_CREATE\_CALLBACK\_MACRO}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{define}} ADD\+\_\+\+TO\+\_\+\+CREATE\+\_\+\+CALLBACK\+\_\+\+MACRO(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{class\+\_\+name}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\mbox{\hyperlink{_i__modifier__database__helper_8h_a1a4f19752d01c81b017092faa59a453a}{MODDB\_HELPER\_GET\_ASSOCIATED\_ID}}(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{class\_name}}),\ \mbox{\hyperlink{structmodifier__init__data}{modifier\_init\_data}}(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_i__modifier__database__helper_8h_a8ba7748d0cb1c953d4e0948abfd4102f}{MODDB\_HELPER\_GET\_STATIC\_JSON\_PARSER}}(\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{class\_name}}),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ []()\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::shared\_ptr<I\_modifier>((\mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\_modifier}}*)\textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{class\_name}}());\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ )\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{modifier__database_8cpp_a9e0aea5d4e16734169f2841d82167961}\label{modifier__database_8cpp_a9e0aea5d4e16734169f2841d82167961} 
+\index{modifier\_database.cpp@{modifier\_database.cpp}!modifier\_init\_data\_map@{modifier\_init\_data\_map}}
+\index{modifier\_init\_data\_map@{modifier\_init\_data\_map}!modifier\_database.cpp@{modifier\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{modifier\_init\_data\_map}{modifier\_init\_data\_map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$std\+::string, \mbox{\hyperlink{structmodifier__init__data}{modifier\+\_\+init\+\_\+data}}$>$ modifier\+\_\+init\+\_\+data\+\_\+map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{modifier__database_8cpp_a6a9899def81c4f5f3f8327b0b2044a74}{ADD\_TO\_CREATE\_CALLBACK\_MACRO}}(\mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier}{damage\_normal\_additive\_modifier}}),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{modifier__database_8cpp_a4d17df9dda23acb8d4d82afeb4646fd5}\label{modifier__database_8cpp_a4d17df9dda23acb8d4d82afeb4646fd5} 
+\index{modifier\_database.cpp@{modifier\_database.cpp}!modifier\_list\_set@{modifier\_list\_set}}
+\index{modifier\_list\_set@{modifier\_list\_set}!modifier\_database.cpp@{modifier\_database.cpp}}
+\doxysubsubsection{\texorpdfstring{modifier\_list\_set}{modifier\_list\_set}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::set$<$std\+::string$>$ modifier\+\_\+list\+\_\+set = create\+\_\+set\+\_\+of\+\_\+key(\mbox{\hyperlink{modifier__database_8cpp_a9e0aea5d4e16734169f2841d82167961}{modifier\+\_\+init\+\_\+data\+\_\+map}})}
+

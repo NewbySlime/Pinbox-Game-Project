@@ -1,0 +1,51 @@
+\doxysection{game\+\_\+scene\+\_\+handler.\+h}
+\hypertarget{game__scene__handler_8h_source}{}\label{game__scene__handler_8h_source}\index{src/game\_scene\_handler.h@{src/game\_scene\_handler.h}}
+\mbox{\hyperlink{game__scene__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_SCENE\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_SCENE\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_ON\_CONTEXT\_CHANGING\ "{}sghocc"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SIGNAL\_GAME\_HANDLER\_ON\_CONTEXT\_DONE\_CHANGING\ "{}sghocdc"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }game\_handler;}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1game__scene__handler}{game\_scene\_handler}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00013\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1game__scene__handler}{game\_scene\_handler}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ INIT\_game\_contextID)}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ DEBUG\_game\_contextID)}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1game__handler}{game\_handler}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{comment}{//\ don't\ expose\ this\ to\ public,\ handle\ by\ listening\ to\ game\ UI}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{comment}{//\ by\ handling\ by\ game\_handler,\ spaghetti\ code\ will\ be\ avoided,\ as\ it\ handles\ by\ game\_handler\ not\ by\ the\ UI\ or\ any\ other\ control\ nodes}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_change\_to\_context(godot::String\ contextID);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__scene__handler_a05e5d842cb527e7e4c38c69e0c5c8971}{\_bind\_methods}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__scene__handler_a4ef0325fa9b8df0c2cf23859db051ef5}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1game__scene__handler_a5f29e91caca8b3ba96e301bd1424eb6f}{\_on\_subautoload\_ready}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1game__handler__on__context__changed}{game\_handler\_on\_context\_changed}}\{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1game__scene__handler}{game\_scene\_handler}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ godot::String\ \_context\_ID;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1game__handler__on__context__changed_aea73e7f4a14cd5f8d8bc5093e59ae1d5}{get\_context\_ID}}()\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_context\_ID;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

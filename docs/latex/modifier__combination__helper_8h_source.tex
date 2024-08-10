@@ -1,0 +1,37 @@
+\doxysection{modifier\+\_\+combination\+\_\+helper.\+h}
+\hypertarget{modifier__combination__helper_8h_source}{}\label{modifier__combination__helper_8h_source}\index{src/modifier\_combination\_helper.h@{src/modifier\_combination\_helper.h}}
+\mbox{\hyperlink{modifier__combination__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODIFIER\_COMBINATION\_HELPER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODIFIER\_COMBINATION\_HELPER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifier__container__item_8h}{modifier\_container\_item.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__data__container_8h}{hit\_register\_data\_container.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container_8h}{item\_container.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier_8h}{I\_modifier.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_modifiers}{Game::Modifiers}}\{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper}{modifier\_combination\_helper}}:\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game::Modifiers::I\_modifier}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ std::vector<std::pair<}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item}{Game::Item::modifier\_container\_item}}*,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ >>\ \_combination\_data;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper_a818460357e656321d57492572f0d5593}{modifier\_combination\_helper}}()\{\}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper_a818460357e656321d57492572f0d5593}{modifier\_combination\_helper}}(\mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game::Item::I\_item\_container}}*\ container);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{comment}{//\ if\ hitreg\_state\ is\ NULL\ then\ the\ modifier\ will\ expect\ to\ apply\ passive\ modifiers}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1modifier__combination__helper_aacc1331f3bb8e9b00080b5690dbf369b}{modify\_weapon\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ stats,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ hitreg\_state\ =\ NULL)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \};}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

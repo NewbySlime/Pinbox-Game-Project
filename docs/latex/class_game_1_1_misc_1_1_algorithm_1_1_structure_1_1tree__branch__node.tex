@@ -1,0 +1,107 @@
+\doxysection{Game\+::Misc\+::Algorithm\+::Structure\+::tree\+\_\+branch\+\_\+node Class Reference}
+\hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+
+
+A class to create a reference tree of a node. This class also provide the function to check if the target Node has the same structure of the reference tree (target Node as the root).  
+
+
+
+
+{\ttfamily \#include $<$algorithm\+\_\+node\+\_\+structure.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a2f1fae458424cd99559710fd9d991b51}{tree\+\_\+branch\+\_\+node}} (\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\+\_\+branch\+\_\+node}} \&\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{branch}})
+\begin{DoxyCompactList}\small\item\em Copy class function, not prefered to use generic copy function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_abb112732b87c95614ad7b2282db92374}{tree\+\_\+branch\+\_\+node}} (std\+::map$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\+\_\+branch\+\_\+node}} $>$ $>$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{branch}})
+\begin{DoxyCompactList}\small\item\em Creating branch based on the structure, can be created as the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154}{tree\+\_\+branch\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em Empty tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ae4a765b91a81e9514b64fed8f4895134}{\texorpdfstring{$\sim$}{\string~}tree\+\_\+branch\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for removing the dynamically created memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ac7083c114deaf6a3dfc4f26b32f33b37}{check\+\_\+branch}} (godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parent}})
+\begin{DoxyCompactList}\small\item\em Function to check if the parent has the same structure to the reference tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to create a reference tree of a node. This class also provide the function to check if the target Node has the same structure of the reference tree (target Node as the root). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a2f1fae458424cd99559710fd9d991b51}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a2f1fae458424cd99559710fd9d991b51} 
+\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}!tree\_branch\_node@{tree\_branch\_node}}
+\index{tree\_branch\_node@{tree\_branch\_node}!Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+\doxysubsubsection{\texorpdfstring{tree\_branch\_node()}{tree\_branch\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tree\+\_\+branch\+\_\+node\+::tree\+\_\+branch\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\+\_\+branch\+\_\+node}} \&}]{branch }\end{DoxyParamCaption})}
+
+
+
+Copy class function, not prefered to use generic copy function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branch} & The branch to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_abb112732b87c95614ad7b2282db92374}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_abb112732b87c95614ad7b2282db92374} 
+\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}!tree\_branch\_node@{tree\_branch\_node}}
+\index{tree\_branch\_node@{tree\_branch\_node}!Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+\doxysubsubsection{\texorpdfstring{tree\_branch\_node()}{tree\_branch\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tree\+\_\+branch\+\_\+node\+::tree\+\_\+branch\+\_\+node (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\+\_\+branch\+\_\+node}} $>$ $>$}]{branch }\end{DoxyParamCaption})}
+
+
+
+Creating branch based on the structure, can be created as the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branch} & The branch represented in std\+::map \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154} 
+\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}!tree\_branch\_node@{tree\_branch\_node}}
+\index{tree\_branch\_node@{tree\_branch\_node}!Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+\doxysubsubsection{\texorpdfstring{tree\_branch\_node()}{tree\_branch\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Game\+::\+Misc\+::\+Algorithm\+::\+Structure\+::tree\+\_\+branch\+\_\+node\+::tree\+\_\+branch\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty tree. 
+
+\Hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ae4a765b91a81e9514b64fed8f4895134}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ae4a765b91a81e9514b64fed8f4895134} 
+\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}!````~tree\_branch\_node@{\texorpdfstring{$\sim$}{\string~}tree\_branch\_node}}
+\index{````~tree\_branch\_node@{\texorpdfstring{$\sim$}{\string~}tree\_branch\_node}!Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}tree\_branch\_node()}{\string~tree\_branch\_node()}}
+{\footnotesize\ttfamily tree\+\_\+branch\+\_\+node\+::\texorpdfstring{$\sim$}{\string~}tree\+\_\+branch\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for removing the dynamically created memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ac7083c114deaf6a3dfc4f26b32f33b37}\label{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ac7083c114deaf6a3dfc4f26b32f33b37} 
+\index{Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}!check\_branch@{check\_branch}}
+\index{check\_branch@{check\_branch}!Game::Misc::Algorithm::Structure::tree\_branch\_node@{Game::Misc::Algorithm::Structure::tree\_branch\_node}}
+\doxysubsubsection{\texorpdfstring{check\_branch()}{check\_branch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} tree\+\_\+branch\+\_\+node\+::check\+\_\+branch (\begin{DoxyParamCaption}\item[{godot\+::\+Node \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})}
+
+
+
+Function to check if the parent has the same structure to the reference tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The target Node as a root to check from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the target Node has the same structure to the treed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{algorithm__node__structure_8h}{algorithm\+\_\+node\+\_\+structure.\+h}}\item 
+src/\mbox{\hyperlink{algorithm__node__structure_8cpp}{algorithm\+\_\+node\+\_\+structure.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\doxysection{weapon\+\_\+item.\+h}
+\hypertarget{weapon__item_8h_source}{}\label{weapon__item_8h_source}\index{src/weapon\_item.h@{src/weapon\_item.h}}
+\mbox{\hyperlink{weapon__item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WEAPON\_ITEM\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WEAPON\_ITEM\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__object_8h}{item\_object.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hitreg__data_8h}{hitreg\_data.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__data__container_8h}{hit\_register\_data\_container.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container_8h}{item\_container.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__stats__data_8h}{weapon\_stats\_data.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{namespace\ }Factory\{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }weapon\_factory;}
+\DoxyCodeLine{00022\ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1weapon__item}{weapon\_item}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234d}{stats\_type}}\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234da00a39fa910a2a22686ba97560ed4ce3b}{stats\_type\_primary}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234da1fc8c6195c9590bd0ad5900240e0090a}{stats\_type\_secondary}}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory}{Game::Item::Factory::weapon\_factory}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{comment}{//\ editable}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \_cd\_primary\_stats;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ \_primary\_stats\ =\ NULL;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{comment}{//\ editable}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \_cd\_secondary\_stats;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ \_secondary\_stats\ =\ NULL;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ copy\_stats\_to(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ \_original\_stats,\ std::shared\_ptr<GameUtils::Memory::custom\_memory>*\ \_target\_cd\_stats,\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}**\ \_target\_stats);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a121e21bb9cfa1ae11a9258086a7fb0d6}{\string~weapon\_item}}()\{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a4cdb6c78391cc42129e5846d31435873}{get\_subdata\_name}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a2f594bb7e89a752e133e65712d8706d9}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_afb379ee354ea08a6b6b0c6b72b4a5864}{get\_stats\_mutable}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234d}{stats\_type}}\ type);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6c926610775bd9ff74f3952708f01c0d}{get\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234d}{stats\_type}}\ type)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a83bfbae4d166a17a83eefd79d9286dfe}{get\_stats\_shared\_mutable}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234d}{stats\_type}}\ type);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ std::shared\_ptr<const\ GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_abbd1b7e76f1bfad5e34606225b505893}{get\_stats\_shared}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__item_a6bd947751a8b93defe3430ffe9ad234d}{stats\_type}}\ type)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \};}
+\DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

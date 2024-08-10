@@ -1,0 +1,46 @@
+\doxysection{item\+\_\+resource\+\_\+database.\+h}
+\hypertarget{item__resource__database_8h_source}{}\label{item__resource__database_8h_source}\index{src/item\_resource\_database.h@{src/item\_resource\_database.h}}
+\mbox{\hyperlink{item__resource__database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_RESOURCE\_DATABASE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_RESOURCE\_DATABASE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__resource__data_8h}{item\_resource\_data.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database}{item\_resource\_database}}:\ \textcolor{keyword}{public}\ godot::Node\{}
+\DoxyCodeLine{00014\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database}{item\_resource\_database}},\ godot::Node)}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ item\_resource\_data\_folder)}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ godot::Dictionary\ \_item\_res\_database\_dict;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_process\_item\_res\_data\_dict(godot::Dictionary*\ \_data\_dict);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ std::shared\_ptr<std::vector<Item::item\_resource\_data*>>\ \_get\_data\_filter(godot::Dictionary*\ data\_filter,\ \textcolor{keywordtype}{bool}\ return\_first\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database_a276bf9a2f4b057243b8ee56b59fa1257}{\_bind\_methods}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database_a4a9568882f4fca48e0d29334b9af73ef}{\string~item\_resource\_database}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database_a6a4955221fdb5103b847784aa88615ec}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__data}{Item::item\_resource\_data}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database_a18e6970a0d4bc78de773ba6de35eed8c}{get\_item\_res\_data}}(\textcolor{keyword}{const}\ godot::String\&\ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\_type}},\ \textcolor{keyword}{const}\ godot::String\&\ item\_id);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ std::shared\_ptr<std::vector<Item::item\_resource\_data*>>\ \mbox{\hyperlink{class_game_1_1_item_1_1item__resource__database_a2c1ba28657f1bd25f6f9e887e9f93630}{find\_type}}(\textcolor{keyword}{const}\ godot::String\&\ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\_type}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

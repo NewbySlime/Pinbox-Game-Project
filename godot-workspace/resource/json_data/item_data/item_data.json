@@ -1,0 +1,5 @@
+{
+  "modifier.damage_additive_normal":{
+    "image_path": "res://resource/modifier_adder.png"
+  }
+}

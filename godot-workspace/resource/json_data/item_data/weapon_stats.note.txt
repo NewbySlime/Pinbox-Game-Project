@@ -1,0 +1,32 @@
+damage: number
+  How many damage should the item deal
+
+charge_delay: number
+  How long the delay for a weapon to become charged
+
+fire_mode: String
+  The fire mode of the weapon. Combining types of fire mode by using comma ",". Space (whitespace character) are ignored. Not case-sensitive.
+  List of flags:
+    - "single_fire",      (basic)
+    - "burst_fire",       (basic)
+    - "automatic",        (basic)
+    - "full_exhaust",     (optional)
+    - "charge"            (optional)
+
+  "basic" types of fire mode cannot be combined to make a switchable fire mode. The game only implements single type fire mode. This changes how the weapon shoot in one tap.
+  "optional" types of fire mode can be combined, and will alter how the gun will behave.
+
+fire_rate: number
+  The units is in rounds-per-minute (RPM)
+  The fire rate of the weapon.
+
+tap_rate: number
+  The units is in rounds-per-minute (RPM)
+  Different from fire_rate, this configuration is to limit how the gun can be spammed by the player.
+
+
+alternate_data: alternate_data
+  The alternate version of the weapon_stats
+
+hitreg_data: hitreg_data
+  List of hit register data based on Tree graph.

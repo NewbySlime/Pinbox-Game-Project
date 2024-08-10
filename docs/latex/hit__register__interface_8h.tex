@@ -1,0 +1,53 @@
+\doxysection{src/hit\+\_\+register\+\_\+interface.h File Reference}
+\hypertarget{hit__register__interface_8h}{}\label{hit__register__interface_8h}\index{src/hit\_register\_interface.h@{src/hit\_register\_interface.h}}
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/area2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/timer.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/ray\+\_\+cast2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/node\+\_\+path.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}memory"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1hit__register__start__data}{Game\+::hit\+\_\+register\+\_\+start\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game\+::hit\+\_\+register\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{Game\+::hit\+\_\+register\+\_\+pass\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game\+::hit\+\_\+register\+\_\+data}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_i__damager}{Game\+::\+I\+\_\+damager}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_i__hit__register}{Game\+::\+I\+\_\+hit\+\_\+register}}
+\item 
+struct \mbox{\hyperlink{struct_game_1_1hitreg__metadata}{Game\+::hitreg\+\_\+metadata}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71e}{Game\+::hit\+\_\+register\+\_\+type\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eac615ebfef565f31204d660d455f00b5b}{Game\+::hrte\+\_\+raycast}} = 0
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eaff5448d9523d6421400600f194339913}{Game\+::hrte\+\_\+dome}}
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eae6bf7d83c4c95b5ba297382d6bf12626}{Game\+::hrte\+\_\+arc}}
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea7cd5bbd9b68123325b0063f06c7e5f22}{Game\+::hrte\+\_\+projectiles}}
+, \newline
+\mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea806934b5f0bcc6cd6a787c9d620f7bad}{Game\+::hrte\+\_\+thrown\+\_\+projectiles}}
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eae0e1e4f5638c7dc35d254c20bb0c0372}{Game\+::hrte\+\_\+idle}}
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea40bdda768f6d530c0e2e03e29d91ea87}{Game\+::hrte\+\_\+\+\_\+option\+\_\+flag}} = 0xff000000
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea75c3e9f4aac0d87ade339e591690285f}{Game\+::hrte\+\_\+\+\_\+type\+\_\+flag}} = 0x00ffffff
+, \newline
+\mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71ea7bf0c23f046818e145ff7080713ed8cc}{Game\+::hrte\+\_\+with\+\_\+next}} = 0x80000000
+, \mbox{\hyperlink{namespace_game_a6fc82b3a0435e854814ee670793bf71eaeac5545b92b762431378182d16bde88b}{Game\+::hrte\+\_\+ignore\+\_\+simultaneous\+\_\+deletion}} = 0x40000000
+ \}
+\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\doxysection{item\+\_\+frame\+\_\+control.\+h}
+\hypertarget{item__frame__control_8h_source}{}\label{item__frame__control_8h_source}\index{src/item\_frame\_control.h@{src/item\_frame\_control.h}}
+\mbox{\hyperlink{item__frame__control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_FRAME\_CONTROL\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_FRAME\_CONTROL\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__object_8h}{item\_object.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sprite__resource__instancer_8h}{sprite\_resource\_instancer.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/canvas\_item.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/margin\_container.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/texture\_rect.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SIGNAL\_ITEM\_FRAME\_CONTROL\_ON\_MOUSE\_ENTERED\ "{}sifcome"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SIGNAL\_ITEM\_FRAME\_CONTROL\_ON\_MOUSE\_EXITED\ "{}sifcomex"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control}{item\_frame\_control}}:\ \textcolor{keyword}{public}\ godot\_sac::MarginContainer\_sac,}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_helper_1_1parent__child__watcher__helper}{GameUtils::Helper::parent\_child\_watcher\_helper}}}
+\DoxyCodeLine{00025\ \ \ \{}
+\DoxyCodeLine{00026\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control}{item\_frame\_control}},\ godot\_sac::MarginContainer\_sac)}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}(\textcolor{keywordtype}{double},\ margin\_relative\_size)}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a1ed6f6c64b489432f91f2c83137f51de}{GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC}}(\textcolor{keywordtype}{int},\ min\_size)}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ texture\_rect\_nodepath)}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ resource\_instancer\_nodepath)}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \_bound\_item\ =\ NULL;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ \_bound\_item\_id\ =\ \mbox{\hyperlink{id__types_8h_a600cb8ed14b35d856f409a3b10fc605d}{ITEM\_ID\_NULL}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{Game::sprite\_resource\_instancer}}*\ \_res\_instancer;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::TextureRect*\ \_image\_renderer\_node;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ godot::CanvasItem*\ \_item\_renderer\ =\ NULL;\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_bound\_index;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_update\_size();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_mouse\_entered();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_mouse\_exited();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_a96a4df924ad7847852a24cbfca243dcf}{\_bind\_methods}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_a545c8c894cdfd322ee568ee23d52a633}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_ab3e0aff6ff5f2e5452c3c4f08137101a}{item\_frame\_control}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_a1567b71c6c503f15d50ba24036aa2467}{\_notification}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_a658616b018233db562d5286a476a848c}{bind\_frame\_position}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{comment}{//\ item\ parameter\ can\ be\ NULL}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_acddcf2e842604eb29d649f0e03cb93c0}{bind\_item\_object}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_a260f872ee2f8f8177f9af1700ff9c7fe}{hide\_item}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__frame__control_ae561d82c9b80a978ea854b3e504c088e}{show\_item}}();}
+\DoxyCodeLine{00068\ \ \ \};}
+\DoxyCodeLine{00069\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

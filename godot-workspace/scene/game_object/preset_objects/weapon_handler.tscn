@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cpygbjaun64e"]
+
+[node name="weapon_handler" type="weapon_handler"]

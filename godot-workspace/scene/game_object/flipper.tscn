@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3xhyjr1ce8gb"]
+
+[ext_resource type="Texture2D" uid="uid://dv7cqxel1ih3x" path="res://resource/flipper.png" id="1_cjvhy"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_21j5u"]
+friction = 0.15
+bounce = 0.1
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w28ii"]
+radius = 19.0
+height = 94.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uo1xf"]
+radius = 30.0
+height = 132.0
+
+[node name="flipper" type="flipper"]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_21j5u")
+gravity_scale = 0.0
+continuous_cd = 1
+freeze = true
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(45, 0)
+scale = Vector2(7, 7)
+texture = ExtResource("1_cjvhy")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(106, 3)
+rotation = 1.69297
+shape = SubResource("CapsuleShape2D_w28ii")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(10, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_uo1xf")

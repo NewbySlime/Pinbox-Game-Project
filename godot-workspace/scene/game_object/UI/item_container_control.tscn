@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b1uw21nacbjvp"]
+
+[node name="item_container_control" type="item_container_control"]
+max_size = 40
+frame_horizontal_count = 10
+scroll_container_path = NodePath("ScrollContainer")
+item_frame_control_scene = "res://scene/game_object/preset_objects/items/UI/item_frame_control.tscn"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+horizontal_scroll_mode = 0

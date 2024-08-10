@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://ujnu42vebds4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_npaws"]
+font_size = 30
+
+[sub_resource type="Gradient" id="Gradient_xhc33"]
+colors = PackedColorArray(0, 0.389486, 0.550037, 1, 0.560189, 0.656029, 0.840242, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wfx2u"]
+gradient = SubResource("Gradient_xhc33")
+width = 800
+
+[node name="Control" type="ui_combo_tracker"]
+label = NodePath("VBoxContainer/MarginContainer/HBoxContainer/Label")
+progress_bar = NodePath("VBoxContainer/TextureProgressBar")
+combo_logo = NodePath("VBoxContainer/MarginContainer/HBoxContainer/TextureRect")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_npaws")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+step = 0.1
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_wfx2u")

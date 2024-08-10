@@ -1,0 +1,52 @@
+\doxysection{src/weapon\+\_\+item.cpp File Reference}
+\hypertarget{weapon__item_8cpp}{}\label{weapon__item_8cpp}\index{src/weapon\_item.cpp@{src/weapon\_item.cpp}}
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}id\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}weapon\+\_\+item.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/core/class\+\_\+db.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{weapon__item_8cpp_aed34a0b0d6a58b259fb1e8e9272875a5}{GET\+\_\+\+STATS\+\_\+\+MACRO}}(type)
+\item 
+\#define \mbox{\hyperlink{weapon__item_8cpp_a862e5ae6cb3f94baad7ef589885b11b7}{GET\+\_\+\+STATS\+\_\+\+SHARED\+\_\+\+MACRO}}(type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{weapon__item_8cpp_aed34a0b0d6a58b259fb1e8e9272875a5}\label{weapon__item_8cpp_aed34a0b0d6a58b259fb1e8e9272875a5} 
+\index{weapon\_item.cpp@{weapon\_item.cpp}!GET\_STATS\_MACRO@{GET\_STATS\_MACRO}}
+\index{GET\_STATS\_MACRO@{GET\_STATS\_MACRO}!weapon\_item.cpp@{weapon\_item.cpp}}
+\doxysubsubsection{\texorpdfstring{GET\_STATS\_MACRO}{GET\_STATS\_MACRO}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+STATS\+\_\+\+MACRO(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}(type)\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ stats\_type\_primary:\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_primary\_stats;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ stats\_type\_secondary:\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_secondary\_stats;\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ NULL;}
+
+\end{DoxyCode}
+\Hypertarget{weapon__item_8cpp_a862e5ae6cb3f94baad7ef589885b11b7}\label{weapon__item_8cpp_a862e5ae6cb3f94baad7ef589885b11b7} 
+\index{weapon\_item.cpp@{weapon\_item.cpp}!GET\_STATS\_SHARED\_MACRO@{GET\_STATS\_SHARED\_MACRO}}
+\index{GET\_STATS\_SHARED\_MACRO@{GET\_STATS\_SHARED\_MACRO}!weapon\_item.cpp@{weapon\_item.cpp}}
+\doxysubsubsection{\texorpdfstring{GET\_STATS\_SHARED\_MACRO}{GET\_STATS\_SHARED\_MACRO}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+STATS\+\_\+\+SHARED\+\_\+\+MACRO(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}(type)\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ stats\_type\_primary:\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_cd\_primary\_stats;\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ stats\_type\_secondary:\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_cd\_secondary\_stats;\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ std::shared\_ptr<custom\_memory>();}
+
+\end{DoxyCode}

@@ -1,0 +1,155 @@
+<mxfile host="65bd71144e">
+    <diagram id="RogmCeFpsFKtZlzvqZuk" name="Page-1">
+        <mxGraphModel dx="967" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;Parent to Child&lt;/h1&gt;&lt;p&gt;Parent can check every child that entered its hierarchy for interface of a child.&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;This is needed when parent have frequent update of the data that the interface depends on.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;But the downside is the parent have to implement or use attributes for this method.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="290" width="190" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;The Intended Method&lt;/h1&gt;&lt;p&gt;Since the Node also store interface identification to make sure the node know it has the interface. So when an object wants to get certain interface of a Node, the Node provides a function to get the interface.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="80" width="270" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Methods" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="240" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;h1&gt;Child to Parent&lt;/h1&gt;&lt;p&gt;Whenever child reparent or entering a hierarchy of a parent, the child can get parent's interfaces.&lt;/p&gt;&lt;p&gt;Parent only needed to have and store interface identification.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="520" width="190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="The General System" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="125" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Game Object" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Game Object" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="340" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="interface_helper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="10" target="11">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="460" as="sourcePoint"/>
+                        <mxPoint x="500" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Has Attributes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="310" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="8" target="11">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="450" as="sourcePoint"/>
+                        <mxPoint x="500" y="400" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="680" y="550"/>
+                            <mxPoint x="680" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Get interface of a Game Object" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="410" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Parent to Child" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="125" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Child" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Parent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Giving interface to parent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="400" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="endArrow=classic;html=1;curved=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="21" target="22">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="790" y="320" as="sourcePoint"/>
+                        <mxPoint x="840" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="Related" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="360" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="endArrow=classic;html=1;curved=1;edgeStyle=orthogonalEdgeStyle;startArrow=none;startFill=0;endFill=1;" edge="1" parent="1" source="22" target="21">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="790" y="320" as="sourcePoint"/>
+                        <mxPoint x="840" y="270" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="920" y="280"/>
+                            <mxPoint x="920" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="Giving signals/events to child for updates" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="340" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Child" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Parent" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="340" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="interface_helper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="34" target="35">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1350" y="460" as="sourcePoint"/>
+                        <mxPoint x="1400" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="Has Attributes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1370" y="310" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;curved=1;startArrow=classic;startFill=1;endFill=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="33" target="35">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1350" y="450" as="sourcePoint"/>
+                        <mxPoint x="1400" y="400" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1580" y="550"/>
+                            <mxPoint x="1580" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=classic;html=1;curved=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="33" target="34">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1210" y="410" as="sourcePoint"/>
+                        <mxPoint x="1260" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Related" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="450" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="interface_helper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="970" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Has Attributes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="950" y="490" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;curved=1;" edge="1" parent="1" source="21" target="44">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="940" y="390" as="sourcePoint"/>
+                        <mxPoint x="990" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="" style="endArrow=classic;html=1;curved=1;shadow=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="44" target="22">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1340" y="480" as="sourcePoint"/>
+                        <mxPoint x="1390" y="430" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1150" y="550"/>
+                            <mxPoint x="1150" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="Giving interface to child" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1540" y="270" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Child to Parent" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1400" y="120" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,60 @@
+\doxysection{src/item\+\_\+server.cpp File Reference}
+\hypertarget{item__server_8cpp}{}\label{item__server_8cpp}\index{src/item\_server.cpp@{src/item\_server.cpp}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+signal.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+identification.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+world\+\_\+entity\+\_\+2d\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/resource\+\_\+loader.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/json.\+hpp"{}}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ std\+::string, \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\+\_\+type}} $>$ \mbox{\hyperlink{item__server_8cpp_a23d5780036ba4088bed16a233b718085}{\+\_\+item\+\_\+types\+\_\+parse}}
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\+\_\+type}}, std\+::string $>$ \mbox{\hyperlink{item__server_8cpp_a9752dbd6fd39789695b7d7adddc63ef4}{\+\_\+item\+\_\+types\+\_\+parse\+\_\+inverse}} = create\+\_\+inverse\+\_\+of\+\_\+map(\mbox{\hyperlink{item__server_8cpp_a23d5780036ba4088bed16a233b718085}{\+\_\+item\+\_\+types\+\_\+parse}})
+\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$ std\+::string, \mbox{\hyperlink{namespace_game_1_1_item_ad1cd89dbcdbe21154be6df5877c5d1fc}{premade\+\_\+item\+\_\+container\+\_\+type}} $>$ \mbox{\hyperlink{item__server_8cpp_a9483a3990d1eba4eef9f88d5f08d5569}{\+\_\+item\+\_\+container\+\_\+types\+\_\+parse}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{item__server_8cpp_a9483a3990d1eba4eef9f88d5f08d5569}\label{item__server_8cpp_a9483a3990d1eba4eef9f88d5f08d5569} 
+\index{item\_server.cpp@{item\_server.cpp}!\_item\_container\_types\_parse@{\_item\_container\_types\_parse}}
+\index{\_item\_container\_types\_parse@{\_item\_container\_types\_parse}!item\_server.cpp@{item\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{\_item\_container\_types\_parse}{\_item\_container\_types\_parse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$std\+::string, \mbox{\hyperlink{namespace_game_1_1_item_ad1cd89dbcdbe21154be6df5877c5d1fc}{premade\+\_\+item\+\_\+container\+\_\+type}}$>$ \+\_\+item\+\_\+container\+\_\+types\+\_\+parse}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}player\_item\_container"{}},\ \mbox{\hyperlink{namespace_game_1_1_item_ad1cd89dbcdbe21154be6df5877c5d1fca78544ab970a6e08c345666151949d21f}{pict\_player}}\},}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}player\_weapon\_item\_container"{}},\ \mbox{\hyperlink{namespace_game_1_1_item_ad1cd89dbcdbe21154be6df5877c5d1fcab90370dd394728c34e3a48a02fb83cf3}{pict\_player\_weapon}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{item__server_8cpp_a23d5780036ba4088bed16a233b718085}\label{item__server_8cpp_a23d5780036ba4088bed16a233b718085} 
+\index{item\_server.cpp@{item\_server.cpp}!\_item\_types\_parse@{\_item\_types\_parse}}
+\index{\_item\_types\_parse@{\_item\_types\_parse}!item\_server.cpp@{item\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{\_item\_types\_parse}{\_item\_types\_parse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$std\+::string, \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\+\_\+type}}$>$ \+\_\+item\+\_\+types\+\_\+parse}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}modifier"{}},\ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768a31d673c6de27a744ae91b82ea123e3ad}{it\_modifier}}\},}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}weapon"{}},\ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768ab8a95c53c134517d1cdc3ce3f4ce6543}{it\_weapon}}\},}
+\DoxyCodeLine{\ \ \{\textcolor{stringliteral}{"{}material"{}},\ \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768a64c01996a1611cc0ceae42cfc2478622}{it\_material}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{item__server_8cpp_a9752dbd6fd39789695b7d7adddc63ef4}\label{item__server_8cpp_a9752dbd6fd39789695b7d7adddc63ef4} 
+\index{item\_server.cpp@{item\_server.cpp}!\_item\_types\_parse\_inverse@{\_item\_types\_parse\_inverse}}
+\index{\_item\_types\_parse\_inverse@{\_item\_types\_parse\_inverse}!item\_server.cpp@{item\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{\_item\_types\_parse\_inverse}{\_item\_types\_parse\_inverse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{const}} std\+::map$<$\mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{item\+\_\+type}}, std\+::string$>$ \+\_\+item\+\_\+types\+\_\+parse\+\_\+inverse = create\+\_\+inverse\+\_\+of\+\_\+map(\mbox{\hyperlink{item__server_8cpp_a23d5780036ba4088bed16a233b718085}{\+\_\+item\+\_\+types\+\_\+parse}})}
+

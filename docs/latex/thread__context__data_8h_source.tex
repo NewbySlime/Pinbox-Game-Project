@@ -1,0 +1,50 @@
+\doxysection{thread\+\_\+context\+\_\+data.\+h}
+\hypertarget{thread__context__data_8h_source}{}\label{thread__context__data_8h_source}\index{src/thread\_context\_data.h@{src/thread\_context\_data.h}}
+\mbox{\hyperlink{thread__context__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ THREAD\_CONTEXT\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ THREAD\_CONTEXT\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}thread"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_threading}{GameUtils::Threading}}\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\_data>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data}{thread\_context\_data}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ T\_data\ \_def\_data;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ std::map<std::thread::id,\ T\_data>\ \_data\_thread\_map;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_af2d3ddd680937704e1a4b264df9ba161}{\_on\_this\_deleted\_data\_iteration}}(T\_data\ \_thread\_data)\{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_a1d3cba9aa1b5ce168d58c09863f64c93}{thread\_context\_data}}(T\_data\ default\_data)\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \_def\_data\ =\ default\_data;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_a7420a958d35a8256429d66835a26e4a3}{\string~thread\_context\_data}}()\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ \_data\_thread\_map)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_af2d3ddd680937704e1a4b264df9ba161}{\_on\_this\_deleted\_data\_iteration}}(\_pair.second);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \_data\_thread\_map.clear();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_a8548c0128c90dae46a80f73b7842dfd6}{add\_last\_data}}(T\_data\ data)\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \_data\_thread\_map[std::this\_thread::get\_id()]\ =\ data;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ T\_data\ \mbox{\hyperlink{class_game_utils_1_1_threading_1_1thread__context__data_a7490ffdaad40a218714e6d9ff2d43ef6}{get\_last\_data}}()\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \_data\_thread\_map.find(std::this\_thread::get\_id());}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_data\_thread\_map.end())}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_def\_data;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_iter-\/>second;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

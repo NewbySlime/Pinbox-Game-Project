@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cyaarb6ncd2u5"]
+
+[node name="time_scaler" type="time_scaler"]
+process_mode = 3

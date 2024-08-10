@@ -1,0 +1,3 @@
+raycast:
+  max_length: The maximum length of the raycast
+  time: The time of the raycast retained before gone

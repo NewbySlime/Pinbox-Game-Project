@@ -1,0 +1,23 @@
+\doxysection{item\+\_\+location\+\_\+data\+\_\+struct.\+h}
+\hypertarget{item__location__data__struct_8h_source}{}\label{item__location__data__struct_8h_source}\index{src/item\_location\_data\_struct.h@{src/item\_location\_data\_struct.h}}
+\mbox{\hyperlink{item__location__data__struct_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_LOCATION\_DATA\_STRUCT}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_LOCATION\_DATA\_STRUCT}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \ \#define\ ITEM\_POSITION\_DATA\_CLEAR(pos\_data)\ pos\_data.container\_id\ =\ ITEM\_CONTAINER\_ID\_NULL;\ pos\_data.index\_position\ =\ -\/1}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \ \#define\ ITEM\_POSITION\_DATA\_CHECK(pos\_data)\ (pos\_data.container\_id\ !=\ ITEM\_CONTAINER\_ID\_NULL\ \&\&\ pos\_data.index\_position\ >=\ 0)}}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{item\_position\_data}}\{}
+\DoxyCodeLine{00011\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data_ac13b48fbbdf8d54d3a1d5d7f83bb9bf4}{container\_id}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data_a75d49ce9981b21dbd7c091312b8615d3}{index\_position}};}
+\DoxyCodeLine{00014\ \ \ \};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

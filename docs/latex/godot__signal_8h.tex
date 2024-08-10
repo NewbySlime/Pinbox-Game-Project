@@ -1,0 +1,56 @@
+\doxysection{src/godot\+\_\+signal.h File Reference}
+\hypertarget{godot__signal_8h}{}\label{godot__signal_8h}\index{src/godot\_signal.h@{src/godot\_signal.h}}
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/variant.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{godot__signal_8h_a5547ff8e8ad2bfc65a4ce0224484e546}{SIGNAL\+\_\+\+PARAM\+\_\+\+TO\+\_\+\+CUSTOMPTR}}(variable)~  \mbox{\hyperlink{godot__var__extended_8h_a76df0b378a85ee88a2ba74a212d884e4}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM\+\_\+\+PTR}}(variable)
+\item 
+\#define \mbox{\hyperlink{godot__signal_8h_a11ebaba542526051dd11ee64011fa1c8}{SIGNAL\+\_\+\+PARAM\+\_\+\+TO\+\_\+\+CUSTOM}}(variable)~  \mbox{\hyperlink{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM}}(variable)
+\item 
+\#define \mbox{\hyperlink{godot__signal_8h_a92b4ffb04bd906ab0534a96158ee17df}{SIGNAL\+\_\+\+PARAM\+\_\+\+GET\+\_\+\+CUSTOMPTR}}(variable,  type)~  \mbox{\hyperlink{godot__var__extended_8h_aca6bcc16c38b0ac6fc4f509e83d3b9c8}{GDVAR\+\_\+\+CUSTOM\+\_\+\+TO}}(variable, type)
+\item 
+\#define \mbox{\hyperlink{godot__signal_8h_ae2cfdc2f196a7fca59ac48179ff633d7}{SIGNAL\+\_\+\+PARAM\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}~\mbox{\hyperlink{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}{GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\+\_\+custom\+\_\+object}} \mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\+\_\+param\+\_\+ref}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{godot__signal_8h_ae2cfdc2f196a7fca59ac48179ff633d7}\label{godot__signal_8h_ae2cfdc2f196a7fca59ac48179ff633d7} 
+\index{godot\_signal.h@{godot\_signal.h}!SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE@{SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE}}
+\index{SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE@{SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE}!godot\_signal.h@{godot\_signal.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE}{SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PARAM\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE~\mbox{\hyperlink{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}{GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}}
+
+\Hypertarget{godot__signal_8h_a92b4ffb04bd906ab0534a96158ee17df}\label{godot__signal_8h_a92b4ffb04bd906ab0534a96158ee17df} 
+\index{godot\_signal.h@{godot\_signal.h}!SIGNAL\_PARAM\_GET\_CUSTOMPTR@{SIGNAL\_PARAM\_GET\_CUSTOMPTR}}
+\index{SIGNAL\_PARAM\_GET\_CUSTOMPTR@{SIGNAL\_PARAM\_GET\_CUSTOMPTR}!godot\_signal.h@{godot\_signal.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PARAM\_GET\_CUSTOMPTR}{SIGNAL\_PARAM\_GET\_CUSTOMPTR}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PARAM\+\_\+\+GET\+\_\+\+CUSTOMPTR(\begin{DoxyParamCaption}\item[{}]{variable,  }\item[{}]{type }\end{DoxyParamCaption})~  \mbox{\hyperlink{godot__var__extended_8h_aca6bcc16c38b0ac6fc4f509e83d3b9c8}{GDVAR\+\_\+\+CUSTOM\+\_\+\+TO}}(variable, type)}
+
+\Hypertarget{godot__signal_8h_a11ebaba542526051dd11ee64011fa1c8}\label{godot__signal_8h_a11ebaba542526051dd11ee64011fa1c8} 
+\index{godot\_signal.h@{godot\_signal.h}!SIGNAL\_PARAM\_TO\_CUSTOM@{SIGNAL\_PARAM\_TO\_CUSTOM}}
+\index{SIGNAL\_PARAM\_TO\_CUSTOM@{SIGNAL\_PARAM\_TO\_CUSTOM}!godot\_signal.h@{godot\_signal.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PARAM\_TO\_CUSTOM}{SIGNAL\_PARAM\_TO\_CUSTOM}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PARAM\+\_\+\+TO\+\_\+\+CUSTOM(\begin{DoxyParamCaption}\item[{}]{variable }\end{DoxyParamCaption})~  \mbox{\hyperlink{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM}}(variable)}
+
+\Hypertarget{godot__signal_8h_a5547ff8e8ad2bfc65a4ce0224484e546}\label{godot__signal_8h_a5547ff8e8ad2bfc65a4ce0224484e546} 
+\index{godot\_signal.h@{godot\_signal.h}!SIGNAL\_PARAM\_TO\_CUSTOMPTR@{SIGNAL\_PARAM\_TO\_CUSTOMPTR}}
+\index{SIGNAL\_PARAM\_TO\_CUSTOMPTR@{SIGNAL\_PARAM\_TO\_CUSTOMPTR}!godot\_signal.h@{godot\_signal.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PARAM\_TO\_CUSTOMPTR}{SIGNAL\_PARAM\_TO\_CUSTOMPTR}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PARAM\+\_\+\+TO\+\_\+\+CUSTOMPTR(\begin{DoxyParamCaption}\item[{}]{variable }\end{DoxyParamCaption})~  \mbox{\hyperlink{godot__var__extended_8h_a76df0b378a85ee88a2ba74a212d884e4}{GDVAR\+\_\+\+CUSTOM\+\_\+\+FROM\+\_\+\+PTR}}(variable)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}\label{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764} 
+\index{godot\_signal.h@{godot\_signal.h}!gdsignal\_param\_ref@{gdsignal\_param\_ref}}
+\index{gdsignal\_param\_ref@{gdsignal\_param\_ref}!godot\_signal.h@{godot\_signal.h}}
+\doxysubsubsection{\texorpdfstring{gdsignal\_param\_ref}{gdsignal\_param\_ref}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\+\_\+custom\+\_\+object}} \mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\+\_\+param\+\_\+ref}}}
+

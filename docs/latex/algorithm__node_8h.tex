@@ -1,0 +1,31 @@
+\doxysection{src/algorithm\+\_\+node.h File Reference}
+\hypertarget{algorithm__node_8h}{}\label{algorithm__node_8h}\index{src/algorithm\_node.h@{src/algorithm\_node.h}}
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/collision\+\_\+shape2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/shape2d.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/typed\+\_\+array.\+hpp"{}}\newline
+{\ttfamily \#include "{}vector"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc}{Game\+::\+Misc}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game\+::\+Misc\+::\+Algorithm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a7af96c5161941cdac346da173e699275}{Game\+::\+Misc\+::\+Algorithm\+::find\+\_\+child\+\_\+node\+\_\+type}} (godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parent}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{default\+\_\+value}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\begin{DoxyCompactList}\small\item\em Find child Node in parent Node based on the type supplied. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{typename}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} $>$ }\\\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a00a840b55a29994b6bc7baeae1e6a01d}{Game\+::\+Misc\+::\+Algorithm\+::get\+\_\+collision\+\_\+shape}} (godot\+::\+Collision\+Shape2D \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{shape}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{default\+\_\+value}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\begin{DoxyCompactList}\small\item\em Get the collision shape based on the Type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a8a9e3819049f79970c02f50db63ca441}{Game\+::\+Misc\+::\+Algorithm\+::is\+\_\+node\+\_\+in\+\_\+child}} (godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parent}}, godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{target\+\_\+obj}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{bool}} \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{check\+\_\+recursive}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{false}})
+\begin{DoxyCompactList}\small\item\em Function to check if the target Node is in the child area of parent Node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a83e5a0715b4b90142d34ce7f1eb68f82}{Game\+::\+Misc\+::\+Algorithm\+::remove\+\_\+all\+\_\+child}} (godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parent}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{removed\+\_\+callback}})(godot\+::\+Node \texorpdfstring{$\ast$}{*}))
+\begin{DoxyCompactList}\small\item\em Function to remove all child in the parent Node. ~\newline
+ NOTE\+: this function will only detach child from parent. To free the child, use the removed\+\_\+callback parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}} \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a78e45cbc9cd0980b16bfc1b11ee0e18e}{Game\+::\+Misc\+::\+Algorithm\+::remove\+\_\+all\+\_\+child\+\_\+filter}} (godot\+::\+Node \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{parent}}, \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{removed\+\_\+callback}})(godot\+::\+Node \texorpdfstring{$\ast$}{*}), std\+::vector$<$ godot\+::\+Node \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{filter}}=\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{NULL}})
+\begin{DoxyCompactList}\small\item\em Function to remove some child based on the filters provided, in the parent Node. ~\newline
+ NOTE\+: this function will only detach child from parent. To free the child, use the removed\+\_\+callback parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}

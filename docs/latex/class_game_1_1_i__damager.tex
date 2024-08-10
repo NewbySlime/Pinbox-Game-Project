@@ -1,0 +1,70 @@
+\doxysection{Game\+::I\+\_\+damager Class Reference}
+\hypertarget{class_game_1_1_i__damager}{}\label{class_game_1_1_i__damager}\index{Game::I\_damager@{Game::I\_damager}}
+
+
+{\ttfamily \#include $<$hit\+\_\+register\+\_\+interface.\+h$>$}
+
+Inheritance diagram for Game\+::I\+\_\+damager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_i__damager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_game_1_1_i__damager_a1941630a8d8b30c18d3b635c423e6067}{\texorpdfstring{$\sim$}{\string~}\+I\+\_\+damager}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__damager_a0ac488b63c6fd32d780c9343895a549b}{on\+\_\+hit}} (\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{hit\+\_\+register\+\_\+pass\+\_\+data}} \texorpdfstring{$\ast$}{*}pass\+\_\+data)=0
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__damager_ab1fc5833895d357dd9d2e4fb7e293732}{on\+\_\+hitreg\+\_\+changed}} (const \mbox{\hyperlink{struct_game_1_1hit__register__state}{hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}new\+\_\+state=NULL)=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{I\+\_\+damager}} $>$ \mbox{\hyperlink{class_game_1_1_i__damager_a94443ce5e64fb82afffb11ab5fe06089}{clone\+\_\+damager}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_i__damager_a1941630a8d8b30c18d3b635c423e6067}\label{class_game_1_1_i__damager_a1941630a8d8b30c18d3b635c423e6067} 
+\index{Game::I\_damager@{Game::I\_damager}!````~I\_damager@{\texorpdfstring{$\sim$}{\string~}I\_damager}}
+\index{````~I\_damager@{\texorpdfstring{$\sim$}{\string~}I\_damager}!Game::I\_damager@{Game::I\_damager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}I\_damager()}{\string~I\_damager()}}
+{\footnotesize\ttfamily virtual Game\+::\+I\+\_\+damager\+::\texorpdfstring{$\sim$}{\string~}\+I\+\_\+damager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_i__damager_a94443ce5e64fb82afffb11ab5fe06089}\label{class_game_1_1_i__damager_a94443ce5e64fb82afffb11ab5fe06089} 
+\index{Game::I\_damager@{Game::I\_damager}!clone\_damager@{clone\_damager}}
+\index{clone\_damager@{clone\_damager}!Game::I\_damager@{Game::I\_damager}}
+\doxysubsubsection{\texorpdfstring{clone\_damager()}{clone\_damager()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_i__damager}{I\+\_\+damager}} $>$ Game\+::\+I\+\_\+damager\+::clone\+\_\+damager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_game_1_1generic__damager_a8e0de38c5370f1da3f9a104963dbd305}{Game\+::generic\+\_\+damager}}.
+
+\Hypertarget{class_game_1_1_i__damager_a0ac488b63c6fd32d780c9343895a549b}\label{class_game_1_1_i__damager_a0ac488b63c6fd32d780c9343895a549b} 
+\index{Game::I\_damager@{Game::I\_damager}!on\_hit@{on\_hit}}
+\index{on\_hit@{on\_hit}!Game::I\_damager@{Game::I\_damager}}
+\doxysubsubsection{\texorpdfstring{on\_hit()}{on\_hit()}}
+{\footnotesize\ttfamily virtual void Game\+::\+I\+\_\+damager\+::on\+\_\+hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{hit\+\_\+register\+\_\+pass\+\_\+data}} \texorpdfstring{$\ast$}{*}}]{pass\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_game_1_1generic__damager_a85b5b01796134c2fa5d2bbd2ab186fec}{Game\+::generic\+\_\+damager}}.
+
+\Hypertarget{class_game_1_1_i__damager_ab1fc5833895d357dd9d2e4fb7e293732}\label{class_game_1_1_i__damager_ab1fc5833895d357dd9d2e4fb7e293732} 
+\index{Game::I\_damager@{Game::I\_damager}!on\_hitreg\_changed@{on\_hitreg\_changed}}
+\index{on\_hitreg\_changed@{on\_hitreg\_changed}!Game::I\_damager@{Game::I\_damager}}
+\doxysubsubsection{\texorpdfstring{on\_hitreg\_changed()}{on\_hitreg\_changed()}}
+{\footnotesize\ttfamily virtual void Game\+::\+I\+\_\+damager\+::on\+\_\+hitreg\+\_\+changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1hit__register__state}{hit\+\_\+register\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+state = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_game_1_1generic__damager_ac8da102b4ee978a1a38721b7c40250a9}{Game\+::generic\+\_\+damager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{hit__register__interface_8h}{hit\+\_\+register\+\_\+interface.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\doxysection{runtime\+\_\+id\+\_\+container.\+h}
+\hypertarget{runtime__id__container_8h_source}{}\label{runtime__id__container_8h_source}\index{src/runtime\_id\_container.h@{src/runtime\_id\_container.h}}
+\mbox{\hyperlink{runtime__id__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RUNTIME\_ID\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RUNTIME\_ID\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{thread__error_8h}{thread\_error.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}set"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_utils_1_1_identification}{GameUtils::Identification}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{comment}{//\ for\ id\_object,\ it\ has\ to\ accomodate\ function\ operator++\ and\ equal\ comparison\ operator}}
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ id\_object\ also\ has\ default\ constructor\ for\ the\ invalid\ id}}
+\DoxyCodeLine{00013\ \ \ \textcolor{comment}{//\ therefore,\ id\_object\ is\ best\ as\ a\ custom\ class,\ not\ c++\ basic\ types}}
+\DoxyCodeLine{00014\ \ \ \textcolor{comment}{//\ for\ item\_object,\ it\ has\ to\ accomodate\ comparison\ operators\ used\ by\ std::map}}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \textcolor{keywordtype}{id}\_\textcolor{keywordtype}{object},\ \textcolor{keyword}{typename}\ item\_\textcolor{keywordtype}{object}>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container}{runtime\_id\_container}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\_error\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203aa5d54b8d70d17ec712fc66ceee2ce1ce}{rtic\_ce\_ok}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36}{id\_not\_exist}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a258f9eab8f19199b96d0b121151abb52}{id\_already\_exist}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ab72734c16c282e76835a5d72d81e647c}{id\_is\_excluded}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ad2308bb26d404e0ba0745c45701158d8}{index\_out\_of\_range}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ cannot\_create\_new\_id}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ std::map<id\_object,\ item\_object>\ \_item\_data;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ std::set<id\_object>\ \_excluded\_id;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_error_1_1thread__error}{Game::Error::thread\_error<class\_error>}}\ \_error\_data\ =\ \mbox{\hyperlink{class_game_1_1_error_1_1thread__error}{Game::Error::thread\_error<class\_error>}}(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203aa5d54b8d70d17ec712fc66ceee2ce1ce}{rtic\_ce\_ok}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{class\_error}}\ error)\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \_error\_data.\mbox{\hyperlink{class_game_1_1_error_1_1thread__error_adc0048c3a9595288ddcef8622ffdf649}{add\_last\_error}}(error);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203}{class\_error}}\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9434adc505564f5c223a7cbad5e98186}{get\_last\_error}}()\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_error\_data.\mbox{\hyperlink{class_game_1_1_error_1_1thread__error_a0baabfc8e3ae1d6532d6e28ab4887740}{get\_last\_error}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a4a7795ee6ffc23dbfec3535d25e01f0b}{add\_to\_excluded\_id}}(id\_object\ \textcolor{keywordtype}{id})\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \_excluded\_id.insert(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_aa8457a52738929f091da1ba6ffb247a4}{remove\_from\_excluded\_id}}(id\_object\ \textcolor{keywordtype}{id})\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \_excluded\_id.erase(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{comment}{//\ if\ cannot\ get\ new\ id,\ returns\ the\ default\ id\_object}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{comment}{//\ for\ user,\ check\ get\_last\_error\ function}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ id\_object\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_ada05d6e434351d434e1abffb3b1867e6}{find\_new\_id}}()\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ id\_object\ \_res\_id\ =\ id\_object();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ id\_object\ \_begin\_id\ =\ \_item\_data.begin()-\/>second;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_id\_found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_current\_iter\ =\ \_item\_data.begin();\ !\_id\_found\ \&\&\ \_current\_iter\ !=\ \_item\_data.end();\ \_current\_iter++)\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_next\_iter\ =\ \_current\_iter+1;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ it's\ the\ end\ of\ the\ map}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_next\_iter\ ==\ \_item\_data.end())\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ id\_object\ \_current\_id\ =\ \_current\_iter-\/>second;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_current\_id++;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ \_current\_id\ is\ the\ same\ with\ the\ id\ contained\ in\ \_excluded\_id}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\_ex\_id\ =\ \_excluded\_id.find(\_current\_id);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\_ex\_id\ !=\ \_excluded\_id.end())}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ \_current\_id\ is\ the\ same\ as\ the\ beginning\ id\ (looping)}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_current\_id\ ==\ \_begin\_id)\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203acffd1f3c3532234bcaf293b0b8b90d4e}{cannot\_create\_new\_id}});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_id\_found\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ just\ to\ break\ from\ first\ loop}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ don't\ check\ from\ \_item\_data\ since\ this\ is\ the\ last\ iter}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_res\_id\ =\ \_current\_id;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_id\_found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when\ there's\ more\ iterators\ to\ check}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ id\_object\ \_last\_id\_check\ =\ \_next\_iter-\/>second;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ id\_object\ \_current\_id\ =\ \_current\_iter-\/>second;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_current\_id++;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_current\_id\ ==\ \_last\_id\_check)}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\_ex\_id\ =\ \_excluded\_id.find(\_current\_id);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\_ex\_id\ !=\ \_excluded\_id.end())}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_res\_id\ =\ \_current\_id;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_id\_found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res\_id;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ item\_object\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a6fcf56e8201885ec995aefb20f6aa32f}{get\_item}}(id\_object\ \textcolor{keywordtype}{id},\ item\_object\ default\_item\ =\ item\_object())\{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \_item\_data.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_item\_data.end())\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36}{id\_not\_exist}});}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_item;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_iter-\/>second;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a079a214650da80fd9f8ed5cff4511e59}{add\_item}}(item\_object\ data,\ \textcolor{keywordtype}{bool}\ as\_reserved\ =\ \textcolor{keyword}{false},\ id\_object\ reserved\_id\ =\ id\_object())\{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ id\_object\ \_new\_id;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(as\_reserved)\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\_ex\_id\ =\ \_excluded\_id.find(reserved\_id);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\_ex\_id\ !=\ \_excluded\_id.end())\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ab72734c16c282e76835a5d72d81e647c}{id\_is\_excluded}});}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\_id\ =\ \_item\_data.find(reserved\_id);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\_id\ !=\ \_item\_data.end())\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a258f9eab8f19199b96d0b121151abb52}{id\_already\_exist}});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \_new\_id\ =\ reserved\_id;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \_new\_id\ =\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_ada05d6e434351d434e1abffb3b1867e6}{find\_new\_id}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \_item\_data[\_new\_id]\ =\ data;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ item\_object\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a15d89d3081ca931ba40a879a5d2a302b}{delete\_item}}(id\_object\ \textcolor{keywordtype}{id},\ item\_object\ default\_item\ =\ item\_object())\{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \_iter\ =\ \_item\_data.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_iter\ ==\ \_item\_data.end())\{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203a626cb43363f802d2f9cd268cd7a93e36}{id\_not\_exist}});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_item;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \_item\_data.erase(\_iter);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_iter-\/>second;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_aa7937c4d45de9ff6e9dade6f3bd9c35a}{get\_size}}()\{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_item\_data.size();}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ item\_object\ \mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_ae869f9ae0b5f27b94ff74a4971f77bd2}{get\_item\_index}}(uint64\_t\ index,\ item\_object\ default\_item\ =\ item\_object())\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(index\ >=\ \_item\_data.size()\ ||\ index\ <\ 0)\{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \_set\_error(\mbox{\hyperlink{class_game_utils_1_1_identification_1_1runtime__id__container_a9a40ce2768dee54032a7f502fc0e4203ad2308bb26d404e0ba0745c45701158d8}{index\_out\_of\_range}});}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_item;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\_item\_data.begin()+index)-\/>second;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \};}
+\DoxyCodeLine{00169\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx3sc5wttp1je"]
+
+[ext_resource type="Texture2D" uid="uid://ddwmxprj37a17" path="res://resource/item_container_ui.png" id="1_tn48i"]
+[ext_resource type="PackedScene" uid="uid://bmsarodovpwjj" path="res://scene/game_object/preset_objects/items/UI/inventory_control/item_sprite_template.tscn" id="2_o7cxp"]
+
+[node name="item_frame_control" type="item_frame_control"]
+margin_relative_size = 0.15
+min_size = 120
+item_sprite_node = NodePath("item_sprite")
+texture_filter = 1
+custom_minimum_size = Vector2(120, 120)
+offset_right = 120.0
+offset_bottom = 120.0
+size_flags_horizontal = 2
+
+[node name="frame" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_tn48i")
+region_rect = Rect2(10, 10, 12, 12)
+
+[node name="item_sprite" parent="." instance=ExtResource("2_o7cxp")]
+layout_mode = 2

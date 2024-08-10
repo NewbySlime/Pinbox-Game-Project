@@ -1,0 +1,131 @@
+\doxysection{Game\+::pinbox Class Reference}
+\hypertarget{class_game_1_1pinbox}{}\label{class_game_1_1pinbox}\index{Game::pinbox@{Game::pinbox}}
+
+
+{\ttfamily \#include $<$pinbox.\+h$>$}
+
+Inheritance diagram for Game\+::pinbox\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1pinbox}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1pinbox_a12b1633471fa9078e0b77efd4a4a6a6d}{pinbox}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1pinbox_af2945c11a8ef401596b096a194a939cd}{\texorpdfstring{$\sim$}{\string~}pinbox}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_a5d83f6b26550e2f2f703da7b9785eb4c}{\+\_\+physics\+\_\+process}} (double delta) override
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_a979cd9267064c02166f3a43cc7b5d47c}{\+\_\+integrate\+\_\+forces}} (godot\+::\+Physics\+Direct\+Body\+State2D \texorpdfstring{$\ast$}{*}state) override
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_a953375c1f3cfeaa6fbeaf16812e19f76}{custom\+\_\+input}} (godot\+::\+Object \texorpdfstring{$\ast$}{*}event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_i__movement}{Game\+::\+I\+\_\+movement}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a87e78e1a7848e60b74bb221f4e183f7d}{move\+\_\+up}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a676ceaccd18d71f316022a9b97005fbe}{move\+\_\+down}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a853f8a52676d9cef26856eb8a0fccb73}{move\+\_\+left}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a0053593f5c781c07841f1eca2fd8fde0}{move\+\_\+right}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a57fe04b43ae21007ed91a16eb1c6dbf5}{move\+\_\+stop\+\_\+up}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a4bb0451da5f5efc72e71e1c723be43a1}{move\+\_\+stop\+\_\+down}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_ae933a7f636a43c1162cccf90157e3f1a}{move\+\_\+stop\+\_\+left}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_acc77466e75ed9f0071d49ead3c96a1dc}{move\+\_\+stop\+\_\+right}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_ad9ff806964a22e786a41ff6e621d6efa}{on\+\_\+terniary\+\_\+priming}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a56fe030e34164419d4878f439de1884c}{on\+\_\+terniary\+\_\+continuing}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a4afb24e2d9f7ca6cbcaf582d5fdbc775}{on\+\_\+terniary\+\_\+cancelled}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_i__movement_a7a77a1c20b5443272ccab9ec406bece0}{on\+\_\+update}} (const \mbox{\hyperlink{struct_game_1_1action__class__update__data}{action\+\_\+class\+\_\+update\+\_\+data}} \&update\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_ab8b40fd16a498702542cca3733519288}{\+\_\+bind\+\_\+subautoload}} (\mbox{\hyperlink{class_game_1_1subautoload__container}{Game\+::subautoload\+\_\+container}} \texorpdfstring{$\ast$}{*}container) override
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_aceb4a642c2ad3c7f4909cb6583ba3582}{\+\_\+on\+\_\+gamenode\+\_\+ready}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1pinbox_a0b5f8d3197e51b988c0d91f4b0350d59}{\+\_\+on\+\_\+hp\+\_\+changed}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1pinbox_acacfdb55b44702742fd3c638b8aa9912}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1pinbox_a12b1633471fa9078e0b77efd4a4a6a6d}\label{class_game_1_1pinbox_a12b1633471fa9078e0b77efd4a4a6a6d} 
+\index{Game::pinbox@{Game::pinbox}!pinbox@{pinbox}}
+\index{pinbox@{pinbox}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{pinbox()}{pinbox()}}
+{\footnotesize\ttfamily Game\+::pinbox\+::pinbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1pinbox_af2945c11a8ef401596b096a194a939cd}\label{class_game_1_1pinbox_af2945c11a8ef401596b096a194a939cd} 
+\index{Game::pinbox@{Game::pinbox}!````~pinbox@{\texorpdfstring{$\sim$}{\string~}pinbox}}
+\index{````~pinbox@{\texorpdfstring{$\sim$}{\string~}pinbox}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}pinbox()}{\string~pinbox()}}
+{\footnotesize\ttfamily Game\+::pinbox\+::\texorpdfstring{$\sim$}{\string~}pinbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1pinbox_acacfdb55b44702742fd3c638b8aa9912}\label{class_game_1_1pinbox_acacfdb55b44702742fd3c638b8aa9912} 
+\index{Game::pinbox@{Game::pinbox}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily static void Game\+::pinbox\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1pinbox_ab8b40fd16a498702542cca3733519288}\label{class_game_1_1pinbox_ab8b40fd16a498702542cca3733519288} 
+\index{Game::pinbox@{Game::pinbox}!\_bind\_subautoload@{\_bind\_subautoload}}
+\index{\_bind\_subautoload@{\_bind\_subautoload}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_bind\_subautoload()}{\_bind\_subautoload()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::\+\_\+bind\+\_\+subautoload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1subautoload__container}{Game\+::subautoload\+\_\+container}} \texorpdfstring{$\ast$}{*}}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1pinbox_a979cd9267064c02166f3a43cc7b5d47c}\label{class_game_1_1pinbox_a979cd9267064c02166f3a43cc7b5d47c} 
+\index{Game::pinbox@{Game::pinbox}!\_integrate\_forces@{\_integrate\_forces}}
+\index{\_integrate\_forces@{\_integrate\_forces}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_integrate\_forces()}{\_integrate\_forces()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::\+\_\+integrate\+\_\+forces (\begin{DoxyParamCaption}\item[{godot\+::\+Physics\+Direct\+Body\+State2D \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_game_1_1pinbox_aceb4a642c2ad3c7f4909cb6583ba3582}\label{class_game_1_1pinbox_aceb4a642c2ad3c7f4909cb6583ba3582} 
+\index{Game::pinbox@{Game::pinbox}!\_on\_gamenode\_ready@{\_on\_gamenode\_ready}}
+\index{\_on\_gamenode\_ready@{\_on\_gamenode\_ready}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_on\_gamenode\_ready()}{\_on\_gamenode\_ready()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::\+\_\+on\+\_\+gamenode\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1pinbox_a0b5f8d3197e51b988c0d91f4b0350d59}\label{class_game_1_1pinbox_a0b5f8d3197e51b988c0d91f4b0350d59} 
+\index{Game::pinbox@{Game::pinbox}!\_on\_hp\_changed@{\_on\_hp\_changed}}
+\index{\_on\_hp\_changed@{\_on\_hp\_changed}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_on\_hp\_changed()}{\_on\_hp\_changed()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::\+\_\+on\+\_\+hp\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1pinbox_a5d83f6b26550e2f2f703da7b9785eb4c}\label{class_game_1_1pinbox_a5d83f6b26550e2f2f703da7b9785eb4c} 
+\index{Game::pinbox@{Game::pinbox}!\_physics\_process@{\_physics\_process}}
+\index{\_physics\_process@{\_physics\_process}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{\_physics\_process()}{\_physics\_process()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::\+\_\+physics\+\_\+process (\begin{DoxyParamCaption}\item[{double}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_game_1_1pinbox_a953375c1f3cfeaa6fbeaf16812e19f76}\label{class_game_1_1pinbox_a953375c1f3cfeaa6fbeaf16812e19f76} 
+\index{Game::pinbox@{Game::pinbox}!custom\_input@{custom\_input}}
+\index{custom\_input@{custom\_input}!Game::pinbox@{Game::pinbox}}
+\doxysubsubsection{\texorpdfstring{custom\_input()}{custom\_input()}}
+{\footnotesize\ttfamily void Game\+::pinbox\+::custom\+\_\+input (\begin{DoxyParamCaption}\item[{godot\+::\+Object \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{pinbox_8h}{pinbox.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,23 @@
+{
+  "weapon.pistol":{
+    "name": "Pistol",
+    "desc": "Generic Pistol",
+
+    "weapon_stats:primary":{
+      "damage": 1,
+
+      "hitreg_data":{
+        "0": {
+          "type": "raycast",
+          "max_length": 1000,
+          "time": 0.1,
+          "next_node":[]
+        }
+      }
+    },
+
+    "secondary.weapon_stats":{
+
+    }
+  }
+}

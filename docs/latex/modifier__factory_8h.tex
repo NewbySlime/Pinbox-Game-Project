@@ -1,0 +1,39 @@
+\doxysection{src/modifier\+\_\+factory.h File Reference}
+\hypertarget{modifier__factory_8h}{}\label{modifier__factory_8h}\index{src/modifier\_factory.h@{src/modifier\_factory.h}}
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+{\ttfamily \#include "{}I\+\_\+item\+\_\+factory.\+h"{}}\newline
+{\ttfamily \#include "{}I\+\_\+modifier.\+h"{}}\newline
+{\ttfamily \#include "{}I\+\_\+modifier\+\_\+database\+\_\+helper.\+h"{}}\newline
+{\ttfamily \#include "{}algorithm\+\_\+random.\+h"{}}\newline
+{\ttfamily \#include "{}custom\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}modifier\+\_\+container\+\_\+item.\+h"{}}\newline
+{\ttfamily \#include "{}modifier\+\_\+database.\+h"{}}\newline
+{\ttfamily \#include "{}rng\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/dictionary.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}memory"{}}\newline
+{\ttfamily \#include "{}string"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1modifier__factory}{Game\+::\+Item\+::\+Factory\+::modifier\+\_\+factory}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item_1_1_factory}{Game\+::\+Item\+::\+Factory}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game\+::\+Modifiers\+::\+I\+\_\+modifier}} $>$, \mbox{\hyperlink{class_game_1_1_item_1_1_i__modifier__database__helper}{Game\+::\+Item\+::\+I\+\_\+modifier\+\_\+database\+\_\+helper}} \texorpdfstring{$\ast$}{*} $>$(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_1_1_item_1_1_factory_ad07913dd179d30f3ec0d67f0353e5c4d}{Game\+::\+Item\+::\+Factory\+::create\+\_\+modifier\+\_\+callback}}) (\mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1modifier__factory}{Game\+::\+Item\+::\+Factory\+::modifier\+\_\+factory}} \texorpdfstring{$\ast$}{*}container)
+\item 
+typedef \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_game_1_1_item_1_1_factory_a6dec8f73472e730e56cb25437677d67b}{Game\+::\+Item\+::\+Factory\+::parse\+\_\+modifier\+\_\+data\+\_\+callback}}) (godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}json\+\_\+data)
+\end{DoxyCompactItemize}

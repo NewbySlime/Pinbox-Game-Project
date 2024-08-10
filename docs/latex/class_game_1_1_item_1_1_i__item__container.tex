@@ -1,0 +1,290 @@
+\doxysection{Game\+::Item\+::I\+\_\+item\+\_\+container Class Reference}
+\hypertarget{class_game_1_1_item_1_1_i__item__container}{}\label{class_game_1_1_item_1_1_i__item__container}\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+
+
+{\ttfamily \#include $<$I\+\_\+item\+\_\+container.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::I\+\_\+item\+\_\+container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.641510cm]{class_game_1_1_item_1_1_i__item__container}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a4a624d6c4a23081013db6f5e6a7bbd33}{get\+\_\+item}} (int index)
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_ab495e1de6cf1ae0515959c4deb469ba6}{get\+\_\+item\+\_\+id}} (int index)
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a65881629cba060114bb0b164702947a9}{get\+\_\+container\+\_\+id}} ()
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a67b72d6df5178eb7981042f2354f13df}{get\+\_\+container\+\_\+type}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a19fcdd17c44b539ae02c12fc15eedd97}{is\+\_\+item\+\_\+exist}} (int index)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_ad239b3c77f0324350e387d8e5a4fb5e3}{is\+\_\+item\+\_\+can\+\_\+exist}} (const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}item)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a2939a3e64b980cd0c935093f894262b4}{is\+\_\+item\+\_\+can\+\_\+exist}} (uint64\+\_\+t item\+\_\+id)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_abea4e635bc213410dffd4aed7ebb75ce}{set\+\_\+item\+\_\+filter\+\_\+type}} (uint32\+\_\+t new\+\_\+type)
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a07f7bd8cc92cb0669bc1be406be0ed74}{get\+\_\+item\+\_\+filter\+\_\+type}} ()
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a976978e6d1370501c0264c8eb64ebdd1}{empty\+\_\+slot\+\_\+count}} ()
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_afb79d8ffeae8063348de447231d50c78}{get\+\_\+container\+\_\+size}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_ad8dc05b2f58b6281944c32aa2f546eab}{resize\+\_\+container}} (int new\+\_\+size)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a2faa8cc4e7b13e1dc80f1cc4dde7fe01}{add\+\_\+to\+\_\+container}} (\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} id, int index=-\/1)
+\item 
+virtual \mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a571fb6089aec7edd16996d77380eb414}{remove\+\_\+from\+\_\+container}} (int index)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_ad251f09ab8660b408dc21a692445a510}{swap\+\_\+item}} (int index, \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&pos\+\_\+data)
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a5476ffcdedf11680b9725cc9d645c3b1}{drop\+\_\+item}} (int index)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_aa41649f8a7858fc585d0bb2c3df113bc}{drop\+\_\+all\+\_\+item}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a1a561f6da97ee1a11194ed54c9543f88}{drop\+\_\+all\+\_\+item\+\_\+filter}} (uint32\+\_\+t type\+\_\+filter)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a3017886be615f50f52b8aa6540a3bfd0}{\+\_\+check\+\_\+index}} (int index)
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a6e4fcd931189eb8884dffe2efb5f590f}{\+\_\+get\+\_\+new\+\_\+index}} ()
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_adfed20e145d52ee7b0a0e9927cff5c14}{\+\_\+remove\+\_\+item}} (int index)
+\item 
+virtual int \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container_a539617330add11f1f1a800a3477d79ef}{\+\_\+add\+\_\+item}} (const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}item, int index=-\/1, bool force=false, uint64\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+removed\+\_\+id=NULL)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a539617330add11f1f1a800a3477d79ef}\label{class_game_1_1_item_1_1_i__item__container_a539617330add11f1f1a800a3477d79ef} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!\_add\_item@{\_add\_item}}
+\index{\_add\_item@{\_add\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{\_add\_item()}{\_add\_item()}}
+{\footnotesize\ttfamily virtual int Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::\+\_\+add\+\_\+item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}}]{item,  }\item[{int}]{index = {\ttfamily -\/1},  }\item[{bool}]{force = {\ttfamily false},  }\item[{uint64\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+removed\+\_\+id = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c6c6236d8d8c25ce53a3c2cb4f45aed}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a3017886be615f50f52b8aa6540a3bfd0}\label{class_game_1_1_item_1_1_i__item__container_a3017886be615f50f52b8aa6540a3bfd0} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!\_check\_index@{\_check\_index}}
+\index{\_check\_index@{\_check\_index}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{\_check\_index()}{\_check\_index()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::\+\_\+check\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a33454c6d58b5dcb512902631af8b2c48}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a6e4fcd931189eb8884dffe2efb5f590f}\label{class_game_1_1_item_1_1_i__item__container_a6e4fcd931189eb8884dffe2efb5f590f} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!\_get\_new\_index@{\_get\_new\_index}}
+\index{\_get\_new\_index@{\_get\_new\_index}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{\_get\_new\_index()}{\_get\_new\_index()}}
+{\footnotesize\ttfamily virtual int Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::\+\_\+get\+\_\+new\+\_\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container__infinite_a862d9257c253b9999f8df22dd5f15755}{Game\+::\+Item\+::item\+\_\+container\+\_\+infinite}}, and \mbox{\hyperlink{class_game_1_1_item_1_1item__container_adcf567b9660076fcd403a1725047c677}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_adfed20e145d52ee7b0a0e9927cff5c14}\label{class_game_1_1_item_1_1_i__item__container_adfed20e145d52ee7b0a0e9927cff5c14} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!\_remove\_item@{\_remove\_item}}
+\index{\_remove\_item@{\_remove\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{\_remove\_item()}{\_remove\_item()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::\+\_\+remove\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container__infinite_a97ce0da1f19114ae7dc0554c55df4b5b}{Game\+::\+Item\+::item\+\_\+container\+\_\+infinite}}, and \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2be371cab744d43931659a9d29514cf2}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a2faa8cc4e7b13e1dc80f1cc4dde7fe01}\label{class_game_1_1_item_1_1_i__item__container_a2faa8cc4e7b13e1dc80f1cc4dde7fe01} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!add\_to\_container@{add\_to\_container}}
+\index{add\_to\_container@{add\_to\_container}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{add\_to\_container()}{add\_to\_container()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::add\+\_\+to\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}}}]{id,  }\item[{int}]{index = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a9171d55e78daaa96e9479fae69a4e46d}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_aa41649f8a7858fc585d0bb2c3df113bc}\label{class_game_1_1_item_1_1_i__item__container_aa41649f8a7858fc585d0bb2c3df113bc} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!drop\_all\_item@{drop\_all\_item}}
+\index{drop\_all\_item@{drop\_all\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{drop\_all\_item()}{drop\_all\_item()}}
+{\footnotesize\ttfamily virtual void Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::drop\+\_\+all\+\_\+item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1f9dd402fdaa09b27ccd1a3635e44cbc}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a1a561f6da97ee1a11194ed54c9543f88}\label{class_game_1_1_item_1_1_i__item__container_a1a561f6da97ee1a11194ed54c9543f88} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!drop\_all\_item\_filter@{drop\_all\_item\_filter}}
+\index{drop\_all\_item\_filter@{drop\_all\_item\_filter}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{drop\_all\_item\_filter()}{drop\_all\_item\_filter()}}
+{\footnotesize\ttfamily virtual void Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::drop\+\_\+all\+\_\+item\+\_\+filter (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type\+\_\+filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8246fb40579c680e876420109e88e362}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a5476ffcdedf11680b9725cc9d645c3b1}\label{class_game_1_1_item_1_1_i__item__container_a5476ffcdedf11680b9725cc9d645c3b1} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!drop\_item@{drop\_item}}
+\index{drop\_item@{drop\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{drop\_item()}{drop\_item()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::drop\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c70ded4c0dcfff164b324f8f47d9533}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a976978e6d1370501c0264c8eb64ebdd1}\label{class_game_1_1_item_1_1_i__item__container_a976978e6d1370501c0264c8eb64ebdd1} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!empty\_slot\_count@{empty\_slot\_count}}
+\index{empty\_slot\_count@{empty\_slot\_count}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{empty\_slot\_count()}{empty\_slot\_count()}}
+{\footnotesize\ttfamily virtual int Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::empty\+\_\+slot\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8a1642ff2db820b92f3455cb56e3cc23}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a65881629cba060114bb0b164702947a9}\label{class_game_1_1_item_1_1_i__item__container_a65881629cba060114bb0b164702947a9} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_container\_id@{get\_container\_id}}
+\index{get\_container\_id@{get\_container\_id}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_container\_id()}{get\_container\_id()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+container\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a43b72492fc59106dce7a1f4ab80e9c6d}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_afb79d8ffeae8063348de447231d50c78}\label{class_game_1_1_item_1_1_i__item__container_afb79d8ffeae8063348de447231d50c78} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_container\_size@{get\_container\_size}}
+\index{get\_container\_size@{get\_container\_size}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_container\_size()}{get\_container\_size()}}
+{\footnotesize\ttfamily virtual int Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+container\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container__infinite_ab4c0db4dc750a5add92a0bda083ab3c7}{Game\+::\+Item\+::item\+\_\+container\+\_\+infinite}}, and \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a0a61cce966186ab723d2638cc16583ba}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a67b72d6df5178eb7981042f2354f13df}\label{class_game_1_1_item_1_1_i__item__container_a67b72d6df5178eb7981042f2354f13df} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_container\_type@{get\_container\_type}}
+\index{get\_container\_type@{get\_container\_type}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_container\_type()}{get\_container\_type()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+container\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a72012ff093703378a4f195b7ebc23749}{Game\+::\+Item\+::item\+\_\+container}}, \mbox{\hyperlink{class_game_1_1_item_1_1item__container__delete_a2487eb3fff78bf05793c2d647dd21e65}{Game\+::\+Item\+::item\+\_\+container\+\_\+delete}}, and \mbox{\hyperlink{class_game_1_1_item_1_1item__container__infinite_a35c6fbb32a805a4e3cf36d1431bf4505}{Game\+::\+Item\+::item\+\_\+container\+\_\+infinite}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a4a624d6c4a23081013db6f5e6a7bbd33}\label{class_game_1_1_item_1_1_i__item__container_a4a624d6c4a23081013db6f5e6a7bbd33} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_item@{get\_item}}
+\index{get\_item@{get\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_item()}{get\_item()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*} Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ab24dcfba887b2a85e826f8a036dcfa42}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a07f7bd8cc92cb0669bc1be406be0ed74}\label{class_game_1_1_item_1_1_i__item__container_a07f7bd8cc92cb0669bc1be406be0ed74} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_item\_filter\_type@{get\_item\_filter\_type}}
+\index{get\_item\_filter\_type@{get\_item\_filter\_type}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_item\_filter\_type()}{get\_item\_filter\_type()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+item\+\_\+filter\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a157137e21a8febb38a46a62c512e5673}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_ab495e1de6cf1ae0515959c4deb469ba6}\label{class_game_1_1_item_1_1_i__item__container_ab495e1de6cf1ae0515959c4deb469ba6} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!get\_item\_id@{get\_item\_id}}
+\index{get\_item\_id@{get\_item\_id}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{get\_item\_id()}{get\_item\_id()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::get\+\_\+item\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a00a21982310f69e6026d0e065077a00e}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_ad239b3c77f0324350e387d8e5a4fb5e3}\label{class_game_1_1_item_1_1_i__item__container_ad239b3c77f0324350e387d8e5a4fb5e3} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!is\_item\_can\_exist@{is\_item\_can\_exist}}
+\index{is\_item\_can\_exist@{is\_item\_can\_exist}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{is\_item\_can\_exist()}{is\_item\_can\_exist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::is\+\_\+item\+\_\+can\+\_\+exist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game\+::\+Item\+::item\+\_\+object}} \texorpdfstring{$\ast$}{*}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ac3ddd1f8c4432a5155446e72c1c38d90}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a2939a3e64b980cd0c935093f894262b4}\label{class_game_1_1_item_1_1_i__item__container_a2939a3e64b980cd0c935093f894262b4} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!is\_item\_can\_exist@{is\_item\_can\_exist}}
+\index{is\_item\_can\_exist@{is\_item\_can\_exist}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{is\_item\_can\_exist()}{is\_item\_can\_exist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::is\+\_\+item\+\_\+can\+\_\+exist (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{item\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8c0cdd78c2c0b3480ea9a10a20d0090d}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a19fcdd17c44b539ae02c12fc15eedd97}\label{class_game_1_1_item_1_1_i__item__container_a19fcdd17c44b539ae02c12fc15eedd97} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!is\_item\_exist@{is\_item\_exist}}
+\index{is\_item\_exist@{is\_item\_exist}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{is\_item\_exist()}{is\_item\_exist()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::is\+\_\+item\+\_\+exist (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8101922a61f7a8cbb43f5b7467bde45e}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_a571fb6089aec7edd16996d77380eb414}\label{class_game_1_1_item_1_1_i__item__container_a571fb6089aec7edd16996d77380eb414} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!remove\_from\_container@{remove\_from\_container}}
+\index{remove\_from\_container@{remove\_from\_container}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_container()}{remove\_from\_container()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}} Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::remove\+\_\+from\+\_\+container (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a7c9b2dfe122c0ba7020b27227dfb5213}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_ad8dc05b2f58b6281944c32aa2f546eab}\label{class_game_1_1_item_1_1_i__item__container_ad8dc05b2f58b6281944c32aa2f546eab} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!resize\_container@{resize\_container}}
+\index{resize\_container@{resize\_container}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{resize\_container()}{resize\_container()}}
+{\footnotesize\ttfamily virtual void Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::resize\+\_\+container (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container__infinite_ad30193c0323411da6ac12d7442725296}{Game\+::\+Item\+::item\+\_\+container\+\_\+infinite}}, and \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a974172bcb46de57d8d49dacfb1482962}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_abea4e635bc213410dffd4aed7ebb75ce}\label{class_game_1_1_item_1_1_i__item__container_abea4e635bc213410dffd4aed7ebb75ce} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!set\_item\_filter\_type@{set\_item\_filter\_type}}
+\index{set\_item\_filter\_type@{set\_item\_filter\_type}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{set\_item\_filter\_type()}{set\_item\_filter\_type()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::set\+\_\+item\+\_\+filter\+\_\+type (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{new\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_aefb665c97c6e053531fb6131751de8bb}{Game\+::\+Item\+::item\+\_\+container}}.
+
+\Hypertarget{class_game_1_1_item_1_1_i__item__container_ad251f09ab8660b408dc21a692445a510}\label{class_game_1_1_item_1_1_i__item__container_ad251f09ab8660b408dc21a692445a510} 
+\index{Game::Item::I\_item\_container@{Game::Item::I\_item\_container}!swap\_item@{swap\_item}}
+\index{swap\_item@{swap\_item}!Game::Item::I\_item\_container@{Game::Item::I\_item\_container}}
+\doxysubsubsection{\texorpdfstring{swap\_item()}{swap\_item()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Item\+::\+I\+\_\+item\+\_\+container\+::swap\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game\+::\+Item\+::item\+\_\+position\+\_\+data}} \&}]{pos\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a99d01d8a15905899257ed93392716b76}{Game\+::\+Item\+::item\+\_\+container}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_i__item__container_8h}{I\+\_\+item\+\_\+container.\+h}}\end{DoxyCompactItemize}

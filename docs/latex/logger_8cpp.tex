@@ -1,0 +1,68 @@
+\doxysection{src/logger.cpp File Reference}
+\hypertarget{logger_8cpp}{}\label{logger_8cpp}\index{src/logger.cpp@{src/logger.cpp}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}chrono"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/time.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/utility\+\_\+functions.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logger_8cpp_a8b1aa9abcf98cbc5b557e3954860cc43}{FUNC\+\_\+\+CONTEXT\+\_\+\+FORMAT\+\_\+\+FUNCNAME\+\_\+\+LINE}}~String("{}\{0\}\+:\{1\}"{})
+\item 
+\#define \mbox{\hyperlink{logger_8cpp_a50235b82c18ed84f5ea9322510358394}{TIME\+\_\+\+STRING\+\_\+\+FORMAT}}~String("{}\{0\}.\{1\}"{})
+\item 
+\#define \mbox{\hyperlink{logger_8cpp_afa0c1c203f756b286441f91c43a17227}{LOGGING\+\_\+\+FORMAT}}~String("{}\mbox{[}INF\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})
+\item 
+\#define \mbox{\hyperlink{logger_8cpp_a53a66c429a72bec911cceebd639486ee}{WARNING\+\_\+\+FORMAT}}~String("{}\mbox{[}WRN\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})
+\item 
+\#define \mbox{\hyperlink{logger_8cpp_a928a040a39d2b7874a996ca901f4b8b1}{ERROR\+\_\+\+FORMAT}}~String("{}\mbox{[}ERR\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_utils_1_1logger}{logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{logger_8cpp_a23fb1f7aa24bffd8efc093b62be89d45}{\+\_\+static\+\_\+logger\+\_\+obj}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{logger_8cpp_a928a040a39d2b7874a996ca901f4b8b1}\label{logger_8cpp_a928a040a39d2b7874a996ca901f4b8b1} 
+\index{logger.cpp@{logger.cpp}!ERROR\_FORMAT@{ERROR\_FORMAT}}
+\index{ERROR\_FORMAT@{ERROR\_FORMAT}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{ERROR\_FORMAT}{ERROR\_FORMAT}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+FORMAT~String("{}\mbox{[}ERR\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})}
+
+\Hypertarget{logger_8cpp_a8b1aa9abcf98cbc5b557e3954860cc43}\label{logger_8cpp_a8b1aa9abcf98cbc5b557e3954860cc43} 
+\index{logger.cpp@{logger.cpp}!FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE@{FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE}}
+\index{FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE@{FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE}{FUNC\_CONTEXT\_FORMAT\_FUNCNAME\_LINE}}
+{\footnotesize\ttfamily \#define FUNC\+\_\+\+CONTEXT\+\_\+\+FORMAT\+\_\+\+FUNCNAME\+\_\+\+LINE~String("{}\{0\}\+:\{1\}"{})}
+
+\Hypertarget{logger_8cpp_afa0c1c203f756b286441f91c43a17227}\label{logger_8cpp_afa0c1c203f756b286441f91c43a17227} 
+\index{logger.cpp@{logger.cpp}!LOGGING\_FORMAT@{LOGGING\_FORMAT}}
+\index{LOGGING\_FORMAT@{LOGGING\_FORMAT}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{LOGGING\_FORMAT}{LOGGING\_FORMAT}}
+{\footnotesize\ttfamily \#define LOGGING\+\_\+\+FORMAT~String("{}\mbox{[}INF\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})}
+
+\Hypertarget{logger_8cpp_a50235b82c18ed84f5ea9322510358394}\label{logger_8cpp_a50235b82c18ed84f5ea9322510358394} 
+\index{logger.cpp@{logger.cpp}!TIME\_STRING\_FORMAT@{TIME\_STRING\_FORMAT}}
+\index{TIME\_STRING\_FORMAT@{TIME\_STRING\_FORMAT}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{TIME\_STRING\_FORMAT}{TIME\_STRING\_FORMAT}}
+{\footnotesize\ttfamily \#define TIME\+\_\+\+STRING\+\_\+\+FORMAT~String("{}\{0\}.\{1\}"{})}
+
+\Hypertarget{logger_8cpp_a53a66c429a72bec911cceebd639486ee}\label{logger_8cpp_a53a66c429a72bec911cceebd639486ee} 
+\index{logger.cpp@{logger.cpp}!WARNING\_FORMAT@{WARNING\_FORMAT}}
+\index{WARNING\_FORMAT@{WARNING\_FORMAT}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{WARNING\_FORMAT}{WARNING\_FORMAT}}
+{\footnotesize\ttfamily \#define WARNING\+\_\+\+FORMAT~String("{}\mbox{[}WRN\mbox{]}\mbox{[}\{0\}\mbox{]} \{1\}"{})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{logger_8cpp_a23fb1f7aa24bffd8efc093b62be89d45}\label{logger_8cpp_a23fb1f7aa24bffd8efc093b62be89d45} 
+\index{logger.cpp@{logger.cpp}!\_static\_logger\_obj@{\_static\_logger\_obj}}
+\index{\_static\_logger\_obj@{\_static\_logger\_obj}!logger.cpp@{logger.cpp}}
+\doxysubsubsection{\texorpdfstring{\_static\_logger\_obj}{\_static\_logger\_obj}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_utils_1_1logger}{logger}}\texorpdfstring{$\ast$}{*} \+\_\+static\+\_\+logger\+\_\+obj = NULL}
+

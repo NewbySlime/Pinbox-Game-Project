@@ -1,0 +1,126 @@
+\doxysection{pinbox.\+h}
+\hypertarget{pinbox_8h_source}{}\label{pinbox_8h_source}\index{src/pinbox.h@{src/pinbox.h}}
+\mbox{\hyperlink{pinbox_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PINBOX\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PINBOX\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{damageable__object_8h}{damageable\_object.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dash_8h}{dash.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}game\_custom\_input.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__movement_8h}{I\_movement.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__world__entity__2d__handler_8h}{item\_world\_entity\_2d\_handler.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__dropper_8h}{item\_dropper.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__picker__area_8h}{item\_picker\_area.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifier__factory_8h}{modifier\_factory.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__container_8h}{subautoload\_container.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{time__scaler_8h}{time\_scaler.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__factory_8h}{weapon\_factory.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__handler_8h}{weapon\_handler.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/physics\_direct\_body\_state2d.hpp"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/timer.hpp"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/gpu\_particles2d.hpp"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/vector2.hpp"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1pinbox}{pinbox}}:\ \textcolor{keyword}{public}\ Game::damageable\_object,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_i__movement}{Game::I\_movement}}\{}
+\DoxyCodeLine{00032\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1pinbox}{pinbox}},\ Game::damageable\_object)}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ start\_player\_velocity)}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ hold\_action\_timeout)}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ bullet\_time\_scale)}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ bullet\_time\_scale\_smooth\_time)}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::Vector2,\ movement\_multiplier)}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ hitbox\_node)}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ particle\_node)}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ rigidbody\_collision\_body)}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ dash\_raycast)}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \_action\_key\_type\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ akt\_\_key\_mask\ =\ 0x00FF,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ akt\_no\_key\ =\ 0x0000,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ akt\_primary\_key\ =\ 0x0001,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ akt\_secondary\_key\ =\ 0x0002,}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ akt\_\_type\_mask\ =\ 0xFF00,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ akt\_normal\ =\ 0x0000,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ akt\_alternate\ =\ 0x0100}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}}*\ \_iwe2d\_handler;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ Game::game\_custom\_input*\ \_custom\_input;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1time__scaler}{Game::time\_scaler}}*\ \_time\_scaler;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ Game::damageable\_object*\ \_hitbox\_node;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ godot::GPUParticles2D*\ \_particle\_node;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ godot::Timer*\ \_hold\_action\_timer;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ godot::Timer*\ \_hold\_dash\_timer;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__dropper}{Game::Item::item\_dropper}}*\ \_item\_dropper;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{Game::Item::item\_picker\_area}}*\ \_item\_picker;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_input\_flags\ =\ 0;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_input\_flags\_prev\ =\ 0;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ uint32\_t\ \_bullet\_time\_counter\ =\ 0;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_player\_velocity;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ uint16\_t\ \_current\_action\ =\ \_action\_key\_type::akt\_no\_key;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1weapon__handler}{Game::weapon\_handler}}*\ \_primary\_action;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_i__action__class}{I\_action\_class}}*\ \_secondary\_action;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ uint16\_t\ \_current\_dash\_action\ =\ \_action\_key\_type::akt\_no\_key;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_functionality_1_1dash__action}{Game::EntityFunctionality::dash\_action}}*\ \_dash\_action;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ int32\_t\ \_time\_scale\_count\ =\ 0;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_hold\_action\_timer\_timeout();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_hold\_dash\_timer\_timeout();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_do\_bullet\_time();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_cancel\_bullet\_time();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_cancel\_all\_action();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_time\_scale\_slow\_down();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_time\_scale\_normal();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_acacfdb55b44702742fd3c638b8aa9912}{\_bind\_methods}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_ab8b40fd16a498702542cca3733519288}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_aceb4a642c2ad3c7f4909cb6583ba3582}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_a0b5f8d3197e51b988c0d91f4b0350d59}{\_on\_hp\_changed}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1pinbox_a12b1633471fa9078e0b77efd4a4a6a6d}{pinbox}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1pinbox_af2945c11a8ef401596b096a194a939cd}{\string~pinbox}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_a5d83f6b26550e2f2f703da7b9785eb4c}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_a979cd9267064c02166f3a43cc7b5d47c}{\_integrate\_forces}}(godot::PhysicsDirectBodyState2D*\ state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1pinbox_a953375c1f3cfeaa6fbeaf16812e19f76}{custom\_input}}(godot::Object*\ event);}
+\DoxyCodeLine{00117\ \ \ \};}
+\DoxyCodeLine{00118\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,91 @@
+\doxysection{Game\+::Entity\+::I\+\_\+vital\+\_\+object Class Reference}
+\hypertarget{class_game_1_1_entity_1_1_i__vital__object}{}\label{class_game_1_1_entity_1_1_i__vital__object}\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+
+
+{\ttfamily \#include $<$I\+\_\+vital\+\_\+object.\+h$>$}
+
+Inheritance diagram for Game\+::Entity\+::I\+\_\+vital\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_1_1_entity_1_1_i__vital__object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_afc23ce2a003b93464d792b28b8c5aeab}{do\+\_\+damage}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game\+::\+Entity\+::damage\+\_\+info}} \&d\+\_\+info)
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_ae619d72ea2c0c52a3cf329beb56a6cb8}{do\+\_\+heal}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game\+::\+Entity\+::heal\+\_\+info}} \&h\+\_\+info)
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_a0c61f43e19fbe549150db9d14b4dc1d9}{do\+\_\+revive}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game\+::\+Entity\+::revive\+\_\+info}} \&r\+\_\+info)
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_a8dd13b12bbe479df7b98f4dca85c3106}{get\+\_\+health\+\_\+point}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_adcb1b2d7299d4b1b2a6945e9e761f4b6}{use\+\_\+energy}} (const double e\+\_\+point)
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_ad571801df51fc63da906d698cba29b0c}{get\+\_\+energy\+\_\+point}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_afc23ce2a003b93464d792b28b8c5aeab}\label{class_game_1_1_entity_1_1_i__vital__object_afc23ce2a003b93464d792b28b8c5aeab} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!do\_damage@{do\_damage}}
+\index{do\_damage@{do\_damage}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{do\_damage()}{do\_damage()}}
+{\footnotesize\ttfamily virtual double Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::do\+\_\+damage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game\+::\+Entity\+::damage\+\_\+info}} \&}]{d\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a7b53ffd7d946c3339c195b14264ca791}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_ae619d72ea2c0c52a3cf329beb56a6cb8}\label{class_game_1_1_entity_1_1_i__vital__object_ae619d72ea2c0c52a3cf329beb56a6cb8} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!do\_heal@{do\_heal}}
+\index{do\_heal@{do\_heal}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{do\_heal()}{do\_heal()}}
+{\footnotesize\ttfamily virtual double Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::do\+\_\+heal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game\+::\+Entity\+::heal\+\_\+info}} \&}]{h\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ab2cf9e57ea8d7865057250b4a27e5375}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_a0c61f43e19fbe549150db9d14b4dc1d9}\label{class_game_1_1_entity_1_1_i__vital__object_a0c61f43e19fbe549150db9d14b4dc1d9} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!do\_revive@{do\_revive}}
+\index{do\_revive@{do\_revive}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{do\_revive()}{do\_revive()}}
+{\footnotesize\ttfamily virtual double Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::do\+\_\+revive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game\+::\+Entity\+::revive\+\_\+info}} \&}]{r\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a9bfdd6d1aef1a9249f00cf4c8277018b}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_ad571801df51fc63da906d698cba29b0c}\label{class_game_1_1_entity_1_1_i__vital__object_ad571801df51fc63da906d698cba29b0c} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!get\_energy\_point@{get\_energy\_point}}
+\index{get\_energy\_point@{get\_energy\_point}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{get\_energy\_point()}{get\_energy\_point()}}
+{\footnotesize\ttfamily virtual double Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::get\+\_\+energy\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a09ddaa4b3aac268389401690d13b4c32}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_a8dd13b12bbe479df7b98f4dca85c3106}\label{class_game_1_1_entity_1_1_i__vital__object_a8dd13b12bbe479df7b98f4dca85c3106} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!get\_health\_point@{get\_health\_point}}
+\index{get\_health\_point@{get\_health\_point}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{get\_health\_point()}{get\_health\_point()}}
+{\footnotesize\ttfamily virtual double Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::get\+\_\+health\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_game_1_1_entity_1_1_i__vital__object_adcb1b2d7299d4b1b2a6945e9e761f4b6}\label{class_game_1_1_entity_1_1_i__vital__object_adcb1b2d7299d4b1b2a6945e9e761f4b6} 
+\index{Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}!use\_energy@{use\_energy}}
+\index{use\_energy@{use\_energy}!Game::Entity::I\_vital\_object@{Game::Entity::I\_vital\_object}}
+\doxysubsubsection{\texorpdfstring{use\_energy()}{use\_energy()}}
+{\footnotesize\ttfamily virtual bool Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object\+::use\+\_\+energy (\begin{DoxyParamCaption}\item[{const double}]{e\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a2f71a76904e92d41cebf2209cef7bba9}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_i__vital__object_8h}{I\+\_\+vital\+\_\+object.\+h}}\end{DoxyCompactItemize}

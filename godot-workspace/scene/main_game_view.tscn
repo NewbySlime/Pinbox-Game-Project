@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://xxnbpjexd1rj"]
+
+[ext_resource type="Shader" path="res://scene/main_view_viewport.gdshader" id="1_ik5wi"]
+[ext_resource type="PackedScene" uid="uid://bprn3kmotbu7n" path="res://scene/counter_UI.tscn" id="3_54sa1"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_o6o10"]
+viewport_path = NodePath("SubViewportContainer/main_ui")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxci1"]
+resource_local_to_scene = true
+render_priority = 1
+transparency = 1
+no_depth_test = true
+albedo_texture = SubResource("ViewportTexture_o6o10")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bx4ub"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_fxci1")
+size = Vector2(1, 1.9)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_45pm7"]
+viewport_path = NodePath("SubViewportContainer/main_scene")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bresv"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_ik5wi")
+shader_parameter/_viewport_texture = SubResource("ViewportTexture_45pm7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tyduh"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_bresv")
+
+[sub_resource type="Environment" id="Environment_jv6hl"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_eyt5f"]
+
+[node name="Node3D" type="main_view_handler"]
+main_view_camera = NodePath("Camera3D")
+main_view_pointer = NodePath("Pointer")
+main_scene_viewport_mesh = NodePath("main_view")
+main_scene_viewport = NodePath("SubViewportContainer/main_scene")
+main_scene_min_size = 1000.0
+main_ui_viewport = NodePath("SubViewportContainer/main_ui")
+main_ui_viewport_mesh = NodePath("main_ui_view")
+main_ui_min_size = 500.0
+max_main_scene_camera_speed = 2000.0
+max_main_ui_viewport_tilt = 2.0
+process_mode = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="main_ui_view" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.965926, 0.258819, -1.13133e-08, 0, -4.37114e-08, -1, -0.258819, 0.965926, -4.2222e-08, -1.765, 0, -0.115)
+mesh = SubResource("PlaneMesh_bx4ub")
+skeleton = NodePath("../main_view")
+
+[node name="main_view" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_tyduh")
+skeleton = NodePath("")
+
+[node name="Pointer" type="RayCast3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.997564, -0.0697565, 0, 0.0697565, 0.997564, -0.65, -0.125, 1.1)
+environment = SubResource("Environment_jv6hl")
+current = true
+fov = 83.5
+size = 0.075
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1080.0
+offset_bottom = 1080.0
+scale = Vector2(1e-05, 1e-05)
+
+[node name="main_scene" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(800, 800)
+render_target_update_mode = 4
+
+[node name="main_ui" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(800, 800)
+render_target_update_mode = 4
+
+[node name="main_UI" parent="SubViewportContainer/main_ui" instance=ExtResource("3_54sa1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_eyt5f")

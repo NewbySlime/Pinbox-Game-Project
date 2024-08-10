@@ -1,0 +1,54 @@
+\doxysection{damage\+\_\+indicator.\+h}
+\hypertarget{damage__indicator_8h_source}{}\label{damage__indicator_8h_source}\index{src/damage\_indicator.h@{src/damage\_indicator.h}}
+\mbox{\hyperlink{damage__indicator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DAMAGE\_INDICATOR\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DAMAGE\_INDICATOR\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{damageable__object_8h}{damageable\_object.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rng__server_8h}{rng\_server.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/animation\_player.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/rich\_text\_label.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/rigid\_body2d.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_effect}{Game::Effect}}\{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator}{damage\_indicator}}:\ \textcolor{keyword}{public}\ godot\_sac::RigidBody2D\_sac\{}
+\DoxyCodeLine{00018\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator}{damage\_indicator}},\ godot\_sac::RigidBody2D\_sac)}
+\DoxyCodeLine{00019\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ animation\_node);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ rt\_label\_node);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ random\_angle\_min)}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ random\_angle\_max)}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ random\_speed\_min)}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ random\_speed\_max)}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1rng__server}{Game::rng\_server}}*\ \_rng\_server;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ godot::AnimationPlayer*\ \_animation\_node;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ godot::RichTextLabel*\ \_rt\_label\_node;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_animation\_done(godot::String\ animation\_id);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator_aeb7c82619edec5400856759fe7823cb7}{\_bind\_methods}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator_ada1dde535568c75e48193f35b263c5f8}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator_a20fe8e8f723a9ccdae8e32f9012a1a7d}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_effect_1_1damage__indicator_a972ff7441e10a6a9a4317f7bc6f2b7ea}{start\_indication}}(\textcolor{keywordtype}{double}\ damage);}
+\DoxyCodeLine{00045\ \ \ \};}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

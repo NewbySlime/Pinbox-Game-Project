@@ -1,0 +1,79 @@
+\doxysection{src/persistance\+\_\+context.h File Reference}
+\hypertarget{persistance__context_8h}{}\label{persistance__context_8h}\index{src/persistance\_context.h@{src/persistance\_context.h}}
+{\ttfamily \#include "{}I\+\_\+persistance\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}subautoload\+\_\+compatibles.\+h"{}}\newline
+{\ttfamily \#include "{}subdata\+\_\+container.\+h"{}}\newline
+{\ttfamily \#include "{}time.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context}{Game\+::\+Persistance\+::persistance\+\_\+context}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{Game\+::\+Persistance\+::persistance\+\_\+context\+::persistance\+\_\+metadata}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context__on__save__param}{Game\+::\+Persistance\+::persistance\+\_\+context\+\_\+on\+\_\+save\+\_\+param}}
+\item 
+class \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context__on__load__param}{Game\+::\+Persistance\+::persistance\+\_\+context\+\_\+on\+\_\+load\+\_\+param}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_persistance}{Game\+::\+Persistance}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_aa8cdb3c42b714778f3773c0bad6e15f7}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE}}~"{}spcos"{}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_ada3fad19ac38ca1e0750bdf7102fb528}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD}}~"{}spcol"{}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_aa0d73ce8f6000ed6922e426ea600ad1c}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE\+\_\+\+INITIATED}}~"{}spcosi"{}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_a412bfdf04a4a437c7c76a64b36fd956b}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD\+\_\+\+INITIATED}}~"{}spcoli"{}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_a77ab7787bb29c0bea57317e1f291eaa2}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE\+\_\+\+DONE}}~"{}spcosd"{}
+\item 
+\#define \mbox{\hyperlink{persistance__context_8h_a90bc5d5443e721c432a64da66c4d98ed}{SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD\+\_\+\+DONE}}~"{}spcold"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{persistance__context_8h_ada3fad19ac38ca1e0750bdf7102fb528}\label{persistance__context_8h_ada3fad19ac38ca1e0750bdf7102fb528} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD~"{}spcol"{}}
+
+\Hypertarget{persistance__context_8h_a90bc5d5443e721c432a64da66c4d98ed}\label{persistance__context_8h_a90bc5d5443e721c432a64da66c4d98ed} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD\+\_\+\+DONE~"{}spcold"{}}
+
+\Hypertarget{persistance__context_8h_a412bfdf04a4a437c7c76a64b36fd956b}\label{persistance__context_8h_a412bfdf04a4a437c7c76a64b36fd956b} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+LOAD\+\_\+\+INITIATED~"{}spcoli"{}}
+
+\Hypertarget{persistance__context_8h_aa8cdb3c42b714778f3773c0bad6e15f7}\label{persistance__context_8h_aa8cdb3c42b714778f3773c0bad6e15f7} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE~"{}spcos"{}}
+
+\Hypertarget{persistance__context_8h_a77ab7787bb29c0bea57317e1f291eaa2}\label{persistance__context_8h_a77ab7787bb29c0bea57317e1f291eaa2} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE\+\_\+\+DONE~"{}spcosd"{}}
+
+\Hypertarget{persistance__context_8h_aa0d73ce8f6000ed6922e426ea600ad1c}\label{persistance__context_8h_aa0d73ce8f6000ed6922e426ea600ad1c} 
+\index{persistance\_context.h@{persistance\_context.h}!SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED}}
+\index{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED@{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED}!persistance\_context.h@{persistance\_context.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED}{SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PERSISTANCE\+\_\+\+CONTEXT\+\_\+\+ON\+\_\+\+SAVE\+\_\+\+INITIATED~"{}spcosi"{}}
+

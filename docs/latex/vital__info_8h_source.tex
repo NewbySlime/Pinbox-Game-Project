@@ -1,0 +1,46 @@
+\doxysection{vital\+\_\+info.\+h}
+\hypertarget{vital__info_8h_source}{}\label{vital__info_8h_source}\index{src/vital\_info.h@{src/vital\_info.h}}
+\mbox{\hyperlink{vital__info_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VITAL\_INFO\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VITAL\_INFO\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1vital__info}{vital\_info}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_max\_health\_point;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_max\_energy\_point;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_ep\_restore\_delay;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_ep\_restore\_rate;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_parse\_data(\textcolor{keyword}{const}\ godot::Dictionary\&\ \_data\_part);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_a2518f44df6bdb423feb6fc8bf3d1b6d9}{\string~vital\_info}}()\{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_ad086e7c38fabead7fdd30477bccf83bf}{get\_subdata\_name}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_addd9cdf6cad65cb7b3c02dc97768325d}{parse\_dictionary\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem,\ godot::Dictionary*\ data);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_a169afa4ff7ff15f8e2169b34beb67be5}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_ad056b3569c5965c5399c37931c3b17cc}{get\_max\_hp}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_a03bd63e84d740a276cd30511d62d6d09}{get\_max\_ep}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_a3ac9a795677d319947fdc927afe83d26}{get\_ep\_restore\_delay}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_1_1_entity_1_1vital__info_a0e3e5aa573266be4dd974bb8a481f090}{get\_ep\_restore\_rate}}();}
+\DoxyCodeLine{00037\ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

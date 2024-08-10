@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3xhyjr1ce8gb"]
+
+[ext_resource type="Texture2D" uid="uid://dv7cqxel1ih3x" path="res://resource/flipper.png" id="1_cjvhy"]
+[ext_resource type="Script" path="res://gdscripts/flipper.gd" id="1_ktbhx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_21j5u"]
+friction = 0.15
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_n62h7"]
+points = PackedVector2Array(-27.54, 0, -7.445, -25.5, 91.52, -16.41, 109.36, 3.98, 73.8, 22.83, -6.085, 23.99)
+
+[node name="flipper" type="RigidBody2D"]
+rotation = 0.261799
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_21j5u")
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_ktbhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(42, 0)
+scale = Vector2(8.42188, 8.42188)
+texture = ExtResource("1_cjvhy")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_n62h7")

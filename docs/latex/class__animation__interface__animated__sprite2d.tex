@@ -1,0 +1,298 @@
+\doxysection{\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d Class Reference}
+\hypertarget{class__animation__interface__animated__sprite2d}{}\label{class__animation__interface__animated__sprite2d}\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+Inheritance diagram for \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class__animation__interface__animated__sprite2d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class__animation__interface__animated__sprite2d_a0cc6ec422f7be37655ec4a2799c87c77}{\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d}} (Animated\+Sprite2D \texorpdfstring{$\ast$}{*}anim\+\_\+node)
+\item 
+\mbox{\hyperlink{class__animation__interface__animated__sprite2d_ade234f14c1bc59c8d74dece1820d6954}{\texorpdfstring{$\sim$}{\string~}\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d}} ()
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a0a9b8d15d24d7a8f3b4a21435178fec5}{play}} (String\+Name name, float custom\+\_\+blend, float custom\+\_\+speed, bool from\+\_\+end) override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a0e51eaff7769fc5dd4d410d7fc5be4ab}{play\+\_\+backwards}} (String\+Name name, float custom\+\_\+blend) override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_ad6ec228763bb15cc43be45a2e6bbc5ae}{pause}} () override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a6e3b74fea3aa0e387d428a6e00cb302f}{stop}} () override
+\item 
+bool \mbox{\hyperlink{class__animation__interface__animated__sprite2d_adb1da6975426b778b06da9a1b398ec7e}{is\+\_\+playing}} () const override
+\item 
+float \mbox{\hyperlink{class__animation__interface__animated__sprite2d_ac7351b6cf768564829b5d669744f086f}{get\+\_\+speed\+\_\+scale}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_aa3bd32cdaca3e8b8ef6dc4ef08ed5184}{set\+\_\+speed\+\_\+scale}} (float speed) override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a292da6503e13145745642da9f2fa0107}{seek}} (float seconds, bool update, bool update\+\_\+only)
+\item 
+float \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a2f93b9d640b575c001f122cf86251c7e}{get\+\_\+animation\+\_\+length}} () const override
+\item 
+float \mbox{\hyperlink{class__animation__interface__animated__sprite2d_aa8c2dbaf15dbe478e1f78dc7aba81a83}{get\+\_\+animation\+\_\+position}} () const override
+\item 
+bool \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a213ae5131f2ddf6512ec3b2245878922}{get\+\_\+looping}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a17d833bf800be3d55741809ab9e8cdf4}{set\+\_\+looping}} (bool looping) override
+\item 
+bool \mbox{\hyperlink{class__animation__interface__animated__sprite2d_aacaf58f52aa69def13dec39e65bdc7fc}{get\+\_\+centered}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a7c07bccd3d108c42d6f9bd825e1fe967}{set\+\_\+centered}} (bool centered) override
+\item 
+bool \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a6018f1bcbcfda583e278edf6c53b1e34}{get\+\_\+flip\+\_\+h}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_af154df2415182d8e691d91873adf0bee}{set\+\_\+flip\+\_\+h}} (bool flip) override
+\item 
+bool \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a8274cc6f77810a972dfda6249b1d8ca4}{get\+\_\+flip\+\_\+v}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a8e309bab0799b9ee8be1a5756352bebc}{set\+\_\+flip\+\_\+v}} (bool flip) override
+\item 
+Vector2 \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a80236bfdd69dbada694c912259d906da}{get\+\_\+offset}} () const override
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a7fac51f93a33c99b1e0391b0b3ee2c52}{set\+\_\+offset}} (Vector2 offset)
+\item 
+void \mbox{\hyperlink{class__animation__interface__animated__sprite2d_ab833f11e1781aec138b12003e23f258d}{on\+\_\+update}} (String\+Name anim\+\_\+name) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{Game\+::\+Animation\+::\+I\+\_\+animation}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a004ed17f412baea49049b4c14789ea63}{\texorpdfstring{$\sim$}{\string~}\+I\+\_\+animation}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_aa3a24e63fdd93f6b3048645d82685ec2}{play}} (godot\+::\+String\+Name name="{}"{}, float custom\+\_\+blend=-\/1, float custom\+\_\+speed=1, bool from\+\_\+end=false)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a77c9ccfec705f87c74e4bb3fce5993e2}{play\+\_\+backwards}} (godot\+::\+String\+Name name="{}"{}, float custom\+\_\+blend=-\/1)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ae6f08b50c04241ef3c6ae86f6962ff62}{set\+\_\+offset}} (godot\+::\+Vector2 offset)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af2c0208ab8a7f15834b48d0a28569185}{on\+\_\+update}} (godot\+::\+String\+Name anim\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\+\_\+animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class__animation__interface__animated__sprite2d_a04f89ed39c00b75532dca5fb1ef7e0e0}{create\+\_\+this\+\_\+interface}} (Node \texorpdfstring{$\ast$}{*}this\+\_\+node)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class__animation__interface__animated__sprite2d_a0cc6ec422f7be37655ec4a2799c87c77}\label{class__animation__interface__animated__sprite2d_a0cc6ec422f7be37655ec4a2799c87c77} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{\_animation\_interface\_animated\_sprite2d()}{\_animation\_interface\_animated\_sprite2d()}}
+{\footnotesize\ttfamily \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d (\begin{DoxyParamCaption}\item[{Animated\+Sprite2D \texorpdfstring{$\ast$}{*}}]{anim\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_ade234f14c1bc59c8d74dece1820d6954}\label{class__animation__interface__animated__sprite2d_ade234f14c1bc59c8d74dece1820d6954} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!````~\_animation\_interface\_animated\_sprite2d@{\texorpdfstring{$\sim$}{\string~}\_animation\_interface\_animated\_sprite2d}}
+\index{````~\_animation\_interface\_animated\_sprite2d@{\texorpdfstring{$\sim$}{\string~}\_animation\_interface\_animated\_sprite2d}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}\_animation\_interface\_animated\_sprite2d()}{\string~\_animation\_interface\_animated\_sprite2d()}}
+{\footnotesize\ttfamily \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::\texorpdfstring{$\sim$}{\string~}\+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class__animation__interface__animated__sprite2d_a04f89ed39c00b75532dca5fb1ef7e0e0}\label{class__animation__interface__animated__sprite2d_a04f89ed39c00b75532dca5fb1ef7e0e0} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!create\_this\_interface@{create\_this\_interface}}
+\index{create\_this\_interface@{create\_this\_interface}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{create\_this\_interface()}{create\_this\_interface()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation}{I\+\_\+animation}} \texorpdfstring{$\ast$}{*} \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::create\+\_\+this\+\_\+interface (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{this\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a2f93b9d640b575c001f122cf86251c7e}\label{class__animation__interface__animated__sprite2d_a2f93b9d640b575c001f122cf86251c7e} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_animation\_length@{get\_animation\_length}}
+\index{get\_animation\_length@{get\_animation\_length}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_animation\_length()}{get\_animation\_length()}}
+{\footnotesize\ttfamily float \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+animation\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac15e47cb6337b536c81a8d20b7651c9d}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_aa8c2dbaf15dbe478e1f78dc7aba81a83}\label{class__animation__interface__animated__sprite2d_aa8c2dbaf15dbe478e1f78dc7aba81a83} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_animation\_position@{get\_animation\_position}}
+\index{get\_animation\_position@{get\_animation\_position}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_animation\_position()}{get\_animation\_position()}}
+{\footnotesize\ttfamily float \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+animation\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ab31bb75c340bff5167b26330b47ceccb}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_aacaf58f52aa69def13dec39e65bdc7fc}\label{class__animation__interface__animated__sprite2d_aacaf58f52aa69def13dec39e65bdc7fc} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_centered@{get\_centered}}
+\index{get\_centered@{get\_centered}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_centered()}{get\_centered()}}
+{\footnotesize\ttfamily bool \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+centered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_adff1b5bcc7d3ca368337f46ad237dcba}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a6018f1bcbcfda583e278edf6c53b1e34}\label{class__animation__interface__animated__sprite2d_a6018f1bcbcfda583e278edf6c53b1e34} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_flip\_h@{get\_flip\_h}}
+\index{get\_flip\_h@{get\_flip\_h}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_flip\_h()}{get\_flip\_h()}}
+{\footnotesize\ttfamily bool \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+flip\+\_\+h (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a195b142f9755e8c341164ee654559f47}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a8274cc6f77810a972dfda6249b1d8ca4}\label{class__animation__interface__animated__sprite2d_a8274cc6f77810a972dfda6249b1d8ca4} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_flip\_v@{get\_flip\_v}}
+\index{get\_flip\_v@{get\_flip\_v}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_flip\_v()}{get\_flip\_v()}}
+{\footnotesize\ttfamily bool \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+flip\+\_\+v (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a96e4ef413daa6a6f3c24e8223404571d}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a213ae5131f2ddf6512ec3b2245878922}\label{class__animation__interface__animated__sprite2d_a213ae5131f2ddf6512ec3b2245878922} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_looping@{get\_looping}}
+\index{get\_looping@{get\_looping}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_looping()}{get\_looping()}}
+{\footnotesize\ttfamily bool \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+looping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac29e62786a83c5f74138ddb1e65b8044}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a80236bfdd69dbada694c912259d906da}\label{class__animation__interface__animated__sprite2d_a80236bfdd69dbada694c912259d906da} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_offset@{get\_offset}}
+\index{get\_offset@{get\_offset}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_offset()}{get\_offset()}}
+{\footnotesize\ttfamily Vector2 \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af98c13a7ab4781e3a2d4c26cbebec3c2}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_ac7351b6cf768564829b5d669744f086f}\label{class__animation__interface__animated__sprite2d_ac7351b6cf768564829b5d669744f086f} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!get\_speed\_scale@{get\_speed\_scale}}
+\index{get\_speed\_scale@{get\_speed\_scale}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{get\_speed\_scale()}{get\_speed\_scale()}}
+{\footnotesize\ttfamily float \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::get\+\_\+speed\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_acec5592ea2eac3087ddb35efd3ae1fbc}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_adb1da6975426b778b06da9a1b398ec7e}\label{class__animation__interface__animated__sprite2d_adb1da6975426b778b06da9a1b398ec7e} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!is\_playing@{is\_playing}}
+\index{is\_playing@{is\_playing}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{is\_playing()}{is\_playing()}}
+{\footnotesize\ttfamily bool \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::is\+\_\+playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_af0018d6e1ed977d3b0a9f2dec3e71699}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_ab833f11e1781aec138b12003e23f258d}\label{class__animation__interface__animated__sprite2d_ab833f11e1781aec138b12003e23f258d} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!on\_update@{on\_update}}
+\index{on\_update@{on\_update}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{on\_update()}{on\_update()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::on\+\_\+update (\begin{DoxyParamCaption}\item[{String\+Name}]{anim\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_ad6ec228763bb15cc43be45a2e6bbc5ae}\label{class__animation__interface__animated__sprite2d_ad6ec228763bb15cc43be45a2e6bbc5ae} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!pause@{pause}}
+\index{pause@{pause}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ac461d44d34350859af709b4d713fb22e}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a0a9b8d15d24d7a8f3b4a21435178fec5}\label{class__animation__interface__animated__sprite2d_a0a9b8d15d24d7a8f3b4a21435178fec5} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!play@{play}}
+\index{play@{play}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::play (\begin{DoxyParamCaption}\item[{String\+Name}]{name,  }\item[{float}]{custom\+\_\+blend,  }\item[{float}]{custom\+\_\+speed,  }\item[{bool}]{from\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a0e51eaff7769fc5dd4d410d7fc5be4ab}\label{class__animation__interface__animated__sprite2d_a0e51eaff7769fc5dd4d410d7fc5be4ab} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!play\_backwards@{play\_backwards}}
+\index{play\_backwards@{play\_backwards}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{play\_backwards()}{play\_backwards()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::play\+\_\+backwards (\begin{DoxyParamCaption}\item[{String\+Name}]{name,  }\item[{float}]{custom\+\_\+blend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a292da6503e13145745642da9f2fa0107}\label{class__animation__interface__animated__sprite2d_a292da6503e13145745642da9f2fa0107} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!seek@{seek}}
+\index{seek@{seek}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::seek (\begin{DoxyParamCaption}\item[{float}]{seconds,  }\item[{bool}]{update,  }\item[{bool}]{update\+\_\+only }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a80f63cb4d6dfe412a9d623209a7c48e6}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a7c07bccd3d108c42d6f9bd825e1fe967}\label{class__animation__interface__animated__sprite2d_a7c07bccd3d108c42d6f9bd825e1fe967} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_centered@{set\_centered}}
+\index{set\_centered@{set\_centered}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_centered()}{set\_centered()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+centered (\begin{DoxyParamCaption}\item[{bool}]{centered }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a0c9d8c2c7ac1f1ce3f71740b7cedf6d3}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_af154df2415182d8e691d91873adf0bee}\label{class__animation__interface__animated__sprite2d_af154df2415182d8e691d91873adf0bee} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_flip\_h@{set\_flip\_h}}
+\index{set\_flip\_h@{set\_flip\_h}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_flip\_h()}{set\_flip\_h()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+flip\+\_\+h (\begin{DoxyParamCaption}\item[{bool}]{flip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a7a1cfe9389fd34f4e8824fc1b83e7281}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a8e309bab0799b9ee8be1a5756352bebc}\label{class__animation__interface__animated__sprite2d_a8e309bab0799b9ee8be1a5756352bebc} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_flip\_v@{set\_flip\_v}}
+\index{set\_flip\_v@{set\_flip\_v}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_flip\_v()}{set\_flip\_v()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+flip\+\_\+v (\begin{DoxyParamCaption}\item[{bool}]{flip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_aeead56e3145d30bc75de6cd9dfa8babe}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a17d833bf800be3d55741809ab9e8cdf4}\label{class__animation__interface__animated__sprite2d_a17d833bf800be3d55741809ab9e8cdf4} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_looping@{set\_looping}}
+\index{set\_looping@{set\_looping}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_looping()}{set\_looping()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+looping (\begin{DoxyParamCaption}\item[{bool}]{looping }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a1eef4dbddadb0f6872334dcbb445fbf8}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a7fac51f93a33c99b1e0391b0b3ee2c52}\label{class__animation__interface__animated__sprite2d_a7fac51f93a33c99b1e0391b0b3ee2c52} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_offset@{set\_offset}}
+\index{set\_offset@{set\_offset}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_offset()}{set\_offset()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+offset (\begin{DoxyParamCaption}\item[{Vector2}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class__animation__interface__animated__sprite2d_aa3bd32cdaca3e8b8ef6dc4ef08ed5184}\label{class__animation__interface__animated__sprite2d_aa3bd32cdaca3e8b8ef6dc4ef08ed5184} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!set\_speed\_scale@{set\_speed\_scale}}
+\index{set\_speed\_scale@{set\_speed\_scale}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{set\_speed\_scale()}{set\_speed\_scale()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::set\+\_\+speed\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_ad071f6332bc4badec6c67cc364f401fc}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+\Hypertarget{class__animation__interface__animated__sprite2d_a6e3b74fea3aa0e387d428a6e00cb302f}\label{class__animation__interface__animated__sprite2d_a6e3b74fea3aa0e387d428a6e00cb302f} 
+\index{\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}!stop@{stop}}
+\index{stop@{stop}!\_animation\_interface\_animated\_sprite2d@{\_animation\_interface\_animated\_sprite2d}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void \+\_\+animation\+\_\+interface\+\_\+animated\+\_\+sprite2d\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_animation_1_1_i__animation_a4c6ed51b52d748213d1329c2d2f68782}{Game\+::\+Animation\+::\+I\+\_\+animation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{animation__interfacer_8cpp}{animation\+\_\+interfacer.\+cpp}}\end{DoxyCompactItemize}

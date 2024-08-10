@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhy660u7paogm"]
+
+[ext_resource type="PackedScene" uid="uid://b1uw21nacbjvp" path="res://scene/game_object/UI/item_container_control.tscn" id="1_kkvme"]
+
+[node name="inventory_control2" type="inventory_control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="item_container_control" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_kkvme")]
+use_premade_container = true
+premade_container_id = 2
+max_size = 60
+frame_horizontal_count = 4
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="item_container_control" parent="HBoxContainer" instance=ExtResource("1_kkvme")]
+use_premade_container = true
+premade_container_id = 1
+max_size = 60
+frame_horizontal_count = 4
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2

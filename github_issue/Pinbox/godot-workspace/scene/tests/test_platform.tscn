@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://btvcswdhbfofs"]
+
+[ext_resource type="Texture2D" uid="uid://coj1pp3wx2fvu" path="res://icon.svg" id="1_518c1"]
+[ext_resource type="PackedScene" uid="uid://bnf6al7xhi3qr" path="res://scene/game_object/pinbox.tscn" id="2_rvrb7"]
+[ext_resource type="PackedScene" uid="uid://b3xhyjr1ce8gb" path="res://scene/game_object/flipper.tscn" id="3_hyog4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mv4jw"]
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wqh8"]
+size = Vector2(1154, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(560, 617)
+physics_material_override = SubResource("PhysicsMaterial_mv4jw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+z_index = -1
+scale = Vector2(9.84, 1)
+texture = ExtResource("1_518c1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(14, 0)
+shape = SubResource("RectangleShape2D_2wqh8")
+
+[node name="pinbox" parent="." instance=ExtResource("2_rvrb7")]
+position = Vector2(344, 50)
+
+[node name="flipper" parent="." instance=ExtResource("3_hyog4")]
+position = Vector2(284, 458)
+rotation = 0.0
+_max_turn = 35.0
+_turn_speed = 10000.0
+
+[node name="pinbox2" parent="." instance=ExtResource("2_rvrb7")]
+position = Vector2(720, 50)
+
+[node name="flipper2" parent="." instance=ExtResource("3_hyog4")]
+position = Vector2(660, 458)
+rotation = 0.0
+_prevention = false
+_max_turn = 35.0
+_turn_speed = 10000.0

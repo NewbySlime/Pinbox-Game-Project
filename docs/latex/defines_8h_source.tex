@@ -1,0 +1,254 @@
+\doxysection{defines.\+h}
+\hypertarget{defines_8h_source}{}\label{defines_8h_source}\index{src/defines.h@{src/defines.h}}
+\mbox{\hyperlink{defines_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEFINES\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEFINES\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifdef\ \_WIN64}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}windows.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_\_LOCK\_MUTEX(mutex)\ WaitForSingleObject(mutex,\ INFINITE)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_RELEASE\_MUTEX(mutex)\ ReleaseMutex(mutex)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ collision\ layers}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_STATIC\_LAYER\ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_COLLISION\_LAYER\ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_ITEM\_LAYER\ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_PROJECTILE\_LAYER\ \ \ \ 0x20000000}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_ENEMY\_LAYER\ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ COLLISION\_LAYER\_PLAYER\_LAYER\ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ format:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ 0\ -\/\ The\ save\ identifier}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ SAVEFILE\_PATH\ "{}user://players/\{0\}/save.dat"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ CHARSYMBOL\_KEY\_SPLIT\ "{}."{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ VARNAME\_COMBO\_TRACKER\_LOGO\_SPRITE\_DIR\ "{}logo\_sprite\_dir"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VARNAME\_COMBO\_TRACKER\_BASE\_LIMIT\ "{}base\_limit"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ VARNAME\_COMBO\_TRACKER\_BASE\_MULTIPLIER\ "{}base\_multiplier"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ VARNAME\_COMBO\_TRACKER\_MAX\_MULTIPLIER\ "{}max\_multiplier"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ VARNAME\_COMBO\_TRACKER\_MULTIPLIER\_DECREMENT\ "{}multiplier\_decrement"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_DATA\_NAME\ "{}name"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_DATA\_DESCRIPTION\ "{}desc"{}}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ VARNAME\_WEAPON\_STATS\ "{}weapon\_stats"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY\ VARNAME\_WEAPON\_STATS\ "{}:primary"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY\ \ VARNAME\_WEAPON\_STATS\ "{}:secondary"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_DAMAGE\ "{}damage"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_ENERGY\_COST\ "{}energy\_cost"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_ALTERNATE\ "{}alternate\_data"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_ALTERNATE\_WEAPON\_STATS\ VARNAME\_WEAPON\_STATS}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_HITREG\_DATA\ "{}hitreg\_data"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TYPE\ "{}type"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_MAX\_LENGTH\ "{}max\_length"{}}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_TIME\ "{}time"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_HITREG\_DATA\_NEXT\_NODE\ "{}next\_node"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_CHARGE\_DELAY\ "{}charge\_delay"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\ "{}fire\_mode"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_SINGLE\ "{}single\_fire"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_BURST\ "{}burst\_fire"{}}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_AUTOMATIC\ "{}automatic"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_FULL\_EXHAUST\ "{}full\_exhaust"{}}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_MODE\_CHARGE\ "{}charge"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_FIRE\_RATE\ "{}fire\_rate"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_TAP\_RATE\ "{}tap\_rate"{}}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_WEAPON\_STATS\_BURST\_COUNT\ "{}burst\_count"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ VARNAME\_CONSUMABLE\_STATS\ "{}consumable\_stats"{}}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_CONSUMABLE\_STATS\_HEAL\ "{}heal"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_CONSUMABLE\_STATS\_IS\_THROWABLE\ "{}is\_throwable"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_POUCH\_DATA\ "{}item\_pouch\_data"{}}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ITEM\_POUCH\_DATA\_SIZE\ "{}pouch\_size"{}}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ITEM\_POUCH\_DATA\_TYPE\ "{}container\_type"{}}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ITEM\_POUCH\_DATA\_FILTER\ "{}item\_filter"{}}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_RESOURCE\_DATA\ "{}item\_resource\_data"{}}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ITEM\_RES\_EQUIPPABLE\_SPRITE\_DATA\ "{}equippable\_sprite"{},}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ITEM\_RES\_ITEM\_SPRITE\_DATA\ "{}item\_sprite"{}}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ VARNAME\_SPRITE\_RESOURCE\_DATA\_STATIC\ "{}static\_sprite"{}}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATED\ "{}animated\_sprite"{}}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ VARNAME\_SPRITE\_RESOURCE\_DATA\_ANIMATION\_LIB\ "{}animation\_library"{}}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ VARNAME\_SPRITE\_RESOURCE\_DATA\_CUSTOM\ "{}custom\_object\_sprite"{}}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ VARNAME\_VITAL\_INFO\ "{}vital\_info"{}}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_VITAL\_INFO\_MAX\_HEALTH\ "{}max\_health\_point"{}}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_VITAL\_INFO\_MAX\_ENERGY\ "{}max\_energy\_point"{}}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_VITAL\_INFO\_EP\_RESTORE\_DELAY\ "{}ep\_restore\_delay"{}}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_VITAL\_INFO\_EP\_RESTORE\_RATE\ "{}ep\_restore\_rate"{}}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ VARNAME\_INVENTORY\_CONFIG\ "{}inventory\_config"{}}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_INVENTORY\_CONFIG\_TYPE\ "{}inventory\_type"{}}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_INVENTORY\_CONFIG\_SIZE\ "{}size"{}}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ VARNAME\_ENTITY\_DATA\ "{}entity\_data"{}}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_NAME\ "{}name"{}}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_DESCRIPTION\ "{}description"{}}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_TYPE\_CLASS\ "{}type\_class"{}}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_VITAL\_INFO\ VARNAME\_VITAL\_INFO}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_INVENTORY\_CONFIG\ "{}inventory"{}}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\ \ \#define\ VARNAME\_ENTITY\_DATA\_LOADOUT\_INVENTORY\_CONFIG\ "{}loadout\_inventory"{}}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ VARNAME\_MODIFIER\_DATA\_CHANCE\_SCORE\ "{}chance\_score"{}}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ VARNAME\_MODIFIER\_DATA\_MODIFIER\_DATA\ "{}modifier\_data"{}}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_DATA\_IMAGE\_PATH\ "{}image\_path"{}}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ VARNAME\_ITEM\_CONTAINER\_PREMADE\_DATA\_SIZE\ "{}size"{}}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ ITEM\_DATA\_HITREG\_DATA\_START\_ID\ "{}0"{}}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ ITEM\_TYPENAME\_CONSUMABLE\ "{}consumable"{}}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ ITEM\_TYPENAME\_MATERIAL\ "{}material"{}}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ ITEM\_TYPENAME\_MODIFIER\ "{}modifier"{}}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ ITEM\_TYPENAME\_WEAPON\ "{}weapon"{}}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ ENTITY\_TYPENAME\_ENEMY\ "{}enemy"{}}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ ENTITY\_TYPENAME\_NPC\ "{}npc"{}}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ ENTITY\_TYPENAME\_PLAYER\ "{}player"{}}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ VARNAME\_ENTITY\_SCENE\_CLASS\_PATH\ "{}scene\_path"{}}}
+\DoxyCodeLine{00117\ \ \ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ \_CREATE\_CHECKER\_DICT1(key,\ varname,\ type)\(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ if(\_v.get\_type()\ !=\ type)\{\(\backslash\)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(key);\(\backslash\)}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(varname);\(\backslash\)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(Variant::get\_type\_name(type));\(\backslash\)}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\ \ \ \ throw\ Game::Error::gdstr\_exception(String("{}(\{0\}:\{1\})\ is\ not\ \{2\}."{}).format(\_paramarr));\(\backslash\)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ \_CREATE\_CHECKER\_DICT2(key,\ varname,\ type)\(\backslash\)}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\ \ \_v\ =\ \_data\_part[varname];\(\backslash\)}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \_CREATE\_CHECKER\_DICT1(key,\ varname,\ type)}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ \_CREATE\_CHECKER\_PACKED\_SCENE(pck,\ classname)\(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ if(!pck-\/>is\_class(\#classname))\{\(\backslash\)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(pck-\/>get\_path());\(\backslash\)}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(\#classname);\(\backslash\)}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\ \ \ \ throw\ Game::Error::gdstr\_exception(String("{}File\ '\{0\}'\ is\ not\ \{1\}."{}).format(\_paramarr));\(\backslash\)}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ CREATE\_LOAD\_RESOURCE\_CHECKER(target,\ path,\ type)\ \{\(\backslash\)}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\ \ godot::ResourceLoader*\ \_\_macro\_res\_loader\ =\ godot::ResourceLoader::get\_singleton();\(\backslash\)}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\ \ godot::Ref<godot::Resource>\ \_\_macro\_var\_res\ =\ \_\_macro\_res\_loader-\/>load(path);\(\backslash\)}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \ target\ =\ Ref<type>();\(\backslash\)}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\ \ if(\_\_macro\_var\_res.ptr())\{\(\backslash\)}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\ \ \ \ if(\_\_macro\_var\_res-\/>is\_class(\#type))\(\backslash\)}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\ \ \ \ \ \ target\ =\ \_\_macro\_var\_res;\(\backslash\)}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\ \ \ \ else\{\(\backslash\)}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.append(path);\(\backslash\)}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.append(\#type);\(\backslash\)}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\ \ \ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\ \ \ \ \ \ ERR\_ASSERT(String("{}Resource\ (\{0\})\ loaded\ is\ not\ a\ type\ of\ \{1\}."{}).format(\_paramarr))\(\backslash\)}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\ \ \}\(\backslash\)}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\ \ else\{\(\backslash\)}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.append(path);\(\backslash\)}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\ \ \ \ ERR\_ASSERT(String("{}Resource\ (\{0\})\ cannot\ be\ loaded."{}).format(\_paramarr))\(\backslash\)}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\ \ \}\(\backslash\)}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\}}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ CREATE\_LOAD\_PACKED\_SCENE\_CHECKER(target,\ path,\ instantiated\_type)\(\backslash\)}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\ \ CREATE\_LOAD\_RESOURCE\_CHECKER(target,\ path,\ PackedScene)\(\backslash\)}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\ \ if(target.is\_valid())\{\(\backslash\)}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\ \ \ \ Node*\ \_\_macro\_test\_node\ =\ target-\/>instantiate();\(\backslash\)}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\ \ \ \ if(!\_\_macro\_test\_node-\/>is\_class(instantiated\_type::get\_class\_static()))\{\(\backslash\)}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\ \ \ \ \ \ ERR\_ASSERT(String("{}Instantiated\ godot::PackedScene\ is\ not\ a(n)\ "{}\ \#instantiated\_type))\(\backslash\)}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ CREATE\_GET\_NODE\_TESTER(target,\ node\_path,\ type)\{\(\backslash\)}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\ \ \ \ target\ =\ NULL;\(\backslash\)}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\ \ \ \ godot::Node*\ \_\_macro\_test\_node\ =\ get\_node<godot::Node>(node\_path);\(\backslash\)}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\ \ \ \ if(\_\_macro\_test\_node)\{\(\backslash\)}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\ \ \ \ \ \ if(\_\_macro\_test\_node-\/>is\_class(\#type))\(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ target\ =\ (type*)\_\_macro\_test\_node;\(\backslash\)}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\ \ \ \ \ \ else\{\(\backslash\)}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \_paramarr.append(node\_path);\(\backslash\)}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \_paramarr.append(\#type);\(\backslash\)}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ ERR\_ASSERT(String("{}Fetched\ node\ (path:\ \{0\}),\ isn't\ a\ type\ of\ '\{1\}'."{}).format(\_paramarr))\(\backslash\)}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\ \ \ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\ \ \ \ else\{\(\backslash\)}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.append(node\_path);\(\backslash\)}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\ \ \ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\ \ \ \ \ \ ERR\_ASSERT(String("{}Cannot\ get\ specified\ node.\ Path:\ '\{0\}'"{}).format(\_paramarr))\(\backslash\)}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ PROCESS\_JSON\_PATH(json\_path,\ process\_func)\{\(\backslash\)}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\ \ \ \ Ref<FileAccess>\ \_data\ =\ FileAccess::open(json\_path,\ FileAccess::READ);\(\backslash\)}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\ \ \ \ if(\_data.is\_null())\{\(\backslash\)}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\ \ \ \ \ \ \_paramarr.clear();\{\(\backslash\)}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.append(\#json\_path);\(\backslash\)}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \_paramarr.append(json\_path);\(\backslash\)}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\ \ \ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\ \ \ \ \ \ ERR\_ASSERT(String("{}\{0\}\ (dir:\ '\{1\}')\ is\ not\ a\ file"{}).format(\_paramarr))\(\backslash\)}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\ \ \ \ else\{\(\backslash\)}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\ \ \ \ \ \ JSON\ \_json\_data\ =\ JSON();\(\backslash\)}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\ \ \ \ \ \ \_json\_data.parse(\_data-\/>get\_as\_text());\(\backslash\)}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\ \ \ \ \ \ Dictionary\ \_dict\_data\ =\ \_json\_data.get\_data();\(\backslash\)}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\ \ \ \ \ \ process\_func(\&\_dict\_data);\(\backslash\)}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\ \ \ \ \}\(\backslash\)}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ AUTOLOAD\_NODE\_DECLARE(class\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\ \ static\ class\_name*\ get\_singleton();}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ AUTOLOAD\_NODE\_DEFINE(class\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\ \ class\_name*\ \_\_this\_autoload\_\#\#class\_name\ =\ NULL;\ \(\backslash\)}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\ \ class\_name*\ class\_name::get\_singleton()\{\ \(\backslash\)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\ \ \ \ return\ \_\_this\_autoload\_\#\#class\_name;\ \(\backslash\)}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ AUTOLOAD\_NODE\_INIT(class\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\ \ if(!\_\_this\_autoload\_\#\#class\_name)\{\ \(\backslash\)}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ \_\_this\_autoload\_\#\#class\_name\ =\ this;\ \(\backslash\)}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#define\ GAME\_CONTEXT\_SCENE\_FOLDER\ "{}res://scene/game\_context\_scenes"{}}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ PARSE\_GAME\_CONTEXT\_SCENE\_PATH(target\_var,\ context\_id,\ class\_type)\ \(\backslash\)}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \{\ \(\backslash\)}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\ \ \ \ Array\ \_\_macro\_paramarr;\{\ \(\backslash\)}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_macro\_paramarr.append(context\_id);\ \(\backslash\)}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_macro\_paramarr.append(class\_type);\ \(\backslash\)}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\ \ \ \ target\_var\ =\ String(GAME\_CONTEXT\_SCENE\_FOLDER\ "{}/\{0\}/\{1\}.tscn"{}).format(\_\_macro\_paramarr);\ \(\backslash\)}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\ \ \}}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ GDSTR\_TO\_STDSTR(gdstr)\ std::string((char*)gdstr.to\_ascii\_buffer().ptr(),\ gdstr.length())}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

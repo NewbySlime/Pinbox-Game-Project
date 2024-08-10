@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://edrrkyymkw3m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8456"]
+radius = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a8psl"]
+radius = 50.0
+
+[node name="item_picker_area" type="item_picker_area"]
+max_dragged_speed = 800.0
+drag_speed_bezier_graph = PackedVector2Array(0, 0, 0, 0, 0.6, 0.6, 1, 1)
+picker_area_area = NodePath("picker_area")
+picker_collector_area = NodePath("picker_collect")
+
+[node name="picker_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="picker_area"]
+shape = SubResource("CircleShape2D_g8456")
+
+[node name="picker_collect" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="picker_collect"]
+shape = SubResource("CircleShape2D_a8psl")

@@ -1,0 +1,8 @@
+inventory_type: String
+  Type of the inventory. List of the type;
+    - "normal"
+    - "loadout"
+
+size: number (Int, if double, parsed using floor)
+  The size of the inventory.
+  (NOTE: for "loadout" type, the size will be doubled)

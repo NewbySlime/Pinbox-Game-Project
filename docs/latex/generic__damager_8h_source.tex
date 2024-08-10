@@ -1,0 +1,47 @@
+\doxysection{generic\+\_\+damager.\+h}
+\hypertarget{generic__damager_8h_source}{}\label{generic__damager_8h_source}\index{src/generic\_damager.h@{src/generic\_damager.h}}
+\mbox{\hyperlink{generic__damager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GENERIC\_DAMAGER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GENERIC\_DAMAGER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bus__event_8h}{bus\_event.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifier__combination__helper_8h}{modifier\_combination\_helper.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__interface_8h}{hit\_register\_interface.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__item_8h}{weapon\_item.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__stats__data_8h}{weapon\_stats\_data.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}memory"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1generic__damager}{generic\_damager}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_i__damager}{Game::I\_damager}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1bus__event}{Game::bus\_event}}*\ \_bus\_event;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ std::shared\_ptr<Game::Modifiers::modifier\_combination\_helper>\ \_modifier;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ should\ be\ a\ copy}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}\ \_wstats;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1generic__damager_ab8e380b0d9717cfad7efe474e793507d}{\string~generic\_damager}}()\{\}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1generic__damager_a596155e49d4c15decc1b437724e1c526}{generic\_damager}}(\mbox{\hyperlink{class_game_1_1bus__event}{Game::bus\_event}}*\ \_bus\_event);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1generic__damager_a85b5b01796134c2fa5d2bbd2ab186fec}{on\_hit}}(\mbox{\hyperlink{struct_game_1_1hit__register__pass__data}{Game::hit\_register\_pass\_data}}*\ pass\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1generic__damager_ac8da102b4ee978a1a38721b7c40250a9}{on\_hitreg\_changed}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ new\_state\ =\ NULL)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ std::shared\_ptr<Game::I\_damager>\ \mbox{\hyperlink{class_game_1_1generic__damager_a8e0de38c5370f1da3f9a104963dbd305}{clone\_damager}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Game::I\_damager>\ \mbox{\hyperlink{class_game_1_1generic__damager_a461f8cc583bc98fd8e0a43c00ae4ac93}{create\_from\_data}}(}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ w\_item,\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::shared\_ptr<Game::Modifiers::modifier\_combination\_helper>\ mod\_combination,\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1bus__event}{Game::bus\_event}}*\ bus}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ );}
+\DoxyCodeLine{00038\ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

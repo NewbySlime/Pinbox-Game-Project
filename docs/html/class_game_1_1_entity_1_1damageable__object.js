@@ -1,0 +1,28 @@
+var class_game_1_1_entity_1_1damageable__object =
+[
+    [ "damageable_object", "class_game_1_1_entity_1_1damageable__object.html#a95dde1ae40604e05939092bae23c7f28", null ],
+    [ "~damageable_object", "class_game_1_1_entity_1_1damageable__object.html#a0a33bd4447bce6edbf462b68d1e646a2", null ],
+    [ "_notification", "class_game_1_1_entity_1_1damageable__object.html#af031e16d73c6de557c2bc1d942720f08", null ],
+    [ "_on_damaged", "class_game_1_1_entity_1_1damageable__object.html#ab1345266a6602f44ab3f9eadc2436c0e", null ],
+    [ "_on_dead", "class_game_1_1_entity_1_1damageable__object.html#a502383cefe02116d98651bc0596f976d", null ],
+    [ "_on_energy_exhausted", "class_game_1_1_entity_1_1damageable__object.html#a5635d90e17359ed3711cf46ac5f32d82", null ],
+    [ "_on_ep_changed", "class_game_1_1_entity_1_1damageable__object.html#af9b3c3fe037a99800d7726e2904adf5b", null ],
+    [ "_on_healed", "class_game_1_1_entity_1_1damageable__object.html#aa764b95da09f2051298164487d86bd8d", null ],
+    [ "_on_hp_changed", "class_game_1_1_entity_1_1damageable__object.html#a45c788f7d0993d5ec66191dbc7c31d66", null ],
+    [ "_on_revived", "class_game_1_1_entity_1_1damageable__object.html#a997e2ce3df2ba99fe46e9e647963081a", null ],
+    [ "_on_vital_data_changed", "class_game_1_1_entity_1_1damageable__object.html#ac01e3144f93e08d2cabe3f5d738c84ba", null ],
+    [ "_physics_process", "class_game_1_1_entity_1_1damageable__object.html#a1130f0b3671ff14c322a45bdd5f7cb0d", null ],
+    [ "_ready", "class_game_1_1_entity_1_1damageable__object.html#a5a0e260a4e329791d74e6ceaaa3dc385", null ],
+    [ "_set_energy_point", "class_game_1_1_entity_1_1damageable__object.html#a02d571d179aa067673fa3f98e5c776af", null ],
+    [ "_set_health_point", "class_game_1_1_entity_1_1damageable__object.html#a2259944336397e60a6f15e4bce87d66b", null ],
+    [ "_set_max_ep", "class_game_1_1_entity_1_1damageable__object.html#ad10edbb80d74e7d5e6635b83aaeea9ef", null ],
+    [ "_set_max_hp", "class_game_1_1_entity_1_1damageable__object.html#a796a0f07dc13eb98efb1510009501811", null ],
+    [ "_set_restore_delay_ep", "class_game_1_1_entity_1_1damageable__object.html#a97851d0bd483ed70a93ea6c4f6d13587", null ],
+    [ "_set_restore_rate_ep", "class_game_1_1_entity_1_1damageable__object.html#af6861ee332fe40a07980b722fc14f267", null ],
+    [ "do_damage", "class_game_1_1_entity_1_1damageable__object.html#a7b53ffd7d946c3339c195b14264ca791", null ],
+    [ "do_heal", "class_game_1_1_entity_1_1damageable__object.html#ab2cf9e57ea8d7865057250b4a27e5375", null ],
+    [ "do_revive", "class_game_1_1_entity_1_1damageable__object.html#a9bfdd6d1aef1a9249f00cf4c8277018b", null ],
+    [ "get_energy_point", "class_game_1_1_entity_1_1damageable__object.html#a09ddaa4b3aac268389401690d13b4c32", null ],
+    [ "get_vital_data", "class_game_1_1_entity_1_1damageable__object.html#a9ef2eba65df9470beefc04227d348df0", null ],
+    [ "use_energy", "class_game_1_1_entity_1_1damageable__object.html#a2f71a76904e92d41cebf2209cef7bba9", null ]
+];

@@ -1,0 +1,41 @@
+\doxysection{algorithm\+\_\+container.\+h}
+\hypertarget{algorithm__container_8h_source}{}\label{algorithm__container_8h_source}\index{src/algorithm\_container.h@{src/algorithm\_container.h}}
+\mbox{\hyperlink{algorithm__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}set"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game::Misc::Algorithm}}\{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ key,\ \textcolor{keyword}{typename}\ value>\ std::map<value,\ key>\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a8897f7ae06d31275e6e7fdeb522b0620}{create\_inverse\_of\_map}}(std::map<key,\ value>\ original\_map)\{}
+\DoxyCodeLine{00015\ \ \ \ \ std::map<value,\ key>\ \_result;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ original\_map)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \_result[\_pair.second]\ =\ \_pair.first;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return}\ \_result;}
+\DoxyCodeLine{00020\ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ key,\ \textcolor{keyword}{typename}\ value>\ std::set<key>\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a72639b12e989a10f71747b4a96186d8f}{create\_set\_of\_key}}(\textcolor{keyword}{const}\ std::map<key,\ value>\&\ from)\{}
+\DoxyCodeLine{00029\ \ \ \ \ std::set<key>\ \_result;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ from)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \_result.insert(\_pair.first);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \_result;}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ key,\ \textcolor{keyword}{typename}\ value>\ std::set<value>\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_a1d85139a6483ba273e6622cb2a063bee}{create\_set\_of\_value}}(\textcolor{keyword}{const}\ std::map<key,\ value>\&\ from)\{}
+\DoxyCodeLine{00042\ \ \ \ \ std::set<value>\ \_result;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \_pair:\ from)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \_result.insert(\_pair.second);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \_result;}
+\DoxyCodeLine{00047\ \ \ \}}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

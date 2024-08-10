@@ -1,0 +1,66 @@
+\doxysection{src/predelete\+\_\+notifier.h File Reference}
+\hypertarget{predelete__notifier_8h}{}\label{predelete__notifier_8h}\index{src/predelete\_notifier.h@{src/predelete\_notifier.h}}
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpredelete__notifier__signal__param}{predelete\+\_\+notifier\+\_\+signal\+\_\+param}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea}{SIGNAL\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+PREDELETE}}~"{}spdnopd"{}
+\item 
+\#define \mbox{\hyperlink{predelete__notifier_8h_a4db460ec6263ffab8c6bbb160fbccfb5}{ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+INHERIT}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{predelete__notifier_8h_a5f8db05c71fbf4c586b8fd67686f8933}{ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+DEFINE}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{predelete__notifier_8h_ac716342074eaf9b3b996e529f1243a39}{ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+BIND\+\_\+\+GODOT}}(origin\+\_\+class)~  ADD\+\_\+\+SIGNAL(godot\+::\+Method\+Info(\mbox{\hyperlink{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea}{SIGNAL\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+PREDELETE}}, godot\+::\+Property\+Info(\mbox{\hyperlink{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}{GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}, "{}param"{})));
+\item 
+\#define \mbox{\hyperlink{predelete__notifier_8h_a5f60ec1b77fa61d21acd698df8856a11}{ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+NOTIFICATION}}(code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{predelete__notifier_8h_ac716342074eaf9b3b996e529f1243a39}\label{predelete__notifier_8h_ac716342074eaf9b3b996e529f1243a39} 
+\index{predelete\_notifier.h@{predelete\_notifier.h}!ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT@{ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT}}
+\index{ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT@{ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT}!predelete\_notifier.h@{predelete\_notifier.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT}{ATTR\_PREDELETE\_NOTIFIER\_BIND\_GODOT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+BIND\+\_\+\+GODOT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})~  ADD\+\_\+\+SIGNAL(godot\+::\+Method\+Info(\mbox{\hyperlink{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea}{SIGNAL\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+PREDELETE}}, godot\+::\+Property\+Info(\mbox{\hyperlink{godot__var__extended_8h_a1c9490e8f159a3821bf25ed8c3f094e1}{GDVAR\+\_\+\+CUSTOM\+\_\+\+VARIANT\+\_\+\+TYPE}}, "{}param"{})));}
+
+\Hypertarget{predelete__notifier_8h_a5f8db05c71fbf4c586b8fd67686f8933}\label{predelete__notifier_8h_a5f8db05c71fbf4c586b8fd67686f8933} 
+\index{predelete\_notifier.h@{predelete\_notifier.h}!ATTR\_PREDELETE\_NOTIFIER\_DEFINE@{ATTR\_PREDELETE\_NOTIFIER\_DEFINE}}
+\index{ATTR\_PREDELETE\_NOTIFIER\_DEFINE@{ATTR\_PREDELETE\_NOTIFIER\_DEFINE}!predelete\_notifier.h@{predelete\_notifier.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_PREDELETE\_NOTIFIER\_DEFINE}{ATTR\_PREDELETE\_NOTIFIER\_DEFINE}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{predelete__notifier_8h_a4db460ec6263ffab8c6bbb160fbccfb5}\label{predelete__notifier_8h_a4db460ec6263ffab8c6bbb160fbccfb5} 
+\index{predelete\_notifier.h@{predelete\_notifier.h}!ATTR\_PREDELETE\_NOTIFIER\_INHERIT@{ATTR\_PREDELETE\_NOTIFIER\_INHERIT}}
+\index{ATTR\_PREDELETE\_NOTIFIER\_INHERIT@{ATTR\_PREDELETE\_NOTIFIER\_INHERIT}!predelete\_notifier.h@{predelete\_notifier.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_PREDELETE\_NOTIFIER\_INHERIT}{ATTR\_PREDELETE\_NOTIFIER\_INHERIT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+INHERIT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{predelete__notifier_8h_a5f60ec1b77fa61d21acd698df8856a11}\label{predelete__notifier_8h_a5f60ec1b77fa61d21acd698df8856a11} 
+\index{predelete\_notifier.h@{predelete\_notifier.h}!ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION@{ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION}}
+\index{ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION@{ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION}!predelete\_notifier.h@{predelete\_notifier.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION}{ATTR\_PREDELETE\_NOTIFIER\_ON\_NOTIFICATION}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+NOTIFICATION(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}(code)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{keywordflow}{case}\ godot::Object::NOTIFICATION\_PREDELETE:\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{classpredelete__notifier__signal__param}{predelete\_notifier\_signal\_param}}\ \_param(\textcolor{keyword}{this});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ emit\_signal(\mbox{\hyperlink{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea}{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE}},\ \mbox{\hyperlink{godot__var__extended_8h_a304d94472c157eacaa1df8fe5050b58a}{GDVAR\_CUSTOM\_FROM}}(\_param));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea}\label{predelete__notifier_8h_a8599d55be4ad1f66e42aaaabce7cc3ea} 
+\index{predelete\_notifier.h@{predelete\_notifier.h}!SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE@{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE}}
+\index{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE@{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE}!predelete\_notifier.h@{predelete\_notifier.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE}{SIGNAL\_PREDELETE\_NOTIFIER\_ON\_PREDELETE}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+PREDELETE\+\_\+\+NOTIFIER\+\_\+\+ON\+\_\+\+PREDELETE~"{}spdnopd"{}}
+

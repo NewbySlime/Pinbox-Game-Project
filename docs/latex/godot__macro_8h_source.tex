@@ -1,0 +1,68 @@
+\doxysection{godot\+\_\+macro.\+h}
+\hypertarget{godot__macro_8h_source}{}\label{godot__macro_8h_source}\index{src/godot\_macro.h@{src/godot\_macro.h}}
+\mbox{\hyperlink{godot__macro_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GODOT\_MACRO\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GODOT\_MACRO\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/core/class\_db.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_\_\_MACRO\_STRINGIFY}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_\_\_MACRO\_STRINGIFY1(var)\ \#var}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_\_MACRO\_STRINGIFY(var)\ \_\_\_MACRO\_STRINGIFY1(var)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ JOIN\_PATH\_STRING\_HELPER\ godot::String("{}\{0\}/\{1\}"{})}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_VAR(type,\ var\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ private:\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ type\ var\_name;\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ void\ set\_\#\#var\_name(const\ type\ var\_\#\#var\_name)\{\ \(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \ \ var\_name\ =\ var\_\#\#var\_name;\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ type\ get\_\#\#var\_name()\ const\{\ \(\backslash\)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ return\ var\_name;\ \(\backslash\)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_VAR\_WITHOUT\_DEF\_FUNC(type,\ var\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ private:\ \(\backslash\)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ type\ var\_name;\ \(\backslash\)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ public:\ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ void\ set\_\#\#var\_name(const\ type\ var\_\#\#var\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ type\ get\_\#\#var\_name()\ const;}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_SETTER\_FUNC(class\_name,\ type,\ var\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ void\ class\_name::set\_\#\#var\_name(const\ type\ var\_\#\#var\_name)}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_GETTER\_FUNC(class\_name,\ type,\ var\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ type\ class\_name::get\_\#\#var\_name()\ const}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_BIND(class\_name,\ variant\_type,\ var\_name)\ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(D\_METHOD(\_\_\_MACRO\_STRINGIFY(set\_)\ \#var\_name,\ \#var\_name),\ \&class\_name::set\_\#\#var\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(D\_METHOD(\_\_\_MACRO\_STRINGIFY(get\_)\ \#var\_name),\ \&class\_name::get\_\#\#var\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ godot::ClassDB::add\_property(\ \(\backslash\)}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\ \ \ \ \#class\_name,\ \(\backslash\)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ PropertyInfo(variant\_type,\ \#var\_name),\ \(\backslash\)}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \_\_\_MACRO\_STRINGIFY(set\_)\ \#var\_name,\ \(\backslash\)}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \_\_\_MACRO\_STRINGIFY(get\_)\ \#var\_name\ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ );}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ GD\_PROPERTY\_BIND\_HINT(class\_name,\ variant\_type,\ var\_name,\ property\_hint)\ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(D\_METHOD(\_\_\_MACRO\_STRINGIFY(set\_)\ \#var\_name,\ \#var\_name),\ \&class\_name::set\_\#\#var\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ godot::ClassDB::bind\_method(D\_METHOD(\_\_\_MACRO\_STRINGIFY(get\_)\ \#var\_name),\ \&class\_name::get\_\#\#var\_name);\ \(\backslash\)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ godot::ClassDB::add\_property(\ \(\backslash\)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \#class\_name,\ \(\backslash\)}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\ \ \ \ PropertyInfo(variant\_type,\ \#var\_name,\ property\_hint),\ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ \_\_\_MACRO\_STRINGIFY(set\_)\ \#var\_name,\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ \_\_\_MACRO\_STRINGIFY(get\_)\ \#var\_name\ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ );}}
+\DoxyCodeLine{00061\ \ \ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

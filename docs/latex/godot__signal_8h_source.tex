@@ -1,0 +1,31 @@
+\doxysection{godot\+\_\+signal.\+h}
+\hypertarget{godot__signal_8h_source}{}\label{godot__signal_8h_source}\index{src/godot\_signal.h@{src/godot\_signal.h}}
+\mbox{\hyperlink{godot__signal_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GODOT\_SIGNAL\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GODOT\_SIGNAL\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__var__extended_8h}{godot\_var\_extended.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/variant.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ \mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ converts\ from\ an\ object\ reference\ to\ godot-\/readable\ data}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SIGNAL\_PARAM\_TO\_CUSTOMPTR(variable)\(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ GDVAR\_CUSTOM\_FROM\_PTR(variable)}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ converts\ from\ an\ object\ to\ godot-\/readable\ data}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ SIGNAL\_PARAM\_TO\_CUSTOM(variable)\(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ GDVAR\_CUSTOM\_FROM(variable)}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ converts\ from\ godot-\/readable\ data\ to\ a\ reference\ of\ user-\/defined\ type}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SIGNAL\_PARAM\_GET\_CUSTOMPTR(variable,\ type)\(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ GDVAR\_CUSTOM\_TO(variable,\ type)}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ SIGNAL\_PARAM\_CUSTOM\_VARIANT\_TYPE\ GDVAR\_CUSTOM\_VARIANT\_TYPE}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

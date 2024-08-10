@@ -1,0 +1,83 @@
+\doxysection{equippable\+\_\+object.\+h}
+\hypertarget{equippable__object_8h_source}{}\label{equippable__object_8h_source}\index{src/equippable\_object.h@{src/equippable\_object.h}}
+\mbox{\hyperlink{equippable__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EQUIPPABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EQUIPPABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id__types_8h}{id\_types.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__item__container_8h}{I\_item\_container.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container_8h}{item\_container.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__object_8h}{item\_object.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__world__entity__2d__handler_8h}{item\_world\_entity\_2d\_handler.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifiers_8h}{modifiers.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player__actor_8h}{player\_actor.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node2d.hpp"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ SIGNAL\_EQUIPPABLE\_OBJECT\_ON\_DELETED\ "{}seood"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{namespace\ }Item::Factory\{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }equippable\_factory;}
+\DoxyCodeLine{00027\ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1equippable__object}{equippable\_object}}:\ \textcolor{keyword}{public}\ godot\_sac::Node2D\_sac\{}
+\DoxyCodeLine{00030\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1equippable__object}{equippable\_object}},\ godot\_sac::Node2D\_sac)}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ default\_action\_id)}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \_current\_item\ =\ NULL;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_set\_angle\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1equippable__object_a912a5b9f95eabe96dfc09e5f996da052}{\_bind\_methods}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1equippable__object_aa68c081571ca9cfc9490650d127afd0f}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{comment}{//\ function\ for\ inheriting\ class}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1equippable__object_aa64d94649f74397c37268ab3bcde3832}{\_on\_item\_set}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item)\{\}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1equippable__object_a5e28b082783e814ec661190570d7d66a}{equippable\_object}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1equippable__object_a577fdd74d28fff4d4ed0a8412a470b11}{\string~equippable\_object}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1equippable__object_a4d693d0177d046bb022668775a7a163c}{\_physics\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1equippable__object_a6c89e135682acd322a96fbadbe4c61b4}{set\_object\_rotation\_deg}}(\textcolor{keywordtype}{double}\ angle);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1equippable__object_af7937b03d1cffa7e328f0d4465f2e03d}{get\_object\_rotation}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \mbox{\hyperlink{class_game_1_1equippable__object_aa99177f368e24021fcbde66199b9846f}{get\_item\_object}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_i__action__class}{Game::I\_action\_class}}*\ \mbox{\hyperlink{class_game_1_1equippable__object_a6be7bdbadf632019bd97d906b971c67f}{get\_primary\_class}}()\{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_i__action__class}{Game::I\_action\_class}}*\ \mbox{\hyperlink{class_game_1_1equippable__object_a4a67959b67b777887225e13dd9509cbe}{get\_secondary\_class}}()\{\ \textcolor{keywordflow}{return}\ NULL;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1equippable__factory}{Game::Item::Factory::equippable\_factory}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{comment}{//\ subautoloads\ always\ be\ added\ by\ the\ factory}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1equippable__factory}{Game::Item::Factory::equippable\_factory}}*\ \_current\_factory;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}}*\ \_iwe2d\_handler;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_set\_item(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_set\_item\_id(\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ item\_id);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \};}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://wejl23lwjome"]
+
+[sub_resource type="Animation" id="Animation_iel34"]
+resource_name = "loop_idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("item_sprite_renderer:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("item_sprite_renderer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -20, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5, 3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wv2fu"]
+_data = {
+"loop_idle": SubResource("Animation_iel34")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qqukj"]
+
+[node name="item_world_entity_2d" type="item_world_entity_2d"]
+default_throw_smooth_time = 1.0
+time_until_pickable = 2.0
+smooth_throw_bezier = PackedVector2Array(0, 0, 0.9, 0.1, 1, 1, 1, 1)
+animated_player_node = NodePath("AnimationPlayer")
+item_sprite_renderer_node = NodePath("item_sprite_renderer")
+collision_layer = 4
+collision_mask = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wv2fu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qqukj")
+
+[node name="item_sprite_renderer" type="item_sprite_renderer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -0.979964
+offset_right = 20.0
+offset_bottom = 39.02
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

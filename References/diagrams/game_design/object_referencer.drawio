@@ -1,0 +1,129 @@
+<mxfile host="65bd71144e">
+    <diagram id="QoahVZI8cnMSYLMzbJl1" name="Page-1">
+        <mxGraphModel dx="967" dy="788" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" style="edgeStyle=none;html=1;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" parent="1" source="2" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Game Object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="170" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="object_reference_var&lt;br&gt;(pointer variable)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Target object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="925" y="410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;" parent="1" source="5" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="925" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;" parent="1" source="9" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="object_referencer&lt;br&gt;(atribute)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Has attribute" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="230" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Has variable" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="240" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Referencing to" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="575" y="440" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Handles" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="535" y="350" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="As parent" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="995" y="350" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Target Object Deletion" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="675" y="590" width="270" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;" parent="1" target="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="810" y="530" as="sourcePoint"/>
+                        <mxPoint x="875" y="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=classic;html=1;" parent="1" source="18" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="809.5" y="630" as="sourcePoint"/>
+                        <mxPoint x="810" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;" parent="1" source="24" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;" parent="1" source="24" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Game Object" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="730" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;" parent="1" source="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="925" y="1000" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="object_reference_var&lt;br&gt;(pointer variable)&lt;br&gt;(NULL)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Node" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="925" y="840" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;" parent="1" source="31" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="object_referencer&lt;br&gt;(atribute)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="850" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Has attribute" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="790" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Has variable" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="800" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="No Reference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="725" y="1000" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Handles" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="535" y="910" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Target Object&lt;br&gt;(predeleting)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+                    <mxGeometry x="925" y="970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="endArrow=classic;html=1;" parent="1" source="38" target="31" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="745" y="940" as="sourcePoint"/>
+                        <mxPoint x="795" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="Signal Emitted" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+                    <mxGeometry x="805" y="910" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;h1&gt;Object Referencer&lt;/h1&gt;&lt;p&gt;An attribute where it will listen to objects/nodes whenever itself going to be deleted.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="195" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;h1&gt;Predelete Notifier&lt;/h1&gt;&lt;p&gt;A notifier (attribute). Objects who has the attribute will send/emit signals to notify who listens that the object will deinstantiate.&lt;/p&gt;&lt;p&gt;This signal will have the parameters for node identifier.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="370" width="210" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="&lt;h1&gt;Tree Exiting (signal)&lt;/h1&gt;&lt;p&gt;This is another method that the referencer can use. But this method is slow, since this method will make the referencer check every node if the node is exiting. This signal doesn't give the parameter of who is exiting.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="560" width="210" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

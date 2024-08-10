@@ -1,0 +1,59 @@
+\doxysection{src/weapon\+\_\+stats\+\_\+data.cpp File Reference}
+\hypertarget{weapon__stats__data_8cpp}{}\label{weapon__stats__data_8cpp}\index{src/weapon\_stats\_data.cpp@{src/weapon\_stats\_data.cpp}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}alternate\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}weapon\+\_\+stats\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{weapon__stats__data_8cpp_a630f79072e44d7315accf95e81d89599}{\+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER}}(subdata\+\_\+name)~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&weapon\+\_\+stats\+\_\+data\+::\+\_\+\+\_\+add\+\_\+new\+\_\+subdata$<$subdata\+\_\+name$>$\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(weapon\+\_\+stats\+\_\+data\+::\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{weapon__stats__data_8cpp_a2ae02026fa544026c2c1b1dc4ea2287a}{subdata\+\_\+parser\+\_\+function}}) (Dictionary \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ String, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}} $>$ \mbox{\hyperlink{weapon__stats__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a}{\+\_\+subdata\+\_\+parser\+\_\+map}}
+\item 
+std\+::map$<$ String, \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{weapon\+\_\+stats\+\_\+data\+::fire\+\_\+mode}} $>$ \mbox{\hyperlink{weapon__stats__data_8cpp_a0fe1bb8633dfa2a812907af2cdb205bb}{\+\_\+fire\+\_\+mode\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{weapon__stats__data_8cpp_a630f79072e44d7315accf95e81d89599}\label{weapon__stats__data_8cpp_a630f79072e44d7315accf95e81d89599} 
+\index{weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}!\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+\index{\_SUBDATA\_PARSER\_MAP\_HELPER@{\_SUBDATA\_PARSER\_MAP\_HELPER}!weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{\_SUBDATA\_PARSER\_MAP\_HELPER}{\_SUBDATA\_PARSER\_MAP\_HELPER}}
+{\footnotesize\ttfamily \#define \+\_\+\+SUBDATA\+\_\+\+PARSER\+\_\+\+MAP\+\_\+\+HELPER(\begin{DoxyParamCaption}\item[{}]{subdata\+\_\+name }\end{DoxyParamCaption})~\{subdata\+\_\+name\+::get\+\_\+subdata\+\_\+name(), \&weapon\+\_\+stats\+\_\+data\+::\+\_\+\+\_\+add\+\_\+new\+\_\+subdata$<$subdata\+\_\+name$>$\}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{weapon__stats__data_8cpp_a2ae02026fa544026c2c1b1dc4ea2287a}\label{weapon__stats__data_8cpp_a2ae02026fa544026c2c1b1dc4ea2287a} 
+\index{weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}!subdata\_parser\_function@{subdata\_parser\_function}}
+\index{subdata\_parser\_function@{subdata\_parser\_function}!weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{subdata\_parser\_function}{subdata\_parser\_function}}
+{\footnotesize\ttfamily typedef void(weapon\+\_\+stats\+\_\+data\+::\texorpdfstring{$\ast$}{*} subdata\+\_\+parser\+\_\+function) (Dictionary \texorpdfstring{$\ast$}{*})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{weapon__stats__data_8cpp_a0fe1bb8633dfa2a812907af2cdb205bb}\label{weapon__stats__data_8cpp_a0fe1bb8633dfa2a812907af2cdb205bb} 
+\index{weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}!\_fire\_mode\_map@{\_fire\_mode\_map}}
+\index{\_fire\_mode\_map@{\_fire\_mode\_map}!weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{\_fire\_mode\_map}{\_fire\_mode\_map}}
+{\footnotesize\ttfamily std\+::map$<$String, \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{weapon\+\_\+stats\+\_\+data\+::fire\+\_\+mode}}$>$ \+\_\+fire\+\_\+mode\+\_\+map}
+
+\Hypertarget{weapon__stats__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a}\label{weapon__stats__data_8cpp_a82aaa0238d8db742a8af508453ea8f0a} 
+\index{weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}!\_subdata\_parser\_map@{\_subdata\_parser\_map}}
+\index{\_subdata\_parser\_map@{\_subdata\_parser\_map}!weapon\_stats\_data.cpp@{weapon\_stats\_data.cpp}}
+\doxysubsubsection{\texorpdfstring{\_subdata\_parser\_map}{\_subdata\_parser\_map}}
+{\footnotesize\ttfamily std\+::map$<$String, \mbox{\hyperlink{alternate__data_8cpp_af456729d7690105a2b28a1eeaa67a9a0}{subdata\+\_\+parser\+\_\+function}}$>$ \+\_\+subdata\+\_\+parser\+\_\+map}
+

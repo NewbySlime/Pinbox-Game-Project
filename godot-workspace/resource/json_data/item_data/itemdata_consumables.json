@@ -1,0 +1,10 @@
+{
+  "heal_potion":{
+    "name": "Healing Potion",
+    "desc": "A flask containing rejuvenating juice.",
+
+    "stats":{
+      "heal": 1
+    }
+  }
+}

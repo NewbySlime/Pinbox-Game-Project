@@ -1,0 +1,103 @@
+\doxysection{src/id\+\_\+types.h File Reference}
+\hypertarget{id__types_8h}{}\label{id__types_8h}\index{src/id\_types.h@{src/id\_types.h}}
+{\ttfamily \#include "{}stdint.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_entity}{Game\+::\+Entity}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_1_1_item}{Game\+::\+Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{id__types_8h_a5d0c04d1b5354a0ef6bdb182cd8b9bc9}{ENTITY\+\_\+\+ID\+\_\+\+NULL}}~0
+\item 
+\#define \mbox{\hyperlink{id__types_8h_a600cb8ed14b35d856f409a3b10fc605d}{ITEM\+\_\+\+ID\+\_\+\+NULL}}~0
+\item 
+\#define \mbox{\hyperlink{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}{ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL}}~0
+\item 
+\#define \mbox{\hyperlink{id__types_8h_a066fed65f16a9ab29d5e214c54a156ad}{ITEM\+\_\+\+DROPPER\+\_\+\+ID\+\_\+\+NULL}}~0
+\item 
+\#define \mbox{\hyperlink{id__types_8h_afec3975a5016358ef8ebf78e644b51ab}{ITEM\+\_\+\+PICKER\+\_\+\+ID\+\_\+\+NULL}}~0
+\item 
+\#define \mbox{\hyperlink{id__types_8h_a5c4383c02c524b3875318e636b454bcb}{ITEM\+\_\+\+IWE2\+D\+\_\+\+ID\+\_\+\+NULL}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game\+::\+Entity\+::entity\+\_\+inst\+\_\+id}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game\+::\+Item\+::item\+\_\+inst\+\_\+id}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game\+::\+Item\+::item\+\_\+container\+\_\+inst\+\_\+id}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_item_a2754f0e1036b7950bde8f6cc4370baac}{Game\+::\+Item\+::item\+\_\+dropper\+\_\+inst\+\_\+id}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game\+::\+Item\+::item\+\_\+picker\+\_\+inst\+\_\+id}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{namespace_game_1_1_item_ac4fde3f3728102441e102121094b1cf3}{Game\+::\+Item\+::iwe2d\+\_\+inst\+\_\+id}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_game_1_1_entity_a95cf3d74c55a906891300951f515b459}{Game\+::\+Entity\+::entity\+\_\+type}} \{ \mbox{\hyperlink{namespace_game_1_1_entity_a95cf3d74c55a906891300951f515b459ad1d91a5c9189d35484073cade36719ea}{Game\+::\+Entity\+::et\+\_\+player}} = 0x1
+, \mbox{\hyperlink{namespace_game_1_1_entity_a95cf3d74c55a906891300951f515b459af532b81e7ed37959283427ac524e24aa}{Game\+::\+Entity\+::et\+\_\+npc}} = 0x2
+, \mbox{\hyperlink{namespace_game_1_1_entity_a95cf3d74c55a906891300951f515b459a9b2ad0f87c3867d6716e8fdb8c7b0338}{Game\+::\+Entity\+::et\+\_\+enemy}} = 0x3
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768}{Game\+::\+Item\+::item\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768a31d673c6de27a744ae91b82ea123e3ad}{Game\+::\+Item\+::it\+\_\+modifier}} = 0x1
+, \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768ab8a95c53c134517d1cdc3ce3f4ce6543}{Game\+::\+Item\+::it\+\_\+weapon}} = 0x2
+, \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768a64c01996a1611cc0ceae42cfc2478622}{Game\+::\+Item\+::it\+\_\+material}} = 0x3
+, \mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768aa17b4a19863f8aecf93ef725e248f42a}{Game\+::\+Item\+::it\+\_\+consumables}} = 0x4
+, \newline
+\mbox{\hyperlink{namespace_game_1_1_item_ab5b6eb02ea4e1ac667a230610d0e2768ada795121104f5d4c620ce5d2741eb65b}{Game\+::\+Item\+::it\+\_\+throwables}} = 0x5
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_game_1_1_item_a055b1bfa12f2489ae9a53b03e6194aa2}{Game\+::\+Item\+::item\+\_\+container\+\_\+type}} \{ \mbox{\hyperlink{namespace_game_1_1_item_a055b1bfa12f2489ae9a53b03e6194aa2a62f1b08ef0568add4833a71893d0c1cd}{Game\+::\+Item\+::ict\+\_\+generic}}
+, \mbox{\hyperlink{namespace_game_1_1_item_a055b1bfa12f2489ae9a53b03e6194aa2a3e23243fc88195efbbfe1686f1f2a76a}{Game\+::\+Item\+::ict\+\_\+infinite}}
+, \mbox{\hyperlink{namespace_game_1_1_item_a055b1bfa12f2489ae9a53b03e6194aa2a67d4f9f0b5321361bbe8252938798bb6}{Game\+::\+Item\+::ict\+\_\+delete}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{id__types_8h_a5d0c04d1b5354a0ef6bdb182cd8b9bc9}\label{id__types_8h_a5d0c04d1b5354a0ef6bdb182cd8b9bc9} 
+\index{id\_types.h@{id\_types.h}!ENTITY\_ID\_NULL@{ENTITY\_ID\_NULL}}
+\index{ENTITY\_ID\_NULL@{ENTITY\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ENTITY\_ID\_NULL}{ENTITY\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ENTITY\+\_\+\+ID\+\_\+\+NULL~0}
+
+\Hypertarget{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984}\label{id__types_8h_ab31cc8b6a5b86341405b1c7b355e3984} 
+\index{id\_types.h@{id\_types.h}!ITEM\_CONTAINER\_ID\_NULL@{ITEM\_CONTAINER\_ID\_NULL}}
+\index{ITEM\_CONTAINER\_ID\_NULL@{ITEM\_CONTAINER\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_CONTAINER\_ID\_NULL}{ITEM\_CONTAINER\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+CONTAINER\+\_\+\+ID\+\_\+\+NULL~0}
+
+\Hypertarget{id__types_8h_a066fed65f16a9ab29d5e214c54a156ad}\label{id__types_8h_a066fed65f16a9ab29d5e214c54a156ad} 
+\index{id\_types.h@{id\_types.h}!ITEM\_DROPPER\_ID\_NULL@{ITEM\_DROPPER\_ID\_NULL}}
+\index{ITEM\_DROPPER\_ID\_NULL@{ITEM\_DROPPER\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_DROPPER\_ID\_NULL}{ITEM\_DROPPER\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+DROPPER\+\_\+\+ID\+\_\+\+NULL~0}
+
+\Hypertarget{id__types_8h_a600cb8ed14b35d856f409a3b10fc605d}\label{id__types_8h_a600cb8ed14b35d856f409a3b10fc605d} 
+\index{id\_types.h@{id\_types.h}!ITEM\_ID\_NULL@{ITEM\_ID\_NULL}}
+\index{ITEM\_ID\_NULL@{ITEM\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_ID\_NULL}{ITEM\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+ID\+\_\+\+NULL~0}
+
+\Hypertarget{id__types_8h_a5c4383c02c524b3875318e636b454bcb}\label{id__types_8h_a5c4383c02c524b3875318e636b454bcb} 
+\index{id\_types.h@{id\_types.h}!ITEM\_IWE2D\_ID\_NULL@{ITEM\_IWE2D\_ID\_NULL}}
+\index{ITEM\_IWE2D\_ID\_NULL@{ITEM\_IWE2D\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_IWE2D\_ID\_NULL}{ITEM\_IWE2D\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+IWE2\+D\+\_\+\+ID\+\_\+\+NULL~0}
+
+\Hypertarget{id__types_8h_afec3975a5016358ef8ebf78e644b51ab}\label{id__types_8h_afec3975a5016358ef8ebf78e644b51ab} 
+\index{id\_types.h@{id\_types.h}!ITEM\_PICKER\_ID\_NULL@{ITEM\_PICKER\_ID\_NULL}}
+\index{ITEM\_PICKER\_ID\_NULL@{ITEM\_PICKER\_ID\_NULL}!id\_types.h@{id\_types.h}}
+\doxysubsubsection{\texorpdfstring{ITEM\_PICKER\_ID\_NULL}{ITEM\_PICKER\_ID\_NULL}}
+{\footnotesize\ttfamily \#define ITEM\+\_\+\+PICKER\+\_\+\+ID\+\_\+\+NULL~0}
+

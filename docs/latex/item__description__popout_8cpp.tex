@@ -1,0 +1,77 @@
+\doxysection{src/item\+\_\+description\+\_\+popout.cpp File Reference}
+\hypertarget{item__description__popout_8cpp}{}\label{item__description__popout_8cpp}\index{src/item\_description\_popout.cpp@{src/item\_description\_popout.cpp}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}item\+\_\+description\+\_\+popout.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}functional"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+{\ttfamily \#include "{}string"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{item__description__popout_8cpp_ae2f5f28d16c6efbe068893bed9c2c95c}{ANIMATION\+\_\+\+POPOUT}}~"{}popout"{}
+\item 
+\#define \mbox{\hyperlink{item__description__popout_8cpp_a4533e192adfbe1bf3065f1acc2ea10d6}{ANIMATION\+\_\+\+HIDE}}~"{}hide"{}
+\item 
+\#define \mbox{\hyperlink{item__description__popout_8cpp_a143f65b7263b5eb066ca1574f5837400}{ANIMATION\+\_\+\+SCROLL\+\_\+\+UP}}~"{}scroll\+\_\+up"{}
+\item 
+\#define \mbox{\hyperlink{item__description__popout_8cpp_ab119293f069aa8f64fc570e7b48c9130}{ANIMATION\+\_\+\+SCROLL\+\_\+\+DOWN}}~"{}scroll\+\_\+down"{}
+\item 
+\#define \mbox{\hyperlink{item__description__popout_8cpp_a0638a637eb0b0611ade3677adc019c38}{ANIMATION\+\_\+\+WAITING\+\_\+\+NEXT}}~"{}waiting\+\_\+next"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item__description__popout_8cpp_aaffa7b6b66dc1d420830638ff4e0a60f}{GD\+\_\+\+PROPERTY\+\_\+\+GETTER\+\_\+\+FUNC}} (\mbox{\hyperlink{class_game_1_1_item_1_1item__description__popout}{item\+\_\+description\+\_\+popout}}, double, set\+\_\+vscroll\+\_\+norm)
+\item 
+\mbox{\hyperlink{item__description__popout_8cpp_a5196ecc0b41fe081f0fa9c0499059bde}{GD\+\_\+\+PROPERTY\+\_\+\+SETTER\+\_\+\+FUNC}} (\mbox{\hyperlink{class_game_1_1_item_1_1item__description__popout}{item\+\_\+description\+\_\+popout}}, double, set\+\_\+vscroll\+\_\+norm)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{item__description__popout_8cpp_a4533e192adfbe1bf3065f1acc2ea10d6}\label{item__description__popout_8cpp_a4533e192adfbe1bf3065f1acc2ea10d6} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!ANIMATION\_HIDE@{ANIMATION\_HIDE}}
+\index{ANIMATION\_HIDE@{ANIMATION\_HIDE}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{ANIMATION\_HIDE}{ANIMATION\_HIDE}}
+{\footnotesize\ttfamily \#define ANIMATION\+\_\+\+HIDE~"{}hide"{}}
+
+\Hypertarget{item__description__popout_8cpp_ae2f5f28d16c6efbe068893bed9c2c95c}\label{item__description__popout_8cpp_ae2f5f28d16c6efbe068893bed9c2c95c} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!ANIMATION\_POPOUT@{ANIMATION\_POPOUT}}
+\index{ANIMATION\_POPOUT@{ANIMATION\_POPOUT}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{ANIMATION\_POPOUT}{ANIMATION\_POPOUT}}
+{\footnotesize\ttfamily \#define ANIMATION\+\_\+\+POPOUT~"{}popout"{}}
+
+\Hypertarget{item__description__popout_8cpp_ab119293f069aa8f64fc570e7b48c9130}\label{item__description__popout_8cpp_ab119293f069aa8f64fc570e7b48c9130} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!ANIMATION\_SCROLL\_DOWN@{ANIMATION\_SCROLL\_DOWN}}
+\index{ANIMATION\_SCROLL\_DOWN@{ANIMATION\_SCROLL\_DOWN}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{ANIMATION\_SCROLL\_DOWN}{ANIMATION\_SCROLL\_DOWN}}
+{\footnotesize\ttfamily \#define ANIMATION\+\_\+\+SCROLL\+\_\+\+DOWN~"{}scroll\+\_\+down"{}}
+
+\Hypertarget{item__description__popout_8cpp_a143f65b7263b5eb066ca1574f5837400}\label{item__description__popout_8cpp_a143f65b7263b5eb066ca1574f5837400} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!ANIMATION\_SCROLL\_UP@{ANIMATION\_SCROLL\_UP}}
+\index{ANIMATION\_SCROLL\_UP@{ANIMATION\_SCROLL\_UP}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{ANIMATION\_SCROLL\_UP}{ANIMATION\_SCROLL\_UP}}
+{\footnotesize\ttfamily \#define ANIMATION\+\_\+\+SCROLL\+\_\+\+UP~"{}scroll\+\_\+up"{}}
+
+\Hypertarget{item__description__popout_8cpp_a0638a637eb0b0611ade3677adc019c38}\label{item__description__popout_8cpp_a0638a637eb0b0611ade3677adc019c38} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!ANIMATION\_WAITING\_NEXT@{ANIMATION\_WAITING\_NEXT}}
+\index{ANIMATION\_WAITING\_NEXT@{ANIMATION\_WAITING\_NEXT}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{ANIMATION\_WAITING\_NEXT}{ANIMATION\_WAITING\_NEXT}}
+{\footnotesize\ttfamily \#define ANIMATION\+\_\+\+WAITING\+\_\+\+NEXT~"{}waiting\+\_\+next"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{item__description__popout_8cpp_aaffa7b6b66dc1d420830638ff4e0a60f}\label{item__description__popout_8cpp_aaffa7b6b66dc1d420830638ff4e0a60f} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!GD\_PROPERTY\_GETTER\_FUNC@{GD\_PROPERTY\_GETTER\_FUNC}}
+\index{GD\_PROPERTY\_GETTER\_FUNC@{GD\_PROPERTY\_GETTER\_FUNC}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_GETTER\_FUNC()}{GD\_PROPERTY\_GETTER\_FUNC()}}
+{\footnotesize\ttfamily GD\+\_\+\+PROPERTY\+\_\+\+GETTER\+\_\+\+FUNC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_item_1_1item__description__popout}{item\+\_\+description\+\_\+popout}}}]{,  }\item[{double}]{,  }\item[{set\+\_\+vscroll\+\_\+norm}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{item__description__popout_8cpp_a5196ecc0b41fe081f0fa9c0499059bde}\label{item__description__popout_8cpp_a5196ecc0b41fe081f0fa9c0499059bde} 
+\index{item\_description\_popout.cpp@{item\_description\_popout.cpp}!GD\_PROPERTY\_SETTER\_FUNC@{GD\_PROPERTY\_SETTER\_FUNC}}
+\index{GD\_PROPERTY\_SETTER\_FUNC@{GD\_PROPERTY\_SETTER\_FUNC}!item\_description\_popout.cpp@{item\_description\_popout.cpp}}
+\doxysubsubsection{\texorpdfstring{GD\_PROPERTY\_SETTER\_FUNC()}{GD\_PROPERTY\_SETTER\_FUNC()}}
+{\footnotesize\ttfamily GD\+\_\+\+PROPERTY\+\_\+\+SETTER\+\_\+\+FUNC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_1_1_item_1_1item__description__popout}{item\+\_\+description\+\_\+popout}}}]{,  }\item[{double}]{,  }\item[{set\+\_\+vscroll\+\_\+norm}]{ }\end{DoxyParamCaption})}
+

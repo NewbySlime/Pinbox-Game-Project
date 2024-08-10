@@ -1,0 +1,70 @@
+\doxysection{modifiers.\+h}
+\hypertarget{modifiers_8h_source}{}\label{modifiers_8h_source}\index{src/modifiers.h@{src/modifiers.h}}
+\mbox{\hyperlink{modifiers_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODIFIERS\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODIFIERS\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier_8h}{I\_modifier.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier__database__helper_8h}{I\_modifier\_database\_helper.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/random\_number\_generator.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item_1_1_factory}{Game::Item::Factory}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }modifier\_factory;}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_modifiers}{Game::Modifiers}}\{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier}{damage\_normal\_additive\_modifier}}:\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game::Modifiers::I\_modifier}},\ \mbox{\hyperlink{class_game_1_1_item_1_1_i__modifier__database__helper}{Game::Item::I\_modifier\_database\_helper}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_addition\ =\ 0;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a82a012a1f3456e201b5aa929ac669f54}{\string~damage\_normal\_additive\_modifier}}()\{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a6a797fce53ac8318658d6dc3b9eb2ea1}{modify\_weapon\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ stats,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ hitreg\_state\ =\ NULL)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_adea5e68913ce86cb480f28d140f3a5e4}{randomize\_modifier}}(godot::RandomNumberGenerator*\ rng,\ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ modifier\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a8e7fa736aa677a6b9b6e620e1def35cc}{get\_modifier\_title}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a1122e9660d9637c205f1a7efd89a9538}{get\_modifier\_description}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{_i__modifier__database__helper_8h_a6951f63de14e69a8697b6cb332178c1b}{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}}(\textcolor{stringliteral}{"{}damage\_normal\_additive"{}})}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \mbox{\hyperlink{_i__modifier__database__helper_8h_aed4bf88af0bec639450f5c866582c413}{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}}()}
+\DoxyCodeLine{00032\ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ class\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__percentage__additive__modifier}{damage\_percentage\_additive\_modifier}}:\ \mbox{\hyperlink{namespace_game}{Game}}::Modifiers::\mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\_modifier}},\ \mbox{\hyperlink{namespace_game}{Game}}::Item::I\_modifier\_database\_helper\{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_percentage\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__percentage__additive__modifier_a9b826bf2de33a1c0c4d0c5d2112cd36d}{\string~damage\_percentage\_additive\_modifier}}()\{\}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a6a797fce53ac8318658d6dc3b9eb2ea1}{modify\_weapon\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ stats,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ hitreg\_state\ =\ NULL)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_adea5e68913ce86cb480f28d140f3a5e4}{randomize\_modifier}}(godot::RandomNumberGenerator*\ rng,\ std::shared\_ptr<GameUtils::Memory::custom\_memory>\ modifier\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a8e7fa736aa677a6b9b6e620e1def35cc}{get\_modifier\_title}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1damage__normal__additive__modifier_a1122e9660d9637c205f1a7efd89a9538}{get\_modifier\_description}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \mbox{\hyperlink{_i__modifier__database__helper_8h_a6951f63de14e69a8697b6cb332178c1b}{MODDB\_HELPER\_ADD\_STATIC\_ID\_GETTER}}(\textcolor{stringliteral}{"{}damage\_percentage\_additive"{}})}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \mbox{\hyperlink{_i__modifier__database__helper_8h_aed4bf88af0bec639450f5c866582c413}{MODDB\_HELPER\_ADD\_STATIC\_JSON\_PARSER\_DECLARE}}()}
+\DoxyCodeLine{00051\ \ \ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ class\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1weapon__inventory__modifier}{weapon\_inventory\_modifier}}:\ \mbox{\hyperlink{namespace_game}{Game}}::Modifiers::\mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\_modifier}},\ \mbox{\hyperlink{namespace_game}{Game}}::Item::I\_modifier\_database\_helper\{}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1weapon__inventory__modifier_a83065f39ea58e3ffb51a8843959330f3}{get\_container\_size}}();}
+\DoxyCodeLine{00057\ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_modifiers_1_1item__accelerator__modifier}{item\_accelerator\_modifier}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1weapon__inventory__modifier}{weapon\_inventory\_modifier}}\{}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \};}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

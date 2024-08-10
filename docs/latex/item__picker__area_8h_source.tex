@@ -1,0 +1,80 @@
+\doxysection{item\+\_\+picker\+\_\+area.\+h}
+\hypertarget{item__picker__area_8h_source}{}\label{item__picker__area_8h_source}\index{src/item\_picker\_area.h@{src/item\_picker\_area.h}}
+\mbox{\hyperlink{item__picker__area_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_PICKER\_AREA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_PICKER\_AREA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id__types_8h}{id\_types.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__world__entity__2d_8h}{item\_world\_entity\_2d.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/area2d.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{class\ }item\_world\_entity\_2d\_handler;}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{item\_picker\_area}}:\ \textcolor{keyword}{public}\ godot::Node2D\{}
+\DoxyCodeLine{00017\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area}{item\_picker\_area}},\ godot::Node2D)}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ max\_dragged\_speed)}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::PackedVector2Array,\ drag\_speed\_bezier\_graph)}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ picker\_area\_area)}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ picker\_collector\_area)}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__world__entity__2d__handler}{Game::Item::item\_world\_entity\_2d\_handler}}*\ \_iwe2d\_handler;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ godot::Area2D*\ \_picker\_area;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ godot::Area2D*\ \_picker\_collector\_area;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game::Item::I\_item\_container}}*\ \_bound\_container;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ \_bound\_container\_id;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \_item\_picker\_id;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_max\_dragged\_radius;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_is\_container\_full;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_on\_added(uint64\_t\ data);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_on\_removed(uint64\_t\ data);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_item\_container\_deleting(uint64\_t\ data);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_area\_on\_body\_entered(godot::Node*\ node);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_area\_on\_body\_exited(godot::Node*\ node);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_collector\_on\_body\_entered(godot::Node*\ node);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_unbind\_container(\mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game::Item::I\_item\_container}}*\ container,\ godot::Node*\ container\_node);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_bind\_container(\mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game::Item::I\_item\_container}}*\ container,\ godot::Node*\ container\_node);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_check\_container();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_afddafc5b26d1718d0ef4f618da5352af}{\_bind\_methods}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_ab4bdd4c1f78da8765ade83fd5f4a8720}{bind\_item\_container}}(uint64\_t\ container);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_ae4b6ac722d879cb41607c1ce0604da08}{unbind\_item\_container}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_a915a60da0607f637df8e227e9d01c524}{item\_picker\_area}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_a229f590088130d761ee514864a9da134}{\string~item\_picker\_area}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_a69d894b4ccdac8c77b3d9563b7ccd81d}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_a834672f04bb9200eea9128b1ea8cef8b}{get\_picker\_gravity\_speed}}(godot::Vector2\ from\_position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a49d8a4a0df17bc7f4d3334652a010b9a}{Game::Item::item\_picker\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__picker__area_aea87e2cb438cbaf1764278122ea2cc43}{get\_id}}();}
+\DoxyCodeLine{00071\ \ \ \};}
+\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

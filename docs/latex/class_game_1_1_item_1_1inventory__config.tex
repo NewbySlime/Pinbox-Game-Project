@@ -1,0 +1,129 @@
+\doxysection{Game\+::Item\+::inventory\+\_\+config Class Reference}
+\hypertarget{class_game_1_1_item_1_1inventory__config}{}\label{class_game_1_1_item_1_1inventory__config}\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+
+
+{\ttfamily \#include $<$inventory\+\_\+config.\+h$>$}
+
+Inheritance diagram for Game\+::Item\+::inventory\+\_\+config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_1_1_item_1_1inventory__config}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\+\_\+type}} \{ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9ab779b16fe756a026434c86af47ce317f}{\+\_\+wrong\+\_\+type}} = -\/1
+, \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a634dc67623f1f44365767bdfeefab885}{inv\+\_\+type\+\_\+normal}}
+, \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a151fff7e031ab6f35e6b220abde47aa2}{inv\+\_\+type\+\_\+loadout}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a9307d8750a72b38bd387c20b6d3c9729}{\texorpdfstring{$\sim$}{\string~}inventory\+\_\+config}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_ac9068d0ba173adfbdd7d2229d709b091}{copy\+\_\+subdata\+\_\+to}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}mem)
+\item 
+\mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\+\_\+type}} \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a94e33e8471aa7867f8386347e0779e5f}{get\+\_\+inventory\+\_\+type}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a21829e716cba91db38c132657e4d1bf8}{get\+\_\+inventory\+\_\+size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a0d76c1702d4fd01dd2a6902095269014}{custom\+\_\+data}} ()
+\item 
+virtual \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_ad5fbcc96275c546918342cac2635452e}{\texorpdfstring{$\sim$}{\string~}custom\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_ab18de1235372ee36c1b44b9581440088}{bind\+\_\+function}} ()
+\item 
+static godot\+::\+String \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a0fae0e2e91107d2a9b33aa9561f87b7f}{get\+\_\+subdata\+\_\+name}} ()
+\item 
+static void \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_af98a47698d04bba15a6906f63fe020aa}{parse\+\_\+dictionary\+\_\+to}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}mem, godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{Game\+Utils\+::\+Memory\+::custom\+\_\+data}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data_a53f7e68d0a712895ddb0e083b3870435}{custom\+\_\+data\+\_\+check}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}\label{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!inv\_type@{inv\_type}}
+\index{inv\_type@{inv\_type}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{inv\_type}{inv\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{Game\+::\+Item\+::inventory\+\_\+config\+::inv\+\_\+type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_wrong\_type@{\_wrong\_type}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!\_wrong\_type@{\_wrong\_type}}}\Hypertarget{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9ab779b16fe756a026434c86af47ce317f}\label{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9ab779b16fe756a026434c86af47ce317f} 
+\+\_\+wrong\+\_\+type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inv\_type\_normal@{inv\_type\_normal}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!inv\_type\_normal@{inv\_type\_normal}}}\Hypertarget{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a634dc67623f1f44365767bdfeefab885}\label{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a634dc67623f1f44365767bdfeefab885} 
+inv\+\_\+type\+\_\+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inv\_type\_loadout@{inv\_type\_loadout}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!inv\_type\_loadout@{inv\_type\_loadout}}}\Hypertarget{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a151fff7e031ab6f35e6b220abde47aa2}\label{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a151fff7e031ab6f35e6b220abde47aa2} 
+inv\+\_\+type\+\_\+loadout&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_item_1_1inventory__config_a9307d8750a72b38bd387c20b6d3c9729}\label{class_game_1_1_item_1_1inventory__config_a9307d8750a72b38bd387c20b6d3c9729} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!````~inventory\_config@{\texorpdfstring{$\sim$}{\string~}inventory\_config}}
+\index{````~inventory\_config@{\texorpdfstring{$\sim$}{\string~}inventory\_config}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}inventory\_config()}{\string~inventory\_config()}}
+{\footnotesize\ttfamily Game\+::\+Item\+::inventory\+\_\+config\+::\texorpdfstring{$\sim$}{\string~}inventory\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_item_1_1inventory__config_ab18de1235372ee36c1b44b9581440088}\label{class_game_1_1_item_1_1inventory__config_ab18de1235372ee36c1b44b9581440088} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!bind\_function@{bind\_function}}
+\index{bind\_function@{bind\_function}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{bind\_function()}{bind\_function()}}
+{\footnotesize\ttfamily void inventory\+\_\+config\+::bind\+\_\+function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1_item_1_1inventory__config_ac9068d0ba173adfbdd7d2229d709b091}\label{class_game_1_1_item_1_1inventory__config_ac9068d0ba173adfbdd7d2229d709b091} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!copy\_subdata\_to@{copy\_subdata\_to}}
+\index{copy\_subdata\_to@{copy\_subdata\_to}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{copy\_subdata\_to()}{copy\_subdata\_to()}}
+{\footnotesize\ttfamily void inventory\+\_\+config\+::copy\+\_\+subdata\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}}]{mem }\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_1_1_item_1_1inventory__config_a21829e716cba91db38c132657e4d1bf8}\label{class_game_1_1_item_1_1inventory__config_a21829e716cba91db38c132657e4d1bf8} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!get\_inventory\_size@{get\_inventory\_size}}
+\index{get\_inventory\_size@{get\_inventory\_size}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{get\_inventory\_size()}{get\_inventory\_size()}}
+{\footnotesize\ttfamily uint32\+\_\+t inventory\+\_\+config\+::get\+\_\+inventory\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_game_1_1_item_1_1inventory__config_a94e33e8471aa7867f8386347e0779e5f}\label{class_game_1_1_item_1_1inventory__config_a94e33e8471aa7867f8386347e0779e5f} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!get\_inventory\_type@{get\_inventory\_type}}
+\index{get\_inventory\_type@{get\_inventory\_type}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{get\_inventory\_type()}{get\_inventory\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inventory\+\_\+config\+::inv\+\_\+type}} inventory\+\_\+config\+::get\+\_\+inventory\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_game_1_1_item_1_1inventory__config_a0fae0e2e91107d2a9b33aa9561f87b7f}\label{class_game_1_1_item_1_1inventory__config_a0fae0e2e91107d2a9b33aa9561f87b7f} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!get\_subdata\_name@{get\_subdata\_name}}
+\index{get\_subdata\_name@{get\_subdata\_name}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{get\_subdata\_name()}{get\_subdata\_name()}}
+{\footnotesize\ttfamily String inventory\+\_\+config\+::get\+\_\+subdata\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_game_1_1_item_1_1inventory__config_af98a47698d04bba15a6906f63fe020aa}\label{class_game_1_1_item_1_1inventory__config_af98a47698d04bba15a6906f63fe020aa} 
+\index{Game::Item::inventory\_config@{Game::Item::inventory\_config}!parse\_dictionary\_to@{parse\_dictionary\_to}}
+\index{parse\_dictionary\_to@{parse\_dictionary\_to}!Game::Item::inventory\_config@{Game::Item::inventory\_config}}
+\doxysubsubsection{\texorpdfstring{parse\_dictionary\_to()}{parse\_dictionary\_to()}}
+{\footnotesize\ttfamily void inventory\+\_\+config\+::parse\+\_\+dictionary\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}}]{mem,  }\item[{godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{inventory__config_8h}{inventory\+\_\+config.\+h}}\item 
+src/\mbox{\hyperlink{inventory__config_8cpp}{inventory\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

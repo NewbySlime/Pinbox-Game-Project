@@ -1,0 +1,36 @@
+\doxysection{breakable\+\_\+object.\+h}
+\hypertarget{breakable__object_8h_source}{}\label{breakable__object_8h_source}\index{src/breakable\_object.h@{src/breakable\_object.h}}
+\mbox{\hyperlink{breakable__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BREAKABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BREAKABLE\_OBJECT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{damageable__object_8h}{damageable\_object.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_entity}{Game::Entity}}\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object}{breakable\_object}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game::Entity::damageable\_object}}\{}
+\DoxyCodeLine{00013\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object}{breakable\_object}},\ \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game::Entity::damageable\_object}})}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ object\_id)}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_ac95ec52280af4308c9b034d4af556a0f}{\_bind\_methods}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a8e53898a06683e436bd2033c0250db86}{\_on\_damaged}}(\mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game::Entity::damage\_info}}\&\ d\_info)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a410b1af8c29e0f019138ae576f9dbb34}{\_on\_dead}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a7358dec47911435e3ae1e3ce321d4730}{breakable\_object}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_ac63a011849005aed14787f43dcb08f41}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

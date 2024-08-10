@@ -1,0 +1,119 @@
+\doxysection{weapon\+\_\+stats\+\_\+data.\+h}
+\hypertarget{weapon__stats__data_8h_source}{}\label{weapon__stats__data_8h_source}\index{src/weapon\_stats\_data.h@{src/weapon\_stats\_data.h}}
+\mbox{\hyperlink{weapon__stats__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WEAPON\_STATS\_DATA\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WEAPON\_STATS\_DATA\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hitreg__data_8h}{hitreg\_data.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{namespace\ }Factory\{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }weapon\_factory;}
+\DoxyCodeLine{00016\ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{weapon\_stats\_data}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{fire\_mode}}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a1308e8cb4a788537a254f702308442a0}{basic\_config\_filter}}\ =\ 0x00FF,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a1bb6fa46eecfae7ea47887c8f37b011a}{additional\_config\_filter}}\ =\ 0xFF00,}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ basic\ configuration}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a53e9f2a12f06a2fd73caa3c63598285d}{single\_fire}}\ =\ 0x0000,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a9c8cef7122438fa83b74c947d8d089c5}{burst\_fire}}\ =\ 0x0001,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a59d0e89ac5efb4d083a2011bf22fee9a}{automatic}}\ =\ 0x0002,}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ additional\ configuration}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ shoot\ uncontrollably\ until\ player's\ energy\ are\ drained}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1a436cc8d97fcd8568f2426bc429df2128}{full\_exhaust}}\ =\ 0x0100,}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ priming\ doesn't\ instantly\ shoot\ it,\ not\ like\ normal\ configuration\ (no\ charge\ flag)}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ but\ continuing\ will\ shoot\ it,\ if\ the\ primed\ beyond\ charged\ delay\ }}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1aeb1a5d3960eda8bb1e04e735912e1569}{charge}}\ =\ 0x0200}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_damage;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_charge\_delay;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{fire\_mode}}\ \_fire\_mode;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_fire\_rate;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_tap\_rate;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ uint64\_t\ \_burst\_count;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_parse\_weapon\_stats\_dict(godot::Dictionary*\ data);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{fire\_mode}}\ \_parse\_fire\_mode(godot::String\ mode\_flags);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ad25c931ad57ee715b43653bc66345af5}{\string~weapon\_stats\_data}}()\{\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a9e0d620c748553740465310465fe346d}{bind\_function}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a28ca2a1b155862bee8d6d3673ea5cf60}{get\_subdata\_name}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a8ec26537c2bbc100ac1d581d5295f4dc}{parse\_dictionary\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem,\ godot::Dictionary*\ data);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ad0ed27f194d1132996d41c6104b31984}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a93ba979010335b6ca919c2d46df97915}{get\_damage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_aec1c0555ab3ff9869f7525b643098da5}{set\_damage}}(\textcolor{keywordtype}{double}\ damage);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a68ac851dbaed8aa979fc3d1d8a55adbb}{get\_charge\_delay}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a097ca3b9788610c3445e704aee326e62}{set\_charge\_delay}}(\textcolor{keywordtype}{double}\ delay);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{fire\_mode}}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a23f4b47e25f7a244497790f6694fe06f}{get\_fire\_mode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ade4aa7a76c3932b7cb2990e405450f19}{set\_fire\_mode}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a5533278fb50f58b0ce9fa5c3698159f1}{fire\_mode}}\ mode);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_af09cda4f16115f3a280ebfbf0928dcc3}{get\_fire\_rate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ac0d6a769029d82c87b70e5bbb61f7493}{set\_fire\_rate}}(\textcolor{keywordtype}{double}\ rate);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a3b51102992e97d2ab50e44c052f5670f}{get\_tap\_rate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a8c061a5f2f341b0a239ed975830bf3c6}{set\_tap\_rate}}(\textcolor{keywordtype}{double}\ rate);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_a6d0dc16b63a647c970c67cda19015de9}{get\_burst\_count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ac1cd87312683d258553860e9c6352a42}{set\_burst\_count}}(uint64\_t\ count);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ \textcolor{keyword}{const}\ subdata\_class*\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_aed37d3469322326f3128fb8311dbfde2}{get\_subdata}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata<subdata\_class>();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ std::shared\_ptr<const\ GameUtils::Memory::custom\_memory>\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_afe0d883c26275e16b617d2a5867ef548}{get\_subdata\_shared}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata\_shared<subdata\_class>();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1weapon__factory}{Game::Item::Factory::weapon\_factory}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ subdata\_\textcolor{keyword}{class}>\ subdata\_class*\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data_ab60045512b517edbf0cb2d1949b07ece}{get\_subdata\_mutable}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_get\_subdata<subdata\_class>();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data__primary}{weapon\_stats\_data\_primary}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{weapon\_stats\_data}}\{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data__primary_abcc653883c7a38c0b70afbe7c690e08c}{get\_subdata\_name}}()\{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{defines_8h_ae6dfa12f26f9275cd891b85cfe28a4a2}{VARNAME\_WEAPON\_STATS\_TYPE\_PRIMARY}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data__secondary}{weapon\_stats\_data\_secondary}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{weapon\_stats\_data}}\{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data__secondary_aac3edc797630dcb022c7b777e2772b39}{get\_subdata\_name}}()\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{defines_8h_ac3e24010140a1f2c661ae20c97a1e6f2}{VARNAME\_WEAPON\_STATS\_TYPE\_SECONDARY}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \};}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

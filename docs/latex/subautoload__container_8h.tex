@@ -1,0 +1,147 @@
+\doxysection{src/subautoload\+\_\+container.h File Reference}
+\hypertarget{subautoload__container_8h}{}\label{subautoload__container_8h}\index{src/subautoload\_container.h@{src/subautoload\_container.h}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+macro.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/node.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_1_1subautoload__container}{Game\+::subautoload\+\_\+container}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game}{Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a54e9506cc1ddcd25e93cf61281dee325}{SIGNAL\+\_\+\+SUBAUTOLOAD\+\_\+\+ON\+\_\+\+READY}}~"{}ssaor"{}
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a4a0817eac1b011dd2fe9b8af41c98c2c}{GET\+\_\+\+SUBAUTOLOAD}}(type\+\_\+class,  p\+\_\+container,  target)
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a9bd7fdda56c93207fe60e31bf8242d13}{ADD\+\_\+\+CHILD\+\_\+\+SA}}(node)
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNC}}~\+\_\+\+\_\+\+\_\+set\+\_\+bound\+\_\+subautoload
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a3f3caa7291ea6dfea266da3349c49cb6}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNCSTR}}~\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY}}(\mbox{\hyperlink{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNC}})
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNC}}~\+\_\+\+\_\+\+\_\+on\+\_\+ready\+\_\+subautoload
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_ad3222dfd454457b4f6f2b1fe54c30e7d}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNCSTR}}~\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY}}(\mbox{\hyperlink{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNC}})
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a6f61cca77dda88f9c55ab70abd473d7d}{SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+NAME}}(class\+\_\+name)~class\+\_\+name\#\#\+\_\+sac
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_ac5112fc879d40391994146e9b90a5450}{SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+CREATE\+\_\+\+DECLARE}}(class\+\_\+name,  inherit\+\_\+from)
+\item 
+\#define \mbox{\hyperlink{subautoload__container_8h_a36feaf6541bc7655fa7771f1157f698d}{SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+CREATE\+\_\+\+DEFINE}}(class\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{subautoload__container_8h_a9bd7fdda56c93207fe60e31bf8242d13}\label{subautoload__container_8h_a9bd7fdda56c93207fe60e31bf8242d13} 
+\index{subautoload\_container.h@{subautoload\_container.h}!ADD\_CHILD\_SA@{ADD\_CHILD\_SA}}
+\index{ADD\_CHILD\_SA@{ADD\_CHILD\_SA}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_CHILD\_SA}{ADD\_CHILD\_SA}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+CHILD\+\_\+\+SA(\begin{DoxyParamCaption}\item[{}]{node }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ add\_child(node);\ \(\backslash\)}
+\DoxyCodeLine{\ \ get\_subautoload\_root()-\/>bind\_node(node);}
+
+\end{DoxyCode}
+\Hypertarget{subautoload__container_8h_a4a0817eac1b011dd2fe9b8af41c98c2c}\label{subautoload__container_8h_a4a0817eac1b011dd2fe9b8af41c98c2c} 
+\index{subautoload\_container.h@{subautoload\_container.h}!GET\_SUBAUTOLOAD@{GET\_SUBAUTOLOAD}}
+\index{GET\_SUBAUTOLOAD@{GET\_SUBAUTOLOAD}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{GET\_SUBAUTOLOAD}{GET\_SUBAUTOLOAD}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+SUBAUTOLOAD(\begin{DoxyParamCaption}\item[{}]{type\+\_\+class,  }\item[{}]{p\+\_\+container,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ target\ =\ (p\_container)-\/>get\_singleton\_node<type\_class>();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ if(target\ ==\ NULL)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ INIT\_ASSERT()\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ godot::Array\ \_paramarr;\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \_paramarr.append(type\_class::get\_class\_static());\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ERR\_ASSERT(godot::String(\textcolor{stringliteral}{"{}Cannot\ get\ '\{0\}'\ subautoload."{}}).format(\_paramarr));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ godot::Error::ERR\_UNCONFIGURED;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{subautoload__container_8h_a54e9506cc1ddcd25e93cf61281dee325}\label{subautoload__container_8h_a54e9506cc1ddcd25e93cf61281dee325} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SIGNAL\_SUBAUTOLOAD\_ON\_READY@{SIGNAL\_SUBAUTOLOAD\_ON\_READY}}
+\index{SIGNAL\_SUBAUTOLOAD\_ON\_READY@{SIGNAL\_SUBAUTOLOAD\_ON\_READY}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_SUBAUTOLOAD\_ON\_READY}{SIGNAL\_SUBAUTOLOAD\_ON\_READY}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+SUBAUTOLOAD\+\_\+\+ON\+\_\+\+READY~"{}ssaor"{}}
+
+\Hypertarget{subautoload__container_8h_ac5112fc879d40391994146e9b90a5450}\label{subautoload__container_8h_ac5112fc879d40391994146e9b90a5450} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE}}
+\index{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE}{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DECLARE}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+CREATE\+\_\+\+DECLARE(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name,  }\item[{}]{inherit\+\_\+from }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{class\ }class\_name\#\#\_sac:\ \textcolor{keyword}{public}\ inherit\_from\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ GDCLASS(class\_name\#\#\_sac,\ inherit\_from)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ \_\_\_bound\_subautoload\ =\ NULL;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_\_\_is\_ready\ =\ \textcolor{keyword}{false};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d}{SUBAUTOLOAD\_USER\_BINDFUNC}}(\mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ subautoload\_ref);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c}{SUBAUTOLOAD\_USER\_READYFUNC}}();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \_bind\_methods();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \_bind\_subautoload(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\{\}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \_on\_gamenode\_ready()\{\}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ get\_subautoload\_root();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \};}
+
+\end{DoxyCode}
+\Hypertarget{subautoload__container_8h_a36feaf6541bc7655fa7771f1157f698d}\label{subautoload__container_8h_a36feaf6541bc7655fa7771f1157f698d} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE}}
+\index{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE}{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_CREATE\_DEFINE}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+CREATE\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})}
+
+\Hypertarget{subautoload__container_8h_a6f61cca77dda88f9c55ab70abd473d7d}\label{subautoload__container_8h_a6f61cca77dda88f9c55ab70abd473d7d} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME}}
+\index{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME@{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME}{SUBAUTOLOAD\_COMPATIBLE\_CLASS\_NAME}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+COMPATIBLE\+\_\+\+CLASS\+\_\+\+NAME(\begin{DoxyParamCaption}\item[{}]{class\+\_\+name }\end{DoxyParamCaption})~class\+\_\+name\#\#\+\_\+sac}
+
+\Hypertarget{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d}\label{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_USER\_BINDFUNC@{SUBAUTOLOAD\_USER\_BINDFUNC}}
+\index{SUBAUTOLOAD\_USER\_BINDFUNC@{SUBAUTOLOAD\_USER\_BINDFUNC}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_USER\_BINDFUNC}{SUBAUTOLOAD\_USER\_BINDFUNC}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNC~\+\_\+\+\_\+\+\_\+set\+\_\+bound\+\_\+subautoload}
+
+\Hypertarget{subautoload__container_8h_a3f3caa7291ea6dfea266da3349c49cb6}\label{subautoload__container_8h_a3f3caa7291ea6dfea266da3349c49cb6} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_USER\_BINDFUNCSTR@{SUBAUTOLOAD\_USER\_BINDFUNCSTR}}
+\index{SUBAUTOLOAD\_USER\_BINDFUNCSTR@{SUBAUTOLOAD\_USER\_BINDFUNCSTR}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_USER\_BINDFUNCSTR}{SUBAUTOLOAD\_USER\_BINDFUNCSTR}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNCSTR~\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY}}(\mbox{\hyperlink{subautoload__container_8h_a4a8166145b55f9d15a9603fcac55111d}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+BINDFUNC}})}
+
+\Hypertarget{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c}\label{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_USER\_READYFUNC@{SUBAUTOLOAD\_USER\_READYFUNC}}
+\index{SUBAUTOLOAD\_USER\_READYFUNC@{SUBAUTOLOAD\_USER\_READYFUNC}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_USER\_READYFUNC}{SUBAUTOLOAD\_USER\_READYFUNC}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNC~\+\_\+\+\_\+\+\_\+on\+\_\+ready\+\_\+subautoload}
+
+\Hypertarget{subautoload__container_8h_ad3222dfd454457b4f6f2b1fe54c30e7d}\label{subautoload__container_8h_ad3222dfd454457b4f6f2b1fe54c30e7d} 
+\index{subautoload\_container.h@{subautoload\_container.h}!SUBAUTOLOAD\_USER\_READYFUNCSTR@{SUBAUTOLOAD\_USER\_READYFUNCSTR}}
+\index{SUBAUTOLOAD\_USER\_READYFUNCSTR@{SUBAUTOLOAD\_USER\_READYFUNCSTR}!subautoload\_container.h@{subautoload\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBAUTOLOAD\_USER\_READYFUNCSTR}{SUBAUTOLOAD\_USER\_READYFUNCSTR}}
+{\footnotesize\ttfamily \#define SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNCSTR~\mbox{\hyperlink{godot__macro_8h_a62cc1876c448f8a89fd857f591f2bdc6}{\+\_\+\+\_\+\+\_\+\+MACRO\+\_\+\+STRINGIFY}}(\mbox{\hyperlink{subautoload__container_8h_abdb50d06c544f510ece68def535e9c5c}{SUBAUTOLOAD\+\_\+\+USER\+\_\+\+READYFUNC}})}
+

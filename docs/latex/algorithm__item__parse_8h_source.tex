@@ -1,0 +1,40 @@
+\doxysection{algorithm\+\_\+item\+\_\+parse.\+h}
+\hypertarget{algorithm__item__parse_8h_source}{}\label{algorithm__item__parse_8h_source}\index{src/algorithm\_item\_parse.h@{src/algorithm\_item\_parse.h}}
+\mbox{\hyperlink{algorithm__item__parse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_PARSE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_PARSE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/packed\_string\_array.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm}{Game::Misc::Algorithm}}\{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result}{parse\_item\_id\_result}}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ godot::String\ \_item\_type\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ godot::String\ \_item\_id\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ godot::String\ \_warning\_message\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_warning\_exist\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_a13ed22d7e985bbcb6700a401eddffa23}{add\_warning}}(\textcolor{keyword}{const}\ godot::String\&\ warning\_message);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_a9baa67c02cefe29be724cd48e7f41971}{is\_warning\_exist}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_a778cd48bdc423ad2c4b40d3797ef0420}{get\_warning}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_a31bc2fa745661e764b0b67735467a1ad}{set\_item\_id}}(\textcolor{keyword}{const}\ godot::String\&\ item\_id);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_ab22bce2993cf23b6a3bc81193f4e13e2}{set\_item\_type}}(\textcolor{keyword}{const}\ godot::String\&\ item\_type);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_a54e1bdd576c982c90feec20ac18d15c3}{get\_item\_id}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result_ac372f7f7bf3f9ae335f7270a7fef22cb}{get\_item\_type}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1parse__item__id__result}{parse\_item\_id\_result}}\ \mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_acc8060e16a4e71b2ed12d7d559820895}{parse\_full\_item\_id}}(godot::String\ full\_id);}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,14 @@
+type.name_id: Dictionary
+  Format of the item id
+
+  name: String
+    The user-readable name of the item
+
+  desc: String
+    Description of the item
+
+  weapon_stats: weapon_stats_data
+    Stats for weapon
+    Subtypes;
+      - primary
+      - secondary

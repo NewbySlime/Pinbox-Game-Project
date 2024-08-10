@@ -1,0 +1,57 @@
+\doxysection{modifier\+\_\+container\+\_\+item.\+h}
+\hypertarget{modifier__container__item_8h_source}{}\label{modifier__container__item_8h_source}\index{src/modifier\_container\_item.h@{src/modifier\_container\_item.h}}
+\mbox{\hyperlink{modifier__container__item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODIFIER\_CONTAINER\_ITEM\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODIFIER\_CONTAINER\_ITEM\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__modifier_8h}{I\_modifier.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__object_8h}{item\_object.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__stats__data_8h}{weapon\_stats\_data.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifier__rating__data_8h}{modifier\_rating\_data.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{namespace\ }Factory\{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }modifier\_factory;}
+\DoxyCodeLine{00017\ \ \ \}}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item}{modifier\_container\_item}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{Game::Modifiers::I\_modifier}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1_factory_1_1modifier__factory}{Factory::modifier\_factory}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ std::vector<std::shared\_ptr<Game::Modifiers::I\_modifier>>\ \_container;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ godot::String\ \_description;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ godot::String\ \_title;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_update\_description();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a19026d53af3761654a5fdf1fede77e14}{\string~modifier\_container\_item}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a0784b42b04b76f824074183c4682fbc5}{modify\_weapon\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ stats,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ hitreg\_state)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a1cf10ce849169e2dc7dbca75ee151a04}{get\_modifier\_title}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a5eb8bf2c08a793cbc265627ec82de130}{get\_modifier\_description}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a367ede0ae6e3b46fd2e8d5ea8133007e}{add\_modifier}}(std::shared\_ptr<Game::Modifiers::I\_modifier>\ modifier);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a01b7d6516b31bd1f413e10f9c658f2ae}{clear\_modifiers}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_aacb7c111bdbc20d08739fdc574bce3f1}{get\_modifier\_count}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ std::shared\_ptr<const\ Game::Modifiers::I\_modifier>\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_a8653362ff3f00ef1233a4c55f2a68160}{get\_modifier\_index}}(uint64\_t\ index);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{comment}{//Game::modifier\_rating\_data\ get\_rating\_data();}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{comment}{//\ subdata\ functions}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_ab537b98d45d31f2fd1a062ca584dbdf9}{get\_subdata\_name}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1modifier__container__item_ab859c959d3c01e099bd79f296cf31f5c}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \};}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

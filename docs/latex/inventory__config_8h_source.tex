@@ -1,0 +1,49 @@
+\doxysection{inventory\+\_\+config.\+h}
+\hypertarget{inventory__config_8h_source}{}\label{inventory__config_8h_source}\index{src/inventory\_config.h@{src/inventory\_config.h}}
+\mbox{\hyperlink{inventory__config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INVENTORY\_CONFIG\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INVENTORY\_CONFIG\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{custom__memory_8h}{custom\_memory.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/string.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1inventory__config}{inventory\_config}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__data}{GameUtils::Memory::custom\_data}}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\_type}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9ab779b16fe756a026434c86af47ce317f}{\_wrong\_type}}\ =\ -\/1,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a634dc67623f1f44365767bdfeefab885}{inv\_type\_normal}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9a151fff7e031ab6f35e6b220abde47aa2}{inv\_type\_loadout}}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\_type}}\ \_inventory\_type;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ uint32\_t\ \_inventory\_size;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\_type}}\ \_parse\_inventory\_type(\textcolor{keyword}{const}\ godot::String\&\ value);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_parse\_data(\textcolor{keyword}{const}\ godot::Dictionary\&\ \_data\_part);}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_ab18de1235372ee36c1b44b9581440088}{bind\_function}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a9307d8750a72b38bd387c20b6d3c9729}{\string~inventory\_config}}()\{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{static}\ godot::String\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a0fae0e2e91107d2a9b33aa9561f87b7f}{get\_subdata\_name}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_af98a47698d04bba15a6906f63fe020aa}{parse\_dictionary\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem,\ godot::Dictionary*\ data);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_ac9068d0ba173adfbdd7d2229d709b091}{copy\_subdata\_to}}(\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{GameUtils::Memory::custom\_memory}}*\ mem);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a4b093583164e0478b66f0a7dba988eb9}{inv\_type}}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a94e33e8471aa7867f8386347e0779e5f}{get\_inventory\_type}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__config_a21829e716cba91db38c132657e4d1bf8}{get\_inventory\_size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+\doxysection{src/subdata\+\_\+container.h File Reference}
+\hypertarget{subdata__container_8h}{}\label{subdata__container_8h}\index{src/subdata\_container.h@{src/subdata\_container.h}}
+{\ttfamily \#include "{}custom\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/dictionary.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}map"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}
+\item 
+struct \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container\+::\+\_\+subdata\+\_\+metadata}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils}{Game\+Utils}}
+\item 
+namespace \mbox{\hyperlink{namespace_game_utils_1_1_parsing_helper}{Game\+Utils\+::\+Parsing\+Helper}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{subdata__container_8h_ae00c024a011c49b597fffc267a89c27e}{SUBDATA\+\_\+\+OVERRIDE\+\_\+\+NAME}}(origin\+\_\+class,  new\+\_\+class\+\_\+name,  new\+\_\+subdata\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{subdata__container_8h_ae00c024a011c49b597fffc267a89c27e}\label{subdata__container_8h_ae00c024a011c49b597fffc267a89c27e} 
+\index{subdata\_container.h@{subdata\_container.h}!SUBDATA\_OVERRIDE\_NAME@{SUBDATA\_OVERRIDE\_NAME}}
+\index{SUBDATA\_OVERRIDE\_NAME@{SUBDATA\_OVERRIDE\_NAME}!subdata\_container.h@{subdata\_container.h}}
+\doxysubsubsection{\texorpdfstring{SUBDATA\_OVERRIDE\_NAME}{SUBDATA\_OVERRIDE\_NAME}}
+{\footnotesize\ttfamily \#define SUBDATA\+\_\+\+OVERRIDE\+\_\+\+NAME(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class,  }\item[{}]{new\+\_\+class\+\_\+name,  }\item[{}]{new\+\_\+subdata\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }new\_class\_name:\ \textcolor{keyword}{public}\ origin\_class\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ godot::String\ get\_subdata\_name()\{\ \textcolor{keywordflow}{return}\ new\_subdata\_name;\ \}\ \(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}

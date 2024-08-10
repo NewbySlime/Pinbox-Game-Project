@@ -1,0 +1,212 @@
+\doxysection{Game\+::Entity\+::breakable\+\_\+object Class Reference}
+\hypertarget{class_game_1_1_entity_1_1breakable__object}{}\label{class_game_1_1_entity_1_1breakable__object}\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+
+
+{\ttfamily \#include $<$breakable\+\_\+object.\+h$>$}
+
+Inheritance diagram for Game\+::Entity\+::breakable\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.745098cm]{class_game_1_1_entity_1_1breakable__object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a7358dec47911435e3ae1e3ce321d4730}{breakable\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_ac63a011849005aed14787f43dcb08f41}{\+\_\+ready}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game\+::\+Entity\+::damageable\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a95dde1ae40604e05939092bae23c7f28}{damageable\+\_\+object}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a0a33bd4447bce6edbf462b68d1e646a2}{\texorpdfstring{$\sim$}{\string~}damageable\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a5a0e260a4e329791d74e6ceaaa3dc385}{\+\_\+ready}} () override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a1130f0b3671ff14c322a45bdd5f7cb0d}{\+\_\+physics\+\_\+process}} (double delta) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af031e16d73c6de557c2bc1d942720f08}{\+\_\+notification}} (int code)
+\item 
+double \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a7b53ffd7d946c3339c195b14264ca791}{do\+\_\+damage}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game\+::\+Entity\+::damage\+\_\+info}} \&d\+\_\+info) override
+\item 
+double \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ab2cf9e57ea8d7865057250b4a27e5375}{do\+\_\+heal}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game\+::\+Entity\+::heal\+\_\+info}} \&h\+\_\+info) override
+\item 
+double \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a9bfdd6d1aef1a9249f00cf4c8277018b}{do\+\_\+revive}} (const \mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game\+::\+Entity\+::revive\+\_\+info}} \&r\+\_\+info) override
+\item 
+bool \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a2f71a76904e92d41cebf2209cef7bba9}{use\+\_\+energy}} (const double e\+\_\+point) override
+\item 
+double \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a09ddaa4b3aac268389401690d13b4c32}{get\+\_\+energy\+\_\+point}} () override
+\item 
+const \mbox{\hyperlink{class_game_1_1_entity_1_1vital__data}{Game\+::\+Entity\+::vital\+\_\+data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a9ef2eba65df9470beefc04227d348df0}{get\+\_\+vital\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game\+::\+Entity\+::entity\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a9f95b2a532c377a73aa73b4de8327918}{entity\+\_\+object}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a6c71023051def5c258efc442c6bf00ee}{\texorpdfstring{$\sim$}{\string~}entity\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aebef9343b0c770cad04ed7d9fb4add3b}{\+\_\+physics\+\_\+process}} (double delta) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a7efd0ab317a618fe3ac7b9b6f24dc15e}{\+\_\+notification}} (int code)
+\item 
+\mbox{\hyperlink{namespace_game_1_1_entity_a24ada67db510328cb10c5e1ca8ecaa7f}{Game\+::\+Entity\+::entity\+\_\+inst\+\_\+id}} \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_addc89e6c5ee4cbd3a28f932971c9fe74}{get\+\_\+instance\+\_\+id}} () const override
+\item 
+const \mbox{\hyperlink{class_game_1_1_entity_1_1entity__data}{Game\+::\+Entity\+::entity\+\_\+data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aebfca16d16def1c6479b82f7fd9ddb70}{get\+\_\+entity\+\_\+data}} () const override
+\item 
+const \mbox{\hyperlink{class_game_1_1_entity_1_1entity__resource__data}{Game\+::\+Entity\+::entity\+\_\+resource\+\_\+data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a36e40ee8f6b6fac4e1975fc98f81e04c}{get\+\_\+entity\+\_\+resource\+\_\+data}} () const override
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\const subdata\+\_\+class \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a156fb637c357ddfd1e4a27694552a4df}{get\+\_\+subdata}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} $>$ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a3957a3249ff46728b762f2ccd9decd77}{get\+\_\+subdata\+\_\+shared}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::weak\+\_\+ptr$<$ const subdata\+\_\+class $>$ \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_aafc856edca969dbb6f54c34c39ae9599}{get\+\_\+subdata\+\_\+ref}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object}{Game\+::\+Entity\+::\+I\+\_\+vital\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_game_1_1_entity_1_1_i__vital__object_a8dd13b12bbe479df7b98f4dca85c3106}{get\+\_\+health\+\_\+point}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a8e53898a06683e436bd2033c0250db86}{\+\_\+on\+\_\+damaged}} (\mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game\+::\+Entity\+::damage\+\_\+info}} \&d\+\_\+info) override
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_a410b1af8c29e0f019138ae576f9dbb34}{\+\_\+on\+\_\+dead}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game\+::\+Entity\+::damageable\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ac01e3144f93e08d2cabe3f5d738c84ba}{\+\_\+on\+\_\+vital\+\_\+data\+\_\+changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a45c788f7d0993d5ec66191dbc7c31d66}{\+\_\+on\+\_\+hp\+\_\+changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_aa764b95da09f2051298164487d86bd8d}{\+\_\+on\+\_\+healed}} (\mbox{\hyperlink{struct_game_1_1_entity_1_1heal__info}{Game\+::\+Entity\+::heal\+\_\+info}} \&h\+\_\+info)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a997e2ce3df2ba99fe46e9e647963081a}{\+\_\+on\+\_\+revived}} (\mbox{\hyperlink{struct_game_1_1_entity_1_1revive__info}{Game\+::\+Entity\+::revive\+\_\+info}} \&r\+\_\+info)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af9b3c3fe037a99800d7726e2904adf5b}{\+\_\+on\+\_\+ep\+\_\+changed}} (double new\+\_\+ep)
+\item 
+virtual void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a5635d90e17359ed3711cf46ac5f32d82}{\+\_\+on\+\_\+energy\+\_\+exhausted}} ()
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a796a0f07dc13eb98efb1510009501811}{\+\_\+set\+\_\+max\+\_\+hp}} (double max\+\_\+hp, bool restore\+\_\+hp=false)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ad10edbb80d74e7d5e6635b83aaeea9ef}{\+\_\+set\+\_\+max\+\_\+ep}} (double max\+\_\+ep, bool restore\+\_\+ep=false)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a2259944336397e60a6f15e4bce87d66b}{\+\_\+set\+\_\+health\+\_\+point}} (double new\+\_\+hp, bool capped=true)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a02d571d179aa067673fa3f98e5c776af}{\+\_\+set\+\_\+energy\+\_\+point}} (double new\+\_\+ep, bool capped=true)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_af6861ee332fe40a07980b722fc14f267}{\+\_\+set\+\_\+restore\+\_\+rate\+\_\+ep}} (double restore\+\_\+rate)
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a97851d0bd483ed70a93ea6c4f6d13587}{\+\_\+set\+\_\+restore\+\_\+delay\+\_\+ep}} (double restore\+\_\+delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game\+::\+Entity\+::entity\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a5bdd98bf3bc7d19cc9706b4273e06c45}{\+\_\+on\+\_\+gamenode\+\_\+ready}} () override
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a92da7f296b75ca039cf20eb9ade7f65b}{\+\_\+set\+\_\+subdata}} (subdata\+\_\+class \texorpdfstring{$\ast$}{*}from)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a815c7aa4c4131e9b63183e6aefcbdce5}{\+\_\+set\+\_\+subdata\+\_\+ref}} (std\+::shared\+\_\+ptr$<$ subdata\+\_\+class $>$ ref\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a477e464de4bfbfd2115b194db21d4b3e}{\+\_\+\+\_\+copy\+\_\+subdata\+\_\+to\+\_\+subdata}} (\mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{subdata\+\_\+container}} \texorpdfstring{$\ast$}{*}container) const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a0c64d34b06d30732e4f98bf61fea8175}{\+\_\+\+\_\+create\+\_\+copy\+\_\+function}} (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}from, \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}to) const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a6a8cf5ede7347856f1ba4d910c3b31d1}{\+\_\+\+\_\+add\+\_\+new\+\_\+subdata}} (godot\+::\+Dictionary \texorpdfstring{$\ast$}{*}\+\_\+data\+\_\+dict)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_adaefb2a4606ea0d35eaff086ebcac73b}{\+\_\+\+\_\+set\+\_\+subdata}} (subdata\+\_\+class \texorpdfstring{$\ast$}{*}from)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a16167141a734b664df3b3206a229b282}{\+\_\+\+\_\+set\+\_\+subdata\+\_\+ref}} (std\+::shared\+\_\+ptr$<$ subdata\+\_\+class $>$ ref\+\_\+ptr)
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\subdata\+\_\+class \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a05d5d76b73fa5fc39ed072af3ca2ace8}{\+\_\+\+\_\+get\+\_\+subdata}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::weak\+\_\+ptr$<$ subdata\+\_\+class $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a4f9098d297a869604f52274adc5a019b}{\+\_\+\+\_\+get\+\_\+subdata\+\_\+weak}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a01cd0c47c9bd62887a2f8b8554e4562d}{\+\_\+\+\_\+get\+\_\+subdata\+\_\+shared}} () const
+\item 
+{\footnotesize template$<$typename subdata\+\_\+class $>$ }\\void \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a764c228934fbcb6c7c91d1c955d5e2d1}{\+\_\+\+\_\+remove\+\_\+subdata}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_entity_1_1breakable__object_ac95ec52280af4308c9b034d4af556a0f}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object}{Game\+::\+Entity\+::damageable\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a24d729a5768a76982acd8e4bb03022e7}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object}{Game\+::\+Entity\+::entity\+\_\+object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_game_1_1_entity_1_1entity__object_a733ebc4d5eab328f7a54a8ef6294982e}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(subdata\+\_\+container\+::\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_a78fc3e0a85ed64adc69265271a16d0ca}{\+\_\+subdata\+\_\+function\+\_\+copy}}) (\mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}from, \mbox{\hyperlink{class_game_utils_1_1_memory_1_1custom__memory}{Game\+Utils\+::\+Memory\+::custom\+\_\+memory}} \texorpdfstring{$\ast$}{*}to) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{Game\+Utils\+::\+Parsing\+Helper\+::subdata\+\_\+container}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ godot\+::\+String, \mbox{\hyperlink{struct_game_utils_1_1_parsing_helper_1_1subdata__container_1_1__subdata__metadata}{\+\_\+subdata\+\_\+metadata}} $>$ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container_ac9437f6e82ed6d19678f1199409d2860}{\+\_\+subdata\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_1_1_entity_1_1breakable__object_a7358dec47911435e3ae1e3ce321d4730}\label{class_game_1_1_entity_1_1breakable__object_a7358dec47911435e3ae1e3ce321d4730} 
+\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}!breakable\_object@{breakable\_object}}
+\index{breakable\_object@{breakable\_object}!Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+\doxysubsubsection{\texorpdfstring{breakable\_object()}{breakable\_object()}}
+{\footnotesize\ttfamily breakable\+\_\+object\+::breakable\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_1_1_entity_1_1breakable__object_ac95ec52280af4308c9b034d4af556a0f}\label{class_game_1_1_entity_1_1breakable__object_ac95ec52280af4308c9b034d4af556a0f} 
+\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily void breakable\+\_\+object\+::\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_game_1_1_entity_1_1breakable__object_a8e53898a06683e436bd2033c0250db86}\label{class_game_1_1_entity_1_1breakable__object_a8e53898a06683e436bd2033c0250db86} 
+\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}!\_on\_damaged@{\_on\_damaged}}
+\index{\_on\_damaged@{\_on\_damaged}!Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+\doxysubsubsection{\texorpdfstring{\_on\_damaged()}{\_on\_damaged()}}
+{\footnotesize\ttfamily void breakable\+\_\+object\+::\+\_\+on\+\_\+damaged (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_1_1_entity_1_1damage__info}{Game\+::\+Entity\+::damage\+\_\+info}} \&}]{d\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_ab1345266a6602f44ab3f9eadc2436c0e}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1breakable__object_a410b1af8c29e0f019138ae576f9dbb34}\label{class_game_1_1_entity_1_1breakable__object_a410b1af8c29e0f019138ae576f9dbb34} 
+\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}!\_on\_dead@{\_on\_dead}}
+\index{\_on\_dead@{\_on\_dead}!Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+\doxysubsubsection{\texorpdfstring{\_on\_dead()}{\_on\_dead()}}
+{\footnotesize\ttfamily void breakable\+\_\+object\+::\+\_\+on\+\_\+dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_1_1_entity_1_1damageable__object_a502383cefe02116d98651bc0596f976d}{Game\+::\+Entity\+::damageable\+\_\+object}}.
+
+\Hypertarget{class_game_1_1_entity_1_1breakable__object_ac63a011849005aed14787f43dcb08f41}\label{class_game_1_1_entity_1_1breakable__object_ac63a011849005aed14787f43dcb08f41} 
+\index{Game::Entity::breakable\_object@{Game::Entity::breakable\_object}!\_ready@{\_ready}}
+\index{\_ready@{\_ready}!Game::Entity::breakable\_object@{Game::Entity::breakable\_object}}
+\doxysubsubsection{\texorpdfstring{\_ready()}{\_ready()}}
+{\footnotesize\ttfamily void breakable\+\_\+object\+::\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{breakable__object_8h}{breakable\+\_\+object.\+h}}\item 
+src/\mbox{\hyperlink{breakable__object_8cpp}{breakable\+\_\+object.\+cpp}}\end{DoxyCompactItemize}

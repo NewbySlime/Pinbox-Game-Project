@@ -1,0 +1,78 @@
+\doxysection{item\+\_\+container.\+h}
+\hypertarget{item__container_8h_source}{}\label{item__container_8h_source}\index{src/item\_container.h@{src/item\_container.h}}
+\mbox{\hyperlink{item__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEM\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEM\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__object_8h}{item\_object.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__item__container_8h}{I\_item\_container.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__location__data__struct_8h}{item\_location\_data\_struct.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }item\_server;}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1item__container}{item\_container}}:\ \textcolor{keyword}{public}\ godot::Node,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_1_1_item_1_1_i__item__container}{Game::Item::I\_item\_container}}\{}
+\DoxyCodeLine{00015\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1item__container}{item\_container}},\ godot::Node)}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a83285e7fb3653857d415ddbc4064b6de}{\_bind\_methods}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ad99c1e8a153fb99baca574dbd4c6a8ef}{item\_server}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{item\_server}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a97359308a0bd4150cab31625cbe38318}{\_server}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1906444480c8ba77dcd5d167b6fa3ddf}{\_container\_id}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2d921fb0524934674c42f376ee599ce0}{\_item\_filter\_type}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ std::vector<uint64\_t>\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a10a647c675ab5ce0594b418795badc67}{\_item\_list}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a54efe9c967d85e4a2b3c8ec7f388cdd2}{\_item\_count}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1f158894d8380f24af109d4c005784ba}{\_emit\_signal\_index\_removed}}(\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\&\ pos\_data,\ uint64\_t\ item\_id);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ae3abdd201d2368325377b9f49ae847d4}{\_emit\_signal\_index\_added}}(\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\&\ pos\_data,\ uint64\_t\ item\_id);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ae826c8e6ce5247cf22a5a8774aa660aa}{\_emit\_signal\_index\_changed}}(\mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\&\ pos\_data);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a366962eb9e808f14ec33db88988b6911}{\_emit\_signal\_container\_resized}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a33454c6d58b5dcb512902631af8b2c48}{\_check\_index}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_adcf567b9660076fcd403a1725047c677}{\_get\_new\_index}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2be371cab744d43931659a9d29514cf2}{\_remove\_item}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c6c6236d8d8c25ce53a3c2cb4f45aed}{\_add\_item}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item,\ \textcolor{keywordtype}{int}\ index\ =\ -\/1,\ \textcolor{keywordtype}{bool}\ force\ =\ \textcolor{keyword}{false},\ uint64\_t*\ \_removed\_id\ =\ NULL)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a2596733d08f3de546f22662f57b2bc1d}{item\_container}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ab24dcfba887b2a85e826f8a036dcfa42}{get\_item}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a00a21982310f69e6026d0e065077a00e}{get\_item\_id}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a43b72492fc59106dce7a1f4ab80e9c6d}{get\_container\_id}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a72012ff093703378a4f195b7ebc23749}{get\_container\_type}}()\textcolor{keyword}{\ override}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_game_1_1_item_a055b1bfa12f2489ae9a53b03e6194aa2a62f1b08ef0568add4833a71893d0c1cd}{ict\_generic}};\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8101922a61f7a8cbb43f5b7467bde45e}{is\_item\_exist}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ac3ddd1f8c4432a5155446e72c1c38d90}{is\_item\_can\_exist}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__object}{Game::Item::item\_object}}*\ item)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_ac3ddd1f8c4432a5155446e72c1c38d90}{is\_item\_can\_exist}}(uint64\_t\ item\_id)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_aefb665c97c6e053531fb6131751de8bb}{set\_item\_filter\_type}}(uint32\_t\ new\_type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a157137e21a8febb38a46a62c512e5673}{get\_item\_filter\_type}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8a1642ff2db820b92f3455cb56e3cc23}{empty\_slot\_count}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a0a61cce966186ab723d2638cc16583ba}{get\_container\_size}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a974172bcb46de57d8d49dacfb1482962}{resize\_container}}(\textcolor{keywordtype}{int}\ new\_size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a9171d55e78daaa96e9479fae69a4e46d}{add\_to\_container}}(\mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ index\ =\ -\/1)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a2504f792016c8c540682959039286f3b}{Game::Item::item\_inst\_id}}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a7c9b2dfe122c0ba7020b27227dfb5213}{remove\_from\_container}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a99d01d8a15905899257ed93392716b76}{swap\_item}}(\textcolor{keywordtype}{int}\ index,\ \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\&\ pos\_data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a3c70ded4c0dcfff164b324f8f47d9533}{drop\_item}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a1f9dd402fdaa09b27ccd1a3635e44cbc}{drop\_all\_item}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1item__container_a8246fb40579c680e876420109e88e362}{drop\_all\_item\_filter}}(uint32\_t\ filter)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ \ \ \};}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

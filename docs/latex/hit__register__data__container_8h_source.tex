@@ -1,0 +1,33 @@
+\doxysection{hit\+\_\+register\+\_\+data\+\_\+container.\+h}
+\hypertarget{hit__register__data__container_8h_source}{}\label{hit__register__data__container_8h_source}\index{src/hit\_register\_data\_container.h@{src/hit\_register\_data\_container.h}}
+\mbox{\hyperlink{hit__register__data__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HIT\_REGISTER\_DATA\_CONTAINER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HIT\_REGISTER\_DATA\_CONTAINER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__interface_8h}{hit\_register\_interface.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/dictionary.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1hit__register__data__container}{hit\_register\_data\_container}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ \_data\_head;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \_clear\_data(\mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ \_data\_start);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1hit__register__data__container_a4b91e47563299dc2c5bf52d140a76d37}{hit\_register\_data\_container}}(\mbox{\hyperlink{struct_game_1_1hit__register__data}{hit\_register\_data}}\&\ start\_data);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1hit__register__data__container_a34d191e6169733e683bcab602fd0779b}{\string~hit\_register\_data\_container}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ \mbox{\hyperlink{class_game_1_1hit__register__data__container_a5428eb3c7789d37c68840427dbfe0249}{get\_head}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ \mbox{\hyperlink{class_game_1_1hit__register__data__container_a4e8b799c941fd8f9896a6f57845e9d6a}{add\_node}}(\mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ from,\ \mbox{\hyperlink{struct_game_1_1hit__register__data}{Game::hit\_register\_data}}*\ data);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Game::hit\_register\_data\_container>\ \mbox{\hyperlink{class_game_1_1hit__register__data__container_afeef98a710b204c2165f4c8dbebbd433}{create\_by\_json}}(godot::Dictionary*\ json\_data);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Game::hit\_register\_data\_container>\ \mbox{\hyperlink{class_game_1_1hit__register__data__container_a131c2e5bd19fb16d5ca7555321ba2544}{copy\_hitreg\_container}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1hit__register__data__container}{Game::hit\_register\_data\_container}}\&\ from);}
+\DoxyCodeLine{00024\ \ \ \};}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

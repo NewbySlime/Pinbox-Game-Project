@@ -1,0 +1,100 @@
+\doxysection{persistance\+\_\+context.\+h}
+\hypertarget{persistance__context_8h_source}{}\label{persistance__context_8h_source}\index{src/persistance\_context.h@{src/persistance\_context.h}}
+\mbox{\hyperlink{persistance__context_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PERSISTANCE\_CONTEXT\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PERSISTANCE\_CONTEXT\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i__persistance__data_8h}{I\_persistance\_data.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__container_8h}{subautoload\_container.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subdata__container_8h}{subdata\_container.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}time.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\ "{}spcos"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\ "{}spcol"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_INITIATED\ "{}spcosi"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_INITIATED\ "{}spcoli"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_SAVE\_DONE\ "{}spcosd"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SIGNAL\_PERSISTANCE\_CONTEXT\_ON\_LOAD\_DONE\ "{}spcold"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{class\ }game\_handler;}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_persistance}{Game::Persistance}}\{}
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context}{persistance\_context}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00029\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context}{persistance\_context}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ DEBUG\_game\_save)}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ uint64\_t\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_af0ce9735947c917ebee4933fc2ecf3b5}{false\_persistance}}\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{persistance\_metadata}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_utils_1_1_parsing_helper_1_1subdata__container}{GameUtils::ParsingHelper::subdata\_container}}\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ godot::String\ \_save\_name;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ time\_t\ \_unix\_time\_last\_save;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata_a2ab1fed226a1122dc57a642d49b2a33d}{get\_save\_name}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ godot::String\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata_a5d13435e69c0906dab91e8f7a7463d79}{get\_formatted\_last\_save\_time}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ std::map<persistance\_id,\ persistance\_metadata>\ \_metadata;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ std::map<persistance\_id,\ std::weak\_ptr<Game::Persistance::I\_persistance\_data>>\ \_opened\_data;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \_current\_id;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ std::shared\_ptr<Game::Persistance::I\_persistance\_data>\ \_current\_persistance;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a26cf6d4a17dbc6616cf9797c33196688}{\_bind\_methods}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a822579a8badcd03f10f46871d515474a}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a178245a6bda3ac7fed9de86404a820ec}{persistance\_context}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a91832c92c199a8f1cd230a646b37590c}{\string~persistance\_context}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ std::set<persistance\_id>\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a4543ee2ac22015779afcb4fa5b9e4621}{get\_available\_persistance}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_1_1persistance__metadata}{persistance\_metadata}}*\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a67c73350aebee583c5caea631e50e3ff}{get\_metadata}}(\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{comment}{//\ if\ NULL\ then\ it's\ not\ loaded}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_persistance_1_1_i__persistance__data}{Game::Persistance::I\_persistance\_data}}*\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a1883bd3203d3b40241b72adcaaedd9c9}{get\_current\_persistance\_data}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ std::shared\_ptr<Game::Persistance::I\_persistance\_data>\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_aa0f41416e57df3fba5f884390c93635c}{get\_persistance\_data}}(\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_game_1_1game__handler}{Game::game\_handler}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a65a3df076dd21eba1412689ce56733ca}{create\_new\_persistance}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ this\ will\ also\ load\ the\ persistance}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a51a6777d67e04670f67d4b71d399c860}{change\_persistance}}(\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_ab9fede147e9e0ff09372544390c9d2a1}{change\_persistance\_name}}(\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_a2b94a8194ee0174d9553518218b2f06c}{persistance\_id}}\ \textcolor{keywordtype}{id},\ godot::String\ new\_name);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context_ac8173a2201f31c17980938a3aa29eaa4}{trigger\_save}}();}
+\DoxyCodeLine{00082\ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context__on__save__param}{persistance\_context\_on\_save\_param}}\{}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_persistance_1_1persistance__context__on__load__param}{persistance\_context\_on\_load\_param}}\{}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \};}
+\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

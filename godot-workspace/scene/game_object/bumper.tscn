@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd5g1e18resno"]
+
+[ext_resource type="Texture2D" uid="uid://cwa45oehnsl5o" path="res://resource/bumper.png" id="1_avpex"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ifsk6"]
+friction = 0.4
+bounce = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppbg7"]
+atlas = ExtResource("1_avpex")
+region = Rect2(16, 2, 14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yopqx"]
+atlas = ExtResource("1_avpex")
+region = Rect2(2, 2, 14, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbooj"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppbg7")
+}],
+"loop": false,
+"name": &"bumped",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yopqx")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0860"]
+radius = 35.0
+
+[node name="bumper" type="bumper"]
+animated_sprite = NodePath("AnimatedSprite2D")
+led_activation_time = 1.0
+bumper_base_score = 10.0
+physics_material_override = SubResource("PhysicsMaterial_ifsk6")
+max_contacts_reported = 1
+contact_monitor = true
+freeze = true
+freeze_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3.5, 0)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_fbooj")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+shape = SubResource("CircleShape2D_v0860")

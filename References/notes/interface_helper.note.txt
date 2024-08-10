@@ -1,0 +1,42 @@
+List of general functions;
+  - INTERFACE_GET(p_node, interface_type, target)
+  (any time)
+    Macro for getting interface of a node object.
+    *p_node* pointer that represents Godot's node object.
+    *interface_type* the class type of the interface.
+    *target* variable to store the interface pointer.
+
+  - INTERFACE_CHECK(object_type, interface_type)
+  (any time)
+    Macro to check if the object class has the interface.
+
+
+List of functions used by the interface;
+  - INTERFACE_DEFINE_INTERFACE_CLASS(interface_type)
+  (important) (when declaring/at header)
+    This is to define a class name of the interface.
+    *interface_type* the class type of the interface.
+
+
+List of functions used by a class that inherit the helper;
+  - INTERFACE_HELPER_INHERIT()
+  (important) (when declaring/at header)
+    Macro to use when a class is inheriting from interface_helper.
+    Always used even when inheriting from a class that uses interface_helper.
+
+  - INTERFACE_HELPER_BIND_WITH_GODOT(class_type)
+  (important) (when binding)
+    A Macro for helping interface_helper bind with Godot's functionalities.
+    *class_type* The class type.
+
+  - INTERFACE_HELPER_ADD(class_type, interface_type)
+  (important) (when binding)
+    Register the interface that the class uses.
+    *class_type* The class type that uses the interface.
+    *interface_type* The interface_type to register.
+
+  - INTEFACE_HELPER_ADD_FROM_BEFORE(current_class, before_class)
+  (optional) (when binding)
+    Adding interface from inherited class. This is a helper macro for interface_helper.
+    *current_class* The current class that inherits.
+    *before_class* The inherited class.

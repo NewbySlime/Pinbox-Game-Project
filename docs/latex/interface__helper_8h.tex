@@ -1,0 +1,154 @@
+\doxysection{src/interface\+\_\+helper.h File Reference}
+\hypertarget{interface__helper_8h}{}\label{interface__helper_8h}\index{src/interface\_helper.h@{src/interface\_helper.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+var\+\_\+extended.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/string.\+hpp"{}}\newline
+{\ttfamily \#include "{}string"{}}\newline
+{\ttfamily \#include "{}set"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{interface__helper_8h_a070cc174c8fb2f935353e4319ecb893e}{INTERFACE\+\_\+\+GET}}(p\+\_\+node,  interface\+\_\+type,  target)
+\begin{DoxyCompactList}\small\item\em (any time) ~\newline
+ Macro for getting interface of a node object. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interface__helper_8h_aaecc67570dd231f7b31eea2b1c3e26bf}{INTERFACE\+\_\+\+CHECK}}(object\+\_\+type,  interface\+\_\+type)~  object\+\_\+type\+::\+\_\+\+\_\+\#\#interface\+\_\+type\#\#\+\_\+check()
+\begin{DoxyCompactList}\small\item\em (any time) ~\newline
+ Macro to check if the object class has the interface. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\+\_\+\+DEFINE\+\_\+\+INTERFACE\+\_\+\+CLASS}}(interface\+\_\+type)
+\begin{DoxyCompactList}\small\item\em (important) (when declaring/at header) ~\newline
+ This is to define a class name of the interface. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interface__helper_8h_a0c1736104b36c7d922b17929a5ddbaa0}{ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+BIND\+\_\+\+GODOT}}(class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em (important) (when binding) ~\newline
+ A Macro for helping interface\+\_\+helper bind with Godot\textquotesingle{}s functionalities. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}{ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+INHERIT}}(origin\+\_\+class)
+\begin{DoxyCompactList}\small\item\em (important) (when declaring/at header) ~\newline
+ Macro to use when a class is inheriting from interface\+\_\+helper. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interface__helper_8h_a25ff3049d028669df29224c70069c15f}{ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+DEFINE}}(origin\+\_\+class)
+\item 
+\#define \mbox{\hyperlink{interface__helper_8h_af9769646362ed1f517f2179de3a7b84a}{ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+ON\+\_\+\+NOTIFICATION}}(code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{interface__helper_8h_a0c1736104b36c7d922b17929a5ddbaa0}\label{interface__helper_8h_a0c1736104b36c7d922b17929a5ddbaa0} 
+\index{interface\_helper.h@{interface\_helper.h}!ATTR\_INTERFACE\_HELPER\_BIND\_GODOT@{ATTR\_INTERFACE\_HELPER\_BIND\_GODOT}}
+\index{ATTR\_INTERFACE\_HELPER\_BIND\_GODOT@{ATTR\_INTERFACE\_HELPER\_BIND\_GODOT}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_INTERFACE\_HELPER\_BIND\_GODOT}{ATTR\_INTERFACE\_HELPER\_BIND\_GODOT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+BIND\+\_\+\+GODOT(\begin{DoxyParamCaption}\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ godot::ClassDB::bind\_method(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ godot::D\_METHOD(\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{stringliteral}{"{}interface\_helper\_get\_interface"{}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{stringliteral}{"{}interface\_name"{}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \&class\_type::interface\_helper\_get\_interface\ \(\backslash\)}
+\DoxyCodeLine{\ \ );}
+
+\end{DoxyCode}
+
+
+(important) (when binding) ~\newline
+ A Macro for helping interface\+\_\+helper bind with Godot\textquotesingle{}s functionalities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+\_\+type} & The class type. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface__helper_8h_a25ff3049d028669df29224c70069c15f}\label{interface__helper_8h_a25ff3049d028669df29224c70069c15f} 
+\index{interface\_helper.h@{interface\_helper.h}!ATTR\_INTERFACE\_HELPER\_DEFINE@{ATTR\_INTERFACE\_HELPER\_DEFINE}}
+\index{ATTR\_INTERFACE\_HELPER\_DEFINE@{ATTR\_INTERFACE\_HELPER\_DEFINE}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_INTERFACE\_HELPER\_DEFINE}{ATTR\_INTERFACE\_HELPER\_DEFINE}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+DEFINE(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+\Hypertarget{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8}\label{interface__helper_8h_a3f5415dd55184def6d45c08bab3eaca8} 
+\index{interface\_helper.h@{interface\_helper.h}!ATTR\_INTERFACE\_HELPER\_INHERIT@{ATTR\_INTERFACE\_HELPER\_INHERIT}}
+\index{ATTR\_INTERFACE\_HELPER\_INHERIT@{ATTR\_INTERFACE\_HELPER\_INHERIT}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_INTERFACE\_HELPER\_INHERIT}{ATTR\_INTERFACE\_HELPER\_INHERIT}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+INHERIT(\begin{DoxyParamCaption}\item[{}]{origin\+\_\+class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ interface\_helper\_get\_list\_interface();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ interface\_helper\_get\_interface(godot::String\ interface\_id);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{private}:}
+
+\end{DoxyCode}
+
+
+(important) (when declaring/at header) ~\newline
+ Macro to use when a class is inheriting from interface\+\_\+helper. 
+
+\Hypertarget{interface__helper_8h_af9769646362ed1f517f2179de3a7b84a}\label{interface__helper_8h_af9769646362ed1f517f2179de3a7b84a} 
+\index{interface\_helper.h@{interface\_helper.h}!ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION@{ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION}}
+\index{ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION@{ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION}{ATTR\_INTERFACE\_HELPER\_ON\_NOTIFICATION}}
+{\footnotesize\ttfamily \#define ATTR\+\_\+\+INTERFACE\+\_\+\+HELPER\+\_\+\+ON\+\_\+\+NOTIFICATION(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+
+\Hypertarget{interface__helper_8h_aaecc67570dd231f7b31eea2b1c3e26bf}\label{interface__helper_8h_aaecc67570dd231f7b31eea2b1c3e26bf} 
+\index{interface\_helper.h@{interface\_helper.h}!INTERFACE\_CHECK@{INTERFACE\_CHECK}}
+\index{INTERFACE\_CHECK@{INTERFACE\_CHECK}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{INTERFACE\_CHECK}{INTERFACE\_CHECK}}
+{\footnotesize\ttfamily \#define INTERFACE\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{object\+\_\+type,  }\item[{}]{interface\+\_\+type }\end{DoxyParamCaption})~  object\+\_\+type\+::\+\_\+\+\_\+\#\#interface\+\_\+type\#\#\+\_\+check()}
+
+
+
+(any time) ~\newline
+ Macro to check if the object class has the interface. 
+
+\Hypertarget{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}\label{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c} 
+\index{interface\_helper.h@{interface\_helper.h}!INTERFACE\_DEFINE\_INTERFACE\_CLASS@{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}
+\index{INTERFACE\_DEFINE\_INTERFACE\_CLASS@{INTERFACE\_DEFINE\_INTERFACE\_CLASS}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{INTERFACE\_DEFINE\_INTERFACE\_CLASS}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}
+{\footnotesize\ttfamily \#define INTERFACE\+\_\+\+DEFINE\+\_\+\+INTERFACE\+\_\+\+CLASS(\begin{DoxyParamCaption}\item[{}]{interface\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}:\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ godot::String\ get\_id()\{\textcolor{keywordflow}{return}\ \#interface\_type;\}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \_\_\#\#interface\_type\#\#\_check()\{\}}
+
+\end{DoxyCode}
+
+
+(important) (when declaring/at header) ~\newline
+ This is to define a class name of the interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interface\+\_\+type} & the class type of the interface. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface__helper_8h_a070cc174c8fb2f935353e4319ecb893e}\label{interface__helper_8h_a070cc174c8fb2f935353e4319ecb893e} 
+\index{interface\_helper.h@{interface\_helper.h}!INTERFACE\_GET@{INTERFACE\_GET}}
+\index{INTERFACE\_GET@{INTERFACE\_GET}!interface\_helper.h@{interface\_helper.h}}
+\doxysubsubsection{\texorpdfstring{INTERFACE\_GET}{INTERFACE\_GET}}
+{\footnotesize\ttfamily \#define INTERFACE\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{p\+\_\+node,  }\item[{}]{interface\+\_\+type,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{godot__var__extended_8h_a525ba5a4175a3bb5388c3b46b5268393}{gdvar\_custom\_object}}\ \_obj\ =\ p\_node-\/>call(\textcolor{stringliteral}{"{}interface\_helper\_get\_interface"{}},\ interface\_type::get\_id());\ \(\backslash\)}
+\DoxyCodeLine{\ \ target\ =\ (interface\_type*)\_obj;\ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+(any time) ~\newline
+ Macro for getting interface of a node object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+node} & pointer that represents Godot\textquotesingle{}s node object. \\
+\hline
+{\em interface\+\_\+type} & the class type of the interface. \\
+\hline
+{\em target} & variable to store the interface pointer. \\
+\hline
+\end{DoxyParams}

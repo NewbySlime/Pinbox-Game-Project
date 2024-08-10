@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="-ke-9luOPAYy8LTFLKRa" name="Page-1">
+        <mxGraphModel dx="719" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="item_server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="655" y="330" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="iwe2d_handler" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="655" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="item_container" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1040" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="persistance_context" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="630" y="460" as="sourcePoint"/>
+                        <mxPoint x="680" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="630" y="460" as="sourcePoint"/>
+                        <mxPoint x="680" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="630" y="460" as="sourcePoint"/>
+                        <mxPoint x="680" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="630" y="460" as="sourcePoint"/>
+                        <mxPoint x="680" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="630" y="460" as="sourcePoint"/>
+                        <mxPoint x="680" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Loading runtime items" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="410" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Reading item list that dropped" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="525" y="600" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Getting item objects" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="510" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Uses item_container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="690" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Creates and handles" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="460" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;h1&gt;Persistance between item servers and objects&lt;/h1&gt;&lt;p&gt;item_server can only save the item_object data and also the instance id for each item_object.&lt;/p&gt;&lt;p&gt;For other objects such as servers that handles the item functionality will have to save every item instance id that it uses, or read every instance id that it saves from last save.&amp;nbsp;&lt;/p&gt;&lt;p&gt;item_container isn't prefered to be saved to for garbage collector (items that isn't in container, will be removed from existance&lt;span style=&quot;background-color: initial;&quot;&gt;). And since item_container has different types, item_server should not save item_container data.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="160" width="270" height="300" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,17 @@
+{
+  "damage_normal_additive":{
+    "chance_score": 5,
+    "modifier_data": {
+      "range_low": 2,
+      "range_high": 10
+    }
+  },
+
+  "damage_percentage_additive":{
+    "chance_score": 5,
+    "modifier_data": {
+      "range_low": 5,
+      "range_high": 20
+    }
+  }
+}

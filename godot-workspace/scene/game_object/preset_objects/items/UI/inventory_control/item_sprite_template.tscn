@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bmsarodovpwjj"]
+
+[node name="item_sprite" type="item_sprite_renderer"]
+sprite_margin = 0.1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+region_rect = Rect2(10, 10, 12, 12)

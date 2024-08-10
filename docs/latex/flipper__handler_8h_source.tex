@@ -1,0 +1,50 @@
+\doxysection{flipper\+\_\+handler.\+h}
+\hypertarget{flipper__handler_8h_source}{}\label{flipper__handler_8h_source}\index{src/flipper\_handler.h@{src/flipper\_handler.h}}
+\mbox{\hyperlink{flipper__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FLIPPER\_HANDLER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FLIPPER\_HANDLER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SIGNAL\_FLIPPER\_HANDLER\_ON\_INPUT\ "{}sfhoi"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game}{Game}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{namespace\ }Handlers\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler}{flipper\_handler}}:\ \textcolor{keyword}{public}\ godot::Node\{}
+\DoxyCodeLine{00015\ \ \ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler}{flipper\_handler}},\ godot::Node)}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a7ce33882504efa2ac1cddda83da6043e}{flipper\_input\_flag}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a7ce33882504efa2ac1cddda83da6043ea4c925199ae64ff6b9566ef4770858890}{left\_hand\_flipper}}\ =\ 0x1,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a7ce33882504efa2ac1cddda83da6043eabc4d85f7b2421ab6ec67e49261c15973}{right\_hand\_flipper}}\ =\ 0x2}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_input\_flag;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a460a84aaa41432b9bfe8ed61e7c31ccc}{\_bind\_methods}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a221154ea959a7e588f27c52ec3f41f2f}{flipper\_handler}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a65f5efbb7868e505899b1d9c4576cf85}{\string~flipper\_handler}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_ac3d045574d7ea5fe8ee77eded401efe2}{\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_aa909cb7ae3d25981fa394e1a8ee8e380}{\_input}}(\textcolor{keyword}{const}\ godot::Ref<godot::InputEvent>\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a19ed3e61c8aa51813384da1f7a8a5425}{AUTOLOAD\_NODE\_DECLARE}}(\mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler}{flipper\_handler}})}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_1_1_handlers_1_1flipper__handler_a9b00747c66950fc9cfc6fdccb7aa5b47}{get\_input\_flag}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \ \ \}}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

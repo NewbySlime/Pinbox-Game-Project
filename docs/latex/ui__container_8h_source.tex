@@ -1,0 +1,69 @@
+\doxysection{ui\+\_\+container.\+h}
+\hypertarget{ui__container_8h_source}{}\label{ui__container_8h_source}\index{src/ui\_container.h@{src/ui\_container.h}}
+\mbox{\hyperlink{ui__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UI\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UI\_CONTAINER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{algorithm__node_8h}{algorithm\_node.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/control.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/sub\_viewport.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/viewport\_texture.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/node\_path.hpp"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_u_i}{Game::UI}}\{}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container}{ui\_container}}:\ \textcolor{keyword}{public}\ godot\_sac::Node\_sac\{}
+\DoxyCodeLine{00017\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container}{ui\_container}},\ godot\_sac::Node\_sac)}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ left\_controller\_path)}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ right\_controller\_path)}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ left\_subviewport\_path)}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ right\_subviewport\_path)}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ godot::Control*\ \_left\_controller;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ godot::Control*\ \_right\_controller;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ godot::SubViewport*\ \_left\_subviewport;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ godot::SubViewport*\ \_right\_subviewport;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_ad3fc86593fdaa12d086bca0c5764f83f}{\_bind\_methods}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_a2e8822c66e947ffd311d56e9ad5e28d3}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ godot::Control*\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_a96c7a3e3108286b5c119f55e37ce3adc}{get\_left\_control}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ godot::Control*\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_a60e32f245a8b7a22e9774b7578eecb6f}{get\_right\_control}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ godot::Ref<godot::ViewportTexture>\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_a74c45846c6f9d5120f722924692b389e}{get\_left\_viewport\_tex}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ godot::Ref<godot::ViewportTexture>\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_ac0fc45980b06b0a700f49ee846805012}{get\_right\_viewport\_tex}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T*\ \mbox{\hyperlink{class_game_1_1_u_i_1_1ui__container_ab72b877f266c32f1b8a8ffca999e2aed}{find\_child\_node\_type}}(T*\ default\_value\ =\ NULL)\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ T*\ \_res\ =\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Game::Misc::Algorithm::find\_child\_node\_type<T>}}(\textcolor{keyword}{this},\ default\_value);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_res\ !=\ default\_value)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \_res\ =\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Game::Misc::Algorithm::find\_child\_node\_type<T>}}(\_left\_controller,\ default\_value);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_res\ !=\ default\_value)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \_res\ =\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1random__chance__data}{Game::Misc::Algorithm::find\_child\_node\_type<T>}}(\_right\_controller,\ default\_value);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_res\ !=\ default\_value)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_res;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_value;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \};}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

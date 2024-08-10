@@ -1,0 +1,31 @@
+\doxysection{I\+\_\+modifier.\+h}
+\hypertarget{_i__modifier_8h_source}{}\label{_i__modifier_8h_source}\index{src/I\_modifier.h@{src/I\_modifier.h}}
+\mbox{\hyperlink{_i__modifier_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ I\_MODIFIER\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ I\_MODIFIER\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hit__register__interface_8h}{hit\_register\_interface.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interface__helper_8h}{interface\_helper.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__item_8h}{weapon\_item.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weapon__stats__data_8h}{weapon\_stats\_data.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_modifiers}{Game::Modifiers}}\{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\_modifier}}\{}
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{interface__helper_8h_a98534cd345c36c1fb729b8fa8011121c}{INTERFACE\_DEFINE\_INTERFACE\_CLASS}}(\mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier}{I\_modifier}})}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a8b81090ca2d98d7de4b5a943d92e4c06}{\string~I\_modifier}}()\{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{comment}{//\ if\ hitreg\_state\ is\ NULL\ then\ the\ modifier\ would\ expect\ to\ apply\ passive\ modifiers}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a1987f4528448bc78acc9157aa7393661}{modify\_weapon\_stats}}(\mbox{\hyperlink{class_game_1_1_item_1_1weapon__stats__data}{Game::Item::weapon\_stats\_data}}*\ stats,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_1_1hit__register__state}{Game::hit\_register\_state}}*\ hitreg\_state\ =\ NULL)\textcolor{keyword}{\ const}\{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a1ccba80c56713f6724426bab68663a5b}{get\_modifier\_title}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ godot::String\ \mbox{\hyperlink{class_game_1_1_modifiers_1_1_i__modifier_a6912bb0160597f164124f48bb2f68ed3}{get\_modifier\_description}}()\textcolor{keyword}{\ const}\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00022\ \ \ \};}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxgsr005vp7qp"]
+
+[ext_resource type="PackedScene" uid="uid://bnf6al7xhi3qr" path="res://scene/game_object/pinbox.tscn" id="2_jafre"]
+[ext_resource type="PackedScene" uid="uid://b3xhyjr1ce8gb" path="res://scene/game_object/flipper.tscn" id="3_qgj7s"]
+[ext_resource type="Texture2D" uid="uid://coj1pp3wx2fvu" path="res://icon.svg" id="4_3c01t"]
+[ext_resource type="PackedScene" uid="uid://cd5g1e18resno" path="res://scene/game_object/bumper.tscn" id="4_ub8jd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mv4jw"]
+rough = true
+bounce = 22.35
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r0orw"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8w4pw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8qhw6"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mkfa7"]
+normal = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw4xb"]
+size = Vector2(116, 119)
+
+[node name="main_scene_handler" type="main_scene_handler"]
+init_margin = NodePath("init_margin")
+player_max_edge_margin = NodePath("player_max_edge_margin")
+level_low_edge = NodePath("min_scroll")
+level_high_edge = NodePath("max_scroll")
+camera_path = NodePath("Camera2D")
+player_path = NodePath("pinbox")
+map_boundary = NodePath("map_boundary")
+hitreg_container = NodePath("hitreg_container")
+damage_indicator_container = NodePath("damage_indicator_container")
+iwe2d_container = NodePath("IWE2D_container")
+smooth_scroll_time = 0.1
+smooth_scroll_bezier = PackedVector2Array(1, 1, 0.397, 1, 0.107, 0.66, 0, 0)
+
+[node name="map_boundary" type="Marker2D" parent="."]
+position = Vector2(1646, -3000)
+
+[node name="player_max_edge_margin" type="Marker2D" parent="."]
+position = Vector2(0, 189)
+
+[node name="min_scroll" type="Marker2D" parent="."]
+position = Vector2(0, -3000)
+
+[node name="max_scroll" type="Marker2D" parent="."]
+
+[node name="init_margin" type="Marker2D" parent="."]
+position = Vector2(0, 390)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_mv4jw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_r0orw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_8w4pw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1646, 0)
+shape = SubResource("WorldBoundaryShape2D_8qhw6")
+
+[node name="RayCast2D" type="RayCast2D" parent="StaticBody2D/CollisionShape2D3"]
+position = Vector2(-8.205, 0)
+target_position = Vector2(-48.57, 50)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -3000)
+shape = SubResource("WorldBoundaryShape2D_mkfa7")
+
+[node name="pinbox" parent="." instance=ExtResource("2_jafre")]
+position = Vector2(687, -1228)
+collision_layer = 0
+collision_mask = 1610612737
+
+[node name="flipper" parent="." instance=ExtResource("3_qgj7s")]
+position = Vector2(359, -254)
+rotation = 0.261799
+
+[node name="flipper2" parent="." instance=ExtResource("3_qgj7s")]
+is_right_hand = true
+use_right_hand_input = true
+position = Vector2(855, -254)
+rotation = 2.87979
+scale = Vector2(1, -1)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="bumper" parent="." instance=ExtResource("4_ub8jd")]
+bounce_force = 10000.0
+position = Vector2(1034, -492)
+
+[node name="bumper3" parent="." instance=ExtResource("4_ub8jd")]
+bounce_force = 10000.0
+position = Vector2(1187, -497)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
+
+[node name="bumper2" parent="." instance=ExtResource("4_ub8jd")]
+position = Vector2(1112, -611)
+
+[node name="flipper3" parent="." instance=ExtResource("3_qgj7s")]
+is_right_hand = true
+use_right_hand_input = true
+position = Vector2(926, -947)
+rotation = -0.436332
+scale = Vector2(-1, 1)
+
+[node name="flipper4" parent="." instance=ExtResource("3_qgj7s")]
+position = Vector2(142, -634)
+rotation = 0.436332
+
+[node name="bumper4" parent="." instance=ExtResource("4_ub8jd")]
+position = Vector2(479, -631)
+
+[node name="bumper5" parent="." instance=ExtResource("4_ub8jd")]
+position = Vector2(653, -804)
+
+[node name="IWE2D_container" type="Node2D" parent="."]
+
+[node name="hitreg_container" type="Node2D" parent="."]
+
+[node name="breakable_object" type="breakable_object" parent="."]
+position = Vector2(660, -496)
+collision_layer = 1073741827
+collision_mask = 3
+sleeping = true
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="breakable_object"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_yw4xb")
+
+[node name="Sprite2D" type="Sprite2D" parent="breakable_object"]
+texture = ExtResource("4_3c01t")
+
+[node name="damage_indicator_container" type="Node2D" parent="."]

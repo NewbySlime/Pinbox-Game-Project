@@ -1,0 +1,124 @@
+\doxysection{inventory\+\_\+control.\+h}
+\hypertarget{inventory__control_8h_source}{}\label{inventory__control_8h_source}\index{src/inventory\_control.h@{src/inventory\_control.h}}
+\mbox{\hyperlink{inventory__control_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INVENTORY\_CONTROL\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INVENTORY\_CONTROL\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{godot__macro_8h}{godot\_macro.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{subautoload__compatibles_8h}{subautoload\_compatibles.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor__follower__control_8h}{cursor\_follower\_control.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__container__control_8h}{item\_container\_control.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__description__popout_8h}{item\_description\_popout.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item__server_8h}{item\_server.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{time__scaler_8h}{time\_scaler.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{modifier__container__item_8h}{modifier\_container\_item.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/control.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/input\_event.hpp"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/nine\_patch\_rect.hpp"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SIGNAL\_INVENTORY\_CONTROL\_DONE\_TRANSITIONING\ "{}sicdt"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_item}{Game::Item}}\{}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_item_1_1inventory__control}{inventory\_control}}:\ \textcolor{keyword}{public}\ godot\_sac::Control\_sac\{}
+\DoxyCodeLine{00025\ \ \ GDCLASS(\mbox{\hyperlink{class_game_1_1_item_1_1inventory__control}{inventory\_control}},\ godot\_sac::Control\_sac)}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ UI\_item\_sprite\_template\_scene)}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::String,\ item\_description\_popout\_scene)}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{double},\ description\_popout\_idle\_time)}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(\textcolor{keywordtype}{int},\ cursor\_follower\_item\_sprite\_size)}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ animation\_player)}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ \mbox{\hyperlink{class_game_1_1_item_1_1item__deleter__control}{item\_deleter\_control}})}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ item\_drop\_area)}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ main\_icontainer\_control)}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{godot__macro_8h_a5653711653ebc5bce1e1e176279a8f01}{GD\_PROPERTY\_VAR}}(godot::NodePath,\ loadout\_icontainer\_control)}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\_item\_container\_metadata\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_1_1_item_1_1inventory__control_1_1__item__container__metadata_1_1__object__data}{\_object\_data}}\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \mbox{\hyperlink{struct_game_1_1_item_1_1inventory__control_1_1__item__container__metadata_1_1__object__data_a28d396b239e2761dfe77ed1dea9eed53}{control\_node}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{struct_game_1_1_item_1_1inventory__control_1_1__item__container__metadata_1_1__object__data_a89e5653e98bc3884a09fa8db85f80acf}{node\_inst\_id}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::map<uint64\_t,\ \_object\_data>\ \_container\_control\_map;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ container\_id;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1cursor__follower__control}{Game::cursor\_follower\_control}}*\ \_cursor\_follower;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__server}{Game::Item::item\_server}}*\ \_item\_server;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1time__scaler}{Game::time\_scaler}}*\ \_time\_scaler;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_item\_sprite\_template\_scene;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ godot::Ref<godot::PackedScene>\ \_item\_description\_popout\_scene;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ godot::AnimationPlayer*\ \_animation\_player;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_icontainer\_main;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_icontainer\_loadout;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\ \_current\_grabbed;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{struct_game_1_1_item_1_1item__position__data}{Game::Item::item\_position\_data}}\ \_current\_hover;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ godot::TextureRect*\ \_cf\_sprite\_renderer;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1sprite__resource__instancer}{Game::sprite\_resource\_instancer}}*\ \_cf\_sprite\_instancer;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1item__description__popout}{Game::Item::item\_description\_popout}}*\ \_cf\_item\_desc\_popout;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ godot::Timer*\ \_popout\_wait\_timer;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ std::map<Game::Item::item\_container\_inst\_id,\ \_item\_container\_metadata*>\ \_container\_id\_metadata\_map;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ std::vector<std::shared\_ptr<Game::Item::modifier\_container\_item>>\ \_mod\_cont\_list;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_is\_drop\_area\_hovered;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_animation\_finished(godot::String\ anim\_name);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_popout\_wait\_timer\_timeout();}
+\DoxyCodeLine{00080\ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_add(\mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_control,\ \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_remove(\mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_control,\ \mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_control\_on\_mouse\_hovered(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ param);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_control\_on\_mouse\_exited();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_control\_on\_changed(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ param);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_item\_container\_control\_on\_exiting(\mbox{\hyperlink{godot__signal_8h_a5d4edecd2324dddf076c7e15582d2764}{gdsignal\_param\_ref}}\ param);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_drop\_area\_on\_mouse\_hovered();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_drop\_area\_on\_mouse\_exited();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_drop\_grabbed\_item();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_on\_item\_moved();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_bind\_item\_container\_control(\mbox{\hyperlink{class_game_1_1_item_1_1item__container__control}{Game::Item::item\_container\_control}}*\ \_control);}
+\DoxyCodeLine{00095\ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a5dd218d27c4250192d9604e1042f97fc}{\_bind\_methods}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a9437a23ba621c64922ab6fc2750024b9}{\_bind\_subautoload}}(\mbox{\hyperlink{class_game_1_1subautoload__container}{Game::subautoload\_container}}*\ sa\_container)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a4c7c765106766222faec8ce3d298492e}{\_on\_gamenode\_ready}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_abca68684bc360052fcf04ebf96f8d4c5}{inventory\_control}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a7d9264f822350894d9c4f00978a9463c}{\string~inventory\_control}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a89a36315d4724c0a5e7d493ac6ee2e04}{\_process}}(\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a8090219d003279cd23fc563b45a894e9}{\_gui\_input}}(\textcolor{keyword}{const}\ godot::Ref<godot::InputEvent>\&\ \_event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a68738b9fe456433ed2df7db36c30515e}{bind\_icontainer\_main}}(\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ inst\_id);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a595d805af2c4d330622a441e23098c38}{bind\_icontainer\_loadout}}(\mbox{\hyperlink{namespace_game_1_1_item_a20260e8434990f6c952a26575c14d53a}{Game::Item::item\_container\_inst\_id}}\ inst\_id);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_a6bd4718efe2e4cb5e061837969266a06}{show}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_1_1_item_1_1inventory__control_afb98faade9160b805483ad1da9b2ee81}{hide}}();}
+\DoxyCodeLine{00115\ \ \ \};}
+\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

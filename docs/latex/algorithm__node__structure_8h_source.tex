@@ -1,0 +1,34 @@
+\doxysection{algorithm\+\_\+node\+\_\+structure.\+h}
+\hypertarget{algorithm__node__structure_8h_source}{}\label{algorithm__node__structure_8h_source}\index{src/algorithm\_node\_structure.h@{src/algorithm\_node\_structure.h}}
+\mbox{\hyperlink{algorithm__node__structure_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ALGORITHM\_NODE\_STRUCTURE\_HEADER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ALGORITHM\_NODE\_STRUCTURE\_HEADER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}map"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}string"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}vector"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_1_1_misc_1_1_algorithm_1_1_structure}{Game::Misc::Algorithm::Structure}}\{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\_branch\_node}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ std::map<std::string,\ std::vector<tree\_branch\_node*>>\ \_branches;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_check\_branch(godot::Node*\ parent,\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\_branch\_node}}*\ branch);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154}{tree\_branch\_node}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node}{tree\_branch\_node}}\&\ branch);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154}{tree\_branch\_node}}(std::map<std::string,\ std::vector<tree\_branch\_node>>\ branch);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_a37ad13e70594a0151966d8729726f154}{tree\_branch\_node}}()\{\}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ae4a765b91a81e9514b64fed8f4895134}{\string~tree\_branch\_node}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_1_1_misc_1_1_algorithm_1_1_structure_1_1tree__branch__node_ac7083c114deaf6a3dfc4f26b32f33b37}{check\_branch}}(godot::Node*\ parent);}
+\DoxyCodeLine{00035\ \ \ \};}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

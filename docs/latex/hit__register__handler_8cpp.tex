@@ -1,0 +1,32 @@
+\doxysection{src/hit\+\_\+register\+\_\+handler.cpp File Reference}
+\hypertarget{hit__register__handler_8cpp}{}\label{hit__register__handler_8cpp}\index{src/hit\_register\_handler.cpp@{src/hit\_register\_handler.cpp}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}hit\+\_\+register\+\_\+handler.\+h"{}}\newline
+{\ttfamily \#include "{}hit\+\_\+registers.\+h"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/resource\+\_\+loader.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/classes/timer.\+hpp"{}}\newline
+{\ttfamily \#include "{}godot\+\_\+cpp/variant/variant.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hit__register__handler_8cpp_a7db36ac6bbf1f3df97643a7741524a80}{\+\_\+\+\_\+\+HRH\+\_\+\+CHECK\+\_\+\+NODE}}(node,  target\+\_\+node)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{hit__register__handler_8cpp_a7db36ac6bbf1f3df97643a7741524a80}\label{hit__register__handler_8cpp_a7db36ac6bbf1f3df97643a7741524a80} 
+\index{hit\_register\_handler.cpp@{hit\_register\_handler.cpp}!\_\_HRH\_CHECK\_NODE@{\_\_HRH\_CHECK\_NODE}}
+\index{\_\_HRH\_CHECK\_NODE@{\_\_HRH\_CHECK\_NODE}!hit\_register\_handler.cpp@{hit\_register\_handler.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_HRH\_CHECK\_NODE}{\_\_HRH\_CHECK\_NODE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HRH\+\_\+\+CHECK\+\_\+\+NODE(\begin{DoxyParamCaption}\item[{}]{node,  }\item[{}]{target\+\_\+node }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}(!node-\/>is\_class(\#target\_node))\{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ERR\_ASSERT(\textcolor{stringliteral}{"{}Resource\ loaded\ is\ not\ a\ "{}}\ \#target\_node)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{goto}\ skip\_label;\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\ \ target\_node*\ \_test\_casted\_node\ =\ (target\_node*)node;}
+
+\end{DoxyCode}
